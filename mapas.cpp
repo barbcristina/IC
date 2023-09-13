@@ -1,20 +1,26 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 
 int main(){
     
-    int x = 10, y = 10, v = 1;
+    int x = 10, y = 10, v = 0;
+    int w, h;
+    float z = 200;
     std::ofstream arquivo("mapas.txt");
+
+    std::cin >> h >> w;
 
     if(!arquivo){
         std::cerr << "Não foi possível abrir o arquivo." << std::endl;
         return 1;
     }
 
-    for(int i = 1; i < 16; i++){
-        for(int j = 1; j < 9; j++){
-            arquivo << v << " " << x << " " << y << std::endl;
+    for(int i = 0; i < h; i++){
+        for(int j = 0; j < w; j++){
+            arquivo << v << " " << x << " " << y << " " << z << std::endl;
             x+=20;
+            z += 0.13;
             v++;
         }
         y+=20;
