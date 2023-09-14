@@ -20,7 +20,7 @@ int main(){
         for(int j = 0; j < w; j++){
             arquivo << v << " " << x << " " << y << " " << z << std::endl;
             x+=20;
-            z += 0.13;
+            z += 0.07;
             v++;
         }
         y+=20;
