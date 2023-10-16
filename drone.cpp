@@ -6,6 +6,7 @@
 #include <limits>
 #include <sstream>
 #include <queue>
+#include <algorithm>
 
 // Função para calcular h
 double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double, double, double>>& coord) {
@@ -60,6 +61,52 @@ void print_path(const std::vector<int>& parent, int v) {
     }
     print_path(parent, parent[v]);
     std::cout << v << " ";
+}
+
+// Função para encontrar o próximo ponto mais próximo que não tenha sido visitado
+int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado) {
+    int n = distancias.size();
+    int proximoPonto = -1;
+    double menorDistancia = std::numeric_limits<double>::max();
+
+    for (int i = 0; i < n; i++) {
+        if (i != atual && !visitado[i] && distancias[atual][i] < menorDistancia) {
+            proximoPonto = i;
+            menorDistancia = distancias[atual][i];
+        }
+    }
+
+    return proximoPonto;
+}
+
+// Função para encontrar o ciclo hamiltoniano usando KNN
+std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double>>& distancias) {
+    int n = distancias.size();
+    std::vector<bool> visitado(n, false);
+    std::vector<int> cicloHamiltoniano;
+
+    int pontoAtual = 0; // Comece a partir de um ponto qualquer (por exemplo, 0)
+
+    cicloHamiltoniano.push_back(pontoAtual);
+    visitado[pontoAtual] = true;
+
+    for (int i = 1; i < n; i++) {
+        int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado);
+
+        if (proximoPonto == -1) {
+            //std::cerr << "Não foi possível encontrar um próximo ponto." << std::endl;
+            break;
+        }
+
+        cicloHamiltoniano.push_back(proximoPonto);
+        visitado[proximoPonto] = true;
+        pontoAtual = proximoPonto;
+    }
+
+    // Certifique-se de que o ciclo termina onde começou (ciclo hamiltoniano)
+    //cicloHamiltoniano.push_back(cicloHamiltoniano[0]);
+
+    return cicloHamiltoniano;
 }
 
 int main() {
@@ -122,12 +169,12 @@ int main() {
         for (int j : validos) {
             if (i != j) {
                 int dist = std::sqrt(std::pow(std::get<0>(coord[i]) - std::get<0>(coord[j]), 2) + std::pow(std::get<1>(coord[i]) - std::get<1>(coord[j]), 2));
-                //if (dist > 30) { // Distancia máxima entre vértices adjacentes
+                if (dist > 29) { // Distancia máxima entre vértices adjacentes
                     //printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
-                //    continue;  // Então se i e j não forem adjacentes, c[i][j] = inf
-                //} else {
+                    continue;  // Então se i e j não forem adjacentes, c[i][j] = inf
+                } else {
                     c[i][j] = dist;
-                    printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
+                }    //printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
             }
         }
     }
@@ -182,7 +229,7 @@ int main() {
             distancias[i][j] = dist[j];
         }
         altitudes[i][j] = alt[j];
-        if ((i == 12 && (j == 22 || j == 13 || j == 15 || j == 11 || j == 12)) || (i == 58 && (j == 68 || j == 69 || j == 70 || j == 71))) {
+        if (i == 102 && (j == 161 || j == 126 || j == 160 || j == 162 || j == 163 || j == 159 || j == 127 || j == 139 || j == 150 || j == 130 || j == 143 || j == 156)) {
             std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
             print_path(parent, j);
             std::cout << std::endl;
@@ -195,53 +242,30 @@ int main() {
         }
     }
 
-    int k = c.size(); // Tamanho da matriz de distâncias
-    std::vector<bool> visitado(k, false); // Para rastrear vértices visitados
-    std::vector<int> caminhoHamiltoniano; // Para armazenar o caminho
-
-    int verticeAtual = ini;
-    int verticeAnterior = -1;
-
-
-    // Adicione o ponto inicial ao caminho
-    caminhoHamiltoniano.push_back(verticeAtual);
-    visitado[verticeAtual] = true;
-
-    // Encontre o caminho hamiltoniano
-    while (caminhoHamiltoniano.size() < validos.size()) {
-        int verticeProximo = -1;
-        double menorDistancia = std::numeric_limits<double>::max();
-
-        for (int i = 0; i < k; i++) {
-            if (!visitado[i] && c[verticeAtual][i] < menorDistancia) {
-                menorDistancia = c[verticeAtual][i];
-                verticeProximo = i;
+    for (int i : validos) {
+        for (int j : validos) {
+            if (i == 12 && (j == 13 || j == 26 || j == 39 || j == 52 || j == 65 || j == 78 || j == 91 || j == 104 || j == 117 || j == 130 || j == 143 || j == 156)){
+            distancias[i][j] = distancias[i][j]*2;
+            std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << std::endl;
             }
         }
+    }
 
-        if (verticeProximo != -1) {
-            caminhoHamiltoniano.push_back(verticeProximo);
-            visitado[verticeProximo] = true;
-            verticeAnterior = verticeAtual;
-            verticeAtual = verticeProximo;
-        } else {
-            std::cerr << "Não foi possível encontrar um caminho hamiltoniano." << std::endl;
-            break;
+    distancias[103][161] = 638.5;
+
+    std::vector<int> cicloHamiltoniano = encontrarCicloHamiltoniano(distancias);
+
+    int l =1;
+    // Imprima o caminho hamiltoniano
+    std::cout << "Ciclo Hamiltoniano: " << std::endl;
+    for (int vertice : cicloHamiltoniano) {
+        std::cout << vertice << " ";
+        if(l%13 == 0){
+        std::cout << std::endl;
+        l++;
         }
     }
-
-     if (caminhoHamiltoniano.back() != fin) {
-        caminhoHamiltoniano.push_back(fin);
-        visitado[fin] = true;
-    }
-
-    // Certifique-se de visitar todos os vértices válidos e obstáculos, se necessário
-    for (int v : validos) {
-        if (!visitado[v]) {
-            caminhoHamiltoniano.push_back(v);
-            visitado[v] = true;
-        }
-    }
+    std::cout << std::endl;
 
     std::ofstream resultadosFile("resultados.txt");
 
@@ -251,8 +275,8 @@ int main() {
         resultadosFile << std::get<0>(tuple) << " " << std::get<1>(tuple) << " " << std::get<2>(tuple) << std::endl;
         }
 
-        resultadosFile << "Caminho Hamiltoniano:" << std::endl;
-        for (int vertex : caminhoHamiltoniano) {
+        resultadosFile << "Ciclo Hamiltoniano:" << std::endl;
+        for (int vertex : cicloHamiltoniano) {
             resultadosFile << vertex << " ";
         }
         resultadosFile << std::endl;
@@ -267,19 +291,6 @@ int main() {
         std::cerr << "Erro ao abrir o arquivo resultados.txt para escrita." << std::endl;
         return 1;
     }
-
-    int i = 1;
-
-    // Imprima o caminho hamiltoniano
-    std::cout << "Caminho Hamiltoniano: ";
-    for (int vertice : caminhoHamiltoniano) {
-        std::cout << vertice << " ";
-        if(i%13 == 0)
-        std::cout << std::endl;
-        i++;
-    }
-    std::cout << std::endl;
-
 
     return 0;
 }
