@@ -7,6 +7,7 @@
 #include <sstream>
 #include <queue>
 #include <algorithm>
+#include <numeric>
 
 // Função para calcular h
 double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double, double, double>>& coord) {
@@ -47,7 +48,7 @@ double calcular_a(int i, int j, int k, const std::vector<std::tuple<double, doub
         double angulo = (180 / M_PI) * ang;
 
         // Penalização em relação ao ângulo
-        double a = pow(1.0 + ((5.0 * angulo) / 180.0), 2);
+        double a = pow(1.0 + ((1.0 * angulo) / 180.0), 2);
 
         return a;
     }
@@ -64,7 +65,7 @@ void print_path(const std::vector<int>& parent, int v) {
 }
 
 // Função para encontrar o próximo ponto mais próximo que não tenha sido visitado
-int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado) {
+int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado, int pontoInicial) {
     int n = distancias.size();
     int proximoPonto = -1;
     double menorDistancia = std::numeric_limits<double>::max();
@@ -86,12 +87,13 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
     std::vector<int> cicloHamiltoniano;
 
     int pontoAtual = 0; // Comece a partir de um ponto qualquer (por exemplo, 0)
+    int pontoInicial = pontoAtual;
 
     cicloHamiltoniano.push_back(pontoAtual);
     visitado[pontoAtual] = true;
 
     for (int i = 1; i < n; i++) {
-        int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado);
+        int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado, pontoInicial);
 
         if (proximoPonto == -1) {
             //std::cerr << "Não foi possível encontrar um próximo ponto." << std::endl;
@@ -104,7 +106,7 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
     }
 
     // Certifique-se de que o ciclo termina onde começou (ciclo hamiltoniano)
-    //cicloHamiltoniano.push_back(cicloHamiltoniano[0]);
+    //cicloHamiltoniano.push_back(pontoInicial);
 
     return cicloHamiltoniano;
 }
@@ -229,7 +231,7 @@ int main() {
             distancias[i][j] = dist[j];
         }
         altitudes[i][j] = alt[j];
-        if (i == 102 && (j == 161 || j == 126 || j == 160 || j == 162 || j == 163 || j == 159 || j == 127 || j == 139 || j == 150 || j == 130 || j == 143 || j == 156)) {
+        if (i == 103 && (j == 139 || j == 126 || j == 127 || j == 138 || j == 137 || j == 159 || j == 142 || j == 151 || j == 152 || j == 130 || j == 143 || j == 156)) {
             std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
             print_path(parent, j);
             std::cout << std::endl;
@@ -241,17 +243,6 @@ int main() {
             dijkstra(c, i, j);
         }
     }
-
-    for (int i : validos) {
-        for (int j : validos) {
-            if (i == 12 && (j == 13 || j == 26 || j == 39 || j == 52 || j == 65 || j == 78 || j == 91 || j == 104 || j == 117 || j == 130 || j == 143 || j == 156)){
-            distancias[i][j] = distancias[i][j]*2;
-            std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << std::endl;
-            }
-        }
-    }
-
-    distancias[103][161] = 638.5;
 
     std::vector<int> cicloHamiltoniano = encontrarCicloHamiltoniano(distancias);
 
