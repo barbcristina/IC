@@ -14,10 +14,9 @@ double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double
 
     // Verifica se a cidade de partida é diferente da de chegada
     if (i == j) {
-        return 0.0;
+        return 0;
     } else {
-        // k = 1 enquanto não for decidido a penalidade
-        double h = std::pow(1.0 + (1.0 * ((std::get<2>(coord_2) - std::get<2>(coord_1)) / dist)), 2);
+        double h = pow(1.0 + (1.0 * ((std::get<2>(coord_2) - std::get<2>(coord_1)) / dist)), 2);
         return h;
     }
 }
@@ -26,11 +25,11 @@ double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double
 double calcular_a(int i, int j, int k, const std::vector<std::tuple<double, double, double>>& coord) {
     // 500 seria P0, um ponto virtual que garante que "a" sempre será igual a 1
     if (i == j) {
-        return 1.0;
+        return 1;
     }
 
     if (j == k) {
-        return 0.0;
+        return 0;
     } else {
         std::tuple<double, double, double> coord_cidade_1 = coord[i];  // Coordenadas da cidade 1
         std::tuple<double, double, double> coord_cidade_2 = coord[j];  // Coordenadas da cidade 2
@@ -114,8 +113,8 @@ int main() {
         }
     }
 
-    int ini = validos[0];
-    int fin = validos[1];
+    int ini = 0;
+    int fin = 168;
 
     // Cria a matriz de custos
     std::vector<std::vector<double>> c(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
@@ -123,13 +122,12 @@ int main() {
         for (int j : validos) {
             if (i != j) {
                 int dist = std::sqrt(std::pow(std::get<0>(coord[i]) - std::get<0>(coord[j]), 2) + std::pow(std::get<1>(coord[i]) - std::get<1>(coord[j]), 2));
-                if (dist > 30) { // Distancia máxima entre vértices adjacentes
+                //if (dist > 30) { // Distancia máxima entre vértices adjacentes
                     //printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
-                    continue;  // Então se i e j não forem adjacentes, c[i][j] = inf
-                } else {
+                //    continue;  // Então se i e j não forem adjacentes, c[i][j] = inf
+                //} else {
                     c[i][j] = dist;
                     printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
-                }
             }
         }
     }
@@ -184,7 +182,7 @@ int main() {
             distancias[i][j] = dist[j];
         }
         altitudes[i][j] = alt[j];
-        if ((i == 22 && (j == 22 || j == 9 || j == 10 || j == 11 || j == 12)) || (i == 58 && (j == 68 || j == 69 || j == 70 || j == 71))) {
+        if ((i == 12 && (j == 22 || j == 13 || j == 15 || j == 11 || j == 12)) || (i == 58 && (j == 68 || j == 69 || j == 70 || j == 71))) {
             std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
             print_path(parent, j);
             std::cout << std::endl;
@@ -196,6 +194,92 @@ int main() {
             dijkstra(c, i, j);
         }
     }
+
+    int k = c.size(); // Tamanho da matriz de distâncias
+    std::vector<bool> visitado(k, false); // Para rastrear vértices visitados
+    std::vector<int> caminhoHamiltoniano; // Para armazenar o caminho
+
+    int verticeAtual = ini;
+    int verticeAnterior = -1;
+
+
+    // Adicione o ponto inicial ao caminho
+    caminhoHamiltoniano.push_back(verticeAtual);
+    visitado[verticeAtual] = true;
+
+    // Encontre o caminho hamiltoniano
+    while (caminhoHamiltoniano.size() < validos.size()) {
+        int verticeProximo = -1;
+        double menorDistancia = std::numeric_limits<double>::max();
+
+        for (int i = 0; i < k; i++) {
+            if (!visitado[i] && c[verticeAtual][i] < menorDistancia) {
+                menorDistancia = c[verticeAtual][i];
+                verticeProximo = i;
+            }
+        }
+
+        if (verticeProximo != -1) {
+            caminhoHamiltoniano.push_back(verticeProximo);
+            visitado[verticeProximo] = true;
+            verticeAnterior = verticeAtual;
+            verticeAtual = verticeProximo;
+        } else {
+            std::cerr << "Não foi possível encontrar um caminho hamiltoniano." << std::endl;
+            break;
+        }
+    }
+
+     if (caminhoHamiltoniano.back() != fin) {
+        caminhoHamiltoniano.push_back(fin);
+        visitado[fin] = true;
+    }
+
+    // Certifique-se de visitar todos os vértices válidos e obstáculos, se necessário
+    for (int v : validos) {
+        if (!visitado[v]) {
+            caminhoHamiltoniano.push_back(v);
+            visitado[v] = true;
+        }
+    }
+
+    std::ofstream resultadosFile("resultados.txt");
+
+    if (resultadosFile.is_open()) {
+        resultadosFile << "Coordenadas:" << std::endl;
+        for (const auto& tuple : coord) {
+        resultadosFile << std::get<0>(tuple) << " " << std::get<1>(tuple) << " " << std::get<2>(tuple) << std::endl;
+        }
+
+        resultadosFile << "Caminho Hamiltoniano:" << std::endl;
+        for (int vertex : caminhoHamiltoniano) {
+            resultadosFile << vertex << " ";
+        }
+        resultadosFile << std::endl;
+
+        resultadosFile << "Obstaculos:" << std::endl;
+        for (const auto& obstacle : obstaculos) {
+            resultadosFile << std::get<0>(obstacle) << " " << std::get<1>(obstacle) << std::endl;
+        }
+
+        resultadosFile.close();
+    } else {
+        std::cerr << "Erro ao abrir o arquivo resultados.txt para escrita." << std::endl;
+        return 1;
+    }
+
+    int i = 1;
+
+    // Imprima o caminho hamiltoniano
+    std::cout << "Caminho Hamiltoniano: ";
+    for (int vertice : caminhoHamiltoniano) {
+        std::cout << vertice << " ";
+        if(i%13 == 0)
+        std::cout << std::endl;
+        i++;
+    }
+    std::cout << std::endl;
+
 
     return 0;
 }
