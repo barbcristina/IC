@@ -9,6 +9,8 @@
 #include <algorithm>
 #include <numeric>
 
+double valorTotalAcumulado = 0.0; // Inicialize com zero
+
 // Função para calcular h
 double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double, double, double>>& coord) {
     std::tuple<double, double, double> coord_1 = coord[i];
@@ -55,13 +57,13 @@ double calcular_a(int i, int j, int k, const std::vector<std::tuple<double, doub
 }
 
 // Função para imprimir o caminho mínimo
-void print_path(const std::vector<int>& parent, int v) {
+void print_path(const std::vector<int>& parent, int v, std::ofstream& output) {
     if (parent[v] == -1) {
-        std::cout << v << " ";
+        output << v << " ";
         return;
     }
-    print_path(parent, parent[v]);
-    std::cout << v << " ";
+    print_path(parent, parent[v], output);
+    output << v << " ";
 }
 
 // Função para encontrar o próximo ponto mais próximo que não tenha sido visitado
@@ -100,6 +102,7 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
             break;
         }
 
+        valorTotalAcumulado += distancias[pontoAtual][proximoPonto];
         cicloHamiltoniano.push_back(proximoPonto);
         visitado[proximoPonto] = true;
         pontoAtual = proximoPonto;
@@ -185,6 +188,7 @@ int main() {
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
+    std::ofstream pathFile("path.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -231,11 +235,15 @@ int main() {
             distancias[i][j] = dist[j];
         }
         altitudes[i][j] = alt[j];
-        if (i == 103 && (j == 139 || j == 126 || j == 127 || j == 138 || j == 137 || j == 159 || j == 142 || j == 151 || j == 152 || j == 130 || j == 143 || j == 156)) {
-            std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
-            print_path(parent, j);
-            std::cout << std::endl;
-        }
+        //if (i == 103 && (j == 139 || j == 126 || j == 127 || j == 138 || j == 137 || j == 159 || j == 142 || j == 151 || j == 152 || j == 130 || j == 143 || j == 156)) {
+            //std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
+            //print_path(parent, j);
+            // Imprima o caminho Hamiltoniano no arquivo
+        pathFile << "Caminho de " << i+1 << " para " << j+1 << ": ";
+        print_path(parent, j, pathFile);
+        pathFile << "\n";
+        std::cout << std::endl;
+        //}
     };
 
     for (int i : validos) {
@@ -243,8 +251,10 @@ int main() {
             dijkstra(c, i, j);
         }
     }
-
+    // Crie um arquivo para registrar o caminho Hamiltoniano
     std::vector<int> cicloHamiltoniano = encontrarCicloHamiltoniano(distancias);
+
+    pathFile.close();
 
     int l =1;
     // Imprima o caminho hamiltoniano
@@ -276,6 +286,8 @@ int main() {
         for (const auto& obstacle : obstaculos) {
             resultadosFile << std::get<0>(obstacle) << " " << std::get<1>(obstacle) << std::endl;
         }
+
+        resultadosFile << "Valor Total do Ciclo: " << valorTotalAcumulado << std::endl;
 
         resultadosFile.close();
     } else {
