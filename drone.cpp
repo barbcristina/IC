@@ -88,7 +88,7 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
     std::vector<bool> visitado(n, false);
     std::vector<int> cicloHamiltoniano;
 
-    int pontoAtual = 0; // Comece a partir de um ponto qualquer (por exemplo, 0)
+    int pontoAtual = 0;
     int pontoInicial = pontoAtual;
 
     cicloHamiltoniano.push_back(pontoAtual);
@@ -98,7 +98,6 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
         int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado, pontoInicial);
 
         if (proximoPonto == -1) {
-            //std::cerr << "Não foi possível encontrar um próximo ponto." << std::endl;
             break;
         }
 
@@ -107,9 +106,6 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
         visitado[proximoPonto] = true;
         pontoAtual = proximoPonto;
     }
-
-    // Certifique-se de que o ciclo termina onde começou (ciclo hamiltoniano)
-    //cicloHamiltoniano.push_back(pontoInicial);
 
     return cicloHamiltoniano;
 }
@@ -188,6 +184,7 @@ int main() {
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
+
     std::ofstream pathFile("path.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
@@ -235,15 +232,10 @@ int main() {
             distancias[i][j] = dist[j];
         }
         altitudes[i][j] = alt[j];
-        //if (i == 103 && (j == 139 || j == 126 || j == 127 || j == 138 || j == 137 || j == 159 || j == 142 || j == 151 || j == 152 || j == 130 || j == 143 || j == 156)) {
-            //std::cout << "Distância mínima de " << i << " para " << j << ": " << distancias[i][j] << ", Caminho: ";
-            //print_path(parent, j);
-            // Imprima o caminho Hamiltoniano no arquivo
-        pathFile << "Caminho de " << i+1 << " para " << j+1 << ": ";
+        pathFile << "Caminho de " << i << " para " << j << ": ";
         print_path(parent, j, pathFile);
         pathFile << "\n";
         std::cout << std::endl;
-        //}
     };
 
     for (int i : validos) {
@@ -251,7 +243,7 @@ int main() {
             dijkstra(c, i, j);
         }
     }
-    // Crie um arquivo para registrar o caminho Hamiltoniano
+    
     std::vector<int> cicloHamiltoniano = encontrarCicloHamiltoniano(distancias);
 
     pathFile.close();
