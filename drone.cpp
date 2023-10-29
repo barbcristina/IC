@@ -106,8 +106,57 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
         visitado[proximoPonto] = true;
         pontoAtual = proximoPonto;
     }
+    //cicloHamiltoniano.push_back(pontoInicial);
 
     return cicloHamiltoniano;
+}
+
+std::pair<std::vector<int>, double> OPT(std::vector<int> rota, std::vector<std::vector<double>>& distancias, double dist){
+    double ganhoMax = 0;
+    std::pair<std::vector<int>, double> melhor;
+    melhor.first = rota;
+    melhor.second = dist;
+    std::vector<int> bestV(4);
+    int n = rota.size();
+    int limc;
+
+    for(int a = 0; a < n-3; a++){
+        int b = a+1;
+        limc = n-1;
+        for(int c = a+2; c < limc; c++){
+            int d=c+1;
+            //if(distancias[rota[a]][rota[b]] < 30 && distancias[rota[c]][rota[d]] < 30 && distancias[rota[a]][rota[c]] < 30 && distancias[rota[b]][rota[d]] < 30);
+            double ganho = (distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]]) - (distancias[rota[a]][rota[c]] + distancias[rota[b]][rota[d]]);
+            if(ganho > ganhoMax){
+                ganhoMax = ganho;
+                bestV = {a, b, c, d};
+                std::cout << rota[a] << "  " << rota[b]<< "  " << rota[c] << "  " << rota[d] << "  " << ganho << std::endl;
+            }
+        }
+    }
+    if(ganhoMax > 0){
+        melhor.second = dist - ganhoMax;
+        melhor.first[bestV[1]] = rota[bestV[2]];
+        melhor.first[bestV[2]] = rota[bestV[1]];
+    }
+    
+    return melhor;
+}
+
+std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota,std::vector<std::vector<double>>& distancias, double dist){
+    bool melhora = true;
+    std::pair<std::vector<int>, double> melhorRota;
+    while(melhora){
+        melhora = false;
+        melhorRota = OPT(rota, distancias, dist);
+        std::cout << melhorRota.second << "  " << dist << std::endl;
+        if(melhorRota.second < dist){
+            rota = melhorRota.first;
+            dist = melhorRota.second;
+            melhora = true;
+        }
+    }
+    return melhorRota;
 }
 
 int main() {
@@ -226,11 +275,11 @@ int main() {
             }
         }
 
-        if (c[i][j] != std::numeric_limits<double>::infinity()) {
-            distancias[i][j] = c[i][j];
-        } else {
-            distancias[i][j] = dist[j];
-        }
+        //if (c[i][j] != std::numeric_limits<double>::infinity()) {
+        //    distancias[i][j] = c[i][j];
+        //} else {
+        distancias[i][j] = dist[j];
+        //}
         altitudes[i][j] = alt[j];
         pathFile << "Caminho de " << i << " para " << j << ": ";
         print_path(parent, j, pathFile);
@@ -245,6 +294,15 @@ int main() {
     }
     
     std::vector<int> cicloHamiltoniano = encontrarCicloHamiltoniano(distancias);
+    //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
+    //cicloHamiltoniano = melhorRota.first;
+
+    double total = 0;
+    std::cout << valorTotalAcumulado << std::endl;
+    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++)
+        total += distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
+
+    valorTotalAcumulado = total;
 
     pathFile.close();
 

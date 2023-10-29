@@ -201,4 +201,4 @@ Obstaculos:
 110 90
 210 30
 230 30
-Valor Total do Ciclo: 3239.2
+Valor Total do Ciclo: 3250.79
