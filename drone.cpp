@@ -8,6 +8,7 @@
 #include <queue>
 #include <algorithm>
 #include <numeric>
+#include <random>
 
 double valorTotalAcumulado = 0.0; // Inicialize com zero
 
@@ -67,7 +68,7 @@ void print_path(const std::vector<int>& parent, int v, std::ofstream& output) {
 }
 
 // Função para encontrar o próximo ponto mais próximo que não tenha sido visitado
-int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado, int pontoInicial) {
+int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado, int pontoInicial, std::vector<int> ciclo) {
     int n = distancias.size();
     int proximoPonto = -1;
     double menorDistancia = std::numeric_limits<double>::max();
@@ -89,13 +90,15 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
     std::vector<int> cicloHamiltoniano;
 
     int pontoAtual = 0;
+    int pontoat = 168;
+    int pontoini = pontoat;
     int pontoInicial = pontoAtual;
 
     cicloHamiltoniano.push_back(pontoAtual);
     visitado[pontoAtual] = true;
-
-    for (int i = 1; i < n; i++) {
-        int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado, pontoInicial);
+    // tentar incluir a penalizacao por angulo aqui
+    for (int i = 1; i < n/2; i++) {
+        int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado, pontoInicial, cicloHamiltoniano);
 
         if (proximoPonto == -1) {
             break;
@@ -106,6 +109,23 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
         visitado[proximoPonto] = true;
         pontoAtual = proximoPonto;
     }
+
+
+    cicloHamiltoniano.push_back(pontoat);
+    visitado[pontoat] = true;
+    for (int i = n/2; i < n; i++) {
+        int proximoPonto = encontrarProximoPonto(pontoat, distancias, visitado, pontoini, cicloHamiltoniano);
+
+        if (proximoPonto == -1) {
+            break;
+        }
+
+        valorTotalAcumulado += distancias[pontoat][proximoPonto];
+        cicloHamiltoniano.push_back(proximoPonto);
+        visitado[proximoPonto] = true;
+        pontoat = proximoPonto;
+    }
+    std::reverse(cicloHamiltoniano.begin() + n/2, cicloHamiltoniano.end());
     //cicloHamiltoniano.push_back(pontoInicial);
 
     return cicloHamiltoniano;
@@ -117,7 +137,7 @@ std::pair<std::vector<int>, double> OPT(std::vector<int> rota, std::vector<std::
     melhor.first = rota;
     melhor.second = dist;
     std::vector<int> bestV(4);
-    int n = rota.size();
+    int n = rota.size()-1;
     int limc;
 
     for(int a = 0; a < n-3; a++){
@@ -297,6 +317,26 @@ int main() {
     //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
     //cicloHamiltoniano = melhorRota.first;
 
+    std::random_device rd;
+    std::mt19937 g(rd());
+
+    //std::shuffle(cicloHamiltoniano.begin(), cicloHamiltoniano.end(), g);
+    //cicloHamiltoniano = {17, 165, 144, 52, 126, 16, 6, 71, 72, 149, 131, 164, 18, 20, 98, 14, 8, 1, 92, 39, 112, 152, 78, 147, 155, 91, 127, 122, 100, 117, 105, 49, 37, 79, 129, 111, 76, 13, 51, 140, 35, 88, 59, 41, 77, 66, 120, 93, 101, 162, 150, 50, 65, 10, 108, 69, 136, 96, 19, 158, 31, 45, 48, 32, 58, 168, 60, 22, 26, 40, 95, 90, 53, 143, 166, 142, 47, 128, 135, 3, 125, 94, 160, 148, 2, 106, 139, 42, 118, 87, 103, 86, 38, 12, 70, 110, 46, 4, 43, 15, 167, 29, 7, 75, 130, 109, 163, 99, 89, 124, 161, 137, 151, 159, 0, 9, 5, 157, 61, 119, 141, 138, 146, 102, 73, 123, 21, 68, 74, 104, 36, 156, 145, 44, 11, 121, 30, 62, 107};
+
+    //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
+    //cicloHamiltoniano = melhorRota.first;
+
+    //caminho encontrado pelo modelo
+    //[1, 2, 3, 16, 15, 14, 27, 40, 53, 66, 79, 92, 93, 80, 67, 54, 41, 42, 43, 30, 17, 4, 5, 6, 7, 8, 9, 10, 12, 13, 11, 23, 22, 21, 20, 19, 18, 31, 44, 45, 32, 33, 46, 47, 60, 59, 71, 69, 70, 72, 73, 74, 75, 62, 61, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 76, 89, 90, 77, 78, 91, 104, 103, 102, 101, 88, 87, 100, 99, 112, 125, 124, 111, 110, 97, 96, 95, 94, 107, 106, 105, 118, 131, 144, 157, 158, 159, 160, 147, 146, 145, 132, 119, 120, 121, 108, 109, 122, 123, 136, 149, 148, 161, 162, 163, 164, 151, 150, 137, 138, 139, 126, 113, 127, 128, 129, 130, 143, 142, 141, 140, 153, 152, 165, 166, 167, 168, 169, 156]
+    //std::vector<int> fo(validos.size());
+    //fo = {1, 2, 3, 16, 15, 14, 27, 40, 53, 66, 79, 92, 93, 80, 67, 54, 41, 42, 43, 30, 17, 4, 5, 6, 7, 8, 9, 10, 12, 13, 11, 23, 22, 21, 20, 19, 18, 31, 44, 45, 32, 33, 46, 47, 60, 59, 71, 69, 70, 72, 73, 74, 75, 62, 61, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 76, 89, 90, 77, 78, 91, 104, 103, 102, 101, 88, 87, 100, 99, 112, 125, 124, 111, 110, 97, 96, 95, 94, 107, 106, 105, 118, 131, 144, 157, 158, 159, 160, 147, 146, 145, 132, 119, 120, 121, 108, 109, 122, 123, 136, 149, 148, 161, 162, 163, 164, 151, 150, 137, 138, 139, 126, 113, 127, 128, 129, 130, 143, 142, 141, 140, 153, 152, 165, 166, 167, 168, 169, 156};
+    //fo = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 12, 11, 23, 22, 21, 20, 33, 32, 19, 18, 17, 16, 15, 14, 27, 40, 53, 66, 67, 54, 41, 42, 43, 30, 31, 44, 45, 46, 47, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 62, 61, 60, 59, 71, 70, 69, 72, 73, 74, 87, 88, 75, 76, 77, 78, 91, 104, 103, 90, 89, 102, 101, 100, 99, 112, 113, 126, 125, 124, 111, 110, 97, 96, 109, 108, 95, 94, 93, 80, 79, 92, 105, 106, 107, 120, 121, 122, 123, 136, 137, 138, 139, 140, 127, 128, 129, 130, 143, 142, 141, 153, 152, 151, 150, 149, 148, 147, 146, 145, 132, 119, 118, 131, 144, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 156};
+    //double totalfo = 0;
+    //for(int i = 0; i < fo.size() - 1; i++)
+    //    totalfo += distancias[fo[i]-1][fo[i+1]-1];
+
+    //std::cout << "Total Gurobi: " << totalfo << std::endl;
+
     double total = 0;
     std::cout << valorTotalAcumulado << std::endl;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++)
@@ -310,7 +350,7 @@ int main() {
     // Imprima o caminho hamiltoniano
     std::cout << "Ciclo Hamiltoniano: " << std::endl;
     for (int vertice : cicloHamiltoniano) {
-        std::cout << vertice << " ";
+        std::cout << vertice << ", ";
         if(l%13 == 0){
         std::cout << std::endl;
         l++;
