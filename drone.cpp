@@ -87,7 +87,7 @@ int encontrarProximoPonto(int atual, const std::vector<std::vector<double>>& dis
 std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double>>& distancias) {
     int n = distancias.size();
     std::vector<bool> visitado(n, false);
-    std::vector<int> cicloHamiltoniano;
+    std::vector<int> cicloHamiltoniano, cicloHamiltoniano2;
 
     int pontoAtual = 0;
     int pontoat = 168;
@@ -95,38 +95,44 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
     int pontoInicial = pontoAtual;
 
     cicloHamiltoniano.push_back(pontoAtual);
+    cicloHamiltoniano2.push_back(pontoini);
     visitado[pontoAtual] = true;
+     visitado[pontoat] = true;
     // tentar incluir a penalizacao por angulo aqui
-    for (int i = 1; i < n/2; i++) {
+    for (int i = 1; i < n; i++) {
         int proximoPonto = encontrarProximoPonto(pontoAtual, distancias, visitado, pontoInicial, cicloHamiltoniano);
+        int proximoPontofin = encontrarProximoPonto(pontoat, distancias, visitado, pontoini, cicloHamiltoniano);
 
         if (proximoPonto == -1) {
             break;
         }
 
-        valorTotalAcumulado += distancias[pontoAtual][proximoPonto];
-        cicloHamiltoniano.push_back(proximoPonto);
-        visitado[proximoPonto] = true;
-        pontoAtual = proximoPonto;
-    }
+        std::cout << proximoPonto << " " << visitado[proximoPonto] << std::endl;
 
+        if(visitado[proximoPonto] == false){
+            valorTotalAcumulado += distancias[pontoAtual][proximoPonto];
+            cicloHamiltoniano.push_back(proximoPonto);
+            visitado[proximoPonto] = true;
+            pontoAtual = proximoPonto;
+        }
 
-    cicloHamiltoniano.push_back(pontoat);
-    visitado[pontoat] = true;
-    for (int i = n/2; i < n; i++) {
-        int proximoPonto = encontrarProximoPonto(pontoat, distancias, visitado, pontoini, cicloHamiltoniano);
-
-        if (proximoPonto == -1) {
+        if (proximoPontofin == -1) {
             break;
         }
 
-        valorTotalAcumulado += distancias[pontoat][proximoPonto];
-        cicloHamiltoniano.push_back(proximoPonto);
-        visitado[proximoPonto] = true;
-        pontoat = proximoPonto;
+        if(visitado[proximoPontofin] == false){
+            valorTotalAcumulado += distancias[pontoat][proximoPontofin];
+            cicloHamiltoniano2.push_back(proximoPontofin);
+            visitado[proximoPontofin] = true;
+            pontoat = proximoPontofin;
+        }
     }
-    std::reverse(cicloHamiltoniano.begin() + n/2, cicloHamiltoniano.end());
-    //cicloHamiltoniano.push_back(pontoInicial);
+
+    std::reverse(cicloHamiltoniano2.begin(), cicloHamiltoniano2.end());
+
+    for(int i = 0 ; i < cicloHamiltoniano2.size(); i++){
+        cicloHamiltoniano.push_back(cicloHamiltoniano2[i]);
+    }
 
     return cicloHamiltoniano;
 }
@@ -317,25 +323,9 @@ int main() {
     //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
     //cicloHamiltoniano = melhorRota.first;
 
-    std::random_device rd;
-    std::mt19937 g(rd());
+    std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
+    cicloHamiltoniano = melhorRota.first;
 
-    //std::shuffle(cicloHamiltoniano.begin(), cicloHamiltoniano.end(), g);
-    //cicloHamiltoniano = {17, 165, 144, 52, 126, 16, 6, 71, 72, 149, 131, 164, 18, 20, 98, 14, 8, 1, 92, 39, 112, 152, 78, 147, 155, 91, 127, 122, 100, 117, 105, 49, 37, 79, 129, 111, 76, 13, 51, 140, 35, 88, 59, 41, 77, 66, 120, 93, 101, 162, 150, 50, 65, 10, 108, 69, 136, 96, 19, 158, 31, 45, 48, 32, 58, 168, 60, 22, 26, 40, 95, 90, 53, 143, 166, 142, 47, 128, 135, 3, 125, 94, 160, 148, 2, 106, 139, 42, 118, 87, 103, 86, 38, 12, 70, 110, 46, 4, 43, 15, 167, 29, 7, 75, 130, 109, 163, 99, 89, 124, 161, 137, 151, 159, 0, 9, 5, 157, 61, 119, 141, 138, 146, 102, 73, 123, 21, 68, 74, 104, 36, 156, 145, 44, 11, 121, 30, 62, 107};
-
-    //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado);
-    //cicloHamiltoniano = melhorRota.first;
-
-    //caminho encontrado pelo modelo
-    //[1, 2, 3, 16, 15, 14, 27, 40, 53, 66, 79, 92, 93, 80, 67, 54, 41, 42, 43, 30, 17, 4, 5, 6, 7, 8, 9, 10, 12, 13, 11, 23, 22, 21, 20, 19, 18, 31, 44, 45, 32, 33, 46, 47, 60, 59, 71, 69, 70, 72, 73, 74, 75, 62, 61, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 76, 89, 90, 77, 78, 91, 104, 103, 102, 101, 88, 87, 100, 99, 112, 125, 124, 111, 110, 97, 96, 95, 94, 107, 106, 105, 118, 131, 144, 157, 158, 159, 160, 147, 146, 145, 132, 119, 120, 121, 108, 109, 122, 123, 136, 149, 148, 161, 162, 163, 164, 151, 150, 137, 138, 139, 126, 113, 127, 128, 129, 130, 143, 142, 141, 140, 153, 152, 165, 166, 167, 168, 169, 156]
-    //std::vector<int> fo(validos.size());
-    //fo = {1, 2, 3, 16, 15, 14, 27, 40, 53, 66, 79, 92, 93, 80, 67, 54, 41, 42, 43, 30, 17, 4, 5, 6, 7, 8, 9, 10, 12, 13, 11, 23, 22, 21, 20, 19, 18, 31, 44, 45, 32, 33, 46, 47, 60, 59, 71, 69, 70, 72, 73, 74, 75, 62, 61, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 76, 89, 90, 77, 78, 91, 104, 103, 102, 101, 88, 87, 100, 99, 112, 125, 124, 111, 110, 97, 96, 95, 94, 107, 106, 105, 118, 131, 144, 157, 158, 159, 160, 147, 146, 145, 132, 119, 120, 121, 108, 109, 122, 123, 136, 149, 148, 161, 162, 163, 164, 151, 150, 137, 138, 139, 126, 113, 127, 128, 129, 130, 143, 142, 141, 140, 153, 152, 165, 166, 167, 168, 169, 156};
-    //fo = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 12, 11, 23, 22, 21, 20, 33, 32, 19, 18, 17, 16, 15, 14, 27, 40, 53, 66, 67, 54, 41, 42, 43, 30, 31, 44, 45, 46, 47, 48, 49, 36, 37, 38, 39, 52, 51, 50, 63, 62, 61, 60, 59, 71, 70, 69, 72, 73, 74, 87, 88, 75, 76, 77, 78, 91, 104, 103, 90, 89, 102, 101, 100, 99, 112, 113, 126, 125, 124, 111, 110, 97, 96, 109, 108, 95, 94, 93, 80, 79, 92, 105, 106, 107, 120, 121, 122, 123, 136, 137, 138, 139, 140, 127, 128, 129, 130, 143, 142, 141, 153, 152, 151, 150, 149, 148, 147, 146, 145, 132, 119, 118, 131, 144, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 156};
-    //double totalfo = 0;
-    //for(int i = 0; i < fo.size() - 1; i++)
-    //    totalfo += distancias[fo[i]-1][fo[i+1]-1];
-
-    //std::cout << "Total Gurobi: " << totalfo << std::endl;
 
     double total = 0;
     std::cout << valorTotalAcumulado << std::endl;
@@ -345,6 +335,7 @@ int main() {
     valorTotalAcumulado = total;
 
     pathFile.close();
+    std::cout << cicloHamiltoniano.size() << std::endl;
 
     int l =1;
     // Imprima o caminho hamiltoniano
