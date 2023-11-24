@@ -140,6 +140,8 @@ std::vector<int> encontrarCicloHamiltoniano(const std::vector<std::vector<double
         cicloHamiltoniano.push_back(cicloHamiltoniano2[i]);
     }
 
+    cicloHamiltoniano.push_back(0);
+
     return cicloHamiltoniano;
 }
 
@@ -189,56 +191,6 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota,std::vect
         }
     }
     return melhorRota;
-}
-
-std::vector<int> construirCicloCheapestInsertion(const std::vector<std::vector<double>>& distancias) {
-    int n = distancias.size();
-    std::vector<int> ciclo;
-    std::vector<bool> visitado(n, false);
-
-    // Comece com o ponto 0 e marque como visitado
-    ciclo.push_back(0);
-    visitado[0] = true;
-
-    while (ciclo.size() < n-30) {
-        std::cout << ciclo.size() << std::endl;
-        int cidadeAInserir = -1;
-        int cidadeExistenteNoCiclo = -1;
-        double menorDistanciaAdicional = std::numeric_limits<double>::max();
-
-        // Para cada cidade no ciclo atual
-        for (size_t i = 0; i < ciclo.size(); i++) {
-            int cidade1 = ciclo[i];
-
-            // Encontre a cidade mais próxima que ainda não está no ciclo
-            for (int j = 0; j < n; j++) {
-                if (!visitado[j]) {
-                    // Calcule a distância adicional se inserirmos a cidade j entre cidade1 e a cidade no ciclo
-                    int cidade2 = ciclo[(i + 1) % ciclo.size()];  // Próxima cidade no ciclo
-                    double distanciaAdicional = distancias[cidade1][j] + distancias[j][cidade2] - distancias[cidade1][cidade2];
-
-                    // Se a distância adicional for a menor encontrada até agora, atualize os valores
-                    if (distanciaAdicional < menorDistanciaAdicional) {
-                        cidadeAInserir = j;
-                        cidadeExistenteNoCiclo = cidade1;
-                        menorDistanciaAdicional = distanciaAdicional;
-                    }
-                }
-            }
-        }
-
-        // Insira a cidade encontrada no ciclo entre cidadeExistenteNoCiclo e a próxima cidade
-        for (size_t i = 0; i < ciclo.size(); i++) {
-            if (ciclo[i] == cidadeExistenteNoCiclo) {
-                ciclo.insert(ciclo.begin() + i + 1, cidadeAInserir);
-                break;
-            }
-        }
-
-        visitado[cidadeAInserir] = true;
-    }
-
-    return ciclo;
 }
 
 std::vector<int> construirFronteira(std::vector<int> obstaculos_indices, int largura, int altura) {
@@ -585,16 +537,29 @@ int main() {
     //std::vector<int> cicloHamiltoniano = construirCicloCheapestInsertion(distancias2);
     //std::vector<int> cicloHamiltoniano = construirCaminhoInsercaoMaisBarata(distancias2, fronteira, q, altitudes);
 
-    //std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado, q, altitudes);
-    //cicloHamiltoniano = melhorRota.first;
+    std::pair<std::vector<int>, double> melhorRota = Local_Search(cicloHamiltoniano, distancias, valorTotalAcumulado, q, altitudes);
+    cicloHamiltoniano = melhorRota.first;
+    //std::vector<int> cicloHamiltoniano = {1, 14, 27, 15, 16, 17, 30, 31, 18, 19, 32, 45, 44, 43, 42, 41, 40, 53, 54, 67, 66, 79, 80, 93, 92, 105, 106, 107, 94, 95, 96, 97, 110, 111, 124, 125, 138, 139, 140, 153, 152, 151, 150, 137, 136, 123, 122, 109, 108, 121, 120, 119, 118, 131, 132, 145, 144, 157, 158, 159, 146, 147, 160, 161, 148, 149, 162, 163, 164, 165, 166, 167, 168, 169, 156, 143, 130, 129, 142, 141, 128, 127, 126, 113, 112, 99, 100, 101, 102, 103, 104, 91, 78, 77, 90, 89, 76, 75, 88, 87, 74, 73, 72, 71, 70, 69, 59, 60, 61, 62, 63, 50, 51, 52, 39, 38, 37, 36, 49, 48, 47, 46, 33, 20, 21, 22, 23, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 
     double total = 0;
     std::cout << valorTotalAcumulado << std::endl;
-    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++)
+    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
+    }
+
+    //std::cout << valorTotalAcumulado << std::endl;
+    //for(int i = 0; i < cicloHamiltoniano.size(); i++){
+    //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
+    //}
 
     valorTotalAcumulado = total;
+
+    //double totalfo = 0;
+    //for(int i = 0; i < fo.size() - 1; i++)
+    //    totalfo += distancias[fo[i]-1][fo[i+1]-1];
+
+    std::cout << "Total Gurobi: " << valorTotalAcumulado << std::endl;
 
     auto end_time = std::chrono::steady_clock::now();
 
