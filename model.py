@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 
-mapas = 'mapas8.txt'
+mapas = 'mapas16.txt'
 
 # Abrir o arquivo para leitura
 with open(mapas, 'r') as arquivo:
@@ -24,9 +24,9 @@ n = len(coord)  # número de células (pontos)
 coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
 #8x8
-obstaculos_indices = [20, 21, 22, 23, 40, 41, 42, 61, 59, 60]
+#obstaculos_indices = [26, 27, 46, 48, 47, 61, 62, 63, 93, 94, 95, 114, 112, 113, 150, 151, 152, 130, 131, 132, 170, 171, 172, 173]
 #15x15
-# obstaculos_indices = [11, 12, 13, 14, 19, 20, 21, 22, 36, 33, 34, 35, 50, 51, 52, 53, 54, 78, 79, 80, 81, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 192, 193, 191, 167, 168, 169, 170, 198, 199, 200, 201]
+obstaculos_indices = [19, 20, 21, 22, 50, 51, 52, 53, 54, 76, 77, 78, 205, 206, 207, 79, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 167, 168, 169, 170, 231, 232, 233]
 # 13x13
 # obstaculos_indices = [33, 34, 153, 154, 67, 80, 82, 83, 84, 85, 132, 133, 134, 25, 97, 27, 28, 63, 64, 113, 114, 115, 116, 81, 54, 55, 56, 57, 23, 24]
 obstaculos = [coord[i] for i in obstaculos_indices]
@@ -265,4 +265,4 @@ plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
 plt.title(f"Cost = {modelo.objVal:.2f}")
 
-plt.savefig('gurobi64.png')
+plt.savefig('gurobi256.png')
