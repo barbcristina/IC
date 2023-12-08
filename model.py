@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 
-mapas = 'mapas16.txt'
+mapas = 'mapas12.txt'
 
 # Abrir o arquivo para leitura
 with open(mapas, 'r') as arquivo:
@@ -26,9 +26,9 @@ coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 #8x8
 #obstaculos_indices = [26, 27, 46, 48, 47, 61, 62, 63, 93, 94, 95, 114, 112, 113, 150, 151, 152, 130, 131, 132, 170, 171, 172, 173]
 #15x15
-obstaculos_indices = [19, 20, 21, 22, 50, 51, 52, 53, 54, 76, 77, 78, 205, 206, 207, 79, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 167, 168, 169, 170, 231, 232, 233]
+# obstaculos_indices = [19, 20, 21, 22, 50, 51, 52, 53, 54, 76, 77, 78, 205, 206, 207, 79, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 167, 168, 169, 170, 231, 232, 233]
 # 13x13
-# obstaculos_indices = [33, 34, 153, 154, 67, 80, 82, 83, 84, 85, 132, 133, 134, 25, 97, 27, 28, 63, 64, 113, 114, 115, 116, 81, 54, 55, 56, 57, 23, 24]
+obstaculos_indices = [13, 14, 15, 22, 23, 40, 41, 42, 43, 67, 68, 69, 84, 85, 104, 105, 106, 107, 122, 123, 124, 125]
 obstaculos = [coord[i] for i in obstaculos_indices]
 validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
 
@@ -73,7 +73,7 @@ def calcular_a(i, j, k):
     div = (r + s - t)/math.sqrt(4*r*s)
     ang = math.pi - math.acos(div)
 
-    angulo = (0.5 * (180/math.pi) * ang)
+    angulo = (0.1 * (180/math.pi) * ang)
     #print("angulo entre: ", i, " ", j, " ",k, " = ", angulo)
 
     return angulo
@@ -127,6 +127,7 @@ def dijkstra(c, i, j):
                 angulos = calcular_a(parent[u] if parent[u] is not None else u, u, v)
                 alt[v] = alt[u] + altitude
                 dist[v] = dist[u] + (c[u][v] + angulos)
+                parent[v] = u
                 heapq.heappush(heap, (dist[v], v))
     if c[i][j] != float('inf'):
       distancias[i][j] = c[i][j]
@@ -150,7 +151,7 @@ x = modelo.addVars(n, n, vtype=gp.GRB.BINARY, name="x")
 u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
 y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y")
 
-modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i for k in validos if j != k), sense=gp.GRB.MINIMIZE)
+modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
 #ponto inical: ini; ponto final: fin
 for i in validos:
@@ -181,7 +182,7 @@ for i in validos:
     for j in validos:
       if j!=ini:
         for k in validos:
-          if k!=ini and k!=j:
+          if k!=ini:
             modelo.addConstr(y[i, j, k] <= x[j, k])
             modelo.addConstr(y[i, j, k] <= x[i, j])
 
@@ -265,4 +266,4 @@ plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
 plt.title(f"Cost = {modelo.objVal:.2f}")
 
-plt.savefig('gurobi256.png')
+plt.savefig('gurobi144.png')
