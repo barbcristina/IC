@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 
-mapas = 'mapas12.txt'
+mapas = 'mapas10.txt'
 
 # Abrir o arquivo para leitura
 with open(mapas, 'r') as arquivo:
@@ -22,13 +22,13 @@ coord = [tuple(linha.split()) for linha in linhas]
 
 n = len(coord)  # número de células (pontos)
 coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
-
+obstaculos_indices = [13, 15, 14, 24, 25, 26, 57, 58, 59, 70, 71, 72, 94, 95, 96]
 #8x8
-#obstaculos_indices = [26, 27, 46, 48, 47, 61, 62, 63, 93, 94, 95, 114, 112, 113, 150, 151, 152, 130, 131, 132, 170, 171, 172, 173]
+#obstaculos_indices = [20, 21, 22, 23, 40, 41, 42, 59, 60, 61]
 #15x15
 # obstaculos_indices = [19, 20, 21, 22, 50, 51, 52, 53, 54, 76, 77, 78, 205, 206, 207, 79, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 167, 168, 169, 170, 231, 232, 233]
-# 13x13
-obstaculos_indices = [13, 14, 15, 22, 23, 40, 41, 42, 43, 67, 68, 69, 84, 85, 104, 105, 106, 107, 122, 123, 124, 125]
+# 12x12
+#obstaculos_indices = [13, 14, 15, 22, 23, 40, 41, 42, 43, 67, 68, 69, 84, 85, 104, 105, 106, 107, 122, 123, 124, 125]
 obstaculos = [coord[i] for i in obstaculos_indices]
 validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
 
@@ -73,7 +73,7 @@ def calcular_a(i, j, k):
     div = (r + s - t)/math.sqrt(4*r*s)
     ang = math.pi - math.acos(div)
 
-    angulo = (0.1 * (180/math.pi) * ang)
+    angulo = (0.2 * (180/math.pi) * ang)
     #print("angulo entre: ", i, " ", j, " ",k, " = ", angulo)
 
     return angulo
@@ -188,10 +188,9 @@ for i in validos:
 
 # Restrição 6
 for i in validos:
-  if i!=ini:
     for j in validos:
-      if j!=ini:
-        modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
+        for k in validos:
+            modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
 modelo.optimize()
 
@@ -208,6 +207,25 @@ if modelo.status == gp.GRB.OPTIMAL:
                 route.append(j+1)
     route.append(1)
     print(route)
+
+    total = 0
+    for i in range(n):
+       for j in range(n):
+          if i == j: continue
+          if distancias[i][j] == float('inf') : continue
+          total += x[i,j].X * distancias[i][j]
+
+    for i in range(n):
+       for j in range(n):
+          if i == j: continue
+          for k in range(n):
+             if j == k: continue
+             if distancias[i][j] == float('inf') : continue
+             total += y[i,j,k].X * q[i][j][k]
+             print(y[i,j,k].X, " ", q[i][j][k])
+
+    print(total)
+    print(modelo.objVal)   
 else:
     print("Solução não necessária ótima.")
     # for i in range(n):
@@ -266,4 +284,4 @@ plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
 plt.title(f"Cost = {modelo.objVal:.2f}")
 
-plt.savefig('gurobi144.png')
+plt.savefig('gurobi100.png')
