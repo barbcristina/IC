@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 
-mapas = 'mapas10.txt'
+mapas = 'mapas8.txt'
 
 # Abrir o arquivo para leitura
 with open(mapas, 'r') as arquivo:
@@ -21,14 +21,18 @@ linhas = dados.strip().split('\n')
 coord = [tuple(linha.split()) for linha in linhas]
 
 n = len(coord)  # número de células (pontos)
+
 coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
-obstaculos_indices = [13, 15, 14, 24, 25, 26, 57, 58, 59, 70, 71, 72, 94, 95, 96]
+#10x10
+#obstaculos_indices = [13, 15, 14, 41, 42, 43, 57, 58, 59, 71, 72, 73, 97, 98, 99]
 #8x8
-#obstaculos_indices = [20, 21, 22, 23, 40, 41, 42, 59, 60, 61]
-#15x15
-# obstaculos_indices = [19, 20, 21, 22, 50, 51, 52, 53, 54, 76, 77, 78, 205, 206, 207, 79, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 167, 168, 169, 170, 231, 232, 233]
-# 12x12
-#obstaculos_indices = [13, 14, 15, 22, 23, 40, 41, 42, 43, 67, 68, 69, 84, 85, 104, 105, 106, 107, 122, 123, 124, 125]
+obstaculos_indices = [20, 21, 22, 23, 40, 41, 42, 59, 60, 61]
+#9x9
+#obstaculos_indices = [12, 13, 14, 41, 42, 43, 64, 65, 66]
+# 7x7
+#obstaculos_indices = [12, 13, 22, 23, 38, 39, 40]
+# 6x6
+#obstaculos_indices = [7, 8, 22, 23, 30, 31]
 obstaculos = [coord[i] for i in obstaculos_indices]
 validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
 
@@ -151,8 +155,9 @@ x = modelo.addVars(n, n, vtype=gp.GRB.BINARY, name="x")
 u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
 y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y")
 
-modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
+modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
+#+ gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i)
 #ponto inical: ini; ponto final: fin
 for i in validos:
   if i != fin:
@@ -176,22 +181,13 @@ for i in validos:
     modelo.addConstr(u[i] >= 1)
     modelo.addConstr(u[i] <= n - 1)
 
-# Restrição 5
-for i in validos:
-  if i!=ini:
-    for j in validos:
-      if j!=ini:
-        for k in validos:
-          if k!=ini:
-            modelo.addConstr(y[i, j, k] <= x[j, k])
-            modelo.addConstr(y[i, j, k] <= x[i, j])
-
 # Restrição 6
 for i in validos:
     for j in validos:
         for k in validos:
             modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
+modelo.Params.timeLimit = 10800
 modelo.optimize()
 
 if modelo.status == gp.GRB.OPTIMAL:
@@ -208,24 +204,6 @@ if modelo.status == gp.GRB.OPTIMAL:
     route.append(1)
     print(route)
 
-    total = 0
-    for i in range(n):
-       for j in range(n):
-          if i == j: continue
-          if distancias[i][j] == float('inf') : continue
-          total += x[i,j].X * distancias[i][j]
-
-    for i in range(n):
-       for j in range(n):
-          if i == j: continue
-          for k in range(n):
-             if j == k: continue
-             if distancias[i][j] == float('inf') : continue
-             total += y[i,j,k].X * q[i][j][k]
-             print(y[i,j,k].X, " ", q[i][j][k])
-
-    print(total)
-    print(modelo.objVal)   
 else:
     print("Solução não necessária ótima.")
     # for i in range(n):

@@ -8,18 +8,18 @@ Caminho de 0 para 6: 0 1 2 3 4 5 6
 Caminho de 0 para 7: 0 1 2 3 4 5 6 7 
 Caminho de 0 para 8: 0 8 
 Caminho de 0 para 9: 0 9 
-Caminho de 0 para 10: 0 1 2 3 10 
-Caminho de 0 para 11: 0 1 2 3 11 
-Caminho de 0 para 12: 0 1 2 3 4 5 12 
-Caminho de 0 para 13: 0 1 2 3 4 5 13 
-Caminho de 0 para 14: 0 1 2 3 4 5 6 14 
-Caminho de 0 para 15: 0 1 2 3 4 5 6 7 15 
+Caminho de 0 para 10: 0 9 10 
+Caminho de 0 para 11: 0 1 2 11 
+Caminho de 0 para 12: 0 1 2 3 12 
+Caminho de 0 para 13: 0 1 2 3 4 13 
+Caminho de 0 para 14: 0 1 2 3 4 5 14 
+Caminho de 0 para 15: 0 1 2 3 4 5 6 15 
 Caminho de 0 para 16: 0 8 16 
-Caminho de 0 para 17: 0 8 16 24 17 
+Caminho de 0 para 17: 0 9 17 
 Caminho de 0 para 18: 0 9 18 
 Caminho de 0 para 19: 0 9 18 19 
 Caminho de 0 para 24: 0 8 16 24 
-Caminho de 0 para 25: 0 8 16 24 25 
+Caminho de 0 para 25: 0 8 16 25 
 Caminho de 0 para 26: 0 9 18 26 
 Caminho de 0 para 27: 0 9 18 27 
 Caminho de 0 para 28: 0 9 18 27 28 
@@ -27,29 +27,29 @@ Caminho de 0 para 29: 0 9 18 27 28 29
 Caminho de 0 para 30: 0 9 18 27 28 29 30 
 Caminho de 0 para 31: 0 9 18 27 28 29 30 31 
 Caminho de 0 para 32: 0 8 16 24 32 
-Caminho de 0 para 33: 0 9 18 26 33 
-Caminho de 0 para 34: 0 9 18 26 34 
+Caminho de 0 para 33: 0 8 16 24 33 
+Caminho de 0 para 34: 0 8 16 25 34 
 Caminho de 0 para 35: 0 9 18 27 35 
 Caminho de 0 para 36: 0 9 18 27 36 
 Caminho de 0 para 37: 0 9 18 27 36 37 
 Caminho de 0 para 38: 0 9 18 27 36 37 38 
 Caminho de 0 para 39: 0 9 18 27 36 37 38 39 
-Caminho de 0 para 43: 0 9 18 27 35 43 
+Caminho de 0 para 43: 0 8 16 25 34 43 
 Caminho de 0 para 44: 0 9 18 27 36 44 
 Caminho de 0 para 45: 0 9 18 27 36 45 
 Caminho de 0 para 46: 0 9 18 27 36 45 46 
 Caminho de 0 para 47: 0 9 18 27 36 45 46 47 
-Caminho de 0 para 48: 0 9 18 27 35 43 51 50 49 48 
-Caminho de 0 para 49: 0 9 18 27 35 43 51 50 49 
-Caminho de 0 para 50: 0 9 18 27 35 43 51 50 
-Caminho de 0 para 51: 0 9 18 27 35 43 51 
-Caminho de 0 para 52: 0 9 18 27 36 44 52 
+Caminho de 0 para 48: 0 8 16 25 34 43 50 49 48 
+Caminho de 0 para 49: 0 8 16 25 34 43 50 49 
+Caminho de 0 para 50: 0 8 16 25 34 43 50 
+Caminho de 0 para 51: 0 8 16 25 34 43 51 
+Caminho de 0 para 52: 0 8 16 25 34 43 52 
 Caminho de 0 para 53: 0 9 18 27 36 45 53 
 Caminho de 0 para 54: 0 9 18 27 36 45 54 
 Caminho de 0 para 55: 0 9 18 27 36 45 54 55 
-Caminho de 0 para 56: 0 9 18 27 35 43 51 58 57 56 
-Caminho de 0 para 57: 0 9 18 27 35 43 51 58 57 
-Caminho de 0 para 58: 0 9 18 27 35 43 51 58 
+Caminho de 0 para 56: 0 8 16 25 34 43 50 57 56 
+Caminho de 0 para 57: 0 8 16 25 34 43 50 57 
+Caminho de 0 para 58: 0 8 16 25 34 43 51 58 
 Caminho de 0 para 62: 0 9 18 27 36 45 54 62 
 Caminho de 0 para 63: 0 9 18 27 36 45 54 63 
 Caminho de 1 para 0: 1 0 
@@ -63,48 +63,48 @@ Caminho de 1 para 7: 1 2 3 4 5 6 7
 Caminho de 1 para 8: 1 8 
 Caminho de 1 para 9: 1 9 
 Caminho de 1 para 10: 1 10 
-Caminho de 1 para 11: 1 2 3 4 11 
-Caminho de 1 para 12: 1 2 3 4 12 
-Caminho de 1 para 13: 1 2 3 4 5 13 
-Caminho de 1 para 14: 1 2 3 4 5 6 14 
-Caminho de 1 para 15: 1 2 3 4 5 6 7 15 
-Caminho de 1 para 16: 1 9 17 16 
+Caminho de 1 para 11: 1 10 11 
+Caminho de 1 para 12: 1 2 3 12 
+Caminho de 1 para 13: 1 2 3 4 13 
+Caminho de 1 para 14: 1 2 3 4 5 14 
+Caminho de 1 para 15: 1 2 3 4 5 6 15 
+Caminho de 1 para 16: 1 8 16 
 Caminho de 1 para 17: 1 9 17 
-Caminho de 1 para 18: 1 9 17 25 18 
+Caminho de 1 para 18: 1 10 18 
 Caminho de 1 para 19: 1 10 19 
-Caminho de 1 para 24: 1 9 17 25 24 
+Caminho de 1 para 24: 1 9 17 24 
 Caminho de 1 para 25: 1 9 17 25 
-Caminho de 1 para 26: 1 9 17 25 26 
+Caminho de 1 para 26: 1 9 17 26 
 Caminho de 1 para 27: 1 10 19 27 
 Caminho de 1 para 28: 1 10 19 28 
 Caminho de 1 para 29: 1 10 19 28 29 
 Caminho de 1 para 30: 1 10 19 28 29 30 
 Caminho de 1 para 31: 1 10 19 28 29 30 31 
-Caminho de 1 para 32: 1 9 17 25 33 32 
+Caminho de 1 para 32: 1 9 17 25 32 
 Caminho de 1 para 33: 1 9 17 25 33 
-Caminho de 1 para 34: 1 10 19 27 34 
-Caminho de 1 para 35: 1 10 19 27 35 
+Caminho de 1 para 34: 1 9 17 25 34 
+Caminho de 1 para 35: 1 9 17 26 35 
 Caminho de 1 para 36: 1 10 19 28 36 
 Caminho de 1 para 37: 1 10 19 28 37 
 Caminho de 1 para 38: 1 10 19 28 37 38 
 Caminho de 1 para 39: 1 10 19 28 37 38 39 
-Caminho de 1 para 43: 1 10 19 27 35 43 
-Caminho de 1 para 44: 1 10 19 28 36 44 
+Caminho de 1 para 43: 1 9 17 25 34 43 
+Caminho de 1 para 44: 1 9 17 26 35 44 
 Caminho de 1 para 45: 1 10 19 28 37 45 
 Caminho de 1 para 46: 1 10 19 28 37 46 
 Caminho de 1 para 47: 1 10 19 28 37 46 47 
-Caminho de 1 para 48: 1 10 19 27 35 43 51 50 49 48 
-Caminho de 1 para 49: 1 10 19 27 35 43 51 50 49 
-Caminho de 1 para 50: 1 10 19 27 35 43 51 50 
-Caminho de 1 para 51: 1 10 19 27 35 43 51 
-Caminho de 1 para 52: 1 10 19 28 36 44 52 
-Caminho de 1 para 53: 1 10 19 28 37 45 53 
+Caminho de 1 para 48: 1 9 17 25 34 43 50 49 48 
+Caminho de 1 para 49: 1 9 17 25 34 43 50 49 
+Caminho de 1 para 50: 1 9 17 25 34 43 50 
+Caminho de 1 para 51: 1 9 17 25 34 43 51 
+Caminho de 1 para 52: 1 9 17 25 34 43 52 
+Caminho de 1 para 53: 1 9 17 26 35 44 53 
 Caminho de 1 para 54: 1 10 19 28 37 46 54 
 Caminho de 1 para 55: 1 10 19 28 37 46 55 
-Caminho de 1 para 56: 1 10 19 27 35 43 51 58 57 56 
-Caminho de 1 para 57: 1 10 19 27 35 43 51 58 57 
-Caminho de 1 para 58: 1 10 19 27 35 43 51 58 
-Caminho de 1 para 62: 1 10 19 28 37 46 54 62 
+Caminho de 1 para 56: 1 9 17 25 34 43 50 57 56 
+Caminho de 1 para 57: 1 9 17 25 34 43 50 57 
+Caminho de 1 para 58: 1 9 17 25 34 43 51 58 
+Caminho de 1 para 62: 1 9 17 26 35 44 53 62 
 Caminho de 1 para 63: 1 10 19 28 37 46 55 63 
 Caminho de 2 para 0: 2 1 0 
 Caminho de 2 para 1: 2 1 
@@ -114,52 +114,52 @@ Caminho de 2 para 4: 2 3 4
 Caminho de 2 para 5: 2 3 4 5 
 Caminho de 2 para 6: 2 3 4 5 6 
 Caminho de 2 para 7: 2 3 4 5 6 7 
-Caminho de 2 para 8: 2 9 16 8 
+Caminho de 2 para 8: 2 9 8 
 Caminho de 2 para 9: 2 9 
 Caminho de 2 para 10: 2 10 
 Caminho de 2 para 11: 2 11 
-Caminho de 2 para 12: 2 3 4 12 
-Caminho de 2 para 13: 2 3 4 5 13 
-Caminho de 2 para 14: 2 3 4 5 6 14 
-Caminho de 2 para 15: 2 3 4 5 6 7 15 
+Caminho de 2 para 12: 2 11 12 
+Caminho de 2 para 13: 2 3 4 13 
+Caminho de 2 para 14: 2 3 4 5 14 
+Caminho de 2 para 15: 2 3 4 5 6 15 
 Caminho de 2 para 16: 2 9 16 
-Caminho de 2 para 17: 2 10 18 26 17 
+Caminho de 2 para 17: 2 9 17 
 Caminho de 2 para 18: 2 10 18 
-Caminho de 2 para 19: 2 10 18 19 
+Caminho de 2 para 19: 2 11 19 
 Caminho de 2 para 24: 2 9 16 24 
-Caminho de 2 para 25: 2 10 18 26 25 
+Caminho de 2 para 25: 2 10 18 25 
 Caminho de 2 para 26: 2 10 18 26 
-Caminho de 2 para 27: 2 10 18 26 27 
-Caminho de 2 para 28: 2 10 18 26 27 28 
-Caminho de 2 para 29: 2 10 18 26 27 28 29 
-Caminho de 2 para 30: 2 10 18 26 27 28 29 30 
-Caminho de 2 para 31: 2 10 18 26 27 28 29 30 31 
-Caminho de 2 para 32: 2 9 16 24 32 
-Caminho de 2 para 33: 2 9 16 24 33 
+Caminho de 2 para 27: 2 10 18 27 
+Caminho de 2 para 28: 2 11 19 28 
+Caminho de 2 para 29: 2 11 19 28 29 
+Caminho de 2 para 30: 2 11 19 28 29 30 
+Caminho de 2 para 31: 2 11 19 28 29 30 31 
+Caminho de 2 para 32: 2 10 18 25 32 
+Caminho de 2 para 33: 2 10 18 26 33 
 Caminho de 2 para 34: 2 10 18 26 34 
-Caminho de 2 para 35: 2 10 18 26 34 35 
-Caminho de 2 para 36: 2 10 18 26 34 35 36 
-Caminho de 2 para 37: 2 10 18 26 34 35 36 37 
-Caminho de 2 para 38: 2 10 18 26 34 35 36 37 38 
-Caminho de 2 para 39: 2 10 18 26 34 35 36 37 38 39 
+Caminho de 2 para 35: 2 10 18 26 35 
+Caminho de 2 para 36: 2 10 18 27 36 
+Caminho de 2 para 37: 2 11 19 28 37 
+Caminho de 2 para 38: 2 11 19 28 37 38 
+Caminho de 2 para 39: 2 11 19 28 37 38 39 
 Caminho de 2 para 43: 2 10 18 26 34 43 
-Caminho de 2 para 44: 2 10 18 26 34 43 44 
-Caminho de 2 para 45: 2 10 18 26 34 43 44 45 
-Caminho de 2 para 46: 2 10 18 26 34 43 44 45 46 
-Caminho de 2 para 47: 2 10 18 26 34 43 44 45 46 47 
-Caminho de 2 para 48: 2 10 18 26 34 43 51 50 49 48 
-Caminho de 2 para 49: 2 10 18 26 34 43 51 50 49 
-Caminho de 2 para 50: 2 10 18 26 34 43 51 50 
+Caminho de 2 para 44: 2 10 18 26 35 44 
+Caminho de 2 para 45: 2 10 18 27 36 45 
+Caminho de 2 para 46: 2 11 19 28 37 46 
+Caminho de 2 para 47: 2 11 19 28 37 46 47 
+Caminho de 2 para 48: 2 10 18 26 34 43 50 49 48 
+Caminho de 2 para 49: 2 10 18 26 34 43 50 49 
+Caminho de 2 para 50: 2 10 18 26 34 43 50 
 Caminho de 2 para 51: 2 10 18 26 34 43 51 
 Caminho de 2 para 52: 2 10 18 26 34 43 52 
-Caminho de 2 para 53: 2 10 18 26 34 43 52 53 
-Caminho de 2 para 54: 2 10 18 26 34 43 52 53 54 
-Caminho de 2 para 55: 2 10 18 26 34 43 52 53 54 55 
-Caminho de 2 para 56: 2 10 18 26 34 43 51 58 57 56 
-Caminho de 2 para 57: 2 10 18 26 34 43 51 58 57 
+Caminho de 2 para 53: 2 10 18 26 35 44 53 
+Caminho de 2 para 54: 2 10 18 27 36 45 54 
+Caminho de 2 para 55: 2 11 19 28 37 46 55 
+Caminho de 2 para 56: 2 10 18 26 34 43 50 57 56 
+Caminho de 2 para 57: 2 10 18 26 34 43 50 57 
 Caminho de 2 para 58: 2 10 18 26 34 43 51 58 
-Caminho de 2 para 62: 2 10 18 26 34 43 52 53 54 62 
-Caminho de 2 para 63: 2 10 18 26 34 43 52 53 54 55 63 
+Caminho de 2 para 62: 2 10 18 26 35 44 53 62 
+Caminho de 2 para 63: 2 10 18 27 36 45 54 63 
 Caminho de 3 para 0: 3 2 1 0 
 Caminho de 3 para 1: 3 2 1 
 Caminho de 3 para 2: 3 2 
@@ -168,52 +168,52 @@ Caminho de 3 para 4: 3 4
 Caminho de 3 para 5: 3 4 5 
 Caminho de 3 para 6: 3 4 5 6 
 Caminho de 3 para 7: 3 4 5 6 7 
-Caminho de 3 para 8: 3 2 1 0 8 
-Caminho de 3 para 9: 3 2 1 0 9 
+Caminho de 3 para 8: 3 2 1 8 
+Caminho de 3 para 9: 3 10 9 
 Caminho de 3 para 10: 3 10 
 Caminho de 3 para 11: 3 11 
 Caminho de 3 para 12: 3 12 
-Caminho de 3 para 13: 3 4 5 13 
-Caminho de 3 para 14: 3 4 5 6 14 
-Caminho de 3 para 15: 3 4 5 6 7 15 
+Caminho de 3 para 13: 3 12 13 
+Caminho de 3 para 14: 3 4 5 14 
+Caminho de 3 para 15: 3 4 5 6 15 
 Caminho de 3 para 16: 3 10 17 16 
 Caminho de 3 para 17: 3 10 17 
-Caminho de 3 para 18: 3 11 19 27 18 
+Caminho de 3 para 18: 3 10 18 
 Caminho de 3 para 19: 3 11 19 
 Caminho de 3 para 24: 3 10 17 24 
 Caminho de 3 para 25: 3 10 17 25 
-Caminho de 3 para 26: 3 11 19 27 26 
+Caminho de 3 para 26: 3 11 19 26 
 Caminho de 3 para 27: 3 11 19 27 
-Caminho de 3 para 28: 3 11 19 27 28 
-Caminho de 3 para 29: 3 11 19 27 28 29 
-Caminho de 3 para 30: 3 11 19 27 28 29 30 
-Caminho de 3 para 31: 3 11 19 27 28 29 30 31 
+Caminho de 3 para 28: 3 11 19 28 
+Caminho de 3 para 29: 3 11 19 28 29 
+Caminho de 3 para 30: 3 11 19 28 29 30 
+Caminho de 3 para 31: 3 11 19 28 29 30 31 
 Caminho de 3 para 32: 3 10 17 24 32 
-Caminho de 3 para 33: 3 10 17 25 33 
-Caminho de 3 para 34: 3 11 19 27 35 43 34 
+Caminho de 3 para 33: 3 11 19 26 33 
+Caminho de 3 para 34: 3 11 19 27 34 
 Caminho de 3 para 35: 3 11 19 27 35 
-Caminho de 3 para 36: 3 11 19 27 35 36 
-Caminho de 3 para 37: 3 11 19 27 35 36 37 
-Caminho de 3 para 38: 3 11 19 27 35 36 37 38 
-Caminho de 3 para 39: 3 11 19 27 35 36 37 38 39 
+Caminho de 3 para 36: 3 11 19 27 36 
+Caminho de 3 para 37: 3 11 19 28 37 
+Caminho de 3 para 38: 3 11 19 28 37 38 
+Caminho de 3 para 39: 3 11 19 28 37 38 39 
 Caminho de 3 para 43: 3 11 19 27 35 43 
-Caminho de 3 para 44: 3 11 19 27 35 43 44 
-Caminho de 3 para 45: 3 11 19 27 35 43 44 45 
-Caminho de 3 para 46: 3 11 19 27 35 43 44 45 46 
-Caminho de 3 para 47: 3 11 19 27 35 43 44 45 46 47 
-Caminho de 3 para 48: 3 11 19 27 35 43 51 50 49 48 
-Caminho de 3 para 49: 3 11 19 27 35 43 51 50 49 
-Caminho de 3 para 50: 3 11 19 27 35 43 51 50 
+Caminho de 3 para 44: 3 11 19 27 35 44 
+Caminho de 3 para 45: 3 11 19 27 36 45 
+Caminho de 3 para 46: 3 11 19 28 37 46 
+Caminho de 3 para 47: 3 11 19 28 37 46 47 
+Caminho de 3 para 48: 3 11 19 27 35 43 50 49 48 
+Caminho de 3 para 49: 3 11 19 27 35 43 50 49 
+Caminho de 3 para 50: 3 11 19 27 35 43 50 
 Caminho de 3 para 51: 3 11 19 27 35 43 51 
-Caminho de 3 para 52: 3 11 19 27 35 43 51 52 
-Caminho de 3 para 53: 3 11 19 27 35 43 51 52 53 
-Caminho de 3 para 54: 3 11 19 27 35 43 51 52 53 54 
-Caminho de 3 para 55: 3 11 19 27 35 43 51 52 53 54 55 
-Caminho de 3 para 56: 3 11 19 27 35 43 51 58 57 56 
-Caminho de 3 para 57: 3 11 19 27 35 43 51 58 57 
+Caminho de 3 para 52: 3 11 19 27 35 43 52 
+Caminho de 3 para 53: 3 11 19 27 35 44 53 
+Caminho de 3 para 54: 3 11 19 27 36 45 54 
+Caminho de 3 para 55: 3 11 19 28 37 46 55 
+Caminho de 3 para 56: 3 11 19 27 35 43 50 57 56 
+Caminho de 3 para 57: 3 11 19 27 35 43 50 57 
 Caminho de 3 para 58: 3 11 19 27 35 43 51 58 
-Caminho de 3 para 62: 3 11 19 27 35 43 51 52 53 54 62 
-Caminho de 3 para 63: 3 11 19 27 35 43 51 52 53 54 55 63 
+Caminho de 3 para 62: 3 11 19 27 35 44 53 62 
+Caminho de 3 para 63: 3 11 19 27 36 45 54 63 
 Caminho de 4 para 0: 4 3 2 1 0 
 Caminho de 4 para 1: 4 3 2 1 
 Caminho de 4 para 2: 4 3 2 
@@ -222,15 +222,15 @@ Caminho de 4 para 4: 4
 Caminho de 4 para 5: 4 5 
 Caminho de 4 para 6: 4 5 6 
 Caminho de 4 para 7: 4 5 6 7 
-Caminho de 4 para 8: 4 11 18 17 8 
-Caminho de 4 para 9: 4 3 2 1 9 
-Caminho de 4 para 10: 4 3 2 1 10 
+Caminho de 4 para 8: 4 3 2 1 8 
+Caminho de 4 para 9: 4 3 2 9 
+Caminho de 4 para 10: 4 11 10 
 Caminho de 4 para 11: 4 11 
 Caminho de 4 para 12: 4 12 
 Caminho de 4 para 13: 4 13 
-Caminho de 4 para 14: 4 5 6 14 
-Caminho de 4 para 15: 4 5 6 7 15 
-Caminho de 4 para 16: 4 11 18 17 16 
+Caminho de 4 para 14: 4 13 14 
+Caminho de 4 para 15: 4 5 6 15 
+Caminho de 4 para 16: 4 3 2 9 16 
 Caminho de 4 para 17: 4 11 18 17 
 Caminho de 4 para 18: 4 11 18 
 Caminho de 4 para 19: 4 11 19 
@@ -238,36 +238,36 @@ Caminho de 4 para 24: 4 11 18 25 24
 Caminho de 4 para 25: 4 11 18 25 
 Caminho de 4 para 26: 4 11 18 26 
 Caminho de 4 para 27: 4 11 19 27 
-Caminho de 4 para 28: 4 11 19 27 28 
-Caminho de 4 para 29: 4 11 19 27 28 29 
-Caminho de 4 para 30: 4 11 19 27 28 29 30 
-Caminho de 4 para 31: 4 11 19 27 28 29 30 31 
+Caminho de 4 para 28: 4 11 19 28 
+Caminho de 4 para 29: 4 11 19 28 29 
+Caminho de 4 para 30: 4 11 19 28 29 30 
+Caminho de 4 para 31: 4 11 19 28 29 30 31 
 Caminho de 4 para 32: 4 11 18 25 32 
 Caminho de 4 para 33: 4 11 18 25 33 
 Caminho de 4 para 34: 4 11 18 26 34 
 Caminho de 4 para 35: 4 11 19 27 35 
-Caminho de 4 para 36: 4 11 19 27 35 36 
-Caminho de 4 para 37: 4 11 19 27 35 36 37 
-Caminho de 4 para 38: 4 11 19 27 35 36 37 38 
-Caminho de 4 para 39: 4 11 19 27 35 36 37 38 39 
+Caminho de 4 para 36: 4 11 19 27 36 
+Caminho de 4 para 37: 4 11 19 28 37 
+Caminho de 4 para 38: 4 11 19 28 37 38 
+Caminho de 4 para 39: 4 11 19 28 37 38 39 
 Caminho de 4 para 43: 4 11 19 27 35 43 
-Caminho de 4 para 44: 4 11 19 27 35 43 44 
-Caminho de 4 para 45: 4 11 19 27 35 43 44 45 
-Caminho de 4 para 46: 4 11 19 27 35 43 44 45 46 
-Caminho de 4 para 47: 4 11 19 27 35 43 44 45 46 47 
-Caminho de 4 para 48: 4 11 19 27 35 43 51 50 49 48 
-Caminho de 4 para 49: 4 11 19 27 35 43 51 50 49 
-Caminho de 4 para 50: 4 11 19 27 35 43 51 50 
+Caminho de 4 para 44: 4 11 19 27 35 44 
+Caminho de 4 para 45: 4 11 19 27 36 45 
+Caminho de 4 para 46: 4 11 19 28 37 46 
+Caminho de 4 para 47: 4 11 19 28 37 46 47 
+Caminho de 4 para 48: 4 11 19 27 35 43 50 49 48 
+Caminho de 4 para 49: 4 11 19 27 35 43 50 49 
+Caminho de 4 para 50: 4 11 19 27 35 43 50 
 Caminho de 4 para 51: 4 11 19 27 35 43 51 
-Caminho de 4 para 52: 4 11 19 27 35 43 51 52 
-Caminho de 4 para 53: 4 11 19 27 35 43 51 52 53 
-Caminho de 4 para 54: 4 11 19 27 35 43 51 52 53 54 
-Caminho de 4 para 55: 4 11 19 27 35 43 51 52 53 54 55 
-Caminho de 4 para 56: 4 11 19 27 35 43 51 58 57 56 
-Caminho de 4 para 57: 4 11 19 27 35 43 51 58 57 
+Caminho de 4 para 52: 4 11 19 27 35 43 52 
+Caminho de 4 para 53: 4 11 19 27 35 44 53 
+Caminho de 4 para 54: 4 11 19 27 36 45 54 
+Caminho de 4 para 55: 4 11 19 28 37 46 55 
+Caminho de 4 para 56: 4 11 19 27 35 43 50 57 56 
+Caminho de 4 para 57: 4 11 19 27 35 43 50 57 
 Caminho de 4 para 58: 4 11 19 27 35 43 51 58 
-Caminho de 4 para 62: 4 11 19 27 35 43 51 52 53 54 62 
-Caminho de 4 para 63: 4 11 19 27 35 43 51 52 53 54 55 63 
+Caminho de 4 para 62: 4 11 19 27 35 44 53 62 
+Caminho de 4 para 63: 4 11 19 27 36 45 54 63 
 Caminho de 5 para 0: 5 4 3 2 1 0 
 Caminho de 5 para 1: 5 4 3 2 1 
 Caminho de 5 para 2: 5 4 3 2 
@@ -276,52 +276,52 @@ Caminho de 5 para 4: 5 4
 Caminho de 5 para 5: 5 
 Caminho de 5 para 6: 5 6 
 Caminho de 5 para 7: 5 6 7 
-Caminho de 5 para 8: 5 12 19 18 17 8 
-Caminho de 5 para 9: 5 4 3 2 1 0 9 
-Caminho de 5 para 10: 5 4 3 2 10 
-Caminho de 5 para 11: 5 4 3 2 11 
+Caminho de 5 para 8: 5 4 3 2 1 8 
+Caminho de 5 para 9: 5 4 3 2 9 
+Caminho de 5 para 10: 5 4 3 10 
+Caminho de 5 para 11: 5 12 11 
 Caminho de 5 para 12: 5 12 
 Caminho de 5 para 13: 5 13 
 Caminho de 5 para 14: 5 14 
-Caminho de 5 para 15: 5 6 7 15 
-Caminho de 5 para 16: 5 12 19 18 17 16 
-Caminho de 5 para 17: 5 12 19 18 17 
+Caminho de 5 para 15: 5 14 15 
+Caminho de 5 para 16: 5 4 3 2 9 16 
+Caminho de 5 para 17: 5 4 3 10 17 
 Caminho de 5 para 18: 5 12 19 18 
 Caminho de 5 para 19: 5 12 19 
-Caminho de 5 para 24: 5 12 19 26 25 24 
+Caminho de 5 para 24: 5 4 3 10 17 24 
 Caminho de 5 para 25: 5 12 19 26 25 
 Caminho de 5 para 26: 5 12 19 26 
 Caminho de 5 para 27: 5 12 19 27 
-Caminho de 5 para 28: 5 12 19 27 28 
-Caminho de 5 para 29: 5 12 19 27 28 29 
-Caminho de 5 para 30: 5 12 19 27 28 29 30 
-Caminho de 5 para 31: 5 12 19 27 28 29 30 31 
+Caminho de 5 para 28: 5 12 19 28 
+Caminho de 5 para 29: 5 12 19 28 29 
+Caminho de 5 para 30: 5 12 19 28 29 30 
+Caminho de 5 para 31: 5 12 19 28 29 30 31 
 Caminho de 5 para 32: 5 12 19 26 33 32 
 Caminho de 5 para 33: 5 12 19 26 33 
 Caminho de 5 para 34: 5 12 19 26 34 
 Caminho de 5 para 35: 5 12 19 27 35 
-Caminho de 5 para 36: 5 12 19 27 35 36 
-Caminho de 5 para 37: 5 12 19 27 35 36 37 
-Caminho de 5 para 38: 5 12 19 27 35 36 37 38 
-Caminho de 5 para 39: 5 12 19 27 35 36 37 38 39 
+Caminho de 5 para 36: 5 12 19 27 36 
+Caminho de 5 para 37: 5 12 19 28 37 
+Caminho de 5 para 38: 5 12 19 28 37 38 
+Caminho de 5 para 39: 5 12 19 28 37 38 39 
 Caminho de 5 para 43: 5 12 19 27 35 43 
-Caminho de 5 para 44: 5 12 19 27 35 43 44 
-Caminho de 5 para 45: 5 12 19 27 35 43 44 45 
-Caminho de 5 para 46: 5 12 19 27 35 43 44 45 46 
-Caminho de 5 para 47: 5 12 19 27 35 43 44 45 46 47 
-Caminho de 5 para 48: 5 12 19 27 35 43 51 50 49 48 
-Caminho de 5 para 49: 5 12 19 27 35 43 51 50 49 
-Caminho de 5 para 50: 5 12 19 27 35 43 51 50 
+Caminho de 5 para 44: 5 12 19 27 35 44 
+Caminho de 5 para 45: 5 12 19 27 36 45 
+Caminho de 5 para 46: 5 12 19 28 37 46 
+Caminho de 5 para 47: 5 12 19 28 37 46 47 
+Caminho de 5 para 48: 5 12 19 27 35 43 50 49 48 
+Caminho de 5 para 49: 5 12 19 27 35 43 50 49 
+Caminho de 5 para 50: 5 12 19 27 35 43 50 
 Caminho de 5 para 51: 5 12 19 27 35 43 51 
-Caminho de 5 para 52: 5 12 19 27 35 43 51 52 
-Caminho de 5 para 53: 5 12 19 27 35 43 51 52 53 
-Caminho de 5 para 54: 5 12 19 27 35 43 51 52 53 54 
-Caminho de 5 para 55: 5 12 19 27 35 43 51 52 53 54 55 
-Caminho de 5 para 56: 5 12 19 27 35 43 51 58 57 56 
-Caminho de 5 para 57: 5 12 19 27 35 43 51 58 57 
+Caminho de 5 para 52: 5 12 19 27 35 43 52 
+Caminho de 5 para 53: 5 12 19 27 35 44 53 
+Caminho de 5 para 54: 5 12 19 27 36 45 54 
+Caminho de 5 para 55: 5 12 19 28 37 46 55 
+Caminho de 5 para 56: 5 12 19 27 35 43 50 57 56 
+Caminho de 5 para 57: 5 12 19 27 35 43 50 57 
 Caminho de 5 para 58: 5 12 19 27 35 43 51 58 
-Caminho de 5 para 62: 5 12 19 27 35 43 51 52 53 54 62 
-Caminho de 5 para 63: 5 12 19 27 35 43 51 52 53 54 55 63 
+Caminho de 5 para 62: 5 12 19 27 35 44 53 62 
+Caminho de 5 para 63: 5 12 19 27 36 45 54 63 
 Caminho de 6 para 0: 6 5 4 3 2 1 0 
 Caminho de 6 para 1: 6 5 4 3 2 1 
 Caminho de 6 para 2: 6 5 4 3 2 
@@ -330,52 +330,52 @@ Caminho de 6 para 4: 6 5 4
 Caminho de 6 para 5: 6 5 
 Caminho de 6 para 6: 6 
 Caminho de 6 para 7: 6 7 
-Caminho de 6 para 8: 6 5 4 3 2 1 0 8 
-Caminho de 6 para 9: 6 5 4 3 2 1 9 
-Caminho de 6 para 10: 6 5 4 3 2 10 
-Caminho de 6 para 11: 6 5 4 3 11 
-Caminho de 6 para 12: 6 5 4 12 
+Caminho de 6 para 8: 6 5 4 3 2 1 8 
+Caminho de 6 para 9: 6 5 4 3 2 9 
+Caminho de 6 para 10: 6 5 4 3 10 
+Caminho de 6 para 11: 6 5 4 11 
+Caminho de 6 para 12: 6 13 12 
 Caminho de 6 para 13: 6 13 
 Caminho de 6 para 14: 6 14 
 Caminho de 6 para 15: 6 15 
-Caminho de 6 para 16: 6 5 4 3 2 1 0 8 16 
-Caminho de 6 para 17: 6 5 4 3 2 1 9 17 
-Caminho de 6 para 18: 6 5 4 3 2 10 18 
-Caminho de 6 para 19: 6 5 4 3 11 19 
-Caminho de 6 para 24: 6 5 4 3 2 1 0 8 16 24 
-Caminho de 6 para 25: 6 5 4 3 2 1 9 17 25 
-Caminho de 6 para 26: 6 5 4 3 2 10 18 26 
-Caminho de 6 para 27: 6 5 4 3 11 19 27 
-Caminho de 6 para 28: 6 5 4 3 11 19 27 28 
-Caminho de 6 para 29: 6 5 4 3 11 19 27 28 29 
-Caminho de 6 para 30: 6 5 4 3 11 19 27 28 29 30 
-Caminho de 6 para 31: 6 5 4 3 11 19 27 28 29 30 31 
-Caminho de 6 para 32: 6 5 4 3 2 1 0 8 16 24 32 
-Caminho de 6 para 33: 6 5 4 3 2 1 9 17 25 33 
-Caminho de 6 para 34: 6 5 4 3 2 10 18 26 34 
-Caminho de 6 para 35: 6 5 4 3 11 19 27 35 
-Caminho de 6 para 36: 6 5 4 3 11 19 27 35 36 
-Caminho de 6 para 37: 6 5 4 3 11 19 27 35 36 37 
-Caminho de 6 para 38: 6 5 4 3 11 19 27 35 36 37 38 
-Caminho de 6 para 39: 6 5 4 3 11 19 27 35 36 37 38 39 
-Caminho de 6 para 43: 6 5 4 3 11 19 27 35 43 
-Caminho de 6 para 44: 6 5 4 3 11 19 27 35 43 44 
-Caminho de 6 para 45: 6 5 4 3 11 19 27 35 43 44 45 
-Caminho de 6 para 46: 6 5 4 3 11 19 27 35 43 44 45 46 
-Caminho de 6 para 47: 6 5 4 3 11 19 27 35 43 44 45 46 47 
-Caminho de 6 para 48: 6 5 4 3 11 19 27 35 43 51 50 49 48 
-Caminho de 6 para 49: 6 5 4 3 11 19 27 35 43 51 50 49 
-Caminho de 6 para 50: 6 5 4 3 11 19 27 35 43 51 50 
-Caminho de 6 para 51: 6 5 4 3 11 19 27 35 43 51 
-Caminho de 6 para 52: 6 5 4 3 11 19 27 35 43 51 52 
-Caminho de 6 para 53: 6 5 4 3 11 19 27 35 43 51 52 53 
-Caminho de 6 para 54: 6 5 4 3 11 19 27 35 43 51 52 53 54 
-Caminho de 6 para 55: 6 5 4 3 11 19 27 35 43 51 52 53 54 55 
-Caminho de 6 para 56: 6 5 4 3 11 19 27 35 43 51 58 57 56 
-Caminho de 6 para 57: 6 5 4 3 11 19 27 35 43 51 58 57 
-Caminho de 6 para 58: 6 5 4 3 11 19 27 35 43 51 58 
-Caminho de 6 para 62: 6 5 4 3 11 19 27 35 43 51 52 53 54 62 
-Caminho de 6 para 63: 6 5 4 3 11 19 27 35 43 51 52 53 54 55 63 
+Caminho de 6 para 16: 6 5 4 3 2 9 16 
+Caminho de 6 para 17: 6 5 4 3 10 17 
+Caminho de 6 para 18: 6 5 4 11 18 
+Caminho de 6 para 19: 6 13 12 19 
+Caminho de 6 para 24: 6 5 4 3 10 17 24 
+Caminho de 6 para 25: 6 5 4 11 18 25 
+Caminho de 6 para 26: 6 13 12 19 26 
+Caminho de 6 para 27: 6 13 12 19 27 
+Caminho de 6 para 28: 6 13 12 19 28 
+Caminho de 6 para 29: 6 13 12 19 28 29 
+Caminho de 6 para 30: 6 13 12 19 28 29 30 
+Caminho de 6 para 31: 6 13 12 19 28 29 30 31 
+Caminho de 6 para 32: 6 5 4 11 18 25 32 
+Caminho de 6 para 33: 6 13 12 19 26 33 
+Caminho de 6 para 34: 6 13 12 19 26 34 
+Caminho de 6 para 35: 6 13 12 19 27 35 
+Caminho de 6 para 36: 6 13 12 19 27 36 
+Caminho de 6 para 37: 6 13 12 19 28 37 
+Caminho de 6 para 38: 6 13 12 19 28 37 38 
+Caminho de 6 para 39: 6 13 12 19 28 37 38 39 
+Caminho de 6 para 43: 6 13 12 19 27 35 43 
+Caminho de 6 para 44: 6 13 12 19 27 35 44 
+Caminho de 6 para 45: 6 13 12 19 27 36 45 
+Caminho de 6 para 46: 6 13 12 19 28 37 46 
+Caminho de 6 para 47: 6 13 12 19 28 37 46 47 
+Caminho de 6 para 48: 6 13 12 19 27 35 43 50 49 48 
+Caminho de 6 para 49: 6 13 12 19 27 35 43 50 49 
+Caminho de 6 para 50: 6 13 12 19 27 35 43 50 
+Caminho de 6 para 51: 6 13 12 19 27 35 43 51 
+Caminho de 6 para 52: 6 13 12 19 27 35 43 52 
+Caminho de 6 para 53: 6 13 12 19 27 35 44 53 
+Caminho de 6 para 54: 6 13 12 19 27 36 45 54 
+Caminho de 6 para 55: 6 13 12 19 28 37 46 55 
+Caminho de 6 para 56: 6 13 12 19 27 35 43 50 57 56 
+Caminho de 6 para 57: 6 13 12 19 27 35 43 50 57 
+Caminho de 6 para 58: 6 13 12 19 27 35 43 51 58 
+Caminho de 6 para 62: 6 13 12 19 27 35 44 53 62 
+Caminho de 6 para 63: 6 13 12 19 27 36 45 54 63 
 Caminho de 7 para 0: 7 6 5 4 3 2 1 0 
 Caminho de 7 para 1: 7 6 5 4 3 2 1 
 Caminho de 7 para 2: 7 6 5 4 3 2 
@@ -384,60 +384,60 @@ Caminho de 7 para 4: 7 6 5 4
 Caminho de 7 para 5: 7 6 5 
 Caminho de 7 para 6: 7 6 
 Caminho de 7 para 7: 7 
-Caminho de 7 para 8: 7 6 5 4 3 2 1 0 8 
-Caminho de 7 para 9: 7 6 5 4 3 2 1 9 
-Caminho de 7 para 10: 7 6 5 4 3 2 10 
-Caminho de 7 para 11: 7 6 5 4 3 11 
-Caminho de 7 para 12: 7 6 5 4 12 
-Caminho de 7 para 13: 7 6 5 13 
+Caminho de 7 para 8: 7 6 5 4 3 2 1 8 
+Caminho de 7 para 9: 7 6 5 4 3 2 9 
+Caminho de 7 para 10: 7 6 5 4 3 10 
+Caminho de 7 para 11: 7 6 5 4 11 
+Caminho de 7 para 12: 7 6 5 12 
+Caminho de 7 para 13: 7 14 13 
 Caminho de 7 para 14: 7 14 
 Caminho de 7 para 15: 7 15 
-Caminho de 7 para 16: 7 6 5 4 3 2 1 0 8 16 
-Caminho de 7 para 17: 7 6 5 4 3 2 1 9 17 
-Caminho de 7 para 18: 7 6 5 4 3 2 10 18 
-Caminho de 7 para 19: 7 6 5 4 3 11 19 
-Caminho de 7 para 24: 7 6 5 4 3 2 1 0 8 16 24 
-Caminho de 7 para 25: 7 6 5 4 3 2 1 9 17 25 
-Caminho de 7 para 26: 7 6 5 4 3 2 10 18 26 
-Caminho de 7 para 27: 7 6 5 4 3 11 19 27 
-Caminho de 7 para 28: 7 6 5 4 3 11 19 27 28 
-Caminho de 7 para 29: 7 6 5 4 3 11 19 27 28 29 
-Caminho de 7 para 30: 7 6 5 4 3 11 19 27 28 29 30 
-Caminho de 7 para 31: 7 6 5 4 3 11 19 27 28 29 30 31 
-Caminho de 7 para 32: 7 6 5 4 3 2 1 0 8 16 24 32 
-Caminho de 7 para 33: 7 6 5 4 3 2 1 9 17 25 33 
-Caminho de 7 para 34: 7 6 5 4 3 2 10 18 26 34 
-Caminho de 7 para 35: 7 6 5 4 3 11 19 27 35 
-Caminho de 7 para 36: 7 6 5 4 3 11 19 27 35 36 
-Caminho de 7 para 37: 7 6 5 4 3 11 19 27 35 36 37 
-Caminho de 7 para 38: 7 6 5 4 3 11 19 27 35 36 37 38 
-Caminho de 7 para 39: 7 6 5 4 3 11 19 27 35 36 37 38 39 
-Caminho de 7 para 43: 7 6 5 4 3 11 19 27 35 43 
-Caminho de 7 para 44: 7 6 5 4 3 11 19 27 35 43 44 
-Caminho de 7 para 45: 7 6 5 4 3 11 19 27 35 43 44 45 
-Caminho de 7 para 46: 7 6 5 4 3 11 19 27 35 43 44 45 46 
-Caminho de 7 para 47: 7 6 5 4 3 11 19 27 35 43 44 45 46 47 
-Caminho de 7 para 48: 7 6 5 4 3 11 19 27 35 43 51 50 49 48 
-Caminho de 7 para 49: 7 6 5 4 3 11 19 27 35 43 51 50 49 
-Caminho de 7 para 50: 7 6 5 4 3 11 19 27 35 43 51 50 
-Caminho de 7 para 51: 7 6 5 4 3 11 19 27 35 43 51 
-Caminho de 7 para 52: 7 6 5 4 3 11 19 27 35 43 51 52 
-Caminho de 7 para 53: 7 6 5 4 3 11 19 27 35 43 51 52 53 
-Caminho de 7 para 54: 7 6 5 4 3 11 19 27 35 43 51 52 53 54 
-Caminho de 7 para 55: 7 6 5 4 3 11 19 27 35 43 51 52 53 54 55 
-Caminho de 7 para 56: 7 6 5 4 3 11 19 27 35 43 51 58 57 56 
-Caminho de 7 para 57: 7 6 5 4 3 11 19 27 35 43 51 58 57 
-Caminho de 7 para 58: 7 6 5 4 3 11 19 27 35 43 51 58 
-Caminho de 7 para 62: 7 6 5 4 3 11 19 27 35 43 51 52 53 54 62 
-Caminho de 7 para 63: 7 6 5 4 3 11 19 27 35 43 51 52 53 54 55 63 
+Caminho de 7 para 16: 7 6 5 4 3 2 9 16 
+Caminho de 7 para 17: 7 6 5 4 3 10 17 
+Caminho de 7 para 18: 7 6 5 4 11 18 
+Caminho de 7 para 19: 7 6 5 12 19 
+Caminho de 7 para 24: 7 6 5 4 3 10 17 24 
+Caminho de 7 para 25: 7 6 5 4 11 18 25 
+Caminho de 7 para 26: 7 6 5 12 19 26 
+Caminho de 7 para 27: 7 6 5 12 19 27 
+Caminho de 7 para 28: 7 6 5 12 19 28 
+Caminho de 7 para 29: 7 6 5 12 19 28 29 
+Caminho de 7 para 30: 7 6 5 12 19 28 29 30 
+Caminho de 7 para 31: 7 6 5 12 19 28 29 30 31 
+Caminho de 7 para 32: 7 6 5 4 11 18 25 32 
+Caminho de 7 para 33: 7 6 5 12 19 26 33 
+Caminho de 7 para 34: 7 6 5 12 19 26 34 
+Caminho de 7 para 35: 7 6 5 12 19 27 35 
+Caminho de 7 para 36: 7 6 5 12 19 27 36 
+Caminho de 7 para 37: 7 6 5 12 19 28 37 
+Caminho de 7 para 38: 7 6 5 12 19 28 37 38 
+Caminho de 7 para 39: 7 6 5 12 19 28 37 38 39 
+Caminho de 7 para 43: 7 6 5 12 19 27 35 43 
+Caminho de 7 para 44: 7 6 5 12 19 27 35 44 
+Caminho de 7 para 45: 7 6 5 12 19 27 36 45 
+Caminho de 7 para 46: 7 6 5 12 19 28 37 46 
+Caminho de 7 para 47: 7 6 5 12 19 28 37 46 47 
+Caminho de 7 para 48: 7 6 5 12 19 27 35 43 50 49 48 
+Caminho de 7 para 49: 7 6 5 12 19 27 35 43 50 49 
+Caminho de 7 para 50: 7 6 5 12 19 27 35 43 50 
+Caminho de 7 para 51: 7 6 5 12 19 27 35 43 51 
+Caminho de 7 para 52: 7 6 5 12 19 27 35 43 52 
+Caminho de 7 para 53: 7 6 5 12 19 27 35 44 53 
+Caminho de 7 para 54: 7 6 5 12 19 27 36 45 54 
+Caminho de 7 para 55: 7 6 5 12 19 28 37 46 55 
+Caminho de 7 para 56: 7 6 5 12 19 27 35 43 50 57 56 
+Caminho de 7 para 57: 7 6 5 12 19 27 35 43 50 57 
+Caminho de 7 para 58: 7 6 5 12 19 27 35 43 51 58 
+Caminho de 7 para 62: 7 6 5 12 19 27 35 44 53 62 
+Caminho de 7 para 63: 7 6 5 12 19 27 36 45 54 63 
 Caminho de 8 para 0: 8 0 
 Caminho de 8 para 1: 8 1 
-Caminho de 8 para 2: 8 9 10 2 
-Caminho de 8 para 3: 8 9 10 11 3 
-Caminho de 8 para 4: 8 9 10 11 12 4 
-Caminho de 8 para 5: 8 9 10 11 12 13 5 
-Caminho de 8 para 6: 8 9 10 11 12 13 14 6 
-Caminho de 8 para 7: 8 9 10 11 12 13 14 15 7 
+Caminho de 8 para 2: 8 1 2 
+Caminho de 8 para 3: 8 9 10 3 
+Caminho de 8 para 4: 8 9 10 11 4 
+Caminho de 8 para 5: 8 9 10 11 12 5 
+Caminho de 8 para 6: 8 9 10 11 12 13 6 
+Caminho de 8 para 7: 8 9 10 11 12 13 14 7 
 Caminho de 8 para 8: 8 
 Caminho de 8 para 9: 8 9 
 Caminho de 8 para 10: 8 9 10 
@@ -448,50 +448,50 @@ Caminho de 8 para 14: 8 9 10 11 12 13 14
 Caminho de 8 para 15: 8 9 10 11 12 13 14 15 
 Caminho de 8 para 16: 8 16 
 Caminho de 8 para 17: 8 17 
-Caminho de 8 para 18: 8 9 10 11 18 
-Caminho de 8 para 19: 8 9 10 11 19 
+Caminho de 8 para 18: 8 17 18 
+Caminho de 8 para 19: 8 9 10 19 
 Caminho de 8 para 24: 8 16 24 
-Caminho de 8 para 25: 8 16 24 32 25 
+Caminho de 8 para 25: 8 17 25 
 Caminho de 8 para 26: 8 17 26 
 Caminho de 8 para 27: 8 17 26 27 
-Caminho de 8 para 28: 8 17 26 27 28 
-Caminho de 8 para 29: 8 17 26 27 28 29 
-Caminho de 8 para 30: 8 17 26 27 28 29 30 
-Caminho de 8 para 31: 8 17 26 27 28 29 30 31 
+Caminho de 8 para 28: 8 9 10 19 28 
+Caminho de 8 para 29: 8 9 10 19 28 29 
+Caminho de 8 para 30: 8 9 10 19 28 29 30 
+Caminho de 8 para 31: 8 9 10 19 28 29 30 31 
 Caminho de 8 para 32: 8 16 24 32 
-Caminho de 8 para 33: 8 16 24 32 33 
+Caminho de 8 para 33: 8 16 24 33 
 Caminho de 8 para 34: 8 17 26 34 
 Caminho de 8 para 35: 8 17 26 35 
 Caminho de 8 para 36: 8 17 26 35 36 
-Caminho de 8 para 37: 8 17 26 35 36 37 
-Caminho de 8 para 38: 8 17 26 35 36 37 38 
-Caminho de 8 para 39: 8 17 26 35 36 37 38 39 
+Caminho de 8 para 37: 8 9 10 19 28 37 
+Caminho de 8 para 38: 8 9 10 19 28 37 38 
+Caminho de 8 para 39: 8 9 10 19 28 37 38 39 
 Caminho de 8 para 43: 8 17 26 35 43 
 Caminho de 8 para 44: 8 17 26 35 44 
 Caminho de 8 para 45: 8 17 26 35 44 45 
-Caminho de 8 para 46: 8 17 26 35 44 45 46 
-Caminho de 8 para 47: 8 17 26 35 44 45 46 47 
-Caminho de 8 para 48: 8 17 26 35 43 51 50 49 48 
-Caminho de 8 para 49: 8 17 26 35 43 51 50 49 
-Caminho de 8 para 50: 8 17 26 35 43 51 50 
+Caminho de 8 para 46: 8 9 10 19 28 37 46 
+Caminho de 8 para 47: 8 9 10 19 28 37 46 47 
+Caminho de 8 para 48: 8 17 26 35 43 50 49 48 
+Caminho de 8 para 49: 8 17 26 35 43 50 49 
+Caminho de 8 para 50: 8 17 26 35 43 50 
 Caminho de 8 para 51: 8 17 26 35 43 51 
 Caminho de 8 para 52: 8 17 26 35 44 52 
 Caminho de 8 para 53: 8 17 26 35 44 53 
 Caminho de 8 para 54: 8 17 26 35 44 53 54 
-Caminho de 8 para 55: 8 17 26 35 44 53 54 55 
-Caminho de 8 para 56: 8 17 26 35 43 51 58 57 56 
-Caminho de 8 para 57: 8 17 26 35 43 51 58 57 
+Caminho de 8 para 55: 8 9 10 19 28 37 46 55 
+Caminho de 8 para 56: 8 17 26 35 43 50 57 56 
+Caminho de 8 para 57: 8 17 26 35 43 50 57 
 Caminho de 8 para 58: 8 17 26 35 43 51 58 
 Caminho de 8 para 62: 8 17 26 35 44 53 62 
 Caminho de 8 para 63: 8 17 26 35 44 53 62 63 
 Caminho de 9 para 0: 9 0 
 Caminho de 9 para 1: 9 1 
 Caminho de 9 para 2: 9 2 
-Caminho de 9 para 3: 9 10 11 3 
-Caminho de 9 para 4: 9 10 11 12 4 
-Caminho de 9 para 5: 9 10 11 12 13 5 
-Caminho de 9 para 6: 9 10 11 12 13 14 6 
-Caminho de 9 para 7: 9 10 11 12 13 14 15 7 
+Caminho de 9 para 3: 9 2 3 
+Caminho de 9 para 4: 9 10 11 4 
+Caminho de 9 para 5: 9 10 11 12 5 
+Caminho de 9 para 6: 9 10 11 12 13 6 
+Caminho de 9 para 7: 9 10 11 12 13 14 7 
 Caminho de 9 para 8: 9 8 
 Caminho de 9 para 9: 9 
 Caminho de 9 para 10: 9 10 
@@ -503,49 +503,49 @@ Caminho de 9 para 15: 9 10 11 12 13 14 15
 Caminho de 9 para 16: 9 16 
 Caminho de 9 para 17: 9 17 
 Caminho de 9 para 18: 9 18 
-Caminho de 9 para 19: 9 10 11 12 19 
-Caminho de 9 para 24: 9 17 25 24 
+Caminho de 9 para 19: 9 18 19 
+Caminho de 9 para 24: 9 16 24 
 Caminho de 9 para 25: 9 17 25 
-Caminho de 9 para 26: 9 17 25 33 26 
+Caminho de 9 para 26: 9 18 26 
 Caminho de 9 para 27: 9 18 27 
 Caminho de 9 para 28: 9 18 27 28 
 Caminho de 9 para 29: 9 18 27 28 29 
 Caminho de 9 para 30: 9 18 27 28 29 30 
 Caminho de 9 para 31: 9 18 27 28 29 30 31 
-Caminho de 9 para 32: 9 17 25 33 32 
+Caminho de 9 para 32: 9 17 25 32 
 Caminho de 9 para 33: 9 17 25 33 
-Caminho de 9 para 34: 9 17 25 33 34 
+Caminho de 9 para 34: 9 17 25 34 
 Caminho de 9 para 35: 9 18 27 35 
 Caminho de 9 para 36: 9 18 27 36 
 Caminho de 9 para 37: 9 18 27 36 37 
 Caminho de 9 para 38: 9 18 27 36 37 38 
 Caminho de 9 para 39: 9 18 27 36 37 38 39 
-Caminho de 9 para 43: 9 18 27 35 43 
+Caminho de 9 para 43: 9 17 25 34 43 
 Caminho de 9 para 44: 9 18 27 36 44 
 Caminho de 9 para 45: 9 18 27 36 45 
 Caminho de 9 para 46: 9 18 27 36 45 46 
 Caminho de 9 para 47: 9 18 27 36 45 46 47 
-Caminho de 9 para 48: 9 18 27 35 43 51 50 49 48 
-Caminho de 9 para 49: 9 18 27 35 43 51 50 49 
-Caminho de 9 para 50: 9 18 27 35 43 51 50 
-Caminho de 9 para 51: 9 18 27 35 43 51 
-Caminho de 9 para 52: 9 18 27 36 44 52 
+Caminho de 9 para 48: 9 17 25 34 43 50 49 48 
+Caminho de 9 para 49: 9 17 25 34 43 50 49 
+Caminho de 9 para 50: 9 17 25 34 43 50 
+Caminho de 9 para 51: 9 17 25 34 43 51 
+Caminho de 9 para 52: 9 17 25 34 43 52 
 Caminho de 9 para 53: 9 18 27 36 45 53 
 Caminho de 9 para 54: 9 18 27 36 45 54 
 Caminho de 9 para 55: 9 18 27 36 45 54 55 
-Caminho de 9 para 56: 9 18 27 35 43 51 58 57 56 
-Caminho de 9 para 57: 9 18 27 35 43 51 58 57 
-Caminho de 9 para 58: 9 18 27 35 43 51 58 
+Caminho de 9 para 56: 9 17 25 34 43 50 57 56 
+Caminho de 9 para 57: 9 17 25 34 43 50 57 
+Caminho de 9 para 58: 9 17 25 34 43 51 58 
 Caminho de 9 para 62: 9 18 27 36 45 54 62 
 Caminho de 9 para 63: 9 18 27 36 45 54 63 
-Caminho de 10 para 0: 10 9 8 0 
+Caminho de 10 para 0: 10 1 0 
 Caminho de 10 para 1: 10 1 
 Caminho de 10 para 2: 10 2 
 Caminho de 10 para 3: 10 3 
-Caminho de 10 para 4: 10 11 12 4 
-Caminho de 10 para 5: 10 11 12 13 5 
-Caminho de 10 para 6: 10 11 12 13 14 6 
-Caminho de 10 para 7: 10 11 12 13 14 15 7 
+Caminho de 10 para 4: 10 3 4 
+Caminho de 10 para 5: 10 11 12 5 
+Caminho de 10 para 6: 10 11 12 13 6 
+Caminho de 10 para 7: 10 11 12 13 14 7 
 Caminho de 10 para 8: 10 9 8 
 Caminho de 10 para 9: 10 9 
 Caminho de 10 para 10: 10 
@@ -554,52 +554,52 @@ Caminho de 10 para 12: 10 11 12
 Caminho de 10 para 13: 10 11 12 13 
 Caminho de 10 para 14: 10 11 12 13 14 
 Caminho de 10 para 15: 10 11 12 13 14 15 
-Caminho de 10 para 16: 10 17 24 16 
+Caminho de 10 para 16: 10 17 16 
 Caminho de 10 para 17: 10 17 
 Caminho de 10 para 18: 10 18 
 Caminho de 10 para 19: 10 19 
 Caminho de 10 para 24: 10 17 24 
-Caminho de 10 para 25: 10 18 26 34 25 
+Caminho de 10 para 25: 10 17 25 
 Caminho de 10 para 26: 10 18 26 
-Caminho de 10 para 27: 10 18 26 34 27 
+Caminho de 10 para 27: 10 19 27 
 Caminho de 10 para 28: 10 19 28 
 Caminho de 10 para 29: 10 19 28 29 
 Caminho de 10 para 30: 10 19 28 29 30 
 Caminho de 10 para 31: 10 19 28 29 30 31 
 Caminho de 10 para 32: 10 17 24 32 
-Caminho de 10 para 33: 10 18 26 34 33 
+Caminho de 10 para 33: 10 18 26 33 
 Caminho de 10 para 34: 10 18 26 34 
-Caminho de 10 para 35: 10 18 26 34 35 
+Caminho de 10 para 35: 10 18 26 35 
 Caminho de 10 para 36: 10 19 28 36 
 Caminho de 10 para 37: 10 19 28 37 
 Caminho de 10 para 38: 10 19 28 37 38 
 Caminho de 10 para 39: 10 19 28 37 38 39 
 Caminho de 10 para 43: 10 18 26 34 43 
-Caminho de 10 para 44: 10 19 28 36 44 
+Caminho de 10 para 44: 10 18 26 35 44 
 Caminho de 10 para 45: 10 19 28 37 45 
 Caminho de 10 para 46: 10 19 28 37 46 
 Caminho de 10 para 47: 10 19 28 37 46 47 
-Caminho de 10 para 48: 10 18 26 34 43 51 50 49 48 
-Caminho de 10 para 49: 10 18 26 34 43 51 50 49 
-Caminho de 10 para 50: 10 18 26 34 43 51 50 
+Caminho de 10 para 48: 10 18 26 34 43 50 49 48 
+Caminho de 10 para 49: 10 18 26 34 43 50 49 
+Caminho de 10 para 50: 10 18 26 34 43 50 
 Caminho de 10 para 51: 10 18 26 34 43 51 
 Caminho de 10 para 52: 10 18 26 34 43 52 
-Caminho de 10 para 53: 10 19 28 37 45 53 
+Caminho de 10 para 53: 10 18 26 35 44 53 
 Caminho de 10 para 54: 10 19 28 37 46 54 
 Caminho de 10 para 55: 10 19 28 37 46 55 
-Caminho de 10 para 56: 10 18 26 34 43 51 58 57 56 
-Caminho de 10 para 57: 10 18 26 34 43 51 58 57 
+Caminho de 10 para 56: 10 18 26 34 43 50 57 56 
+Caminho de 10 para 57: 10 18 26 34 43 50 57 
 Caminho de 10 para 58: 10 18 26 34 43 51 58 
-Caminho de 10 para 62: 10 19 28 37 46 54 62 
+Caminho de 10 para 62: 10 18 26 35 44 53 62 
 Caminho de 10 para 63: 10 19 28 37 46 55 63 
-Caminho de 11 para 0: 11 10 9 8 0 
-Caminho de 11 para 1: 11 10 9 1 
+Caminho de 11 para 0: 11 10 9 0 
+Caminho de 11 para 1: 11 2 1 
 Caminho de 11 para 2: 11 2 
 Caminho de 11 para 3: 11 3 
 Caminho de 11 para 4: 11 4 
-Caminho de 11 para 5: 11 12 13 5 
-Caminho de 11 para 6: 11 12 13 14 6 
-Caminho de 11 para 7: 11 12 13 14 15 7 
+Caminho de 11 para 5: 11 4 5 
+Caminho de 11 para 6: 11 12 13 6 
+Caminho de 11 para 7: 11 12 13 14 7 
 Caminho de 11 para 8: 11 10 9 8 
 Caminho de 11 para 9: 11 10 9 
 Caminho de 11 para 10: 11 10 
@@ -608,52 +608,52 @@ Caminho de 11 para 12: 11 12
 Caminho de 11 para 13: 11 12 13 
 Caminho de 11 para 14: 11 12 13 14 
 Caminho de 11 para 15: 11 12 13 14 15 
-Caminho de 11 para 16: 11 10 9 8 16 
-Caminho de 11 para 17: 11 10 9 8 17 
+Caminho de 11 para 16: 11 10 9 16 
+Caminho de 11 para 17: 11 18 17 
 Caminho de 11 para 18: 11 18 
 Caminho de 11 para 19: 11 19 
 Caminho de 11 para 24: 11 18 25 24 
 Caminho de 11 para 25: 11 18 25 
-Caminho de 11 para 26: 11 19 27 35 26 
+Caminho de 11 para 26: 11 18 26 
 Caminho de 11 para 27: 11 19 27 
-Caminho de 11 para 28: 11 19 27 28 
-Caminho de 11 para 29: 11 19 27 28 29 
-Caminho de 11 para 30: 11 19 27 28 29 30 
-Caminho de 11 para 31: 11 19 27 28 29 30 31 
+Caminho de 11 para 28: 11 19 28 
+Caminho de 11 para 29: 11 19 28 29 
+Caminho de 11 para 30: 11 19 28 29 30 
+Caminho de 11 para 31: 11 19 28 29 30 31 
 Caminho de 11 para 32: 11 18 25 32 
 Caminho de 11 para 33: 11 18 25 33 
-Caminho de 11 para 34: 11 19 27 35 34 
+Caminho de 11 para 34: 11 19 27 34 
 Caminho de 11 para 35: 11 19 27 35 
-Caminho de 11 para 36: 11 19 27 35 36 
-Caminho de 11 para 37: 11 19 27 35 36 37 
-Caminho de 11 para 38: 11 19 27 35 36 37 38 
-Caminho de 11 para 39: 11 19 27 35 36 37 38 39 
+Caminho de 11 para 36: 11 19 27 36 
+Caminho de 11 para 37: 11 19 28 37 
+Caminho de 11 para 38: 11 19 28 37 38 
+Caminho de 11 para 39: 11 19 28 37 38 39 
 Caminho de 11 para 43: 11 19 27 35 43 
-Caminho de 11 para 44: 11 19 27 35 43 44 
-Caminho de 11 para 45: 11 19 27 35 43 44 45 
-Caminho de 11 para 46: 11 19 27 35 43 44 45 46 
-Caminho de 11 para 47: 11 19 27 35 43 44 45 46 47 
-Caminho de 11 para 48: 11 19 27 35 43 51 50 49 48 
-Caminho de 11 para 49: 11 19 27 35 43 51 50 49 
-Caminho de 11 para 50: 11 19 27 35 43 51 50 
+Caminho de 11 para 44: 11 19 27 35 44 
+Caminho de 11 para 45: 11 19 27 36 45 
+Caminho de 11 para 46: 11 19 28 37 46 
+Caminho de 11 para 47: 11 19 28 37 46 47 
+Caminho de 11 para 48: 11 19 27 35 43 50 49 48 
+Caminho de 11 para 49: 11 19 27 35 43 50 49 
+Caminho de 11 para 50: 11 19 27 35 43 50 
 Caminho de 11 para 51: 11 19 27 35 43 51 
-Caminho de 11 para 52: 11 19 27 35 43 51 52 
-Caminho de 11 para 53: 11 19 27 35 43 51 52 53 
-Caminho de 11 para 54: 11 19 27 35 43 51 52 53 54 
-Caminho de 11 para 55: 11 19 27 35 43 51 52 53 54 55 
-Caminho de 11 para 56: 11 19 27 35 43 51 58 57 56 
-Caminho de 11 para 57: 11 19 27 35 43 51 58 57 
+Caminho de 11 para 52: 11 19 27 35 43 52 
+Caminho de 11 para 53: 11 19 27 35 44 53 
+Caminho de 11 para 54: 11 19 27 36 45 54 
+Caminho de 11 para 55: 11 19 28 37 46 55 
+Caminho de 11 para 56: 11 19 27 35 43 50 57 56 
+Caminho de 11 para 57: 11 19 27 35 43 50 57 
 Caminho de 11 para 58: 11 19 27 35 43 51 58 
-Caminho de 11 para 62: 11 19 27 35 43 51 52 53 54 62 
-Caminho de 11 para 63: 11 19 27 35 43 51 52 53 54 55 63 
-Caminho de 12 para 0: 12 11 10 9 8 0 
-Caminho de 12 para 1: 12 11 10 9 1 
-Caminho de 12 para 2: 12 11 10 2 
+Caminho de 11 para 62: 11 19 27 35 44 53 62 
+Caminho de 11 para 63: 11 19 27 36 45 54 63 
+Caminho de 12 para 0: 12 11 10 9 0 
+Caminho de 12 para 1: 12 11 10 1 
+Caminho de 12 para 2: 12 3 2 
 Caminho de 12 para 3: 12 3 
 Caminho de 12 para 4: 12 4 
 Caminho de 12 para 5: 12 5 
-Caminho de 12 para 6: 12 13 14 6 
-Caminho de 12 para 7: 12 13 14 15 7 
+Caminho de 12 para 6: 12 5 6 
+Caminho de 12 para 7: 12 13 14 7 
 Caminho de 12 para 8: 12 11 10 9 8 
 Caminho de 12 para 9: 12 11 10 9 
 Caminho de 12 para 10: 12 11 10 
@@ -662,52 +662,52 @@ Caminho de 12 para 12: 12
 Caminho de 12 para 13: 12 13 
 Caminho de 12 para 14: 12 13 14 
 Caminho de 12 para 15: 12 13 14 15 
-Caminho de 12 para 16: 12 19 26 25 16 
-Caminho de 12 para 17: 12 11 10 9 17 
-Caminho de 12 para 18: 12 11 10 9 18 
+Caminho de 12 para 16: 12 11 10 9 16 
+Caminho de 12 para 17: 12 11 10 17 
+Caminho de 12 para 18: 12 19 18 
 Caminho de 12 para 19: 12 19 
-Caminho de 12 para 24: 12 19 26 25 24 
+Caminho de 12 para 24: 12 11 10 17 24 
 Caminho de 12 para 25: 12 19 26 25 
 Caminho de 12 para 26: 12 19 26 
 Caminho de 12 para 27: 12 19 27 
-Caminho de 12 para 28: 12 19 27 28 
-Caminho de 12 para 29: 12 19 27 28 29 
-Caminho de 12 para 30: 12 19 27 28 29 30 
-Caminho de 12 para 31: 12 19 27 28 29 30 31 
+Caminho de 12 para 28: 12 19 28 
+Caminho de 12 para 29: 12 19 28 29 
+Caminho de 12 para 30: 12 19 28 29 30 
+Caminho de 12 para 31: 12 19 28 29 30 31 
 Caminho de 12 para 32: 12 19 26 33 32 
 Caminho de 12 para 33: 12 19 26 33 
 Caminho de 12 para 34: 12 19 26 34 
 Caminho de 12 para 35: 12 19 27 35 
-Caminho de 12 para 36: 12 19 27 35 36 
-Caminho de 12 para 37: 12 19 27 35 36 37 
-Caminho de 12 para 38: 12 19 27 35 36 37 38 
-Caminho de 12 para 39: 12 19 27 35 36 37 38 39 
+Caminho de 12 para 36: 12 19 27 36 
+Caminho de 12 para 37: 12 19 28 37 
+Caminho de 12 para 38: 12 19 28 37 38 
+Caminho de 12 para 39: 12 19 28 37 38 39 
 Caminho de 12 para 43: 12 19 27 35 43 
-Caminho de 12 para 44: 12 19 27 35 43 44 
-Caminho de 12 para 45: 12 19 27 35 43 44 45 
-Caminho de 12 para 46: 12 19 27 35 43 44 45 46 
-Caminho de 12 para 47: 12 19 27 35 43 44 45 46 47 
-Caminho de 12 para 48: 12 19 27 35 43 51 50 49 48 
-Caminho de 12 para 49: 12 19 27 35 43 51 50 49 
-Caminho de 12 para 50: 12 19 27 35 43 51 50 
+Caminho de 12 para 44: 12 19 27 35 44 
+Caminho de 12 para 45: 12 19 27 36 45 
+Caminho de 12 para 46: 12 19 28 37 46 
+Caminho de 12 para 47: 12 19 28 37 46 47 
+Caminho de 12 para 48: 12 19 27 35 43 50 49 48 
+Caminho de 12 para 49: 12 19 27 35 43 50 49 
+Caminho de 12 para 50: 12 19 27 35 43 50 
 Caminho de 12 para 51: 12 19 27 35 43 51 
-Caminho de 12 para 52: 12 19 27 35 43 51 52 
-Caminho de 12 para 53: 12 19 27 35 43 51 52 53 
-Caminho de 12 para 54: 12 19 27 35 43 51 52 53 54 
-Caminho de 12 para 55: 12 19 27 35 43 51 52 53 54 55 
-Caminho de 12 para 56: 12 19 27 35 43 51 58 57 56 
-Caminho de 12 para 57: 12 19 27 35 43 51 58 57 
+Caminho de 12 para 52: 12 19 27 35 43 52 
+Caminho de 12 para 53: 12 19 27 35 44 53 
+Caminho de 12 para 54: 12 19 27 36 45 54 
+Caminho de 12 para 55: 12 19 28 37 46 55 
+Caminho de 12 para 56: 12 19 27 35 43 50 57 56 
+Caminho de 12 para 57: 12 19 27 35 43 50 57 
 Caminho de 12 para 58: 12 19 27 35 43 51 58 
-Caminho de 12 para 62: 12 19 27 35 43 51 52 53 54 62 
-Caminho de 12 para 63: 12 19 27 35 43 51 52 53 54 55 63 
-Caminho de 13 para 0: 13 12 11 10 9 8 0 
-Caminho de 13 para 1: 13 12 11 10 9 1 
-Caminho de 13 para 2: 13 12 11 10 2 
-Caminho de 13 para 3: 13 12 11 3 
+Caminho de 12 para 62: 12 19 27 35 44 53 62 
+Caminho de 12 para 63: 12 19 27 36 45 54 63 
+Caminho de 13 para 0: 13 12 11 10 9 0 
+Caminho de 13 para 1: 13 12 11 10 1 
+Caminho de 13 para 2: 13 12 11 2 
+Caminho de 13 para 3: 13 4 3 
 Caminho de 13 para 4: 13 4 
 Caminho de 13 para 5: 13 5 
 Caminho de 13 para 6: 13 6 
-Caminho de 13 para 7: 13 14 15 7 
+Caminho de 13 para 7: 13 6 7 
 Caminho de 13 para 8: 13 12 11 10 9 8 
 Caminho de 13 para 9: 13 12 11 10 9 
 Caminho de 13 para 10: 13 12 11 10 
@@ -716,49 +716,49 @@ Caminho de 13 para 12: 13 12
 Caminho de 13 para 13: 13 
 Caminho de 13 para 14: 13 14 
 Caminho de 13 para 15: 13 14 15 
-Caminho de 13 para 16: 13 12 11 10 9 8 16 
-Caminho de 13 para 17: 13 12 11 10 9 17 
-Caminho de 13 para 18: 13 12 11 10 18 
-Caminho de 13 para 19: 13 12 11 19 
-Caminho de 13 para 24: 13 12 11 10 9 8 16 24 
-Caminho de 13 para 25: 13 12 11 10 9 17 25 
-Caminho de 13 para 26: 13 12 11 10 18 26 
-Caminho de 13 para 27: 13 12 11 19 27 
-Caminho de 13 para 28: 13 12 11 19 27 28 
-Caminho de 13 para 29: 13 12 11 19 27 28 29 
-Caminho de 13 para 30: 13 12 11 19 27 28 29 30 
-Caminho de 13 para 31: 13 12 11 19 27 28 29 30 31 
-Caminho de 13 para 32: 13 12 11 10 9 8 16 24 32 
-Caminho de 13 para 33: 13 12 11 10 9 17 25 33 
-Caminho de 13 para 34: 13 12 11 10 18 26 34 
-Caminho de 13 para 35: 13 12 11 19 27 35 
-Caminho de 13 para 36: 13 12 11 19 27 35 36 
-Caminho de 13 para 37: 13 12 11 19 27 35 36 37 
-Caminho de 13 para 38: 13 12 11 19 27 35 36 37 38 
-Caminho de 13 para 39: 13 12 11 19 27 35 36 37 38 39 
-Caminho de 13 para 43: 13 12 11 19 27 35 43 
-Caminho de 13 para 44: 13 12 11 19 27 35 43 44 
-Caminho de 13 para 45: 13 12 11 19 27 35 43 44 45 
-Caminho de 13 para 46: 13 12 11 19 27 35 43 44 45 46 
-Caminho de 13 para 47: 13 12 11 19 27 35 43 44 45 46 47 
-Caminho de 13 para 48: 13 12 11 19 27 35 43 51 50 49 48 
-Caminho de 13 para 49: 13 12 11 19 27 35 43 51 50 49 
-Caminho de 13 para 50: 13 12 11 19 27 35 43 51 50 
-Caminho de 13 para 51: 13 12 11 19 27 35 43 51 
-Caminho de 13 para 52: 13 12 11 19 27 35 43 51 52 
-Caminho de 13 para 53: 13 12 11 19 27 35 43 51 52 53 
-Caminho de 13 para 54: 13 12 11 19 27 35 43 51 52 53 54 
-Caminho de 13 para 55: 13 12 11 19 27 35 43 51 52 53 54 55 
-Caminho de 13 para 56: 13 12 11 19 27 35 43 51 58 57 56 
-Caminho de 13 para 57: 13 12 11 19 27 35 43 51 58 57 
-Caminho de 13 para 58: 13 12 11 19 27 35 43 51 58 
-Caminho de 13 para 62: 13 12 11 19 27 35 43 51 52 53 54 62 
-Caminho de 13 para 63: 13 12 11 19 27 35 43 51 52 53 54 55 63 
-Caminho de 14 para 0: 14 13 12 11 10 9 8 0 
-Caminho de 14 para 1: 14 13 12 11 10 9 1 
-Caminho de 14 para 2: 14 13 12 11 10 2 
-Caminho de 14 para 3: 14 13 12 11 3 
-Caminho de 14 para 4: 14 13 12 4 
+Caminho de 13 para 16: 13 12 11 10 9 16 
+Caminho de 13 para 17: 13 12 11 10 17 
+Caminho de 13 para 18: 13 12 11 18 
+Caminho de 13 para 19: 13 12 19 
+Caminho de 13 para 24: 13 12 11 10 17 24 
+Caminho de 13 para 25: 13 12 11 18 25 
+Caminho de 13 para 26: 13 12 19 26 
+Caminho de 13 para 27: 13 12 19 27 
+Caminho de 13 para 28: 13 12 19 28 
+Caminho de 13 para 29: 13 12 19 28 29 
+Caminho de 13 para 30: 13 12 19 28 29 30 
+Caminho de 13 para 31: 13 12 19 28 29 30 31 
+Caminho de 13 para 32: 13 12 11 18 25 32 
+Caminho de 13 para 33: 13 12 19 26 33 
+Caminho de 13 para 34: 13 12 19 26 34 
+Caminho de 13 para 35: 13 12 19 27 35 
+Caminho de 13 para 36: 13 12 19 27 36 
+Caminho de 13 para 37: 13 12 19 28 37 
+Caminho de 13 para 38: 13 12 19 28 37 38 
+Caminho de 13 para 39: 13 12 19 28 37 38 39 
+Caminho de 13 para 43: 13 12 19 27 35 43 
+Caminho de 13 para 44: 13 12 19 27 35 44 
+Caminho de 13 para 45: 13 12 19 27 36 45 
+Caminho de 13 para 46: 13 12 19 28 37 46 
+Caminho de 13 para 47: 13 12 19 28 37 46 47 
+Caminho de 13 para 48: 13 12 19 27 35 43 50 49 48 
+Caminho de 13 para 49: 13 12 19 27 35 43 50 49 
+Caminho de 13 para 50: 13 12 19 27 35 43 50 
+Caminho de 13 para 51: 13 12 19 27 35 43 51 
+Caminho de 13 para 52: 13 12 19 27 35 43 52 
+Caminho de 13 para 53: 13 12 19 27 35 44 53 
+Caminho de 13 para 54: 13 12 19 27 36 45 54 
+Caminho de 13 para 55: 13 12 19 28 37 46 55 
+Caminho de 13 para 56: 13 12 19 27 35 43 50 57 56 
+Caminho de 13 para 57: 13 12 19 27 35 43 50 57 
+Caminho de 13 para 58: 13 12 19 27 35 43 51 58 
+Caminho de 13 para 62: 13 12 19 27 35 44 53 62 
+Caminho de 13 para 63: 13 12 19 27 36 45 54 63 
+Caminho de 14 para 0: 14 13 12 11 10 9 0 
+Caminho de 14 para 1: 14 13 12 11 10 1 
+Caminho de 14 para 2: 14 13 12 11 2 
+Caminho de 14 para 3: 14 13 12 3 
+Caminho de 14 para 4: 14 5 4 
 Caminho de 14 para 5: 14 5 
 Caminho de 14 para 6: 14 6 
 Caminho de 14 para 7: 14 7 
@@ -770,50 +770,50 @@ Caminho de 14 para 12: 14 13 12
 Caminho de 14 para 13: 14 13 
 Caminho de 14 para 14: 14 
 Caminho de 14 para 15: 14 15 
-Caminho de 14 para 16: 14 13 12 11 10 9 8 16 
-Caminho de 14 para 17: 14 13 12 11 10 9 17 
-Caminho de 14 para 18: 14 13 12 11 10 18 
-Caminho de 14 para 19: 14 13 12 11 19 
-Caminho de 14 para 24: 14 13 12 11 10 9 8 16 24 
-Caminho de 14 para 25: 14 13 12 11 10 9 17 25 
-Caminho de 14 para 26: 14 13 12 11 10 18 26 
-Caminho de 14 para 27: 14 13 12 11 19 27 
-Caminho de 14 para 28: 14 13 12 11 19 27 28 
-Caminho de 14 para 29: 14 13 12 11 19 27 28 29 
-Caminho de 14 para 30: 14 13 12 11 19 27 28 29 30 
-Caminho de 14 para 31: 14 13 12 11 19 27 28 29 30 31 
-Caminho de 14 para 32: 14 13 12 11 10 9 8 16 24 32 
-Caminho de 14 para 33: 14 13 12 11 10 9 17 25 33 
-Caminho de 14 para 34: 14 13 12 11 10 18 26 34 
-Caminho de 14 para 35: 14 13 12 11 19 27 35 
-Caminho de 14 para 36: 14 13 12 11 19 27 35 36 
-Caminho de 14 para 37: 14 13 12 11 19 27 35 36 37 
-Caminho de 14 para 38: 14 13 12 11 19 27 35 36 37 38 
-Caminho de 14 para 39: 14 13 12 11 19 27 35 36 37 38 39 
-Caminho de 14 para 43: 14 13 12 11 19 27 35 43 
-Caminho de 14 para 44: 14 13 12 11 19 27 35 43 44 
-Caminho de 14 para 45: 14 13 12 11 19 27 35 43 44 45 
-Caminho de 14 para 46: 14 13 12 11 19 27 35 43 44 45 46 
-Caminho de 14 para 47: 14 13 12 11 19 27 35 43 44 45 46 47 
-Caminho de 14 para 48: 14 13 12 11 19 27 35 43 51 50 49 48 
-Caminho de 14 para 49: 14 13 12 11 19 27 35 43 51 50 49 
-Caminho de 14 para 50: 14 13 12 11 19 27 35 43 51 50 
-Caminho de 14 para 51: 14 13 12 11 19 27 35 43 51 
-Caminho de 14 para 52: 14 13 12 11 19 27 35 43 51 52 
-Caminho de 14 para 53: 14 13 12 11 19 27 35 43 51 52 53 
-Caminho de 14 para 54: 14 13 12 11 19 27 35 43 51 52 53 54 
-Caminho de 14 para 55: 14 13 12 11 19 27 35 43 51 52 53 54 55 
-Caminho de 14 para 56: 14 13 12 11 19 27 35 43 51 58 57 56 
-Caminho de 14 para 57: 14 13 12 11 19 27 35 43 51 58 57 
-Caminho de 14 para 58: 14 13 12 11 19 27 35 43 51 58 
-Caminho de 14 para 62: 14 13 12 11 19 27 35 43 51 52 53 54 62 
-Caminho de 14 para 63: 14 13 12 11 19 27 35 43 51 52 53 54 55 63 
-Caminho de 15 para 0: 15 14 13 12 11 10 9 8 0 
-Caminho de 15 para 1: 15 14 13 12 11 10 9 1 
-Caminho de 15 para 2: 15 14 13 12 11 10 2 
-Caminho de 15 para 3: 15 14 13 12 11 3 
-Caminho de 15 para 4: 15 14 13 12 4 
-Caminho de 15 para 5: 15 14 13 5 
+Caminho de 14 para 16: 14 13 12 11 10 9 16 
+Caminho de 14 para 17: 14 13 12 11 10 17 
+Caminho de 14 para 18: 14 13 12 11 18 
+Caminho de 14 para 19: 14 13 12 19 
+Caminho de 14 para 24: 14 13 12 11 10 17 24 
+Caminho de 14 para 25: 14 13 12 11 18 25 
+Caminho de 14 para 26: 14 13 12 19 26 
+Caminho de 14 para 27: 14 13 12 19 27 
+Caminho de 14 para 28: 14 13 12 19 28 
+Caminho de 14 para 29: 14 13 12 19 28 29 
+Caminho de 14 para 30: 14 13 12 19 28 29 30 
+Caminho de 14 para 31: 14 13 12 19 28 29 30 31 
+Caminho de 14 para 32: 14 13 12 11 18 25 32 
+Caminho de 14 para 33: 14 13 12 19 26 33 
+Caminho de 14 para 34: 14 13 12 19 26 34 
+Caminho de 14 para 35: 14 13 12 19 27 35 
+Caminho de 14 para 36: 14 13 12 19 27 36 
+Caminho de 14 para 37: 14 13 12 19 28 37 
+Caminho de 14 para 38: 14 13 12 19 28 37 38 
+Caminho de 14 para 39: 14 13 12 19 28 37 38 39 
+Caminho de 14 para 43: 14 13 12 19 27 35 43 
+Caminho de 14 para 44: 14 13 12 19 27 35 44 
+Caminho de 14 para 45: 14 13 12 19 27 36 45 
+Caminho de 14 para 46: 14 13 12 19 28 37 46 
+Caminho de 14 para 47: 14 13 12 19 28 37 46 47 
+Caminho de 14 para 48: 14 13 12 19 27 35 43 50 49 48 
+Caminho de 14 para 49: 14 13 12 19 27 35 43 50 49 
+Caminho de 14 para 50: 14 13 12 19 27 35 43 50 
+Caminho de 14 para 51: 14 13 12 19 27 35 43 51 
+Caminho de 14 para 52: 14 13 12 19 27 35 43 52 
+Caminho de 14 para 53: 14 13 12 19 27 35 44 53 
+Caminho de 14 para 54: 14 13 12 19 27 36 45 54 
+Caminho de 14 para 55: 14 13 12 19 28 37 46 55 
+Caminho de 14 para 56: 14 13 12 19 27 35 43 50 57 56 
+Caminho de 14 para 57: 14 13 12 19 27 35 43 50 57 
+Caminho de 14 para 58: 14 13 12 19 27 35 43 51 58 
+Caminho de 14 para 62: 14 13 12 19 27 35 44 53 62 
+Caminho de 14 para 63: 14 13 12 19 27 36 45 54 63 
+Caminho de 15 para 0: 15 14 13 12 11 10 9 0 
+Caminho de 15 para 1: 15 14 13 12 11 10 1 
+Caminho de 15 para 2: 15 14 13 12 11 2 
+Caminho de 15 para 3: 15 14 13 12 3 
+Caminho de 15 para 4: 15 14 13 4 
+Caminho de 15 para 5: 15 6 5 
 Caminho de 15 para 6: 15 6 
 Caminho de 15 para 7: 15 7 
 Caminho de 15 para 8: 15 14 13 12 11 10 9 8 
@@ -824,56 +824,56 @@ Caminho de 15 para 12: 15 14 13 12
 Caminho de 15 para 13: 15 14 13 
 Caminho de 15 para 14: 15 14 
 Caminho de 15 para 15: 15 
-Caminho de 15 para 16: 15 14 13 12 11 10 9 8 16 
-Caminho de 15 para 17: 15 14 13 12 11 10 9 17 
-Caminho de 15 para 18: 15 14 13 12 11 10 18 
-Caminho de 15 para 19: 15 14 13 12 11 19 
-Caminho de 15 para 24: 15 14 13 12 11 10 9 8 16 24 
-Caminho de 15 para 25: 15 14 13 12 11 10 9 17 25 
-Caminho de 15 para 26: 15 14 13 12 11 10 18 26 
-Caminho de 15 para 27: 15 14 13 12 11 19 27 
-Caminho de 15 para 28: 15 14 13 12 11 19 27 28 
-Caminho de 15 para 29: 15 14 13 12 11 19 27 28 29 
-Caminho de 15 para 30: 15 14 13 12 11 19 27 28 29 30 
-Caminho de 15 para 31: 15 14 13 12 11 19 27 28 29 30 31 
-Caminho de 15 para 32: 15 14 13 12 11 10 9 8 16 24 32 
-Caminho de 15 para 33: 15 14 13 12 11 10 9 17 25 33 
-Caminho de 15 para 34: 15 14 13 12 11 10 18 26 34 
-Caminho de 15 para 35: 15 14 13 12 11 19 27 35 
-Caminho de 15 para 36: 15 14 13 12 11 19 27 35 36 
-Caminho de 15 para 37: 15 14 13 12 11 19 27 35 36 37 
-Caminho de 15 para 38: 15 14 13 12 11 19 27 35 36 37 38 
-Caminho de 15 para 39: 15 14 13 12 11 19 27 35 36 37 38 39 
-Caminho de 15 para 43: 15 14 13 12 11 19 27 35 43 
-Caminho de 15 para 44: 15 14 13 12 11 19 27 35 43 44 
-Caminho de 15 para 45: 15 14 13 12 11 19 27 35 43 44 45 
-Caminho de 15 para 46: 15 14 13 12 11 19 27 35 43 44 45 46 
-Caminho de 15 para 47: 15 14 13 12 11 19 27 35 43 44 45 46 47 
-Caminho de 15 para 48: 15 14 13 12 11 19 27 35 43 51 50 49 48 
-Caminho de 15 para 49: 15 14 13 12 11 19 27 35 43 51 50 49 
-Caminho de 15 para 50: 15 14 13 12 11 19 27 35 43 51 50 
-Caminho de 15 para 51: 15 14 13 12 11 19 27 35 43 51 
-Caminho de 15 para 52: 15 14 13 12 11 19 27 35 43 51 52 
-Caminho de 15 para 53: 15 14 13 12 11 19 27 35 43 51 52 53 
-Caminho de 15 para 54: 15 14 13 12 11 19 27 35 43 51 52 53 54 
-Caminho de 15 para 55: 15 14 13 12 11 19 27 35 43 51 52 53 54 55 
-Caminho de 15 para 56: 15 14 13 12 11 19 27 35 43 51 58 57 56 
-Caminho de 15 para 57: 15 14 13 12 11 19 27 35 43 51 58 57 
-Caminho de 15 para 58: 15 14 13 12 11 19 27 35 43 51 58 
-Caminho de 15 para 62: 15 14 13 12 11 19 27 35 43 51 52 53 54 62 
-Caminho de 15 para 63: 15 14 13 12 11 19 27 35 43 51 52 53 54 55 63 
+Caminho de 15 para 16: 15 14 13 12 11 10 9 16 
+Caminho de 15 para 17: 15 14 13 12 11 10 17 
+Caminho de 15 para 18: 15 14 13 12 11 18 
+Caminho de 15 para 19: 15 14 13 12 19 
+Caminho de 15 para 24: 15 14 13 12 11 10 17 24 
+Caminho de 15 para 25: 15 14 13 12 11 18 25 
+Caminho de 15 para 26: 15 14 13 12 19 26 
+Caminho de 15 para 27: 15 14 13 12 19 27 
+Caminho de 15 para 28: 15 14 13 12 19 28 
+Caminho de 15 para 29: 15 14 13 12 19 28 29 
+Caminho de 15 para 30: 15 14 13 12 19 28 29 30 
+Caminho de 15 para 31: 15 14 13 12 19 28 29 30 31 
+Caminho de 15 para 32: 15 14 13 12 11 18 25 32 
+Caminho de 15 para 33: 15 14 13 12 19 26 33 
+Caminho de 15 para 34: 15 14 13 12 19 26 34 
+Caminho de 15 para 35: 15 14 13 12 19 27 35 
+Caminho de 15 para 36: 15 14 13 12 19 27 36 
+Caminho de 15 para 37: 15 14 13 12 19 28 37 
+Caminho de 15 para 38: 15 14 13 12 19 28 37 38 
+Caminho de 15 para 39: 15 14 13 12 19 28 37 38 39 
+Caminho de 15 para 43: 15 14 13 12 19 27 35 43 
+Caminho de 15 para 44: 15 14 13 12 19 27 35 44 
+Caminho de 15 para 45: 15 14 13 12 19 27 36 45 
+Caminho de 15 para 46: 15 14 13 12 19 28 37 46 
+Caminho de 15 para 47: 15 14 13 12 19 28 37 46 47 
+Caminho de 15 para 48: 15 14 13 12 19 27 35 43 50 49 48 
+Caminho de 15 para 49: 15 14 13 12 19 27 35 43 50 49 
+Caminho de 15 para 50: 15 14 13 12 19 27 35 43 50 
+Caminho de 15 para 51: 15 14 13 12 19 27 35 43 51 
+Caminho de 15 para 52: 15 14 13 12 19 27 35 43 52 
+Caminho de 15 para 53: 15 14 13 12 19 27 35 44 53 
+Caminho de 15 para 54: 15 14 13 12 19 27 36 45 54 
+Caminho de 15 para 55: 15 14 13 12 19 28 37 46 55 
+Caminho de 15 para 56: 15 14 13 12 19 27 35 43 50 57 56 
+Caminho de 15 para 57: 15 14 13 12 19 27 35 43 50 57 
+Caminho de 15 para 58: 15 14 13 12 19 27 35 43 51 58 
+Caminho de 15 para 62: 15 14 13 12 19 27 35 44 53 62 
+Caminho de 15 para 63: 15 14 13 12 19 27 36 45 54 63 
 Caminho de 16 para 0: 16 8 0 
-Caminho de 16 para 1: 16 9 2 1 
+Caminho de 16 para 1: 16 9 1 
 Caminho de 16 para 2: 16 9 2 
 Caminho de 16 para 3: 16 9 2 3 
-Caminho de 16 para 4: 16 9 2 3 4 
+Caminho de 16 para 4: 16 17 18 11 4 
 Caminho de 16 para 5: 16 17 18 19 12 5 
 Caminho de 16 para 6: 16 17 18 19 12 5 6 
 Caminho de 16 para 7: 16 17 18 19 12 5 6 7 
 Caminho de 16 para 8: 16 8 
 Caminho de 16 para 9: 16 9 
-Caminho de 16 para 10: 16 17 18 19 10 
-Caminho de 16 para 11: 16 17 18 19 11 
+Caminho de 16 para 10: 16 9 10 
+Caminho de 16 para 11: 16 17 18 11 
 Caminho de 16 para 12: 16 17 18 19 12 
 Caminho de 16 para 13: 16 17 18 19 12 13 
 Caminho de 16 para 14: 16 17 18 19 12 13 14 
@@ -884,41 +884,41 @@ Caminho de 16 para 18: 16 17 18
 Caminho de 16 para 19: 16 17 18 19 
 Caminho de 16 para 24: 16 24 
 Caminho de 16 para 25: 16 25 
-Caminho de 16 para 26: 16 17 18 19 26 
-Caminho de 16 para 27: 16 17 18 19 27 
+Caminho de 16 para 26: 16 25 26 
+Caminho de 16 para 27: 16 17 18 27 
 Caminho de 16 para 28: 16 17 18 19 28 
 Caminho de 16 para 29: 16 17 18 19 28 29 
 Caminho de 16 para 30: 16 17 18 19 28 29 30 
 Caminho de 16 para 31: 16 17 18 19 28 29 30 31 
 Caminho de 16 para 32: 16 24 32 
-Caminho de 16 para 33: 16 25 34 33 
+Caminho de 16 para 33: 16 25 33 
 Caminho de 16 para 34: 16 25 34 
 Caminho de 16 para 35: 16 25 34 35 
-Caminho de 16 para 36: 16 25 34 35 36 
+Caminho de 16 para 36: 16 17 18 27 36 
 Caminho de 16 para 37: 16 17 18 19 28 37 
 Caminho de 16 para 38: 16 17 18 19 28 37 38 
 Caminho de 16 para 39: 16 17 18 19 28 37 38 39 
 Caminho de 16 para 43: 16 25 34 43 
 Caminho de 16 para 44: 16 25 34 43 44 
-Caminho de 16 para 45: 16 25 34 43 44 45 
+Caminho de 16 para 45: 16 17 18 27 36 45 
 Caminho de 16 para 46: 16 17 18 19 28 37 46 
 Caminho de 16 para 47: 16 17 18 19 28 37 46 47 
-Caminho de 16 para 48: 16 25 34 43 51 50 49 48 
-Caminho de 16 para 49: 16 25 34 43 51 50 49 
-Caminho de 16 para 50: 16 25 34 43 51 50 
+Caminho de 16 para 48: 16 25 34 43 50 49 48 
+Caminho de 16 para 49: 16 25 34 43 50 49 
+Caminho de 16 para 50: 16 25 34 43 50 
 Caminho de 16 para 51: 16 25 34 43 51 
 Caminho de 16 para 52: 16 25 34 43 52 
 Caminho de 16 para 53: 16 25 34 43 52 53 
-Caminho de 16 para 54: 16 25 34 43 52 53 54 
+Caminho de 16 para 54: 16 17 18 27 36 45 54 
 Caminho de 16 para 55: 16 17 18 19 28 37 46 55 
-Caminho de 16 para 56: 16 25 34 43 51 58 57 56 
-Caminho de 16 para 57: 16 25 34 43 51 58 57 
+Caminho de 16 para 56: 16 25 34 43 50 57 56 
+Caminho de 16 para 57: 16 25 34 43 50 57 
 Caminho de 16 para 58: 16 25 34 43 51 58 
-Caminho de 16 para 62: 16 25 34 43 52 53 54 62 
-Caminho de 16 para 63: 16 17 18 19 28 37 46 55 63 
-Caminho de 17 para 0: 17 9 1 0 
+Caminho de 16 para 62: 16 25 34 43 52 53 62 
+Caminho de 16 para 63: 16 17 18 27 36 45 54 63 
+Caminho de 17 para 0: 17 8 0 
 Caminho de 17 para 1: 17 9 1 
-Caminho de 17 para 2: 17 10 3 2 
+Caminho de 17 para 2: 17 10 2 
 Caminho de 17 para 3: 17 10 3 
 Caminho de 17 para 4: 17 10 3 4 
 Caminho de 17 para 5: 17 18 19 12 5 
@@ -927,7 +927,7 @@ Caminho de 17 para 7: 17 18 19 12 5 6 7
 Caminho de 17 para 8: 17 8 
 Caminho de 17 para 9: 17 9 
 Caminho de 17 para 10: 17 10 
-Caminho de 17 para 11: 17 10 3 11 
+Caminho de 17 para 11: 17 10 11 
 Caminho de 17 para 12: 17 18 19 12 
 Caminho de 17 para 13: 17 18 19 12 13 
 Caminho de 17 para 14: 17 18 19 12 13 14 
@@ -939,14 +939,14 @@ Caminho de 17 para 19: 17 18 19
 Caminho de 17 para 24: 17 24 
 Caminho de 17 para 25: 17 25 
 Caminho de 17 para 26: 17 26 
-Caminho de 17 para 27: 17 26 35 27 
+Caminho de 17 para 27: 17 26 27 
 Caminho de 17 para 28: 17 18 19 28 
 Caminho de 17 para 29: 17 18 19 28 29 
 Caminho de 17 para 30: 17 18 19 28 29 30 
 Caminho de 17 para 31: 17 18 19 28 29 30 31 
-Caminho de 17 para 32: 17 25 33 32 
+Caminho de 17 para 32: 17 24 32 
 Caminho de 17 para 33: 17 25 33 
-Caminho de 17 para 34: 17 26 35 34 
+Caminho de 17 para 34: 17 26 34 
 Caminho de 17 para 35: 17 26 35 
 Caminho de 17 para 36: 17 26 35 36 
 Caminho de 17 para 37: 17 18 19 28 37 
@@ -957,28 +957,28 @@ Caminho de 17 para 44: 17 26 35 44
 Caminho de 17 para 45: 17 26 35 44 45 
 Caminho de 17 para 46: 17 18 19 28 37 46 
 Caminho de 17 para 47: 17 18 19 28 37 46 47 
-Caminho de 17 para 48: 17 26 35 43 51 50 49 48 
-Caminho de 17 para 49: 17 26 35 43 51 50 49 
-Caminho de 17 para 50: 17 26 35 43 51 50 
+Caminho de 17 para 48: 17 26 35 43 50 49 48 
+Caminho de 17 para 49: 17 26 35 43 50 49 
+Caminho de 17 para 50: 17 26 35 43 50 
 Caminho de 17 para 51: 17 26 35 43 51 
 Caminho de 17 para 52: 17 26 35 44 52 
 Caminho de 17 para 53: 17 26 35 44 53 
 Caminho de 17 para 54: 17 26 35 44 53 54 
 Caminho de 17 para 55: 17 18 19 28 37 46 55 
-Caminho de 17 para 56: 17 26 35 43 51 58 57 56 
-Caminho de 17 para 57: 17 26 35 43 51 58 57 
+Caminho de 17 para 56: 17 26 35 43 50 57 56 
+Caminho de 17 para 57: 17 26 35 43 50 57 
 Caminho de 17 para 58: 17 26 35 43 51 58 
 Caminho de 17 para 62: 17 26 35 44 53 62 
 Caminho de 17 para 63: 17 26 35 44 53 62 63 
 Caminho de 18 para 0: 18 9 0 
-Caminho de 18 para 1: 18 9 0 1 
+Caminho de 18 para 1: 18 9 1 
 Caminho de 18 para 2: 18 10 2 
-Caminho de 18 para 3: 18 11 4 3 
+Caminho de 18 para 3: 18 11 3 
 Caminho de 18 para 4: 18 11 4 
 Caminho de 18 para 5: 18 11 4 5 
 Caminho de 18 para 6: 18 11 4 5 6 
 Caminho de 18 para 7: 18 11 4 5 6 7 
-Caminho de 18 para 8: 18 9 0 8 
+Caminho de 18 para 8: 18 9 8 
 Caminho de 18 para 9: 18 9 
 Caminho de 18 para 10: 18 10 
 Caminho de 18 para 11: 18 11 
@@ -990,7 +990,7 @@ Caminho de 18 para 16: 18 17 16
 Caminho de 18 para 17: 18 17 
 Caminho de 18 para 18: 18 
 Caminho de 18 para 19: 18 19 
-Caminho de 18 para 24: 18 25 32 24 
+Caminho de 18 para 24: 18 25 24 
 Caminho de 18 para 25: 18 25 
 Caminho de 18 para 26: 18 26 
 Caminho de 18 para 27: 18 27 
@@ -999,9 +999,9 @@ Caminho de 18 para 29: 18 27 28 29
 Caminho de 18 para 30: 18 27 28 29 30 
 Caminho de 18 para 31: 18 27 28 29 30 31 
 Caminho de 18 para 32: 18 25 32 
-Caminho de 18 para 33: 18 25 32 33 
+Caminho de 18 para 33: 18 25 33 
 Caminho de 18 para 34: 18 26 34 
-Caminho de 18 para 35: 18 27 28 35 
+Caminho de 18 para 35: 18 27 35 
 Caminho de 18 para 36: 18 27 36 
 Caminho de 18 para 37: 18 27 36 37 
 Caminho de 18 para 38: 18 27 36 37 38 
@@ -1011,29 +1011,29 @@ Caminho de 18 para 44: 18 27 36 44
 Caminho de 18 para 45: 18 27 36 45 
 Caminho de 18 para 46: 18 27 36 45 46 
 Caminho de 18 para 47: 18 27 36 45 46 47 
-Caminho de 18 para 48: 18 26 34 43 51 50 49 48 
-Caminho de 18 para 49: 18 26 34 43 51 50 49 
-Caminho de 18 para 50: 18 26 34 43 51 50 
+Caminho de 18 para 48: 18 26 34 43 50 49 48 
+Caminho de 18 para 49: 18 26 34 43 50 49 
+Caminho de 18 para 50: 18 26 34 43 50 
 Caminho de 18 para 51: 18 26 34 43 51 
 Caminho de 18 para 52: 18 26 34 43 52 
 Caminho de 18 para 53: 18 27 36 45 53 
 Caminho de 18 para 54: 18 27 36 45 54 
 Caminho de 18 para 55: 18 27 36 45 54 55 
-Caminho de 18 para 56: 18 26 34 43 51 58 57 56 
-Caminho de 18 para 57: 18 26 34 43 51 58 57 
+Caminho de 18 para 56: 18 26 34 43 50 57 56 
+Caminho de 18 para 57: 18 26 34 43 50 57 
 Caminho de 18 para 58: 18 26 34 43 51 58 
 Caminho de 18 para 62: 18 27 36 45 54 62 
 Caminho de 18 para 63: 18 27 36 45 54 63 
 Caminho de 19 para 0: 19 10 1 0 
 Caminho de 19 para 1: 19 10 1 
-Caminho de 19 para 2: 19 10 1 2 
+Caminho de 19 para 2: 19 10 2 
 Caminho de 19 para 3: 19 11 3 
-Caminho de 19 para 4: 19 12 5 4 
+Caminho de 19 para 4: 19 12 4 
 Caminho de 19 para 5: 19 12 5 
 Caminho de 19 para 6: 19 12 5 6 
 Caminho de 19 para 7: 19 12 5 6 7 
-Caminho de 19 para 8: 19 18 17 16 8 
-Caminho de 19 para 9: 19 18 17 16 9 
+Caminho de 19 para 8: 19 18 17 8 
+Caminho de 19 para 9: 19 10 9 
 Caminho de 19 para 10: 19 10 
 Caminho de 19 para 11: 19 11 
 Caminho de 19 para 12: 19 12 
@@ -1044,8 +1044,8 @@ Caminho de 19 para 16: 19 18 17 16
 Caminho de 19 para 17: 19 18 17 
 Caminho de 19 para 18: 19 18 
 Caminho de 19 para 19: 19 
-Caminho de 19 para 24: 19 18 17 16 24 
-Caminho de 19 para 25: 19 18 17 16 25 
+Caminho de 19 para 24: 19 18 17 24 
+Caminho de 19 para 25: 19 26 25 
 Caminho de 19 para 26: 19 26 
 Caminho de 19 para 27: 19 27 
 Caminho de 19 para 28: 19 28 
@@ -1054,50 +1054,50 @@ Caminho de 19 para 30: 19 28 29 30
 Caminho de 19 para 31: 19 28 29 30 31 
 Caminho de 19 para 32: 19 26 33 32 
 Caminho de 19 para 33: 19 26 33 
-Caminho de 19 para 34: 19 27 35 43 34 
+Caminho de 19 para 34: 19 26 34 
 Caminho de 19 para 35: 19 27 35 
-Caminho de 19 para 36: 19 28 29 36 
+Caminho de 19 para 36: 19 28 36 
 Caminho de 19 para 37: 19 28 37 
 Caminho de 19 para 38: 19 28 37 38 
 Caminho de 19 para 39: 19 28 37 38 39 
 Caminho de 19 para 43: 19 27 35 43 
-Caminho de 19 para 44: 19 27 35 43 44 
+Caminho de 19 para 44: 19 27 35 44 
 Caminho de 19 para 45: 19 28 37 45 
 Caminho de 19 para 46: 19 28 37 46 
 Caminho de 19 para 47: 19 28 37 46 47 
-Caminho de 19 para 48: 19 27 35 43 51 50 49 48 
-Caminho de 19 para 49: 19 27 35 43 51 50 49 
-Caminho de 19 para 50: 19 27 35 43 51 50 
+Caminho de 19 para 48: 19 27 35 43 50 49 48 
+Caminho de 19 para 49: 19 27 35 43 50 49 
+Caminho de 19 para 50: 19 27 35 43 50 
 Caminho de 19 para 51: 19 27 35 43 51 
-Caminho de 19 para 52: 19 28 37 45 52 
-Caminho de 19 para 53: 19 28 37 45 53 
+Caminho de 19 para 52: 19 27 35 43 52 
+Caminho de 19 para 53: 19 27 35 44 53 
 Caminho de 19 para 54: 19 28 37 46 54 
 Caminho de 19 para 55: 19 28 37 46 55 
-Caminho de 19 para 56: 19 27 35 43 51 58 57 56 
-Caminho de 19 para 57: 19 27 35 43 51 58 57 
+Caminho de 19 para 56: 19 27 35 43 50 57 56 
+Caminho de 19 para 57: 19 27 35 43 50 57 
 Caminho de 19 para 58: 19 27 35 43 51 58 
-Caminho de 19 para 62: 19 28 37 46 54 62 
+Caminho de 19 para 62: 19 27 35 44 53 62 
 Caminho de 19 para 63: 19 28 37 46 55 63 
 Caminho de 24 para 0: 24 16 8 0 
-Caminho de 24 para 1: 24 16 8 0 1 
+Caminho de 24 para 1: 24 16 8 1 
 Caminho de 24 para 2: 24 17 10 2 
 Caminho de 24 para 3: 24 17 10 3 
 Caminho de 24 para 4: 24 17 10 3 4 
-Caminho de 24 para 5: 24 17 10 3 4 5 
-Caminho de 24 para 6: 24 17 10 3 4 5 6 
-Caminho de 24 para 7: 24 17 10 3 4 5 6 7 
+Caminho de 24 para 5: 24 25 26 19 12 5 
+Caminho de 24 para 6: 24 25 26 19 12 5 6 
+Caminho de 24 para 7: 24 25 26 19 12 5 6 7 
 Caminho de 24 para 8: 24 16 8 
-Caminho de 24 para 9: 24 16 8 0 9 
+Caminho de 24 para 9: 24 17 9 
 Caminho de 24 para 10: 24 17 10 
 Caminho de 24 para 11: 24 17 10 11 
-Caminho de 24 para 12: 24 17 10 11 12 
-Caminho de 24 para 13: 24 17 10 11 12 13 
-Caminho de 24 para 14: 24 17 10 11 12 13 14 
-Caminho de 24 para 15: 24 17 10 11 12 13 14 15 
+Caminho de 24 para 12: 24 25 26 19 12 
+Caminho de 24 para 13: 24 25 26 19 12 13 
+Caminho de 24 para 14: 24 25 26 19 12 13 14 
+Caminho de 24 para 15: 24 25 26 19 12 13 14 15 
 Caminho de 24 para 16: 24 16 
 Caminho de 24 para 17: 24 17 
-Caminho de 24 para 18: 24 25 26 27 18 
-Caminho de 24 para 19: 24 25 26 27 19 
+Caminho de 24 para 18: 24 17 18 
+Caminho de 24 para 19: 24 25 26 19 
 Caminho de 24 para 24: 24 
 Caminho de 24 para 25: 24 25 
 Caminho de 24 para 26: 24 25 26 
@@ -1108,41 +1108,41 @@ Caminho de 24 para 30: 24 25 26 27 28 29 30
 Caminho de 24 para 31: 24 25 26 27 28 29 30 31 
 Caminho de 24 para 32: 24 32 
 Caminho de 24 para 33: 24 33 
-Caminho de 24 para 34: 24 25 26 34 
-Caminho de 24 para 35: 24 25 26 27 35 
-Caminho de 24 para 36: 24 25 26 27 28 36 
-Caminho de 24 para 37: 24 25 26 27 28 29 37 
-Caminho de 24 para 38: 24 25 26 27 28 29 30 38 
-Caminho de 24 para 39: 24 25 26 27 28 29 30 31 39 
-Caminho de 24 para 43: 24 25 26 27 35 43 
-Caminho de 24 para 44: 24 25 26 27 28 36 44 
-Caminho de 24 para 45: 24 25 26 27 28 29 37 45 
-Caminho de 24 para 46: 24 25 26 27 28 29 30 38 46 
-Caminho de 24 para 47: 24 25 26 27 28 29 30 31 39 47 
-Caminho de 24 para 48: 24 25 26 27 35 43 51 50 49 48 
-Caminho de 24 para 49: 24 25 26 27 35 43 51 50 49 
-Caminho de 24 para 50: 24 25 26 27 35 43 51 50 
-Caminho de 24 para 51: 24 25 26 27 35 43 51 
-Caminho de 24 para 52: 24 25 26 27 28 36 44 52 
-Caminho de 24 para 53: 24 25 26 27 28 29 37 45 53 
-Caminho de 24 para 54: 24 25 26 27 28 29 30 38 46 54 
-Caminho de 24 para 55: 24 25 26 27 28 29 30 31 39 47 55 
-Caminho de 24 para 56: 24 25 26 27 35 43 51 58 57 56 
-Caminho de 24 para 57: 24 25 26 27 35 43 51 58 57 
-Caminho de 24 para 58: 24 25 26 27 35 43 51 58 
-Caminho de 24 para 62: 24 25 26 27 28 29 30 38 46 54 62 
-Caminho de 24 para 63: 24 25 26 27 28 29 30 31 39 47 55 63 
-Caminho de 25 para 0: 25 17 9 1 0 
+Caminho de 24 para 34: 24 33 34 
+Caminho de 24 para 35: 24 25 26 35 
+Caminho de 24 para 36: 24 25 26 27 36 
+Caminho de 24 para 37: 24 25 26 27 28 37 
+Caminho de 24 para 38: 24 25 26 27 28 29 38 
+Caminho de 24 para 39: 24 25 26 27 28 29 30 39 
+Caminho de 24 para 43: 24 33 34 43 
+Caminho de 24 para 44: 24 25 26 35 44 
+Caminho de 24 para 45: 24 25 26 27 36 45 
+Caminho de 24 para 46: 24 25 26 27 28 37 46 
+Caminho de 24 para 47: 24 25 26 27 28 29 38 47 
+Caminho de 24 para 48: 24 33 34 43 50 49 48 
+Caminho de 24 para 49: 24 33 34 43 50 49 
+Caminho de 24 para 50: 24 33 34 43 50 
+Caminho de 24 para 51: 24 33 34 43 51 
+Caminho de 24 para 52: 24 33 34 43 52 
+Caminho de 24 para 53: 24 25 26 35 44 53 
+Caminho de 24 para 54: 24 25 26 27 36 45 54 
+Caminho de 24 para 55: 24 25 26 27 28 37 46 55 
+Caminho de 24 para 56: 24 33 34 43 50 57 56 
+Caminho de 24 para 57: 24 33 34 43 50 57 
+Caminho de 24 para 58: 24 33 34 43 51 58 
+Caminho de 24 para 62: 24 25 26 35 44 53 62 
+Caminho de 24 para 63: 24 25 26 27 36 45 54 63 
+Caminho de 25 para 0: 25 17 9 0 
 Caminho de 25 para 1: 25 17 9 1 
-Caminho de 25 para 2: 25 17 9 1 2 
+Caminho de 25 para 2: 25 17 9 2 
 Caminho de 25 para 3: 25 18 11 3 
 Caminho de 25 para 4: 25 18 11 4 
 Caminho de 25 para 5: 25 18 11 4 5 
 Caminho de 25 para 6: 25 18 11 4 5 6 
 Caminho de 25 para 7: 25 18 11 4 5 6 7 
-Caminho de 25 para 8: 25 17 9 8 
+Caminho de 25 para 8: 25 16 8 
 Caminho de 25 para 9: 25 17 9 
-Caminho de 25 para 10: 25 17 9 1 10 
+Caminho de 25 para 10: 25 18 10 
 Caminho de 25 para 11: 25 18 11 
 Caminho de 25 para 12: 25 18 11 12 
 Caminho de 25 para 13: 25 18 11 12 13 
@@ -1151,7 +1151,7 @@ Caminho de 25 para 15: 25 18 11 12 13 14 15
 Caminho de 25 para 16: 25 16 
 Caminho de 25 para 17: 25 17 
 Caminho de 25 para 18: 25 18 
-Caminho de 25 para 19: 25 26 27 28 19 
+Caminho de 25 para 19: 25 18 19 
 Caminho de 25 para 24: 25 24 
 Caminho de 25 para 25: 25 
 Caminho de 25 para 26: 25 26 
@@ -1163,46 +1163,46 @@ Caminho de 25 para 31: 25 26 27 28 29 30 31
 Caminho de 25 para 32: 25 32 
 Caminho de 25 para 33: 25 33 
 Caminho de 25 para 34: 25 34 
-Caminho de 25 para 35: 25 26 27 28 35 
-Caminho de 25 para 36: 25 26 27 28 36 
-Caminho de 25 para 37: 25 26 27 28 29 30 37 
-Caminho de 25 para 38: 25 26 27 28 29 30 31 38 
-Caminho de 25 para 39: 25 34 43 44 45 46 39 
+Caminho de 25 para 35: 25 34 35 
+Caminho de 25 para 36: 25 26 27 36 
+Caminho de 25 para 37: 25 26 27 28 37 
+Caminho de 25 para 38: 25 26 27 28 29 38 
+Caminho de 25 para 39: 25 26 27 28 29 30 39 
 Caminho de 25 para 43: 25 34 43 
 Caminho de 25 para 44: 25 34 43 44 
-Caminho de 25 para 45: 25 34 43 44 45 
-Caminho de 25 para 46: 25 34 43 44 45 46 
-Caminho de 25 para 47: 25 34 43 44 45 46 47 
-Caminho de 25 para 48: 25 34 43 51 50 49 48 
-Caminho de 25 para 49: 25 34 43 51 50 49 
-Caminho de 25 para 50: 25 34 43 51 50 
+Caminho de 25 para 45: 25 26 27 36 45 
+Caminho de 25 para 46: 25 26 27 28 37 46 
+Caminho de 25 para 47: 25 26 27 28 29 38 47 
+Caminho de 25 para 48: 25 34 43 50 49 48 
+Caminho de 25 para 49: 25 34 43 50 49 
+Caminho de 25 para 50: 25 34 43 50 
 Caminho de 25 para 51: 25 34 43 51 
 Caminho de 25 para 52: 25 34 43 52 
 Caminho de 25 para 53: 25 34 43 52 53 
-Caminho de 25 para 54: 25 34 43 52 53 54 
-Caminho de 25 para 55: 25 34 43 52 53 54 55 
-Caminho de 25 para 56: 25 34 43 51 58 57 56 
-Caminho de 25 para 57: 25 34 43 51 58 57 
+Caminho de 25 para 54: 25 26 27 36 45 54 
+Caminho de 25 para 55: 25 26 27 28 37 46 55 
+Caminho de 25 para 56: 25 34 43 50 57 56 
+Caminho de 25 para 57: 25 34 43 50 57 
 Caminho de 25 para 58: 25 34 43 51 58 
-Caminho de 25 para 62: 25 34 43 52 53 54 62 
-Caminho de 25 para 63: 25 34 43 52 53 54 55 63 
+Caminho de 25 para 62: 25 34 43 52 53 62 
+Caminho de 25 para 63: 25 26 27 36 45 54 63 
 Caminho de 26 para 0: 26 17 8 0 
-Caminho de 26 para 1: 26 18 10 2 1 
+Caminho de 26 para 1: 26 18 10 1 
 Caminho de 26 para 2: 26 18 10 2 
-Caminho de 26 para 3: 26 18 10 2 3 
+Caminho de 26 para 3: 26 18 10 3 
 Caminho de 26 para 4: 26 19 12 4 
 Caminho de 26 para 5: 26 19 12 5 
 Caminho de 26 para 6: 26 19 12 5 6 
 Caminho de 26 para 7: 26 19 12 5 6 7 
 Caminho de 26 para 8: 26 17 8 
-Caminho de 26 para 9: 26 18 10 2 9 
+Caminho de 26 para 9: 26 17 9 
 Caminho de 26 para 10: 26 18 10 
-Caminho de 26 para 11: 26 18 10 2 11 
+Caminho de 26 para 11: 26 19 11 
 Caminho de 26 para 12: 26 19 12 
 Caminho de 26 para 13: 26 19 12 13 
 Caminho de 26 para 14: 26 19 12 13 14 
 Caminho de 26 para 15: 26 19 12 13 14 15 
-Caminho de 26 para 16: 26 17 8 16 
+Caminho de 26 para 16: 26 17 16 
 Caminho de 26 para 17: 26 17 
 Caminho de 26 para 18: 26 18 
 Caminho de 26 para 19: 26 19 
@@ -1214,50 +1214,50 @@ Caminho de 26 para 28: 26 27 28
 Caminho de 26 para 29: 26 27 28 29 
 Caminho de 26 para 30: 26 27 28 29 30 
 Caminho de 26 para 31: 26 27 28 29 30 31 
-Caminho de 26 para 32: 26 25 24 32 
+Caminho de 26 para 32: 26 33 32 
 Caminho de 26 para 33: 26 33 
 Caminho de 26 para 34: 26 34 
 Caminho de 26 para 35: 26 35 
-Caminho de 26 para 36: 26 27 28 29 36 
-Caminho de 26 para 37: 26 27 28 29 37 
-Caminho de 26 para 38: 26 27 28 29 30 31 38 
-Caminho de 26 para 39: 26 35 44 45 46 39 
+Caminho de 26 para 36: 26 35 36 
+Caminho de 26 para 37: 26 27 28 37 
+Caminho de 26 para 38: 26 27 28 29 38 
+Caminho de 26 para 39: 26 27 28 29 30 39 
 Caminho de 26 para 43: 26 35 43 
 Caminho de 26 para 44: 26 35 44 
 Caminho de 26 para 45: 26 35 44 45 
-Caminho de 26 para 46: 26 35 44 45 46 
-Caminho de 26 para 47: 26 35 44 45 46 47 
-Caminho de 26 para 48: 26 35 43 51 50 49 48 
-Caminho de 26 para 49: 26 35 43 51 50 49 
-Caminho de 26 para 50: 26 35 43 51 50 
+Caminho de 26 para 46: 26 27 28 37 46 
+Caminho de 26 para 47: 26 27 28 29 38 47 
+Caminho de 26 para 48: 26 35 43 50 49 48 
+Caminho de 26 para 49: 26 35 43 50 49 
+Caminho de 26 para 50: 26 35 43 50 
 Caminho de 26 para 51: 26 35 43 51 
 Caminho de 26 para 52: 26 35 44 52 
 Caminho de 26 para 53: 26 35 44 53 
 Caminho de 26 para 54: 26 35 44 53 54 
-Caminho de 26 para 55: 26 35 44 53 54 55 
-Caminho de 26 para 56: 26 35 43 51 58 57 56 
-Caminho de 26 para 57: 26 35 43 51 58 57 
+Caminho de 26 para 55: 26 27 28 37 46 55 
+Caminho de 26 para 56: 26 35 43 50 57 56 
+Caminho de 26 para 57: 26 35 43 50 57 
 Caminho de 26 para 58: 26 35 43 51 58 
 Caminho de 26 para 62: 26 35 44 53 62 
 Caminho de 26 para 63: 26 35 44 53 62 63 
 Caminho de 27 para 0: 27 18 9 0 
 Caminho de 27 para 1: 27 18 9 1 
-Caminho de 27 para 2: 27 19 11 3 2 
+Caminho de 27 para 2: 27 19 11 2 
 Caminho de 27 para 3: 27 19 11 3 
-Caminho de 27 para 4: 27 19 11 3 4 
-Caminho de 27 para 5: 27 19 11 3 4 5 
-Caminho de 27 para 6: 27 19 11 3 4 5 6 
-Caminho de 27 para 7: 27 19 11 3 4 5 6 7 
+Caminho de 27 para 4: 27 19 11 4 
+Caminho de 27 para 5: 27 19 12 5 
+Caminho de 27 para 6: 27 19 12 5 6 
+Caminho de 27 para 7: 27 19 12 5 6 7 
 Caminho de 27 para 8: 27 18 9 8 
 Caminho de 27 para 9: 27 18 9 
-Caminho de 27 para 10: 27 19 11 3 10 
+Caminho de 27 para 10: 27 18 10 
 Caminho de 27 para 11: 27 19 11 
-Caminho de 27 para 12: 27 19 11 12 
-Caminho de 27 para 13: 27 19 11 12 13 
-Caminho de 27 para 14: 27 19 11 12 13 14 
-Caminho de 27 para 15: 27 19 11 12 13 14 15 
-Caminho de 27 para 16: 27 26 25 24 16 
-Caminho de 27 para 17: 27 26 25 24 17 
+Caminho de 27 para 12: 27 19 12 
+Caminho de 27 para 13: 27 19 12 13 
+Caminho de 27 para 14: 27 19 12 13 14 
+Caminho de 27 para 15: 27 19 12 13 14 15 
+Caminho de 27 para 16: 27 26 25 16 
+Caminho de 27 para 17: 27 18 17 
 Caminho de 27 para 18: 27 18 
 Caminho de 27 para 19: 27 19 
 Caminho de 27 para 24: 27 26 25 24 
@@ -1268,29 +1268,29 @@ Caminho de 27 para 28: 27 28
 Caminho de 27 para 29: 27 28 29 
 Caminho de 27 para 30: 27 28 29 30 
 Caminho de 27 para 31: 27 28 29 30 31 
-Caminho de 27 para 32: 27 26 25 24 32 
-Caminho de 27 para 33: 27 26 25 33 
+Caminho de 27 para 32: 27 26 25 32 
+Caminho de 27 para 33: 27 34 33 
 Caminho de 27 para 34: 27 34 
 Caminho de 27 para 35: 27 35 
 Caminho de 27 para 36: 27 36 
-Caminho de 27 para 37: 27 28 29 30 37 
-Caminho de 27 para 38: 27 28 29 30 38 
-Caminho de 27 para 39: 27 36 45 46 39 
+Caminho de 27 para 37: 27 36 37 
+Caminho de 27 para 38: 27 28 29 38 
+Caminho de 27 para 39: 27 28 29 30 39 
 Caminho de 27 para 43: 27 35 43 
-Caminho de 27 para 44: 27 35 43 51 44 
+Caminho de 27 para 44: 27 36 44 
 Caminho de 27 para 45: 27 36 45 
 Caminho de 27 para 46: 27 36 45 46 
-Caminho de 27 para 47: 27 36 45 46 47 
-Caminho de 27 para 48: 27 35 43 51 50 49 48 
-Caminho de 27 para 49: 27 35 43 51 50 49 
-Caminho de 27 para 50: 27 35 43 51 50 
+Caminho de 27 para 47: 27 28 29 38 47 
+Caminho de 27 para 48: 27 35 43 50 49 48 
+Caminho de 27 para 49: 27 35 43 50 49 
+Caminho de 27 para 50: 27 35 43 50 
 Caminho de 27 para 51: 27 35 43 51 
-Caminho de 27 para 52: 27 35 43 51 52 
+Caminho de 27 para 52: 27 35 43 52 
 Caminho de 27 para 53: 27 36 45 53 
 Caminho de 27 para 54: 27 36 45 54 
 Caminho de 27 para 55: 27 36 45 54 55 
-Caminho de 27 para 56: 27 35 43 51 58 57 56 
-Caminho de 27 para 57: 27 35 43 51 58 57 
+Caminho de 27 para 56: 27 35 43 50 57 56 
+Caminho de 27 para 57: 27 35 43 50 57 
 Caminho de 27 para 58: 27 35 43 51 58 
 Caminho de 27 para 62: 27 36 45 54 62 
 Caminho de 27 para 63: 27 36 45 54 63 
@@ -1298,21 +1298,21 @@ Caminho de 28 para 0: 28 19 10 1 0
 Caminho de 28 para 1: 28 19 10 1 
 Caminho de 28 para 2: 28 19 10 2 
 Caminho de 28 para 3: 28 19 11 3 
-Caminho de 28 para 4: 28 19 11 3 4 
-Caminho de 28 para 5: 28 19 11 3 4 5 
-Caminho de 28 para 6: 28 19 11 3 4 5 6 
-Caminho de 28 para 7: 28 19 11 3 4 5 6 7 
-Caminho de 28 para 8: 28 19 10 9 8 
+Caminho de 28 para 4: 28 19 11 4 
+Caminho de 28 para 5: 28 19 12 5 
+Caminho de 28 para 6: 28 19 12 5 6 
+Caminho de 28 para 7: 28 19 12 5 6 7 
+Caminho de 28 para 8: 28 27 26 17 8 
 Caminho de 28 para 9: 28 19 10 9 
 Caminho de 28 para 10: 28 19 10 
 Caminho de 28 para 11: 28 19 11 
-Caminho de 28 para 12: 28 19 11 12 
-Caminho de 28 para 13: 28 19 11 12 13 
-Caminho de 28 para 14: 28 19 11 12 13 14 
-Caminho de 28 para 15: 28 19 11 12 13 14 15 
-Caminho de 28 para 16: 28 19 10 9 16 
-Caminho de 28 para 17: 28 27 26 25 17 
-Caminho de 28 para 18: 28 19 11 18 
+Caminho de 28 para 12: 28 19 12 
+Caminho de 28 para 13: 28 19 12 13 
+Caminho de 28 para 14: 28 19 12 13 14 
+Caminho de 28 para 15: 28 19 12 13 14 15 
+Caminho de 28 para 16: 28 27 26 25 16 
+Caminho de 28 para 17: 28 27 26 17 
+Caminho de 28 para 18: 28 19 18 
 Caminho de 28 para 19: 28 19 
 Caminho de 28 para 24: 28 27 26 25 24 
 Caminho de 28 para 25: 28 27 26 25 
@@ -1322,52 +1322,52 @@ Caminho de 28 para 28: 28
 Caminho de 28 para 29: 28 29 
 Caminho de 28 para 30: 28 29 30 
 Caminho de 28 para 31: 28 29 30 31 
-Caminho de 28 para 32: 28 27 26 25 24 32 
-Caminho de 28 para 33: 28 27 26 25 33 
-Caminho de 28 para 34: 28 27 26 34 
+Caminho de 28 para 32: 28 27 26 25 32 
+Caminho de 28 para 33: 28 27 26 33 
+Caminho de 28 para 34: 28 35 34 
 Caminho de 28 para 35: 28 35 
 Caminho de 28 para 36: 28 36 
 Caminho de 28 para 37: 28 37 
-Caminho de 28 para 38: 28 29 30 31 38 
-Caminho de 28 para 39: 28 29 30 31 39 
-Caminho de 28 para 43: 28 36 44 43 
+Caminho de 28 para 38: 28 37 38 
+Caminho de 28 para 39: 28 29 30 39 
+Caminho de 28 para 43: 28 35 43 
 Caminho de 28 para 44: 28 36 44 
-Caminho de 28 para 45: 28 36 44 52 45 
+Caminho de 28 para 45: 28 37 45 
 Caminho de 28 para 46: 28 37 46 
 Caminho de 28 para 47: 28 37 46 47 
-Caminho de 28 para 48: 28 36 44 52 51 50 49 48 
-Caminho de 28 para 49: 28 36 44 52 51 50 49 
-Caminho de 28 para 50: 28 36 44 52 51 50 
-Caminho de 28 para 51: 28 36 44 52 51 
+Caminho de 28 para 48: 28 35 43 50 49 48 
+Caminho de 28 para 49: 28 35 43 50 49 
+Caminho de 28 para 50: 28 35 43 50 
+Caminho de 28 para 51: 28 36 44 51 
 Caminho de 28 para 52: 28 36 44 52 
-Caminho de 28 para 53: 28 36 44 52 53 
+Caminho de 28 para 53: 28 36 44 53 
 Caminho de 28 para 54: 28 37 46 54 
 Caminho de 28 para 55: 28 37 46 55 
-Caminho de 28 para 56: 28 36 44 52 51 50 49 48 56 
-Caminho de 28 para 57: 28 36 44 52 51 50 49 57 
-Caminho de 28 para 58: 28 36 44 52 51 50 58 
-Caminho de 28 para 62: 28 37 46 54 62 
+Caminho de 28 para 56: 28 35 43 50 57 56 
+Caminho de 28 para 57: 28 35 43 50 57 
+Caminho de 28 para 58: 28 36 44 51 58 
+Caminho de 28 para 62: 28 36 44 53 62 
 Caminho de 28 para 63: 28 37 46 55 63 
-Caminho de 29 para 0: 29 28 27 26 25 24 16 8 0 
-Caminho de 29 para 1: 29 28 27 26 25 17 9 1 
-Caminho de 29 para 2: 29 28 27 26 18 10 2 
-Caminho de 29 para 3: 29 28 27 19 11 3 
-Caminho de 29 para 4: 29 28 27 19 11 3 4 
-Caminho de 29 para 5: 29 28 27 19 11 3 4 5 
-Caminho de 29 para 6: 29 28 27 19 11 3 4 5 6 
-Caminho de 29 para 7: 29 28 27 19 11 3 4 5 6 7 
-Caminho de 29 para 8: 29 28 27 26 25 24 16 8 
-Caminho de 29 para 9: 29 28 27 26 25 17 9 
-Caminho de 29 para 10: 29 28 27 26 18 10 
-Caminho de 29 para 11: 29 28 27 19 11 
-Caminho de 29 para 12: 29 28 27 19 11 12 
-Caminho de 29 para 13: 29 28 27 19 11 12 13 
-Caminho de 29 para 14: 29 28 27 19 11 12 13 14 
-Caminho de 29 para 15: 29 28 27 19 11 12 13 14 15 
-Caminho de 29 para 16: 29 28 27 26 25 24 16 
-Caminho de 29 para 17: 29 28 27 26 25 17 
-Caminho de 29 para 18: 29 28 27 26 18 
-Caminho de 29 para 19: 29 28 27 19 
+Caminho de 29 para 0: 29 28 27 18 9 0 
+Caminho de 29 para 1: 29 28 19 10 1 
+Caminho de 29 para 2: 29 28 19 10 2 
+Caminho de 29 para 3: 29 28 19 11 3 
+Caminho de 29 para 4: 29 28 19 11 4 
+Caminho de 29 para 5: 29 28 19 12 5 
+Caminho de 29 para 6: 29 28 19 12 5 6 
+Caminho de 29 para 7: 29 28 19 12 5 6 7 
+Caminho de 29 para 8: 29 28 27 26 17 8 
+Caminho de 29 para 9: 29 28 27 18 9 
+Caminho de 29 para 10: 29 28 19 10 
+Caminho de 29 para 11: 29 28 19 11 
+Caminho de 29 para 12: 29 28 19 12 
+Caminho de 29 para 13: 29 28 19 12 13 
+Caminho de 29 para 14: 29 28 19 12 13 14 
+Caminho de 29 para 15: 29 28 19 12 13 14 15 
+Caminho de 29 para 16: 29 28 27 26 25 16 
+Caminho de 29 para 17: 29 28 27 26 17 
+Caminho de 29 para 18: 29 28 27 18 
+Caminho de 29 para 19: 29 28 19 
 Caminho de 29 para 24: 29 28 27 26 25 24 
 Caminho de 29 para 25: 29 28 27 26 25 
 Caminho de 29 para 26: 29 28 27 26 
@@ -1376,52 +1376,52 @@ Caminho de 29 para 28: 29 28
 Caminho de 29 para 29: 29 
 Caminho de 29 para 30: 29 30 
 Caminho de 29 para 31: 29 30 31 
-Caminho de 29 para 32: 29 28 27 26 25 24 32 
-Caminho de 29 para 33: 29 28 27 26 25 33 
-Caminho de 29 para 34: 29 28 27 26 34 
-Caminho de 29 para 35: 29 28 27 26 35 
+Caminho de 29 para 32: 29 28 27 26 25 32 
+Caminho de 29 para 33: 29 28 27 26 33 
+Caminho de 29 para 34: 29 28 27 34 
+Caminho de 29 para 35: 29 36 35 
 Caminho de 29 para 36: 29 36 
 Caminho de 29 para 37: 29 37 
 Caminho de 29 para 38: 29 38 
-Caminho de 29 para 39: 29 38 47 39 
+Caminho de 29 para 39: 29 38 39 
 Caminho de 29 para 43: 29 36 43 
-Caminho de 29 para 44: 29 37 45 53 44 
+Caminho de 29 para 44: 29 36 44 
 Caminho de 29 para 45: 29 37 45 
-Caminho de 29 para 46: 29 37 45 53 46 
+Caminho de 29 para 46: 29 38 46 
 Caminho de 29 para 47: 29 38 47 
 Caminho de 29 para 48: 29 36 43 50 49 48 
 Caminho de 29 para 49: 29 36 43 50 49 
 Caminho de 29 para 50: 29 36 43 50 
 Caminho de 29 para 51: 29 36 43 51 
-Caminho de 29 para 52: 29 37 45 53 52 
+Caminho de 29 para 52: 29 37 45 52 
 Caminho de 29 para 53: 29 37 45 53 
-Caminho de 29 para 54: 29 37 45 53 54 
+Caminho de 29 para 54: 29 37 45 54 
 Caminho de 29 para 55: 29 38 47 55 
 Caminho de 29 para 56: 29 36 43 50 57 56 
 Caminho de 29 para 57: 29 36 43 50 57 
 Caminho de 29 para 58: 29 36 43 50 58 
 Caminho de 29 para 62: 29 37 45 53 62 
-Caminho de 29 para 63: 29 38 47 55 63 
-Caminho de 30 para 0: 30 29 28 27 26 25 24 16 8 0 
-Caminho de 30 para 1: 30 29 28 27 26 25 17 9 1 
-Caminho de 30 para 2: 30 29 28 27 26 18 10 2 
-Caminho de 30 para 3: 30 29 28 27 19 11 3 
-Caminho de 30 para 4: 30 29 28 27 19 11 3 4 
-Caminho de 30 para 5: 30 29 28 27 19 11 3 4 5 
-Caminho de 30 para 6: 30 29 28 27 19 11 3 4 5 6 
-Caminho de 30 para 7: 30 29 28 27 19 11 3 4 5 6 7 
-Caminho de 30 para 8: 30 29 28 27 26 25 24 16 8 
-Caminho de 30 para 9: 30 29 28 27 26 25 17 9 
-Caminho de 30 para 10: 30 29 28 27 26 18 10 
-Caminho de 30 para 11: 30 29 28 27 19 11 
-Caminho de 30 para 12: 30 29 28 27 19 11 12 
-Caminho de 30 para 13: 30 29 28 27 19 11 12 13 
-Caminho de 30 para 14: 30 29 28 27 19 11 12 13 14 
-Caminho de 30 para 15: 30 29 28 27 19 11 12 13 14 15 
-Caminho de 30 para 16: 30 29 28 27 26 25 24 16 
-Caminho de 30 para 17: 30 29 28 27 26 25 17 
-Caminho de 30 para 18: 30 29 28 27 26 18 
-Caminho de 30 para 19: 30 29 28 27 19 
+Caminho de 29 para 63: 29 37 45 54 63 
+Caminho de 30 para 0: 30 29 28 27 18 9 0 
+Caminho de 30 para 1: 30 29 28 19 10 1 
+Caminho de 30 para 2: 30 29 28 19 10 2 
+Caminho de 30 para 3: 30 29 28 19 11 3 
+Caminho de 30 para 4: 30 29 28 19 11 4 
+Caminho de 30 para 5: 30 29 28 19 12 5 
+Caminho de 30 para 6: 30 29 28 19 12 5 6 
+Caminho de 30 para 7: 30 29 28 19 12 5 6 7 
+Caminho de 30 para 8: 30 29 28 27 26 17 8 
+Caminho de 30 para 9: 30 29 28 27 18 9 
+Caminho de 30 para 10: 30 29 28 19 10 
+Caminho de 30 para 11: 30 29 28 19 11 
+Caminho de 30 para 12: 30 29 28 19 12 
+Caminho de 30 para 13: 30 29 28 19 12 13 
+Caminho de 30 para 14: 30 29 28 19 12 13 14 
+Caminho de 30 para 15: 30 29 28 19 12 13 14 15 
+Caminho de 30 para 16: 30 29 28 27 26 25 16 
+Caminho de 30 para 17: 30 29 28 27 26 17 
+Caminho de 30 para 18: 30 29 28 27 18 
+Caminho de 30 para 19: 30 29 28 19 
 Caminho de 30 para 24: 30 29 28 27 26 25 24 
 Caminho de 30 para 25: 30 29 28 27 26 25 
 Caminho de 30 para 26: 30 29 28 27 26 
@@ -1430,52 +1430,52 @@ Caminho de 30 para 28: 30 29 28
 Caminho de 30 para 29: 30 29 
 Caminho de 30 para 30: 30 
 Caminho de 30 para 31: 30 31 
-Caminho de 30 para 32: 30 29 28 27 26 25 24 32 
-Caminho de 30 para 33: 30 29 28 27 26 25 33 
-Caminho de 30 para 34: 30 29 28 27 26 25 34 
-Caminho de 30 para 35: 30 29 28 27 35 
-Caminho de 30 para 36: 30 29 28 27 36 
+Caminho de 30 para 32: 30 29 28 27 26 25 32 
+Caminho de 30 para 33: 30 29 28 27 26 33 
+Caminho de 30 para 34: 30 29 28 27 34 
+Caminho de 30 para 35: 30 29 28 35 
+Caminho de 30 para 36: 30 37 36 
 Caminho de 30 para 37: 30 37 
 Caminho de 30 para 38: 30 38 
 Caminho de 30 para 39: 30 39 
 Caminho de 30 para 43: 30 37 44 43 
 Caminho de 30 para 44: 30 37 44 
-Caminho de 30 para 45: 30 38 46 54 45 
+Caminho de 30 para 45: 30 37 45 
 Caminho de 30 para 46: 30 38 46 
-Caminho de 30 para 47: 30 38 46 47 
+Caminho de 30 para 47: 30 39 47 
 Caminho de 30 para 48: 30 37 44 51 50 49 48 
 Caminho de 30 para 49: 30 37 44 51 50 49 
 Caminho de 30 para 50: 30 37 44 51 50 
 Caminho de 30 para 51: 30 37 44 51 
 Caminho de 30 para 52: 30 37 44 52 
-Caminho de 30 para 53: 30 38 46 54 53 
+Caminho de 30 para 53: 30 38 46 53 
 Caminho de 30 para 54: 30 38 46 54 
-Caminho de 30 para 55: 30 38 46 54 55 
+Caminho de 30 para 55: 30 38 46 55 
 Caminho de 30 para 56: 30 37 44 51 58 57 56 
 Caminho de 30 para 57: 30 37 44 51 58 57 
 Caminho de 30 para 58: 30 37 44 51 58 
 Caminho de 30 para 62: 30 38 46 54 62 
-Caminho de 30 para 63: 30 38 46 54 62 63 
-Caminho de 31 para 0: 31 30 29 28 27 26 25 24 16 8 0 
-Caminho de 31 para 1: 31 30 29 28 27 26 25 17 9 1 
-Caminho de 31 para 2: 31 30 29 28 27 26 18 10 2 
-Caminho de 31 para 3: 31 30 29 28 27 19 11 3 
-Caminho de 31 para 4: 31 30 29 28 27 19 11 3 4 
-Caminho de 31 para 5: 31 30 29 28 27 19 11 3 4 5 
-Caminho de 31 para 6: 31 30 29 28 27 19 11 3 4 5 6 
-Caminho de 31 para 7: 31 30 29 28 27 19 11 3 4 5 6 7 
-Caminho de 31 para 8: 31 30 29 28 27 26 25 24 16 8 
-Caminho de 31 para 9: 31 30 29 28 27 26 25 17 9 
-Caminho de 31 para 10: 31 30 29 28 27 26 18 10 
-Caminho de 31 para 11: 31 30 29 28 27 19 11 
-Caminho de 31 para 12: 31 30 29 28 27 19 11 12 
-Caminho de 31 para 13: 31 30 29 28 27 19 11 12 13 
-Caminho de 31 para 14: 31 30 29 28 27 19 11 12 13 14 
-Caminho de 31 para 15: 31 30 29 28 27 19 11 12 13 14 15 
-Caminho de 31 para 16: 31 30 29 28 27 26 25 24 16 
-Caminho de 31 para 17: 31 30 29 28 27 26 25 17 
-Caminho de 31 para 18: 31 30 29 28 27 26 18 
-Caminho de 31 para 19: 31 30 29 28 27 19 
+Caminho de 30 para 63: 30 38 46 54 63 
+Caminho de 31 para 0: 31 30 29 28 27 18 9 0 
+Caminho de 31 para 1: 31 30 29 28 19 10 1 
+Caminho de 31 para 2: 31 30 29 28 19 10 2 
+Caminho de 31 para 3: 31 30 29 28 19 11 3 
+Caminho de 31 para 4: 31 30 29 28 19 11 4 
+Caminho de 31 para 5: 31 30 29 28 19 12 5 
+Caminho de 31 para 6: 31 30 29 28 19 12 5 6 
+Caminho de 31 para 7: 31 30 29 28 19 12 5 6 7 
+Caminho de 31 para 8: 31 30 29 28 27 26 17 8 
+Caminho de 31 para 9: 31 30 29 28 27 18 9 
+Caminho de 31 para 10: 31 30 29 28 19 10 
+Caminho de 31 para 11: 31 30 29 28 19 11 
+Caminho de 31 para 12: 31 30 29 28 19 12 
+Caminho de 31 para 13: 31 30 29 28 19 12 13 
+Caminho de 31 para 14: 31 30 29 28 19 12 13 14 
+Caminho de 31 para 15: 31 30 29 28 19 12 13 14 15 
+Caminho de 31 para 16: 31 30 29 28 27 26 25 16 
+Caminho de 31 para 17: 31 30 29 28 27 26 17 
+Caminho de 31 para 18: 31 30 29 28 27 18 
+Caminho de 31 para 19: 31 30 29 28 19 
 Caminho de 31 para 24: 31 30 29 28 27 26 25 24 
 Caminho de 31 para 25: 31 30 29 28 27 26 25 
 Caminho de 31 para 26: 31 30 29 28 27 26 
@@ -1484,42 +1484,42 @@ Caminho de 31 para 28: 31 30 29 28
 Caminho de 31 para 29: 31 30 29 
 Caminho de 31 para 30: 31 30 
 Caminho de 31 para 31: 31 
-Caminho de 31 para 32: 31 30 29 28 27 26 25 24 32 
-Caminho de 31 para 33: 31 30 29 28 27 26 25 33 
-Caminho de 31 para 34: 31 30 29 28 27 26 25 34 
-Caminho de 31 para 35: 31 30 29 28 27 26 35 
-Caminho de 31 para 36: 31 30 29 28 36 
-Caminho de 31 para 37: 31 30 29 28 37 
+Caminho de 31 para 32: 31 30 29 28 27 26 25 32 
+Caminho de 31 para 33: 31 30 29 28 27 26 33 
+Caminho de 31 para 34: 31 30 29 28 27 34 
+Caminho de 31 para 35: 31 30 29 28 35 
+Caminho de 31 para 36: 31 30 29 36 
+Caminho de 31 para 37: 31 38 37 
 Caminho de 31 para 38: 31 38 
 Caminho de 31 para 39: 31 39 
-Caminho de 31 para 43: 31 38 45 44 43 
+Caminho de 31 para 43: 31 30 29 36 43 
 Caminho de 31 para 44: 31 38 45 44 
 Caminho de 31 para 45: 31 38 45 
-Caminho de 31 para 46: 31 39 47 55 46 
+Caminho de 31 para 46: 31 38 46 
 Caminho de 31 para 47: 31 39 47 
-Caminho de 31 para 48: 31 38 45 52 51 50 49 48 
-Caminho de 31 para 49: 31 38 45 52 51 50 49 
-Caminho de 31 para 50: 31 38 45 52 51 50 
+Caminho de 31 para 48: 31 30 29 36 43 50 49 48 
+Caminho de 31 para 49: 31 30 29 36 43 50 49 
+Caminho de 31 para 50: 31 30 29 36 43 50 
 Caminho de 31 para 51: 31 38 45 52 51 
 Caminho de 31 para 52: 31 38 45 52 
 Caminho de 31 para 53: 31 38 45 53 
-Caminho de 31 para 54: 31 39 47 55 54 
+Caminho de 31 para 54: 31 39 47 54 
 Caminho de 31 para 55: 31 39 47 55 
-Caminho de 31 para 56: 31 38 45 52 51 50 49 48 56 
-Caminho de 31 para 57: 31 38 45 52 51 50 49 57 
-Caminho de 31 para 58: 31 38 45 52 51 50 58 
-Caminho de 31 para 62: 31 38 45 53 62 
+Caminho de 31 para 56: 31 30 29 36 43 50 57 56 
+Caminho de 31 para 57: 31 30 29 36 43 50 57 
+Caminho de 31 para 58: 31 38 45 52 51 58 
+Caminho de 31 para 62: 31 39 47 55 62 
 Caminho de 31 para 63: 31 39 47 55 63 
 Caminho de 32 para 0: 32 24 16 8 0 
-Caminho de 32 para 1: 32 25 18 10 1 
-Caminho de 32 para 2: 32 25 18 10 2 
+Caminho de 32 para 1: 32 24 16 8 1 
+Caminho de 32 para 2: 32 24 16 9 2 
 Caminho de 32 para 3: 32 25 18 11 3 
 Caminho de 32 para 4: 32 25 18 11 4 
 Caminho de 32 para 5: 32 25 18 11 4 5 
 Caminho de 32 para 6: 32 25 18 11 4 5 6 
 Caminho de 32 para 7: 32 25 18 11 4 5 6 7 
 Caminho de 32 para 8: 32 24 16 8 
-Caminho de 32 para 9: 32 24 16 8 9 
+Caminho de 32 para 9: 32 24 16 9 
 Caminho de 32 para 10: 32 25 18 10 
 Caminho de 32 para 11: 32 25 18 11 
 Caminho de 32 para 12: 32 25 18 11 12 
@@ -1527,17 +1527,17 @@ Caminho de 32 para 13: 32 25 18 11 12 13
 Caminho de 32 para 14: 32 25 18 11 12 13 14 
 Caminho de 32 para 15: 32 25 18 11 12 13 14 15 
 Caminho de 32 para 16: 32 24 16 
-Caminho de 32 para 17: 32 24 16 8 17 
+Caminho de 32 para 17: 32 25 17 
 Caminho de 32 para 18: 32 25 18 
 Caminho de 32 para 19: 32 25 18 19 
 Caminho de 32 para 24: 32 24 
 Caminho de 32 para 25: 32 25 
-Caminho de 32 para 26: 32 33 34 35 26 
-Caminho de 32 para 27: 32 33 34 35 27 
-Caminho de 32 para 28: 32 33 34 35 36 37 28 
-Caminho de 32 para 29: 32 33 34 35 36 37 29 
-Caminho de 32 para 30: 32 33 34 35 36 37 38 30 
-Caminho de 32 para 31: 32 33 34 35 36 37 38 39 31 
+Caminho de 32 para 26: 32 25 26 
+Caminho de 32 para 27: 32 33 34 27 
+Caminho de 32 para 28: 32 33 34 35 28 
+Caminho de 32 para 29: 32 33 34 35 36 29 
+Caminho de 32 para 30: 32 33 34 35 36 37 30 
+Caminho de 32 para 31: 32 33 34 35 36 37 38 31 
 Caminho de 32 para 32: 32 
 Caminho de 32 para 33: 32 33 
 Caminho de 32 para 34: 32 33 34 
@@ -1546,52 +1546,52 @@ Caminho de 32 para 36: 32 33 34 35 36
 Caminho de 32 para 37: 32 33 34 35 36 37 
 Caminho de 32 para 38: 32 33 34 35 36 37 38 
 Caminho de 32 para 39: 32 33 34 35 36 37 38 39 
-Caminho de 32 para 43: 32 33 34 35 43 
-Caminho de 32 para 44: 32 33 34 35 36 44 
-Caminho de 32 para 45: 32 33 34 35 36 37 45 
-Caminho de 32 para 46: 32 33 34 35 36 37 38 46 
-Caminho de 32 para 47: 32 33 34 35 36 37 38 39 47 
-Caminho de 32 para 48: 32 33 34 35 43 51 50 49 48 
-Caminho de 32 para 49: 32 33 34 35 43 51 50 49 
-Caminho de 32 para 50: 32 33 34 35 43 51 50 
-Caminho de 32 para 51: 32 33 34 35 43 51 
-Caminho de 32 para 52: 32 33 34 35 36 44 52 
-Caminho de 32 para 53: 32 33 34 35 36 37 45 53 
-Caminho de 32 para 54: 32 33 34 35 36 37 38 46 54 
-Caminho de 32 para 55: 32 33 34 35 36 37 38 39 47 55 
-Caminho de 32 para 56: 32 33 34 35 43 51 58 57 56 
-Caminho de 32 para 57: 32 33 34 35 43 51 58 57 
-Caminho de 32 para 58: 32 33 34 35 43 51 58 
-Caminho de 32 para 62: 32 33 34 35 36 37 38 46 54 62 
-Caminho de 32 para 63: 32 33 34 35 36 37 38 39 47 55 63 
-Caminho de 33 para 0: 33 25 17 9 1 0 
+Caminho de 32 para 43: 32 33 34 43 
+Caminho de 32 para 44: 32 33 34 35 44 
+Caminho de 32 para 45: 32 33 34 35 36 45 
+Caminho de 32 para 46: 32 33 34 35 36 37 46 
+Caminho de 32 para 47: 32 33 34 35 36 37 38 47 
+Caminho de 32 para 48: 32 33 34 43 50 49 48 
+Caminho de 32 para 49: 32 33 34 43 50 49 
+Caminho de 32 para 50: 32 33 34 43 50 
+Caminho de 32 para 51: 32 33 34 43 51 
+Caminho de 32 para 52: 32 33 34 43 52 
+Caminho de 32 para 53: 32 33 34 35 44 53 
+Caminho de 32 para 54: 32 33 34 35 36 45 54 
+Caminho de 32 para 55: 32 33 34 35 36 37 46 55 
+Caminho de 32 para 56: 32 33 34 43 50 57 56 
+Caminho de 32 para 57: 32 33 34 43 50 57 
+Caminho de 32 para 58: 32 33 34 43 51 58 
+Caminho de 32 para 62: 32 33 34 35 44 53 62 
+Caminho de 32 para 63: 32 33 34 35 36 45 54 63 
+Caminho de 33 para 0: 33 25 17 9 0 
 Caminho de 33 para 1: 33 25 17 9 1 
-Caminho de 33 para 2: 33 26 19 11 2 
-Caminho de 33 para 3: 33 26 19 11 3 
+Caminho de 33 para 2: 33 25 17 9 2 
+Caminho de 33 para 3: 33 25 17 10 3 
 Caminho de 33 para 4: 33 26 19 12 4 
 Caminho de 33 para 5: 33 26 19 12 5 
 Caminho de 33 para 6: 33 26 19 12 5 6 
 Caminho de 33 para 7: 33 26 19 12 5 6 7 
-Caminho de 33 para 8: 33 25 17 9 8 
+Caminho de 33 para 8: 33 25 17 8 
 Caminho de 33 para 9: 33 25 17 9 
-Caminho de 33 para 10: 33 25 17 9 10 
+Caminho de 33 para 10: 33 25 17 10 
 Caminho de 33 para 11: 33 26 19 11 
 Caminho de 33 para 12: 33 26 19 12 
 Caminho de 33 para 13: 33 26 19 12 13 
 Caminho de 33 para 14: 33 26 19 12 13 14 
 Caminho de 33 para 15: 33 26 19 12 13 14 15 
-Caminho de 33 para 16: 33 25 17 16 
+Caminho de 33 para 16: 33 24 16 
 Caminho de 33 para 17: 33 25 17 
-Caminho de 33 para 18: 33 25 17 9 18 
+Caminho de 33 para 18: 33 26 18 
 Caminho de 33 para 19: 33 26 19 
 Caminho de 33 para 24: 33 24 
 Caminho de 33 para 25: 33 25 
 Caminho de 33 para 26: 33 26 
-Caminho de 33 para 27: 33 34 35 36 27 
-Caminho de 33 para 28: 33 34 35 36 28 
-Caminho de 33 para 29: 33 34 35 36 37 29 
-Caminho de 33 para 30: 33 34 35 36 37 38 30 
-Caminho de 33 para 31: 33 34 35 36 37 38 39 31 
+Caminho de 33 para 27: 33 26 27 
+Caminho de 33 para 28: 33 34 35 28 
+Caminho de 33 para 29: 33 34 35 36 29 
+Caminho de 33 para 30: 33 34 35 36 37 30 
+Caminho de 33 para 31: 33 34 35 36 37 38 31 
 Caminho de 33 para 32: 33 32 
 Caminho de 33 para 33: 33 
 Caminho de 33 para 34: 33 34 
@@ -1600,52 +1600,52 @@ Caminho de 33 para 36: 33 34 35 36
 Caminho de 33 para 37: 33 34 35 36 37 
 Caminho de 33 para 38: 33 34 35 36 37 38 
 Caminho de 33 para 39: 33 34 35 36 37 38 39 
-Caminho de 33 para 43: 33 34 35 43 
-Caminho de 33 para 44: 33 34 35 36 44 
-Caminho de 33 para 45: 33 34 35 36 37 45 
-Caminho de 33 para 46: 33 34 35 36 37 38 46 
-Caminho de 33 para 47: 33 34 35 36 37 38 39 47 
-Caminho de 33 para 48: 33 34 35 43 51 50 49 48 
-Caminho de 33 para 49: 33 34 35 43 51 50 49 
-Caminho de 33 para 50: 33 34 35 43 51 50 
-Caminho de 33 para 51: 33 34 35 43 51 
-Caminho de 33 para 52: 33 34 35 36 44 52 
-Caminho de 33 para 53: 33 34 35 36 37 45 53 
-Caminho de 33 para 54: 33 34 35 36 37 38 46 54 
-Caminho de 33 para 55: 33 34 35 36 37 38 39 47 55 
-Caminho de 33 para 56: 33 34 35 43 51 58 57 56 
-Caminho de 33 para 57: 33 34 35 43 51 58 57 
-Caminho de 33 para 58: 33 34 35 43 51 58 
-Caminho de 33 para 62: 33 34 35 36 37 38 46 54 62 
-Caminho de 33 para 63: 33 34 35 36 37 38 39 47 55 63 
-Caminho de 34 para 0: 34 25 16 8 0 
-Caminho de 34 para 1: 34 25 16 8 1 
+Caminho de 33 para 43: 33 34 43 
+Caminho de 33 para 44: 33 34 35 44 
+Caminho de 33 para 45: 33 34 35 36 45 
+Caminho de 33 para 46: 33 34 35 36 37 46 
+Caminho de 33 para 47: 33 34 35 36 37 38 47 
+Caminho de 33 para 48: 33 34 43 50 49 48 
+Caminho de 33 para 49: 33 34 43 50 49 
+Caminho de 33 para 50: 33 34 43 50 
+Caminho de 33 para 51: 33 34 43 51 
+Caminho de 33 para 52: 33 34 43 52 
+Caminho de 33 para 53: 33 34 35 44 53 
+Caminho de 33 para 54: 33 34 35 36 45 54 
+Caminho de 33 para 55: 33 34 35 36 37 46 55 
+Caminho de 33 para 56: 33 34 43 50 57 56 
+Caminho de 33 para 57: 33 34 43 50 57 
+Caminho de 33 para 58: 33 34 43 51 58 
+Caminho de 33 para 62: 33 34 35 44 53 62 
+Caminho de 33 para 63: 33 34 35 36 45 54 63 
+Caminho de 34 para 0: 34 26 18 9 0 
+Caminho de 34 para 1: 34 26 18 10 1 
 Caminho de 34 para 2: 34 26 18 10 2 
-Caminho de 34 para 3: 34 26 18 10 2 3 
-Caminho de 34 para 4: 34 26 18 10 2 3 4 
-Caminho de 34 para 5: 34 26 18 10 2 3 4 5 
-Caminho de 34 para 6: 34 26 18 10 2 3 4 5 6 
-Caminho de 34 para 7: 34 26 18 10 2 3 4 5 6 7 
+Caminho de 34 para 3: 34 26 18 10 3 
+Caminho de 34 para 4: 34 26 18 11 4 
+Caminho de 34 para 5: 34 27 19 12 5 
+Caminho de 34 para 6: 34 27 19 12 5 6 
+Caminho de 34 para 7: 34 27 19 12 5 6 7 
 Caminho de 34 para 8: 34 25 16 8 
-Caminho de 34 para 9: 34 26 18 10 9 
+Caminho de 34 para 9: 34 26 18 9 
 Caminho de 34 para 10: 34 26 18 10 
-Caminho de 34 para 11: 34 26 18 10 11 
-Caminho de 34 para 12: 34 26 18 10 11 12 
-Caminho de 34 para 13: 34 26 18 10 11 12 13 
-Caminho de 34 para 14: 34 26 18 10 11 12 13 14 
-Caminho de 34 para 15: 34 26 18 10 11 12 13 14 15 
+Caminho de 34 para 11: 34 26 18 11 
+Caminho de 34 para 12: 34 27 19 12 
+Caminho de 34 para 13: 34 27 19 12 13 
+Caminho de 34 para 14: 34 27 19 12 13 14 
+Caminho de 34 para 15: 34 27 19 12 13 14 15 
 Caminho de 34 para 16: 34 25 16 
-Caminho de 34 para 17: 34 26 18 10 17 
+Caminho de 34 para 17: 34 25 17 
 Caminho de 34 para 18: 34 26 18 
-Caminho de 34 para 19: 34 26 18 19 
-Caminho de 34 para 24: 34 25 16 24 
+Caminho de 34 para 19: 34 27 19 
+Caminho de 34 para 24: 34 25 24 
 Caminho de 34 para 25: 34 25 
 Caminho de 34 para 26: 34 26 
 Caminho de 34 para 27: 34 27 
-Caminho de 34 para 28: 34 35 36 28 
-Caminho de 34 para 29: 34 35 36 37 29 
-Caminho de 34 para 30: 34 35 36 37 38 30 
-Caminho de 34 para 31: 34 35 36 37 38 39 31 
+Caminho de 34 para 28: 34 27 28 
+Caminho de 34 para 29: 34 35 36 29 
+Caminho de 34 para 30: 34 35 36 37 30 
+Caminho de 34 para 31: 34 35 36 37 38 31 
 Caminho de 34 para 32: 34 33 32 
 Caminho de 34 para 33: 34 33 
 Caminho de 34 para 34: 34 
@@ -1655,51 +1655,51 @@ Caminho de 34 para 37: 34 35 36 37
 Caminho de 34 para 38: 34 35 36 37 38 
 Caminho de 34 para 39: 34 35 36 37 38 39 
 Caminho de 34 para 43: 34 43 
-Caminho de 34 para 44: 34 35 36 37 44 
-Caminho de 34 para 45: 34 35 36 37 45 
-Caminho de 34 para 46: 34 35 36 37 38 39 46 
-Caminho de 34 para 47: 34 43 52 53 54 47 
-Caminho de 34 para 48: 34 43 51 50 49 48 
-Caminho de 34 para 49: 34 43 51 50 49 
-Caminho de 34 para 50: 34 43 51 50 
+Caminho de 34 para 44: 34 43 44 
+Caminho de 34 para 45: 34 35 36 45 
+Caminho de 34 para 46: 34 35 36 37 46 
+Caminho de 34 para 47: 34 35 36 37 38 47 
+Caminho de 34 para 48: 34 43 50 49 48 
+Caminho de 34 para 49: 34 43 50 49 
+Caminho de 34 para 50: 34 43 50 
 Caminho de 34 para 51: 34 43 51 
 Caminho de 34 para 52: 34 43 52 
 Caminho de 34 para 53: 34 43 52 53 
-Caminho de 34 para 54: 34 43 52 53 54 
-Caminho de 34 para 55: 34 43 52 53 54 55 
-Caminho de 34 para 56: 34 43 51 58 57 56 
-Caminho de 34 para 57: 34 43 51 58 57 
+Caminho de 34 para 54: 34 35 36 45 54 
+Caminho de 34 para 55: 34 35 36 37 46 55 
+Caminho de 34 para 56: 34 43 50 57 56 
+Caminho de 34 para 57: 34 43 50 57 
 Caminho de 34 para 58: 34 43 51 58 
-Caminho de 34 para 62: 34 43 52 53 54 62 
-Caminho de 34 para 63: 34 43 52 53 54 55 63 
+Caminho de 34 para 62: 34 43 52 53 62 
+Caminho de 34 para 63: 34 35 36 45 54 63 
 Caminho de 35 para 0: 35 26 17 8 0 
-Caminho de 35 para 1: 35 26 17 9 1 
-Caminho de 35 para 2: 35 26 17 9 2 
+Caminho de 35 para 1: 35 27 19 10 1 
+Caminho de 35 para 2: 35 27 19 11 2 
 Caminho de 35 para 3: 35 27 19 11 3 
-Caminho de 35 para 4: 35 27 19 11 3 4 
-Caminho de 35 para 5: 35 27 19 11 3 4 5 
-Caminho de 35 para 6: 35 27 19 11 3 4 5 6 
-Caminho de 35 para 7: 35 27 19 11 3 4 5 6 7 
+Caminho de 35 para 4: 35 27 19 11 4 
+Caminho de 35 para 5: 35 27 19 12 5 
+Caminho de 35 para 6: 35 27 19 12 5 6 
+Caminho de 35 para 7: 35 27 19 12 5 6 7 
 Caminho de 35 para 8: 35 26 17 8 
 Caminho de 35 para 9: 35 26 17 9 
-Caminho de 35 para 10: 35 27 19 11 10 
+Caminho de 35 para 10: 35 27 19 10 
 Caminho de 35 para 11: 35 27 19 11 
-Caminho de 35 para 12: 35 27 19 11 12 
-Caminho de 35 para 13: 35 27 19 11 12 13 
-Caminho de 35 para 14: 35 27 19 11 12 13 14 
-Caminho de 35 para 15: 35 27 19 11 12 13 14 15 
+Caminho de 35 para 12: 35 27 19 12 
+Caminho de 35 para 13: 35 27 19 12 13 
+Caminho de 35 para 14: 35 27 19 12 13 14 
+Caminho de 35 para 15: 35 27 19 12 13 14 15 
 Caminho de 35 para 16: 35 26 17 16 
 Caminho de 35 para 17: 35 26 17 
-Caminho de 35 para 18: 35 27 19 11 18 
+Caminho de 35 para 18: 35 26 18 
 Caminho de 35 para 19: 35 27 19 
-Caminho de 35 para 24: 35 34 33 32 24 
-Caminho de 35 para 25: 35 34 33 32 25 
+Caminho de 35 para 24: 35 34 33 24 
+Caminho de 35 para 25: 35 26 25 
 Caminho de 35 para 26: 35 26 
 Caminho de 35 para 27: 35 27 
 Caminho de 35 para 28: 35 28 
-Caminho de 35 para 29: 35 36 37 29 
-Caminho de 35 para 30: 35 36 37 38 30 
-Caminho de 35 para 31: 35 36 37 38 39 31 
+Caminho de 35 para 29: 35 28 29 
+Caminho de 35 para 30: 35 36 37 30 
+Caminho de 35 para 31: 35 36 37 38 31 
 Caminho de 35 para 32: 35 34 33 32 
 Caminho de 35 para 33: 35 34 33 
 Caminho de 35 para 34: 35 34 
@@ -1710,19 +1710,19 @@ Caminho de 35 para 38: 35 36 37 38
 Caminho de 35 para 39: 35 36 37 38 39 
 Caminho de 35 para 43: 35 43 
 Caminho de 35 para 44: 35 44 
-Caminho de 35 para 45: 35 36 37 38 45 
-Caminho de 35 para 46: 35 36 37 38 46 
-Caminho de 35 para 47: 35 44 53 54 47 
-Caminho de 35 para 48: 35 43 51 50 49 48 
-Caminho de 35 para 49: 35 43 51 50 49 
-Caminho de 35 para 50: 35 43 51 50 
+Caminho de 35 para 45: 35 44 45 
+Caminho de 35 para 46: 35 36 37 46 
+Caminho de 35 para 47: 35 36 37 38 47 
+Caminho de 35 para 48: 35 43 50 49 48 
+Caminho de 35 para 49: 35 43 50 49 
+Caminho de 35 para 50: 35 43 50 
 Caminho de 35 para 51: 35 43 51 
-Caminho de 35 para 52: 35 44 53 52 
+Caminho de 35 para 52: 35 44 52 
 Caminho de 35 para 53: 35 44 53 
 Caminho de 35 para 54: 35 44 53 54 
-Caminho de 35 para 55: 35 44 53 54 55 
-Caminho de 35 para 56: 35 43 51 58 57 56 
-Caminho de 35 para 57: 35 43 51 58 57 
+Caminho de 35 para 55: 35 36 37 46 55 
+Caminho de 35 para 56: 35 43 50 57 56 
+Caminho de 35 para 57: 35 43 50 57 
 Caminho de 35 para 58: 35 43 51 58 
 Caminho de 35 para 62: 35 44 53 62 
 Caminho de 35 para 63: 35 44 53 62 63 
@@ -1730,30 +1730,30 @@ Caminho de 36 para 0: 36 27 18 9 0
 Caminho de 36 para 1: 36 27 18 9 1 
 Caminho de 36 para 2: 36 27 18 10 2 
 Caminho de 36 para 3: 36 27 19 11 3 
-Caminho de 36 para 4: 36 27 19 11 3 4 
-Caminho de 36 para 5: 36 27 19 11 3 4 5 
-Caminho de 36 para 6: 36 27 19 11 3 4 5 6 
-Caminho de 36 para 7: 36 27 19 11 3 4 5 6 7 
+Caminho de 36 para 4: 36 27 19 11 4 
+Caminho de 36 para 5: 36 27 19 12 5 
+Caminho de 36 para 6: 36 27 19 12 5 6 
+Caminho de 36 para 7: 36 27 19 12 5 6 7 
 Caminho de 36 para 8: 36 27 18 9 8 
 Caminho de 36 para 9: 36 27 18 9 
 Caminho de 36 para 10: 36 27 18 10 
 Caminho de 36 para 11: 36 27 19 11 
-Caminho de 36 para 12: 36 27 19 11 12 
-Caminho de 36 para 13: 36 27 19 11 12 13 
-Caminho de 36 para 14: 36 27 19 11 12 13 14 
-Caminho de 36 para 15: 36 27 19 11 12 13 14 15 
-Caminho de 36 para 16: 36 27 18 17 16 
+Caminho de 36 para 12: 36 27 19 12 
+Caminho de 36 para 13: 36 27 19 12 13 
+Caminho de 36 para 14: 36 27 19 12 13 14 
+Caminho de 36 para 15: 36 27 19 12 13 14 15 
+Caminho de 36 para 16: 36 35 34 25 16 
 Caminho de 36 para 17: 36 27 18 17 
 Caminho de 36 para 18: 36 27 18 
 Caminho de 36 para 19: 36 27 19 
-Caminho de 36 para 24: 36 27 18 17 24 
-Caminho de 36 para 25: 36 35 34 33 25 
-Caminho de 36 para 26: 36 27 19 26 
+Caminho de 36 para 24: 36 35 34 33 24 
+Caminho de 36 para 25: 36 35 34 25 
+Caminho de 36 para 26: 36 27 26 
 Caminho de 36 para 27: 36 27 
 Caminho de 36 para 28: 36 28 
 Caminho de 36 para 29: 36 29 
-Caminho de 36 para 30: 36 37 38 30 
-Caminho de 36 para 31: 36 37 38 39 31 
+Caminho de 36 para 30: 36 29 30 
+Caminho de 36 para 31: 36 37 38 31 
 Caminho de 36 para 32: 36 35 34 33 32 
 Caminho de 36 para 33: 36 35 34 33 
 Caminho de 36 para 34: 36 35 34 
@@ -1765,14 +1765,14 @@ Caminho de 36 para 39: 36 37 38 39
 Caminho de 36 para 43: 36 43 
 Caminho de 36 para 44: 36 44 
 Caminho de 36 para 45: 36 45 
-Caminho de 36 para 46: 36 37 38 39 46 
-Caminho de 36 para 47: 36 37 38 39 47 
+Caminho de 36 para 46: 36 45 46 
+Caminho de 36 para 47: 36 37 38 47 
 Caminho de 36 para 48: 36 43 50 49 48 
 Caminho de 36 para 49: 36 43 50 49 
 Caminho de 36 para 50: 36 43 50 
-Caminho de 36 para 51: 36 43 50 51 
+Caminho de 36 para 51: 36 43 51 
 Caminho de 36 para 52: 36 44 52 
-Caminho de 36 para 53: 36 45 54 53 
+Caminho de 36 para 53: 36 45 53 
 Caminho de 36 para 54: 36 45 54 
 Caminho de 36 para 55: 36 45 54 55 
 Caminho de 36 para 56: 36 43 50 57 56 
@@ -1784,30 +1784,30 @@ Caminho de 37 para 0: 37 28 19 10 1 0
 Caminho de 37 para 1: 37 28 19 10 1 
 Caminho de 37 para 2: 37 28 19 10 2 
 Caminho de 37 para 3: 37 28 19 11 3 
-Caminho de 37 para 4: 37 28 19 11 3 4 
-Caminho de 37 para 5: 37 28 19 11 3 4 5 
-Caminho de 37 para 6: 37 28 19 11 3 4 5 6 
-Caminho de 37 para 7: 37 28 19 11 3 4 5 6 7 
-Caminho de 37 para 8: 37 28 19 10 9 8 
+Caminho de 37 para 4: 37 28 19 11 4 
+Caminho de 37 para 5: 37 28 19 12 5 
+Caminho de 37 para 6: 37 28 19 12 5 6 
+Caminho de 37 para 7: 37 28 19 12 5 6 7 
+Caminho de 37 para 8: 37 36 35 26 17 8 
 Caminho de 37 para 9: 37 28 19 10 9 
 Caminho de 37 para 10: 37 28 19 10 
 Caminho de 37 para 11: 37 28 19 11 
-Caminho de 37 para 12: 37 28 19 11 12 
-Caminho de 37 para 13: 37 28 19 11 12 13 
-Caminho de 37 para 14: 37 28 19 11 12 13 14 
-Caminho de 37 para 15: 37 28 19 11 12 13 14 15 
-Caminho de 37 para 16: 37 28 19 18 17 16 
-Caminho de 37 para 17: 37 28 19 18 17 
+Caminho de 37 para 12: 37 28 19 12 
+Caminho de 37 para 13: 37 28 19 12 13 
+Caminho de 37 para 14: 37 28 19 12 13 14 
+Caminho de 37 para 15: 37 28 19 12 13 14 15 
+Caminho de 37 para 16: 37 36 35 34 25 16 
+Caminho de 37 para 17: 37 36 35 26 17 
 Caminho de 37 para 18: 37 28 19 18 
 Caminho de 37 para 19: 37 28 19 
-Caminho de 37 para 24: 37 28 19 18 17 24 
-Caminho de 37 para 25: 37 36 35 34 33 32 25 
-Caminho de 37 para 26: 37 36 35 34 26 
-Caminho de 37 para 27: 37 36 35 34 27 
+Caminho de 37 para 24: 37 36 35 34 33 24 
+Caminho de 37 para 25: 37 36 35 34 25 
+Caminho de 37 para 26: 37 36 35 26 
+Caminho de 37 para 27: 37 28 27 
 Caminho de 37 para 28: 37 28 
 Caminho de 37 para 29: 37 29 
 Caminho de 37 para 30: 37 30 
-Caminho de 37 para 31: 37 38 39 31 
+Caminho de 37 para 31: 37 30 31 
 Caminho de 37 para 32: 37 36 35 34 33 32 
 Caminho de 37 para 33: 37 36 35 34 33 
 Caminho de 37 para 34: 37 36 35 34 
@@ -1816,49 +1816,49 @@ Caminho de 37 para 36: 37 36
 Caminho de 37 para 37: 37 
 Caminho de 37 para 38: 37 38 
 Caminho de 37 para 39: 37 38 39 
-Caminho de 37 para 43: 37 36 35 34 43 
+Caminho de 37 para 43: 37 44 43 
 Caminho de 37 para 44: 37 44 
 Caminho de 37 para 45: 37 45 
 Caminho de 37 para 46: 37 46 
-Caminho de 37 para 47: 37 46 55 47 
+Caminho de 37 para 47: 37 46 47 
 Caminho de 37 para 48: 37 44 51 50 49 48 
 Caminho de 37 para 49: 37 44 51 50 49 
 Caminho de 37 para 50: 37 44 51 50 
 Caminho de 37 para 51: 37 44 51 
-Caminho de 37 para 52: 37 44 51 52 
+Caminho de 37 para 52: 37 44 52 
 Caminho de 37 para 53: 37 45 53 
-Caminho de 37 para 54: 37 46 55 54 
+Caminho de 37 para 54: 37 46 54 
 Caminho de 37 para 55: 37 46 55 
 Caminho de 37 para 56: 37 44 51 58 57 56 
 Caminho de 37 para 57: 37 44 51 58 57 
 Caminho de 37 para 58: 37 44 51 58 
 Caminho de 37 para 62: 37 45 53 62 
 Caminho de 37 para 63: 37 46 55 63 
-Caminho de 38 para 0: 38 37 36 35 34 33 32 24 16 8 0 
-Caminho de 38 para 1: 38 37 36 35 34 33 25 17 9 1 
-Caminho de 38 para 2: 38 37 36 35 34 26 18 10 2 
-Caminho de 38 para 3: 38 37 36 35 27 19 11 3 
-Caminho de 38 para 4: 38 37 36 35 27 19 11 3 4 
-Caminho de 38 para 5: 38 37 36 35 27 19 11 3 4 5 
-Caminho de 38 para 6: 38 37 36 35 27 19 11 3 4 5 6 
-Caminho de 38 para 7: 38 37 36 35 27 19 11 3 4 5 6 7 
-Caminho de 38 para 8: 38 37 36 35 34 33 32 24 16 8 
-Caminho de 38 para 9: 38 37 36 35 34 33 25 17 9 
-Caminho de 38 para 10: 38 37 36 35 34 26 18 10 
-Caminho de 38 para 11: 38 37 36 35 27 19 11 
-Caminho de 38 para 12: 38 37 36 35 27 19 11 12 
-Caminho de 38 para 13: 38 37 36 35 27 19 11 12 13 
-Caminho de 38 para 14: 38 37 36 35 27 19 11 12 13 14 
-Caminho de 38 para 15: 38 37 36 35 27 19 11 12 13 14 15 
-Caminho de 38 para 16: 38 37 36 35 34 33 32 24 16 
-Caminho de 38 para 17: 38 37 36 35 34 33 25 17 
-Caminho de 38 para 18: 38 37 36 35 34 26 18 
-Caminho de 38 para 19: 38 37 36 35 27 19 
-Caminho de 38 para 24: 38 37 36 35 34 33 32 24 
-Caminho de 38 para 25: 38 37 36 35 34 33 25 
-Caminho de 38 para 26: 38 37 36 35 34 26 
-Caminho de 38 para 27: 38 37 36 35 27 
-Caminho de 38 para 28: 38 37 36 28 
+Caminho de 38 para 0: 38 37 36 27 18 9 0 
+Caminho de 38 para 1: 38 29 28 19 10 1 
+Caminho de 38 para 2: 38 29 28 19 10 2 
+Caminho de 38 para 3: 38 29 28 19 11 3 
+Caminho de 38 para 4: 38 29 28 19 11 4 
+Caminho de 38 para 5: 38 29 28 19 12 5 
+Caminho de 38 para 6: 38 29 28 19 12 5 6 
+Caminho de 38 para 7: 38 29 28 19 12 5 6 7 
+Caminho de 38 para 8: 38 37 36 35 26 17 8 
+Caminho de 38 para 9: 38 37 36 27 18 9 
+Caminho de 38 para 10: 38 29 28 19 10 
+Caminho de 38 para 11: 38 29 28 19 11 
+Caminho de 38 para 12: 38 29 28 19 12 
+Caminho de 38 para 13: 38 29 28 19 12 13 
+Caminho de 38 para 14: 38 29 28 19 12 13 14 
+Caminho de 38 para 15: 38 29 28 19 12 13 14 15 
+Caminho de 38 para 16: 38 37 36 35 34 25 16 
+Caminho de 38 para 17: 38 37 36 35 26 17 
+Caminho de 38 para 18: 38 37 36 27 18 
+Caminho de 38 para 19: 38 29 28 19 
+Caminho de 38 para 24: 38 37 36 35 34 33 24 
+Caminho de 38 para 25: 38 37 36 35 34 25 
+Caminho de 38 para 26: 38 37 36 35 26 
+Caminho de 38 para 27: 38 37 36 27 
+Caminho de 38 para 28: 38 29 28 
 Caminho de 38 para 29: 38 29 
 Caminho de 38 para 30: 38 30 
 Caminho de 38 para 31: 38 31 
@@ -1870,50 +1870,50 @@ Caminho de 38 para 36: 38 37 36
 Caminho de 38 para 37: 38 37 
 Caminho de 38 para 38: 38 
 Caminho de 38 para 39: 38 39 
-Caminho de 38 para 43: 38 37 36 35 43 
-Caminho de 38 para 44: 38 37 36 35 44 
+Caminho de 38 para 43: 38 37 36 43 
+Caminho de 38 para 44: 38 45 44 
 Caminho de 38 para 45: 38 45 
 Caminho de 38 para 46: 38 46 
 Caminho de 38 para 47: 38 47 
-Caminho de 38 para 48: 38 45 52 51 50 49 48 
-Caminho de 38 para 49: 38 45 52 51 50 49 
-Caminho de 38 para 50: 38 45 52 51 50 
+Caminho de 38 para 48: 38 37 36 43 50 49 48 
+Caminho de 38 para 49: 38 37 36 43 50 49 
+Caminho de 38 para 50: 38 37 36 43 50 
 Caminho de 38 para 51: 38 45 52 51 
 Caminho de 38 para 52: 38 45 52 
-Caminho de 38 para 53: 38 46 54 62 53 
+Caminho de 38 para 53: 38 45 53 
 Caminho de 38 para 54: 38 46 54 
-Caminho de 38 para 55: 38 46 54 55 
-Caminho de 38 para 56: 38 45 52 51 50 49 48 56 
-Caminho de 38 para 57: 38 45 52 51 50 49 57 
-Caminho de 38 para 58: 38 45 52 51 50 58 
+Caminho de 38 para 55: 38 47 55 
+Caminho de 38 para 56: 38 37 36 43 50 57 56 
+Caminho de 38 para 57: 38 37 36 43 50 57 
+Caminho de 38 para 58: 38 45 52 51 58 
 Caminho de 38 para 62: 38 46 54 62 
-Caminho de 38 para 63: 38 46 54 62 63 
-Caminho de 39 para 0: 39 38 37 36 35 34 33 32 24 16 8 0 
-Caminho de 39 para 1: 39 38 37 36 35 34 33 25 17 9 1 
-Caminho de 39 para 2: 39 38 37 36 35 34 26 18 10 2 
-Caminho de 39 para 3: 39 38 37 36 35 27 19 11 3 
-Caminho de 39 para 4: 39 38 37 36 35 27 19 11 3 4 
-Caminho de 39 para 5: 39 38 37 36 35 27 19 11 3 4 5 
-Caminho de 39 para 6: 39 38 37 36 35 27 19 11 3 4 5 6 
-Caminho de 39 para 7: 39 38 37 36 35 27 19 11 3 4 5 6 7 
-Caminho de 39 para 8: 39 38 37 36 35 34 33 32 24 16 8 
-Caminho de 39 para 9: 39 38 37 36 35 34 33 25 17 9 
-Caminho de 39 para 10: 39 38 37 36 35 34 26 18 10 
-Caminho de 39 para 11: 39 38 37 36 35 27 19 11 
-Caminho de 39 para 12: 39 38 37 36 35 27 19 11 12 
-Caminho de 39 para 13: 39 38 37 36 35 27 19 11 12 13 
-Caminho de 39 para 14: 39 38 37 36 35 27 19 11 12 13 14 
-Caminho de 39 para 15: 39 38 37 36 35 27 19 11 12 13 14 15 
-Caminho de 39 para 16: 39 38 37 36 35 34 33 32 24 16 
-Caminho de 39 para 17: 39 38 37 36 35 34 33 25 17 
-Caminho de 39 para 18: 39 38 37 36 35 34 26 18 
-Caminho de 39 para 19: 39 38 37 36 35 27 19 
-Caminho de 39 para 24: 39 38 37 36 35 34 33 32 24 
-Caminho de 39 para 25: 39 38 37 36 35 34 33 25 
-Caminho de 39 para 26: 39 38 37 36 35 34 26 
-Caminho de 39 para 27: 39 38 37 36 35 27 
-Caminho de 39 para 28: 39 38 37 36 28 
-Caminho de 39 para 29: 39 38 37 29 
+Caminho de 38 para 63: 38 46 54 63 
+Caminho de 39 para 0: 39 38 37 36 27 18 9 0 
+Caminho de 39 para 1: 39 38 37 28 19 10 1 
+Caminho de 39 para 2: 39 38 37 28 19 10 2 
+Caminho de 39 para 3: 39 38 37 28 19 11 3 
+Caminho de 39 para 4: 39 38 37 28 19 11 4 
+Caminho de 39 para 5: 39 38 37 28 19 12 5 
+Caminho de 39 para 6: 39 38 37 28 19 12 5 6 
+Caminho de 39 para 7: 39 38 37 28 19 12 5 6 7 
+Caminho de 39 para 8: 39 38 37 36 35 26 17 8 
+Caminho de 39 para 9: 39 38 37 36 27 18 9 
+Caminho de 39 para 10: 39 38 37 28 19 10 
+Caminho de 39 para 11: 39 38 37 28 19 11 
+Caminho de 39 para 12: 39 38 37 28 19 12 
+Caminho de 39 para 13: 39 38 37 28 19 12 13 
+Caminho de 39 para 14: 39 38 37 28 19 12 13 14 
+Caminho de 39 para 15: 39 38 37 28 19 12 13 14 15 
+Caminho de 39 para 16: 39 38 37 36 35 34 25 16 
+Caminho de 39 para 17: 39 38 37 36 35 26 17 
+Caminho de 39 para 18: 39 38 37 36 27 18 
+Caminho de 39 para 19: 39 38 37 28 19 
+Caminho de 39 para 24: 39 38 37 36 35 34 33 24 
+Caminho de 39 para 25: 39 38 37 36 35 34 25 
+Caminho de 39 para 26: 39 38 37 36 35 26 
+Caminho de 39 para 27: 39 38 37 36 27 
+Caminho de 39 para 28: 39 38 37 28 
+Caminho de 39 para 29: 39 30 29 
 Caminho de 39 para 30: 39 30 
 Caminho de 39 para 31: 39 31 
 Caminho de 39 para 32: 39 38 37 36 35 34 33 32 
@@ -1924,60 +1924,60 @@ Caminho de 39 para 36: 39 38 37 36
 Caminho de 39 para 37: 39 38 37 
 Caminho de 39 para 38: 39 38 
 Caminho de 39 para 39: 39 
-Caminho de 39 para 43: 39 38 37 36 35 34 43 
-Caminho de 39 para 44: 39 38 37 36 44 
-Caminho de 39 para 45: 39 38 37 36 45 
+Caminho de 39 para 43: 39 38 37 36 43 
+Caminho de 39 para 44: 39 38 37 44 
+Caminho de 39 para 45: 39 46 45 
 Caminho de 39 para 46: 39 46 
 Caminho de 39 para 47: 39 47 
-Caminho de 39 para 48: 39 46 53 52 51 50 49 48 
-Caminho de 39 para 49: 39 46 53 52 51 50 49 
-Caminho de 39 para 50: 39 46 53 52 51 50 
-Caminho de 39 para 51: 39 46 53 52 51 
+Caminho de 39 para 48: 39 38 37 36 43 50 49 48 
+Caminho de 39 para 49: 39 38 37 36 43 50 49 
+Caminho de 39 para 50: 39 38 37 36 43 50 
+Caminho de 39 para 51: 39 38 37 44 51 
 Caminho de 39 para 52: 39 46 53 52 
 Caminho de 39 para 53: 39 46 53 
-Caminho de 39 para 54: 39 47 55 63 54 
+Caminho de 39 para 54: 39 46 54 
 Caminho de 39 para 55: 39 47 55 
-Caminho de 39 para 56: 39 46 53 52 51 50 49 48 56 
-Caminho de 39 para 57: 39 46 53 52 51 50 49 57 
-Caminho de 39 para 58: 39 46 53 52 51 50 58 
-Caminho de 39 para 62: 39 47 55 63 62 
+Caminho de 39 para 56: 39 38 37 36 43 50 57 56 
+Caminho de 39 para 57: 39 38 37 36 43 50 57 
+Caminho de 39 para 58: 39 38 37 44 51 58 
+Caminho de 39 para 62: 39 47 55 62 
 Caminho de 39 para 63: 39 47 55 63 
-Caminho de 43 para 0: 43 34 25 16 8 0 
-Caminho de 43 para 1: 43 34 25 17 9 1 
-Caminho de 43 para 2: 43 34 25 17 9 2 
+Caminho de 43 para 0: 43 35 27 18 9 0 
+Caminho de 43 para 1: 43 35 27 19 10 1 
+Caminho de 43 para 2: 43 35 27 19 11 2 
 Caminho de 43 para 3: 43 35 27 19 11 3 
-Caminho de 43 para 4: 43 35 27 19 11 3 4 
-Caminho de 43 para 5: 43 35 27 19 11 3 4 5 
-Caminho de 43 para 6: 43 35 27 19 11 3 4 5 6 
-Caminho de 43 para 7: 43 35 27 19 11 3 4 5 6 7 
+Caminho de 43 para 4: 43 35 27 19 11 4 
+Caminho de 43 para 5: 43 35 27 19 12 5 
+Caminho de 43 para 6: 43 35 27 19 12 5 6 
+Caminho de 43 para 7: 43 35 27 19 12 5 6 7 
 Caminho de 43 para 8: 43 34 25 16 8 
-Caminho de 43 para 9: 43 34 25 17 9 
-Caminho de 43 para 10: 43 35 27 19 11 3 10 
+Caminho de 43 para 9: 43 35 27 18 9 
+Caminho de 43 para 10: 43 35 27 19 10 
 Caminho de 43 para 11: 43 35 27 19 11 
-Caminho de 43 para 12: 43 35 27 19 11 12 
-Caminho de 43 para 13: 43 35 27 19 11 12 13 
-Caminho de 43 para 14: 43 35 27 19 11 12 13 14 
-Caminho de 43 para 15: 43 35 27 19 11 12 13 14 15 
+Caminho de 43 para 12: 43 35 27 19 12 
+Caminho de 43 para 13: 43 35 27 19 12 13 
+Caminho de 43 para 14: 43 35 27 19 12 13 14 
+Caminho de 43 para 15: 43 35 27 19 12 13 14 15 
 Caminho de 43 para 16: 43 34 25 16 
 Caminho de 43 para 17: 43 34 25 17 
-Caminho de 43 para 18: 43 35 27 19 18 
+Caminho de 43 para 18: 43 35 27 18 
 Caminho de 43 para 19: 43 35 27 19 
 Caminho de 43 para 24: 43 34 25 24 
 Caminho de 43 para 25: 43 34 25 
-Caminho de 43 para 26: 43 35 27 19 26 
+Caminho de 43 para 26: 43 34 26 
 Caminho de 43 para 27: 43 35 27 
-Caminho de 43 para 28: 43 35 27 19 28 
+Caminho de 43 para 28: 43 36 28 
 Caminho de 43 para 29: 43 36 29 
 Caminho de 43 para 30: 43 36 29 30 
-Caminho de 43 para 31: 43 36 29 30 31 
+Caminho de 43 para 31: 43 44 45 38 31 
 Caminho de 43 para 32: 43 34 33 32 
 Caminho de 43 para 33: 43 34 33 
 Caminho de 43 para 34: 43 34 
 Caminho de 43 para 35: 43 35 
 Caminho de 43 para 36: 43 36 
-Caminho de 43 para 37: 43 44 45 46 37 
-Caminho de 43 para 38: 43 44 45 46 38 
-Caminho de 43 para 39: 43 36 29 30 39 
+Caminho de 43 para 37: 43 36 37 
+Caminho de 43 para 38: 43 44 45 38 
+Caminho de 43 para 39: 43 44 45 46 39 
 Caminho de 43 para 43: 43 
 Caminho de 43 para 44: 43 44 
 Caminho de 43 para 45: 43 44 45 
@@ -1988,30 +1988,30 @@ Caminho de 43 para 49: 43 50 49
 Caminho de 43 para 50: 43 50 
 Caminho de 43 para 51: 43 51 
 Caminho de 43 para 52: 43 52 
-Caminho de 43 para 53: 43 44 45 53 
-Caminho de 43 para 54: 43 44 45 46 54 
-Caminho de 43 para 55: 43 44 45 46 47 55 
+Caminho de 43 para 53: 43 52 53 
+Caminho de 43 para 54: 43 44 45 54 
+Caminho de 43 para 55: 43 44 45 46 55 
 Caminho de 43 para 56: 43 50 57 56 
 Caminho de 43 para 57: 43 50 57 
 Caminho de 43 para 58: 43 50 58 
-Caminho de 43 para 62: 43 44 45 46 54 62 
-Caminho de 43 para 63: 43 44 45 46 47 55 63 
+Caminho de 43 para 62: 43 52 53 62 
+Caminho de 43 para 63: 43 44 45 54 63 
 Caminho de 44 para 0: 44 35 26 17 8 0 
 Caminho de 44 para 1: 44 36 28 19 10 1 
 Caminho de 44 para 2: 44 36 28 19 10 2 
 Caminho de 44 para 3: 44 36 28 19 11 3 
-Caminho de 44 para 4: 44 36 28 19 11 3 4 
-Caminho de 44 para 5: 44 36 28 19 11 3 4 5 
-Caminho de 44 para 6: 44 36 28 19 11 3 4 5 6 
-Caminho de 44 para 7: 44 36 28 19 11 3 4 5 6 7 
+Caminho de 44 para 4: 44 36 28 19 11 4 
+Caminho de 44 para 5: 44 36 28 19 12 5 
+Caminho de 44 para 6: 44 36 28 19 12 5 6 
+Caminho de 44 para 7: 44 36 28 19 12 5 6 7 
 Caminho de 44 para 8: 44 35 26 17 8 
 Caminho de 44 para 9: 44 35 26 17 9 
 Caminho de 44 para 10: 44 36 28 19 10 
 Caminho de 44 para 11: 44 36 28 19 11 
-Caminho de 44 para 12: 44 36 28 19 11 12 
-Caminho de 44 para 13: 44 36 28 19 11 12 13 
-Caminho de 44 para 14: 44 36 28 19 11 12 13 14 
-Caminho de 44 para 15: 44 36 28 19 11 12 13 14 15 
+Caminho de 44 para 12: 44 36 28 19 12 
+Caminho de 44 para 13: 44 36 28 19 12 13 
+Caminho de 44 para 14: 44 36 28 19 12 13 14 
+Caminho de 44 para 15: 44 36 28 19 12 13 14 15 
 Caminho de 44 para 16: 44 35 26 17 16 
 Caminho de 44 para 17: 44 35 26 17 
 Caminho de 44 para 18: 44 35 26 18 
@@ -2019,9 +2019,9 @@ Caminho de 44 para 19: 44 36 28 19
 Caminho de 44 para 24: 44 35 26 25 24 
 Caminho de 44 para 25: 44 35 26 25 
 Caminho de 44 para 26: 44 35 26 
-Caminho de 44 para 27: 44 35 26 27 
+Caminho de 44 para 27: 44 35 27 
 Caminho de 44 para 28: 44 36 28 
-Caminho de 44 para 29: 44 37 30 29 
+Caminho de 44 para 29: 44 37 29 
 Caminho de 44 para 30: 44 37 30 
 Caminho de 44 para 31: 44 37 30 31 
 Caminho de 44 para 32: 44 35 34 33 32 
@@ -2030,8 +2030,8 @@ Caminho de 44 para 34: 44 35 34
 Caminho de 44 para 35: 44 35 
 Caminho de 44 para 36: 44 36 
 Caminho de 44 para 37: 44 37 
-Caminho de 44 para 38: 44 45 46 47 38 
-Caminho de 44 para 39: 44 45 46 47 39 
+Caminho de 44 para 38: 44 37 38 
+Caminho de 44 para 39: 44 45 46 39 
 Caminho de 44 para 43: 44 43 
 Caminho de 44 para 44: 44 
 Caminho de 44 para 45: 44 45 
@@ -2043,8 +2043,8 @@ Caminho de 44 para 50: 44 51 50
 Caminho de 44 para 51: 44 51 
 Caminho de 44 para 52: 44 52 
 Caminho de 44 para 53: 44 53 
-Caminho de 44 para 54: 44 45 46 47 54 
-Caminho de 44 para 55: 44 45 46 47 55 
+Caminho de 44 para 54: 44 53 54 
+Caminho de 44 para 55: 44 45 46 55 
 Caminho de 44 para 56: 44 51 58 57 56 
 Caminho de 44 para 57: 44 51 58 57 
 Caminho de 44 para 58: 44 51 58 
@@ -2054,18 +2054,18 @@ Caminho de 45 para 0: 45 36 27 18 9 0
 Caminho de 45 para 1: 45 36 27 18 9 1 
 Caminho de 45 para 2: 45 36 27 18 10 2 
 Caminho de 45 para 3: 45 36 27 19 11 3 
-Caminho de 45 para 4: 45 36 27 19 11 3 4 
-Caminho de 45 para 5: 45 36 27 19 11 3 4 5 
-Caminho de 45 para 6: 45 36 27 19 11 3 4 5 6 
-Caminho de 45 para 7: 45 36 27 19 11 3 4 5 6 7 
+Caminho de 45 para 4: 45 36 27 19 11 4 
+Caminho de 45 para 5: 45 36 27 19 12 5 
+Caminho de 45 para 6: 45 36 27 19 12 5 6 
+Caminho de 45 para 7: 45 36 27 19 12 5 6 7 
 Caminho de 45 para 8: 45 36 27 18 9 8 
 Caminho de 45 para 9: 45 36 27 18 9 
 Caminho de 45 para 10: 45 36 27 18 10 
 Caminho de 45 para 11: 45 36 27 19 11 
-Caminho de 45 para 12: 45 36 27 19 11 12 
-Caminho de 45 para 13: 45 36 27 19 11 12 13 
-Caminho de 45 para 14: 45 36 27 19 11 12 13 14 
-Caminho de 45 para 15: 45 36 27 19 11 12 13 14 15 
+Caminho de 45 para 12: 45 36 27 19 12 
+Caminho de 45 para 13: 45 36 27 19 12 13 
+Caminho de 45 para 14: 45 36 27 19 12 13 14 
+Caminho de 45 para 15: 45 36 27 19 12 13 14 15 
 Caminho de 45 para 16: 45 44 43 34 25 16 
 Caminho de 45 para 17: 45 36 27 18 17 
 Caminho de 45 para 18: 45 36 27 18 
@@ -2074,18 +2074,18 @@ Caminho de 45 para 24: 45 44 43 34 25 24
 Caminho de 45 para 25: 45 44 43 34 25 
 Caminho de 45 para 26: 45 36 27 26 
 Caminho de 45 para 27: 45 36 27 
-Caminho de 45 para 28: 45 36 27 28 
+Caminho de 45 para 28: 45 36 28 
 Caminho de 45 para 29: 45 37 29 
-Caminho de 45 para 30: 45 38 31 30 
+Caminho de 45 para 30: 45 38 30 
 Caminho de 45 para 31: 45 38 31 
 Caminho de 45 para 32: 45 44 43 34 33 32 
 Caminho de 45 para 33: 45 44 43 34 33 
 Caminho de 45 para 34: 45 44 43 34 
-Caminho de 45 para 35: 45 36 27 35 
+Caminho de 45 para 35: 45 36 35 
 Caminho de 45 para 36: 45 36 
 Caminho de 45 para 37: 45 37 
 Caminho de 45 para 38: 45 38 
-Caminho de 45 para 39: 45 38 31 39 
+Caminho de 45 para 39: 45 38 39 
 Caminho de 45 para 43: 45 44 43 
 Caminho de 45 para 44: 45 44 
 Caminho de 45 para 45: 45 
@@ -2094,49 +2094,49 @@ Caminho de 45 para 47: 45 46 47
 Caminho de 45 para 48: 45 44 43 50 49 48 
 Caminho de 45 para 49: 45 44 43 50 49 
 Caminho de 45 para 50: 45 44 43 50 
-Caminho de 45 para 51: 45 44 43 51 
+Caminho de 45 para 51: 45 52 51 
 Caminho de 45 para 52: 45 52 
 Caminho de 45 para 53: 45 53 
 Caminho de 45 para 54: 45 54 
-Caminho de 45 para 55: 45 54 63 55 
+Caminho de 45 para 55: 45 54 55 
 Caminho de 45 para 56: 45 44 43 50 57 56 
 Caminho de 45 para 57: 45 44 43 50 57 
-Caminho de 45 para 58: 45 44 43 50 58 
+Caminho de 45 para 58: 45 52 51 58 
 Caminho de 45 para 62: 45 54 62 
 Caminho de 45 para 63: 45 54 63 
 Caminho de 46 para 0: 46 37 28 19 10 1 0 
 Caminho de 46 para 1: 46 37 28 19 10 1 
 Caminho de 46 para 2: 46 37 28 19 10 2 
 Caminho de 46 para 3: 46 37 28 19 11 3 
-Caminho de 46 para 4: 46 37 28 19 11 3 4 
-Caminho de 46 para 5: 46 37 28 19 11 3 4 5 
-Caminho de 46 para 6: 46 37 28 19 11 3 4 5 6 
-Caminho de 46 para 7: 46 37 28 19 11 3 4 5 6 7 
-Caminho de 46 para 8: 46 37 28 19 10 9 8 
+Caminho de 46 para 4: 46 37 28 19 11 4 
+Caminho de 46 para 5: 46 37 28 19 12 5 
+Caminho de 46 para 6: 46 37 28 19 12 5 6 
+Caminho de 46 para 7: 46 37 28 19 12 5 6 7 
+Caminho de 46 para 8: 46 45 44 35 26 17 8 
 Caminho de 46 para 9: 46 37 28 19 10 9 
 Caminho de 46 para 10: 46 37 28 19 10 
 Caminho de 46 para 11: 46 37 28 19 11 
-Caminho de 46 para 12: 46 37 28 19 11 12 
-Caminho de 46 para 13: 46 37 28 19 11 12 13 
-Caminho de 46 para 14: 46 37 28 19 11 12 13 14 
-Caminho de 46 para 15: 46 37 28 19 11 12 13 14 15 
+Caminho de 46 para 12: 46 37 28 19 12 
+Caminho de 46 para 13: 46 37 28 19 12 13 
+Caminho de 46 para 14: 46 37 28 19 12 13 14 
+Caminho de 46 para 15: 46 37 28 19 12 13 14 15 
 Caminho de 46 para 16: 46 45 44 43 34 25 16 
-Caminho de 46 para 17: 46 37 28 19 18 17 
+Caminho de 46 para 17: 46 45 44 35 26 17 
 Caminho de 46 para 18: 46 37 28 19 18 
 Caminho de 46 para 19: 46 37 28 19 
 Caminho de 46 para 24: 46 45 44 43 34 25 24 
 Caminho de 46 para 25: 46 45 44 43 34 25 
-Caminho de 46 para 26: 46 37 28 27 26 
+Caminho de 46 para 26: 46 45 44 35 26 
 Caminho de 46 para 27: 46 37 28 27 
 Caminho de 46 para 28: 46 37 28 
-Caminho de 46 para 29: 46 37 28 29 
+Caminho de 46 para 29: 46 37 29 
 Caminho de 46 para 30: 46 38 30 
-Caminho de 46 para 31: 46 38 30 31 
+Caminho de 46 para 31: 46 39 31 
 Caminho de 46 para 32: 46 45 44 43 34 33 32 
 Caminho de 46 para 33: 46 45 44 43 34 33 
 Caminho de 46 para 34: 46 45 44 43 34 
-Caminho de 46 para 35: 46 45 44 43 35 
-Caminho de 46 para 36: 46 45 44 43 36 
+Caminho de 46 para 35: 46 45 44 35 
+Caminho de 46 para 36: 46 37 36 
 Caminho de 46 para 37: 46 37 
 Caminho de 46 para 38: 46 38 
 Caminho de 46 para 39: 46 39 
@@ -2148,50 +2148,50 @@ Caminho de 46 para 47: 46 47
 Caminho de 46 para 48: 46 45 44 43 50 49 48 
 Caminho de 46 para 49: 46 45 44 43 50 49 
 Caminho de 46 para 50: 46 45 44 43 50 
-Caminho de 46 para 51: 46 45 44 43 51 
-Caminho de 46 para 52: 46 45 44 52 
+Caminho de 46 para 51: 46 45 44 51 
+Caminho de 46 para 52: 46 53 52 
 Caminho de 46 para 53: 46 53 
 Caminho de 46 para 54: 46 54 
 Caminho de 46 para 55: 46 55 
 Caminho de 46 para 56: 46 45 44 43 50 57 56 
 Caminho de 46 para 57: 46 45 44 43 50 57 
-Caminho de 46 para 58: 46 45 44 43 50 58 
+Caminho de 46 para 58: 46 45 44 51 58 
 Caminho de 46 para 62: 46 54 62 
-Caminho de 46 para 63: 46 54 62 63 
-Caminho de 47 para 0: 47 46 45 44 43 34 25 16 8 0 
-Caminho de 47 para 1: 47 46 45 44 43 34 25 17 9 1 
-Caminho de 47 para 2: 47 38 29 28 27 26 18 10 2 
-Caminho de 47 para 3: 47 38 29 28 27 19 11 3 
-Caminho de 47 para 4: 47 38 29 28 27 19 11 3 4 
-Caminho de 47 para 5: 47 38 29 28 27 19 11 3 4 5 
-Caminho de 47 para 6: 47 38 29 28 27 19 11 3 4 5 6 
-Caminho de 47 para 7: 47 38 29 28 27 19 11 3 4 5 6 7 
-Caminho de 47 para 8: 47 46 45 44 43 34 25 16 8 
-Caminho de 47 para 9: 47 46 45 44 43 34 25 17 9 
-Caminho de 47 para 10: 47 38 29 28 27 26 18 10 
-Caminho de 47 para 11: 47 38 29 28 27 19 11 
-Caminho de 47 para 12: 47 38 29 28 27 19 11 12 
-Caminho de 47 para 13: 47 38 29 28 27 19 11 12 13 
-Caminho de 47 para 14: 47 38 29 28 27 19 11 12 13 14 
-Caminho de 47 para 15: 47 38 29 28 27 19 11 12 13 14 15 
+Caminho de 46 para 63: 46 55 63 
+Caminho de 47 para 0: 47 46 45 36 27 18 9 0 
+Caminho de 47 para 1: 47 38 29 28 19 10 1 
+Caminho de 47 para 2: 47 38 29 28 19 10 2 
+Caminho de 47 para 3: 47 38 29 28 19 11 3 
+Caminho de 47 para 4: 47 38 29 28 19 11 4 
+Caminho de 47 para 5: 47 38 29 28 19 12 5 
+Caminho de 47 para 6: 47 38 29 28 19 12 5 6 
+Caminho de 47 para 7: 47 38 29 28 19 12 5 6 7 
+Caminho de 47 para 8: 47 46 45 44 35 26 17 8 
+Caminho de 47 para 9: 47 46 45 36 27 18 9 
+Caminho de 47 para 10: 47 38 29 28 19 10 
+Caminho de 47 para 11: 47 38 29 28 19 11 
+Caminho de 47 para 12: 47 38 29 28 19 12 
+Caminho de 47 para 13: 47 38 29 28 19 12 13 
+Caminho de 47 para 14: 47 38 29 28 19 12 13 14 
+Caminho de 47 para 15: 47 38 29 28 19 12 13 14 15 
 Caminho de 47 para 16: 47 46 45 44 43 34 25 16 
-Caminho de 47 para 17: 47 46 45 44 43 34 25 17 
-Caminho de 47 para 18: 47 38 29 28 27 26 18 
-Caminho de 47 para 19: 47 38 29 28 27 19 
+Caminho de 47 para 17: 47 46 45 44 35 26 17 
+Caminho de 47 para 18: 47 46 45 36 27 18 
+Caminho de 47 para 19: 47 38 29 28 19 
 Caminho de 47 para 24: 47 46 45 44 43 34 25 24 
 Caminho de 47 para 25: 47 46 45 44 43 34 25 
-Caminho de 47 para 26: 47 38 29 28 27 26 
-Caminho de 47 para 27: 47 38 29 28 27 
+Caminho de 47 para 26: 47 46 45 44 35 26 
+Caminho de 47 para 27: 47 46 45 36 27 
 Caminho de 47 para 28: 47 38 29 28 
 Caminho de 47 para 29: 47 38 29 
-Caminho de 47 para 30: 47 38 29 30 
+Caminho de 47 para 30: 47 38 30 
 Caminho de 47 para 31: 47 39 31 
 Caminho de 47 para 32: 47 46 45 44 43 34 33 32 
 Caminho de 47 para 33: 47 46 45 44 43 34 33 
 Caminho de 47 para 34: 47 46 45 44 43 34 
-Caminho de 47 para 35: 47 38 29 28 35 
-Caminho de 47 para 36: 47 46 45 44 36 
-Caminho de 47 para 37: 47 46 45 44 37 
+Caminho de 47 para 35: 47 46 45 44 35 
+Caminho de 47 para 36: 47 46 45 36 
+Caminho de 47 para 37: 47 38 37 
 Caminho de 47 para 38: 47 38 
 Caminho de 47 para 39: 47 39 
 Caminho de 47 para 43: 47 46 45 44 43 
@@ -2202,57 +2202,57 @@ Caminho de 47 para 47: 47
 Caminho de 47 para 48: 47 46 45 44 43 50 49 48 
 Caminho de 47 para 49: 47 46 45 44 43 50 49 
 Caminho de 47 para 50: 47 46 45 44 43 50 
-Caminho de 47 para 51: 47 46 45 44 43 51 
-Caminho de 47 para 52: 47 46 45 44 52 
-Caminho de 47 para 53: 47 46 45 53 
+Caminho de 47 para 51: 47 46 45 44 51 
+Caminho de 47 para 52: 47 46 45 52 
+Caminho de 47 para 53: 47 54 53 
 Caminho de 47 para 54: 47 54 
 Caminho de 47 para 55: 47 55 
 Caminho de 47 para 56: 47 46 45 44 43 50 57 56 
 Caminho de 47 para 57: 47 46 45 44 43 50 57 
-Caminho de 47 para 58: 47 46 45 44 43 50 58 
-Caminho de 47 para 62: 47 55 63 62 
+Caminho de 47 para 58: 47 46 45 44 51 58 
+Caminho de 47 para 62: 47 54 62 
 Caminho de 47 para 63: 47 55 63 
-Caminho de 48 para 0: 48 49 50 51 43 35 27 19 11 3 2 1 0 
-Caminho de 48 para 1: 48 49 50 51 43 35 27 19 11 3 2 1 
-Caminho de 48 para 2: 48 49 50 51 43 35 27 19 11 3 2 
-Caminho de 48 para 3: 48 49 50 51 43 35 27 19 11 3 
-Caminho de 48 para 4: 48 49 50 51 43 35 27 19 11 3 4 
-Caminho de 48 para 5: 48 49 50 51 43 35 27 19 11 3 4 5 
-Caminho de 48 para 6: 48 49 50 51 43 35 27 19 11 3 4 5 6 
-Caminho de 48 para 7: 48 49 50 51 43 35 27 19 11 3 4 5 6 7 
-Caminho de 48 para 8: 48 49 50 51 43 35 27 19 11 10 9 8 
-Caminho de 48 para 9: 48 49 50 51 43 35 27 19 11 10 9 
-Caminho de 48 para 10: 48 49 50 51 43 35 27 19 11 10 
-Caminho de 48 para 11: 48 49 50 51 43 35 27 19 11 
-Caminho de 48 para 12: 48 49 50 51 43 35 27 19 11 12 
-Caminho de 48 para 13: 48 49 50 51 43 35 27 19 11 12 13 
-Caminho de 48 para 14: 48 49 50 51 43 35 27 19 11 12 13 14 
-Caminho de 48 para 15: 48 49 50 51 43 35 27 19 11 12 13 14 15 
-Caminho de 48 para 16: 48 49 50 51 43 35 27 19 18 17 16 
-Caminho de 48 para 17: 48 49 50 51 43 35 27 19 18 17 
-Caminho de 48 para 18: 48 49 50 51 43 35 27 19 18 
-Caminho de 48 para 19: 48 49 50 51 43 35 27 19 
-Caminho de 48 para 24: 48 49 50 51 43 35 27 26 25 24 
-Caminho de 48 para 25: 48 49 50 51 43 35 27 26 25 
-Caminho de 48 para 26: 48 49 50 51 43 35 27 26 
-Caminho de 48 para 27: 48 49 50 51 43 35 27 
-Caminho de 48 para 28: 48 49 50 51 52 44 36 28 
-Caminho de 48 para 29: 48 49 50 51 52 53 45 37 29 
-Caminho de 48 para 30: 48 49 50 51 52 53 54 46 38 30 
-Caminho de 48 para 31: 48 49 50 51 52 53 54 55 47 39 31 
-Caminho de 48 para 32: 48 49 50 51 43 35 34 33 32 
-Caminho de 48 para 33: 48 49 50 51 43 35 34 33 
-Caminho de 48 para 34: 48 49 50 51 43 35 34 
-Caminho de 48 para 35: 48 49 50 51 43 35 
-Caminho de 48 para 36: 48 49 50 51 52 44 36 
-Caminho de 48 para 37: 48 49 50 51 52 53 45 37 
-Caminho de 48 para 38: 48 49 50 51 52 53 54 46 38 
-Caminho de 48 para 39: 48 49 50 51 52 53 54 55 47 39 
-Caminho de 48 para 43: 48 49 50 51 43 
-Caminho de 48 para 44: 48 49 50 51 52 44 
-Caminho de 48 para 45: 48 49 50 51 52 53 45 
-Caminho de 48 para 46: 48 49 50 51 52 53 54 46 
-Caminho de 48 para 47: 48 49 50 51 52 53 54 55 47 
+Caminho de 48 para 0: 48 49 50 43 35 27 18 9 0 
+Caminho de 48 para 1: 48 49 50 43 35 27 19 10 1 
+Caminho de 48 para 2: 48 49 50 43 35 27 19 11 2 
+Caminho de 48 para 3: 48 49 50 43 35 27 19 11 3 
+Caminho de 48 para 4: 48 49 50 43 35 27 19 11 4 
+Caminho de 48 para 5: 48 49 50 43 35 27 19 12 5 
+Caminho de 48 para 6: 48 49 50 43 35 27 19 12 5 6 
+Caminho de 48 para 7: 48 49 50 43 35 27 19 12 5 6 7 
+Caminho de 48 para 8: 48 49 50 43 35 26 17 8 
+Caminho de 48 para 9: 48 49 50 43 35 27 18 9 
+Caminho de 48 para 10: 48 49 50 43 35 27 19 10 
+Caminho de 48 para 11: 48 49 50 43 35 27 19 11 
+Caminho de 48 para 12: 48 49 50 43 35 27 19 12 
+Caminho de 48 para 13: 48 49 50 43 35 27 19 12 13 
+Caminho de 48 para 14: 48 49 50 43 35 27 19 12 13 14 
+Caminho de 48 para 15: 48 49 50 43 35 27 19 12 13 14 15 
+Caminho de 48 para 16: 48 49 50 43 34 25 16 
+Caminho de 48 para 17: 48 49 50 43 35 26 17 
+Caminho de 48 para 18: 48 49 50 43 35 27 18 
+Caminho de 48 para 19: 48 49 50 43 35 27 19 
+Caminho de 48 para 24: 48 49 50 43 34 25 24 
+Caminho de 48 para 25: 48 49 50 43 34 25 
+Caminho de 48 para 26: 48 49 50 43 35 26 
+Caminho de 48 para 27: 48 49 50 43 35 27 
+Caminho de 48 para 28: 48 49 50 43 36 28 
+Caminho de 48 para 29: 48 49 50 43 36 29 
+Caminho de 48 para 30: 48 49 50 51 44 37 30 
+Caminho de 48 para 31: 48 49 50 51 52 45 38 31 
+Caminho de 48 para 32: 48 49 50 43 34 33 32 
+Caminho de 48 para 33: 48 49 50 43 34 33 
+Caminho de 48 para 34: 48 49 50 43 34 
+Caminho de 48 para 35: 48 49 50 43 35 
+Caminho de 48 para 36: 48 49 50 43 36 
+Caminho de 48 para 37: 48 49 50 51 44 37 
+Caminho de 48 para 38: 48 49 50 51 52 45 38 
+Caminho de 48 para 39: 48 49 50 51 52 53 46 39 
+Caminho de 48 para 43: 48 49 50 43 
+Caminho de 48 para 44: 48 49 50 51 44 
+Caminho de 48 para 45: 48 49 50 51 52 45 
+Caminho de 48 para 46: 48 49 50 51 52 53 46 
+Caminho de 48 para 47: 48 49 50 51 52 53 54 47 
 Caminho de 48 para 48: 48 
 Caminho de 48 para 49: 48 49 
 Caminho de 48 para 50: 48 49 50 
@@ -2263,50 +2263,50 @@ Caminho de 48 para 54: 48 49 50 51 52 53 54
 Caminho de 48 para 55: 48 49 50 51 52 53 54 55 
 Caminho de 48 para 56: 48 56 
 Caminho de 48 para 57: 48 57 
-Caminho de 48 para 58: 48 49 50 58 
-Caminho de 48 para 62: 48 49 50 51 52 53 54 62 
-Caminho de 48 para 63: 48 49 50 51 52 53 54 55 63 
-Caminho de 49 para 0: 49 50 51 43 35 27 19 11 3 2 1 0 
-Caminho de 49 para 1: 49 50 51 43 35 27 19 11 3 2 1 
-Caminho de 49 para 2: 49 50 51 43 35 27 19 11 3 2 
-Caminho de 49 para 3: 49 50 51 43 35 27 19 11 3 
-Caminho de 49 para 4: 49 50 51 43 35 27 19 11 3 4 
-Caminho de 49 para 5: 49 50 51 43 35 27 19 11 3 4 5 
-Caminho de 49 para 6: 49 50 51 43 35 27 19 11 3 4 5 6 
-Caminho de 49 para 7: 49 50 51 43 35 27 19 11 3 4 5 6 7 
-Caminho de 49 para 8: 49 50 51 43 35 27 19 11 10 9 8 
-Caminho de 49 para 9: 49 50 51 43 35 27 19 11 10 9 
-Caminho de 49 para 10: 49 50 51 43 35 27 19 11 10 
-Caminho de 49 para 11: 49 50 51 43 35 27 19 11 
-Caminho de 49 para 12: 49 50 51 43 35 27 19 11 12 
-Caminho de 49 para 13: 49 50 51 43 35 27 19 11 12 13 
-Caminho de 49 para 14: 49 50 51 43 35 27 19 11 12 13 14 
-Caminho de 49 para 15: 49 50 51 43 35 27 19 11 12 13 14 15 
-Caminho de 49 para 16: 49 50 51 43 35 27 19 18 17 16 
-Caminho de 49 para 17: 49 50 51 43 35 27 19 18 17 
-Caminho de 49 para 18: 49 50 51 43 35 27 19 18 
-Caminho de 49 para 19: 49 50 51 43 35 27 19 
-Caminho de 49 para 24: 49 50 51 43 35 27 26 25 24 
-Caminho de 49 para 25: 49 50 51 43 35 27 26 25 
-Caminho de 49 para 26: 49 50 51 43 35 27 26 
-Caminho de 49 para 27: 49 50 51 43 35 27 
-Caminho de 49 para 28: 49 50 51 52 44 36 28 
-Caminho de 49 para 29: 49 50 51 52 53 45 37 29 
-Caminho de 49 para 30: 49 50 51 52 53 54 46 38 30 
-Caminho de 49 para 31: 49 50 51 52 53 54 55 47 39 31 
-Caminho de 49 para 32: 49 50 51 43 35 34 33 32 
-Caminho de 49 para 33: 49 50 51 43 35 34 33 
-Caminho de 49 para 34: 49 50 51 43 35 34 
-Caminho de 49 para 35: 49 50 51 43 35 
-Caminho de 49 para 36: 49 50 51 52 44 36 
-Caminho de 49 para 37: 49 50 51 52 53 45 37 
-Caminho de 49 para 38: 49 50 51 52 53 54 46 38 
-Caminho de 49 para 39: 49 50 51 52 53 54 55 47 39 
-Caminho de 49 para 43: 49 50 51 43 
-Caminho de 49 para 44: 49 50 51 52 44 
-Caminho de 49 para 45: 49 50 51 52 53 45 
-Caminho de 49 para 46: 49 50 51 52 53 54 46 
-Caminho de 49 para 47: 49 50 51 52 53 54 55 47 
+Caminho de 48 para 58: 48 57 58 
+Caminho de 48 para 62: 48 49 50 51 52 53 62 
+Caminho de 48 para 63: 48 49 50 51 52 53 54 63 
+Caminho de 49 para 0: 49 50 43 35 27 18 9 0 
+Caminho de 49 para 1: 49 50 43 35 27 19 10 1 
+Caminho de 49 para 2: 49 50 43 35 27 19 11 2 
+Caminho de 49 para 3: 49 50 43 35 27 19 11 3 
+Caminho de 49 para 4: 49 50 43 35 27 19 11 4 
+Caminho de 49 para 5: 49 50 43 35 27 19 12 5 
+Caminho de 49 para 6: 49 50 43 35 27 19 12 5 6 
+Caminho de 49 para 7: 49 50 43 35 27 19 12 5 6 7 
+Caminho de 49 para 8: 49 50 43 35 26 17 8 
+Caminho de 49 para 9: 49 50 43 35 27 18 9 
+Caminho de 49 para 10: 49 50 43 35 27 19 10 
+Caminho de 49 para 11: 49 50 43 35 27 19 11 
+Caminho de 49 para 12: 49 50 43 35 27 19 12 
+Caminho de 49 para 13: 49 50 43 35 27 19 12 13 
+Caminho de 49 para 14: 49 50 43 35 27 19 12 13 14 
+Caminho de 49 para 15: 49 50 43 35 27 19 12 13 14 15 
+Caminho de 49 para 16: 49 50 43 34 25 16 
+Caminho de 49 para 17: 49 50 43 35 26 17 
+Caminho de 49 para 18: 49 50 43 35 27 18 
+Caminho de 49 para 19: 49 50 43 35 27 19 
+Caminho de 49 para 24: 49 50 43 34 25 24 
+Caminho de 49 para 25: 49 50 43 34 25 
+Caminho de 49 para 26: 49 50 43 35 26 
+Caminho de 49 para 27: 49 50 43 35 27 
+Caminho de 49 para 28: 49 50 43 36 28 
+Caminho de 49 para 29: 49 50 43 36 29 
+Caminho de 49 para 30: 49 50 51 44 37 30 
+Caminho de 49 para 31: 49 50 51 52 45 38 31 
+Caminho de 49 para 32: 49 50 43 34 33 32 
+Caminho de 49 para 33: 49 50 43 34 33 
+Caminho de 49 para 34: 49 50 43 34 
+Caminho de 49 para 35: 49 50 43 35 
+Caminho de 49 para 36: 49 50 43 36 
+Caminho de 49 para 37: 49 50 51 44 37 
+Caminho de 49 para 38: 49 50 51 52 45 38 
+Caminho de 49 para 39: 49 50 51 52 53 46 39 
+Caminho de 49 para 43: 49 50 43 
+Caminho de 49 para 44: 49 50 51 44 
+Caminho de 49 para 45: 49 50 51 52 45 
+Caminho de 49 para 46: 49 50 51 52 53 46 
+Caminho de 49 para 47: 49 50 51 52 53 54 47 
 Caminho de 49 para 48: 49 48 
 Caminho de 49 para 49: 49 
 Caminho de 49 para 50: 49 50 
@@ -2318,49 +2318,49 @@ Caminho de 49 para 55: 49 50 51 52 53 54 55
 Caminho de 49 para 56: 49 56 
 Caminho de 49 para 57: 49 57 
 Caminho de 49 para 58: 49 58 
-Caminho de 49 para 62: 49 50 51 52 53 54 62 
-Caminho de 49 para 63: 49 50 51 52 53 54 55 63 
-Caminho de 50 para 0: 50 43 35 27 19 11 3 2 1 0 
-Caminho de 50 para 1: 50 43 35 27 19 11 3 2 1 
-Caminho de 50 para 2: 50 43 35 27 19 11 3 2 
+Caminho de 49 para 62: 49 50 51 52 53 62 
+Caminho de 49 para 63: 49 50 51 52 53 54 63 
+Caminho de 50 para 0: 50 43 35 27 18 9 0 
+Caminho de 50 para 1: 50 43 35 27 19 10 1 
+Caminho de 50 para 2: 50 43 35 27 19 11 2 
 Caminho de 50 para 3: 50 43 35 27 19 11 3 
-Caminho de 50 para 4: 50 43 35 27 19 11 3 4 
-Caminho de 50 para 5: 50 43 35 27 19 11 3 4 5 
-Caminho de 50 para 6: 50 43 35 27 19 11 3 4 5 6 
-Caminho de 50 para 7: 50 43 35 27 19 11 3 4 5 6 7 
-Caminho de 50 para 8: 50 43 35 27 19 11 10 9 8 
-Caminho de 50 para 9: 50 43 35 27 19 11 10 9 
-Caminho de 50 para 10: 50 43 35 27 19 11 10 
+Caminho de 50 para 4: 50 43 35 27 19 11 4 
+Caminho de 50 para 5: 50 43 35 27 19 12 5 
+Caminho de 50 para 6: 50 43 35 27 19 12 5 6 
+Caminho de 50 para 7: 50 43 35 27 19 12 5 6 7 
+Caminho de 50 para 8: 50 43 35 26 17 8 
+Caminho de 50 para 9: 50 43 35 27 18 9 
+Caminho de 50 para 10: 50 43 35 27 19 10 
 Caminho de 50 para 11: 50 43 35 27 19 11 
-Caminho de 50 para 12: 50 43 35 27 19 11 12 
-Caminho de 50 para 13: 50 43 35 27 19 11 12 13 
-Caminho de 50 para 14: 50 43 35 27 19 11 12 13 14 
-Caminho de 50 para 15: 50 43 35 27 19 11 12 13 14 15 
-Caminho de 50 para 16: 50 43 35 27 19 18 17 16 
-Caminho de 50 para 17: 50 43 35 27 19 18 17 
-Caminho de 50 para 18: 50 43 35 27 19 18 
+Caminho de 50 para 12: 50 43 35 27 19 12 
+Caminho de 50 para 13: 50 43 35 27 19 12 13 
+Caminho de 50 para 14: 50 43 35 27 19 12 13 14 
+Caminho de 50 para 15: 50 43 35 27 19 12 13 14 15 
+Caminho de 50 para 16: 50 43 34 25 16 
+Caminho de 50 para 17: 50 43 35 26 17 
+Caminho de 50 para 18: 50 43 35 27 18 
 Caminho de 50 para 19: 50 43 35 27 19 
-Caminho de 50 para 24: 50 43 35 27 26 25 24 
-Caminho de 50 para 25: 50 43 35 27 26 25 
-Caminho de 50 para 26: 50 43 35 27 26 
+Caminho de 50 para 24: 50 43 34 25 24 
+Caminho de 50 para 25: 50 43 34 25 
+Caminho de 50 para 26: 50 43 35 26 
 Caminho de 50 para 27: 50 43 35 27 
 Caminho de 50 para 28: 50 43 36 28 
 Caminho de 50 para 29: 50 43 36 29 
 Caminho de 50 para 30: 50 43 36 29 30 
-Caminho de 50 para 31: 50 43 36 29 30 31 
-Caminho de 50 para 32: 50 43 35 34 33 32 
-Caminho de 50 para 33: 50 43 35 34 33 
-Caminho de 50 para 34: 50 43 35 34 
+Caminho de 50 para 31: 50 51 52 45 38 31 
+Caminho de 50 para 32: 50 43 34 33 32 
+Caminho de 50 para 33: 50 43 34 33 
+Caminho de 50 para 34: 50 43 34 
 Caminho de 50 para 35: 50 43 35 
 Caminho de 50 para 36: 50 43 36 
 Caminho de 50 para 37: 50 43 36 37 
-Caminho de 50 para 38: 50 43 36 37 38 
-Caminho de 50 para 39: 50 43 36 37 38 39 
+Caminho de 50 para 38: 50 51 52 45 38 
+Caminho de 50 para 39: 50 51 52 53 46 39 
 Caminho de 50 para 43: 50 43 
-Caminho de 50 para 44: 50 43 35 44 
-Caminho de 50 para 45: 50 51 52 53 45 
-Caminho de 50 para 46: 50 51 52 53 54 55 46 
-Caminho de 50 para 47: 50 43 36 37 38 47 
+Caminho de 50 para 44: 50 43 44 
+Caminho de 50 para 45: 50 51 52 45 
+Caminho de 50 para 46: 50 51 52 53 46 
+Caminho de 50 para 47: 50 51 52 53 54 47 
 Caminho de 50 para 48: 50 49 48 
 Caminho de 50 para 49: 50 49 
 Caminho de 50 para 50: 50 
@@ -2369,52 +2369,52 @@ Caminho de 50 para 52: 50 51 52
 Caminho de 50 para 53: 50 51 52 53 
 Caminho de 50 para 54: 50 51 52 53 54 
 Caminho de 50 para 55: 50 51 52 53 54 55 
-Caminho de 50 para 56: 50 49 48 56 
+Caminho de 50 para 56: 50 57 56 
 Caminho de 50 para 57: 50 57 
 Caminho de 50 para 58: 50 58 
-Caminho de 50 para 62: 50 51 52 53 54 62 
-Caminho de 50 para 63: 50 51 52 53 54 55 63 
-Caminho de 51 para 0: 51 43 35 27 19 11 3 2 1 0 
-Caminho de 51 para 1: 51 43 35 27 19 11 3 2 1 
-Caminho de 51 para 2: 51 43 35 27 19 11 3 2 
+Caminho de 50 para 62: 50 51 52 53 62 
+Caminho de 50 para 63: 50 51 52 53 54 63 
+Caminho de 51 para 0: 51 43 35 27 18 9 0 
+Caminho de 51 para 1: 51 43 35 27 19 10 1 
+Caminho de 51 para 2: 51 43 35 27 19 11 2 
 Caminho de 51 para 3: 51 43 35 27 19 11 3 
-Caminho de 51 para 4: 51 43 35 27 19 11 3 4 
-Caminho de 51 para 5: 51 43 35 27 19 11 3 4 5 
-Caminho de 51 para 6: 51 43 35 27 19 11 3 4 5 6 
-Caminho de 51 para 7: 51 43 35 27 19 11 3 4 5 6 7 
-Caminho de 51 para 8: 51 43 35 27 19 11 10 9 8 
-Caminho de 51 para 9: 51 43 35 27 19 11 10 9 
-Caminho de 51 para 10: 51 43 35 27 19 11 10 
+Caminho de 51 para 4: 51 43 35 27 19 11 4 
+Caminho de 51 para 5: 51 43 35 27 19 12 5 
+Caminho de 51 para 6: 51 43 35 27 19 12 5 6 
+Caminho de 51 para 7: 51 43 35 27 19 12 5 6 7 
+Caminho de 51 para 8: 51 43 35 26 17 8 
+Caminho de 51 para 9: 51 43 35 27 18 9 
+Caminho de 51 para 10: 51 43 35 27 19 10 
 Caminho de 51 para 11: 51 43 35 27 19 11 
-Caminho de 51 para 12: 51 43 35 27 19 11 12 
-Caminho de 51 para 13: 51 43 35 27 19 11 12 13 
-Caminho de 51 para 14: 51 43 35 27 19 11 12 13 14 
-Caminho de 51 para 15: 51 43 35 27 19 11 12 13 14 15 
-Caminho de 51 para 16: 51 43 35 27 19 18 17 16 
-Caminho de 51 para 17: 51 43 35 27 19 18 17 
-Caminho de 51 para 18: 51 43 35 27 19 18 
+Caminho de 51 para 12: 51 43 35 27 19 12 
+Caminho de 51 para 13: 51 43 35 27 19 12 13 
+Caminho de 51 para 14: 51 43 35 27 19 12 13 14 
+Caminho de 51 para 15: 51 43 35 27 19 12 13 14 15 
+Caminho de 51 para 16: 51 43 34 25 16 
+Caminho de 51 para 17: 51 43 35 26 17 
+Caminho de 51 para 18: 51 43 35 27 18 
 Caminho de 51 para 19: 51 43 35 27 19 
-Caminho de 51 para 24: 51 43 35 27 26 25 24 
-Caminho de 51 para 25: 51 43 35 27 26 25 
-Caminho de 51 para 26: 51 43 35 27 26 
+Caminho de 51 para 24: 51 43 34 25 24 
+Caminho de 51 para 25: 51 43 34 25 
+Caminho de 51 para 26: 51 43 35 26 
 Caminho de 51 para 27: 51 43 35 27 
-Caminho de 51 para 28: 51 43 35 27 28 
+Caminho de 51 para 28: 51 43 35 28 
 Caminho de 51 para 29: 51 44 37 29 
 Caminho de 51 para 30: 51 44 37 30 
 Caminho de 51 para 31: 51 44 37 30 31 
-Caminho de 51 para 32: 51 43 35 34 33 32 
-Caminho de 51 para 33: 51 43 35 34 33 
-Caminho de 51 para 34: 51 43 35 34 
+Caminho de 51 para 32: 51 43 34 33 32 
+Caminho de 51 para 33: 51 43 34 33 
+Caminho de 51 para 34: 51 43 34 
 Caminho de 51 para 35: 51 43 35 
-Caminho de 51 para 36: 51 43 35 27 36 
+Caminho de 51 para 36: 51 44 36 
 Caminho de 51 para 37: 51 44 37 
 Caminho de 51 para 38: 51 44 37 38 
-Caminho de 51 para 39: 51 44 37 38 39 
+Caminho de 51 para 39: 51 52 53 46 39 
 Caminho de 51 para 43: 51 43 
 Caminho de 51 para 44: 51 44 
-Caminho de 51 para 45: 51 52 53 54 45 
-Caminho de 51 para 46: 51 52 53 54 46 
-Caminho de 51 para 47: 51 44 37 38 47 
+Caminho de 51 para 45: 51 44 45 
+Caminho de 51 para 46: 51 52 53 46 
+Caminho de 51 para 47: 51 52 53 54 47 
 Caminho de 51 para 48: 51 50 49 48 
 Caminho de 51 para 49: 51 50 49 
 Caminho de 51 para 50: 51 50 
@@ -2423,52 +2423,52 @@ Caminho de 51 para 52: 51 52
 Caminho de 51 para 53: 51 52 53 
 Caminho de 51 para 54: 51 52 53 54 
 Caminho de 51 para 55: 51 52 53 54 55 
-Caminho de 51 para 56: 51 50 49 48 56 
-Caminho de 51 para 57: 51 50 49 57 
+Caminho de 51 para 56: 51 50 49 56 
+Caminho de 51 para 57: 51 58 57 
 Caminho de 51 para 58: 51 58 
-Caminho de 51 para 62: 51 52 53 54 62 
-Caminho de 51 para 63: 51 52 53 54 55 63 
-Caminho de 52 para 0: 52 43 34 25 16 8 0 
+Caminho de 51 para 62: 51 52 53 62 
+Caminho de 51 para 63: 51 52 53 54 63 
+Caminho de 52 para 0: 52 44 36 27 18 9 0 
 Caminho de 52 para 1: 52 44 36 28 19 10 1 
 Caminho de 52 para 2: 52 44 36 28 19 10 2 
 Caminho de 52 para 3: 52 44 36 28 19 11 3 
-Caminho de 52 para 4: 52 44 36 28 19 11 3 4 
-Caminho de 52 para 5: 52 44 36 28 19 11 3 4 5 
-Caminho de 52 para 6: 52 44 36 28 19 11 3 4 5 6 
-Caminho de 52 para 7: 52 44 36 28 19 11 3 4 5 6 7 
+Caminho de 52 para 4: 52 44 36 28 19 11 4 
+Caminho de 52 para 5: 52 44 36 28 19 12 5 
+Caminho de 52 para 6: 52 44 36 28 19 12 5 6 
+Caminho de 52 para 7: 52 44 36 28 19 12 5 6 7 
 Caminho de 52 para 8: 52 43 34 25 16 8 
-Caminho de 52 para 9: 52 43 34 25 17 9 
+Caminho de 52 para 9: 52 44 36 27 18 9 
 Caminho de 52 para 10: 52 44 36 28 19 10 
 Caminho de 52 para 11: 52 44 36 28 19 11 
-Caminho de 52 para 12: 52 44 36 28 19 11 12 
-Caminho de 52 para 13: 52 44 36 28 19 11 12 13 
-Caminho de 52 para 14: 52 44 36 28 19 11 12 13 14 
-Caminho de 52 para 15: 52 44 36 28 19 11 12 13 14 15 
+Caminho de 52 para 12: 52 44 36 28 19 12 
+Caminho de 52 para 13: 52 44 36 28 19 12 13 
+Caminho de 52 para 14: 52 44 36 28 19 12 13 14 
+Caminho de 52 para 15: 52 44 36 28 19 12 13 14 15 
 Caminho de 52 para 16: 52 43 34 25 16 
 Caminho de 52 para 17: 52 43 34 25 17 
-Caminho de 52 para 18: 52 43 34 26 18 
+Caminho de 52 para 18: 52 44 36 27 18 
 Caminho de 52 para 19: 52 44 36 28 19 
 Caminho de 52 para 24: 52 43 34 25 24 
 Caminho de 52 para 25: 52 43 34 25 
 Caminho de 52 para 26: 52 43 34 26 
-Caminho de 52 para 27: 52 44 36 28 27 
+Caminho de 52 para 27: 52 44 36 27 
 Caminho de 52 para 28: 52 44 36 28 
-Caminho de 52 para 29: 52 44 36 28 29 
+Caminho de 52 para 29: 52 44 36 29 
 Caminho de 52 para 30: 52 45 38 30 
 Caminho de 52 para 31: 52 45 38 31 
 Caminho de 52 para 32: 52 43 34 33 32 
 Caminho de 52 para 33: 52 43 34 33 
 Caminho de 52 para 34: 52 43 34 
-Caminho de 52 para 35: 52 44 36 28 35 
+Caminho de 52 para 35: 52 43 35 
 Caminho de 52 para 36: 52 44 36 
-Caminho de 52 para 37: 52 44 36 28 37 
+Caminho de 52 para 37: 52 45 37 
 Caminho de 52 para 38: 52 45 38 
 Caminho de 52 para 39: 52 45 38 39 
 Caminho de 52 para 43: 52 43 
 Caminho de 52 para 44: 52 44 
 Caminho de 52 para 45: 52 45 
-Caminho de 52 para 46: 52 53 54 55 46 
-Caminho de 52 para 47: 52 53 54 55 47 
+Caminho de 52 para 46: 52 45 46 
+Caminho de 52 para 47: 52 53 54 47 
 Caminho de 52 para 48: 52 51 50 49 48 
 Caminho de 52 para 49: 52 51 50 49 
 Caminho de 52 para 50: 52 51 50 
@@ -2477,52 +2477,52 @@ Caminho de 52 para 52: 52
 Caminho de 52 para 53: 52 53 
 Caminho de 52 para 54: 52 53 54 
 Caminho de 52 para 55: 52 53 54 55 
-Caminho de 52 para 56: 52 51 50 49 48 56 
-Caminho de 52 para 57: 52 51 50 49 57 
-Caminho de 52 para 58: 52 51 50 58 
-Caminho de 52 para 62: 52 53 54 62 
-Caminho de 52 para 63: 52 53 54 55 63 
+Caminho de 52 para 56: 52 51 50 49 56 
+Caminho de 52 para 57: 52 51 50 57 
+Caminho de 52 para 58: 52 51 58 
+Caminho de 52 para 62: 52 53 62 
+Caminho de 52 para 63: 52 53 54 63 
 Caminho de 53 para 0: 53 44 35 26 17 8 0 
-Caminho de 53 para 1: 53 44 35 26 17 9 1 
-Caminho de 53 para 2: 53 44 35 26 18 10 2 
-Caminho de 53 para 3: 53 44 35 27 19 11 3 
-Caminho de 53 para 4: 53 44 35 27 19 11 3 4 
-Caminho de 53 para 5: 53 44 35 27 19 11 3 4 5 
-Caminho de 53 para 6: 53 44 35 27 19 11 3 4 5 6 
-Caminho de 53 para 7: 53 44 35 27 19 11 3 4 5 6 7 
+Caminho de 53 para 1: 53 45 37 28 19 10 1 
+Caminho de 53 para 2: 53 45 37 28 19 10 2 
+Caminho de 53 para 3: 53 45 37 28 19 11 3 
+Caminho de 53 para 4: 53 45 37 28 19 11 4 
+Caminho de 53 para 5: 53 45 37 28 19 12 5 
+Caminho de 53 para 6: 53 45 37 28 19 12 5 6 
+Caminho de 53 para 7: 53 45 37 28 19 12 5 6 7 
 Caminho de 53 para 8: 53 44 35 26 17 8 
 Caminho de 53 para 9: 53 44 35 26 17 9 
-Caminho de 53 para 10: 53 44 35 26 18 10 
-Caminho de 53 para 11: 53 44 35 27 19 11 
-Caminho de 53 para 12: 53 44 35 27 19 11 12 
-Caminho de 53 para 13: 53 44 35 27 19 11 12 13 
-Caminho de 53 para 14: 53 44 35 27 19 11 12 13 14 
-Caminho de 53 para 15: 53 44 35 27 19 11 12 13 14 15 
+Caminho de 53 para 10: 53 45 37 28 19 10 
+Caminho de 53 para 11: 53 45 37 28 19 11 
+Caminho de 53 para 12: 53 45 37 28 19 12 
+Caminho de 53 para 13: 53 45 37 28 19 12 13 
+Caminho de 53 para 14: 53 45 37 28 19 12 13 14 
+Caminho de 53 para 15: 53 45 37 28 19 12 13 14 15 
 Caminho de 53 para 16: 53 44 35 26 17 16 
 Caminho de 53 para 17: 53 44 35 26 17 
 Caminho de 53 para 18: 53 44 35 26 18 
-Caminho de 53 para 19: 53 44 35 27 19 
+Caminho de 53 para 19: 53 45 37 28 19 
 Caminho de 53 para 24: 53 44 35 26 25 24 
 Caminho de 53 para 25: 53 44 35 26 25 
 Caminho de 53 para 26: 53 44 35 26 
 Caminho de 53 para 27: 53 44 35 27 
-Caminho de 53 para 28: 53 45 37 29 28 
+Caminho de 53 para 28: 53 45 37 28 
 Caminho de 53 para 29: 53 45 37 29 
-Caminho de 53 para 30: 53 45 37 29 30 
+Caminho de 53 para 30: 53 45 37 30 
 Caminho de 53 para 31: 53 46 39 31 
 Caminho de 53 para 32: 53 44 35 34 33 32 
 Caminho de 53 para 33: 53 44 35 34 33 
 Caminho de 53 para 34: 53 44 35 34 
 Caminho de 53 para 35: 53 44 35 
-Caminho de 53 para 36: 53 45 37 29 36 
+Caminho de 53 para 36: 53 44 36 
 Caminho de 53 para 37: 53 45 37 
-Caminho de 53 para 38: 53 45 37 29 38 
+Caminho de 53 para 38: 53 46 38 
 Caminho de 53 para 39: 53 46 39 
-Caminho de 53 para 43: 53 52 51 50 43 
+Caminho de 53 para 43: 53 44 43 
 Caminho de 53 para 44: 53 44 
 Caminho de 53 para 45: 53 45 
 Caminho de 53 para 46: 53 46 
-Caminho de 53 para 47: 53 46 39 47 
+Caminho de 53 para 47: 53 46 47 
 Caminho de 53 para 48: 53 52 51 50 49 48 
 Caminho de 53 para 49: 53 52 51 50 49 
 Caminho de 53 para 50: 53 52 51 50 
@@ -2531,49 +2531,49 @@ Caminho de 53 para 52: 53 52
 Caminho de 53 para 53: 53 
 Caminho de 53 para 54: 53 54 
 Caminho de 53 para 55: 53 54 55 
-Caminho de 53 para 56: 53 52 51 50 49 48 56 
-Caminho de 53 para 57: 53 52 51 50 49 57 
-Caminho de 53 para 58: 53 52 51 50 58 
+Caminho de 53 para 56: 53 52 51 50 49 56 
+Caminho de 53 para 57: 53 52 51 50 57 
+Caminho de 53 para 58: 53 52 51 58 
 Caminho de 53 para 62: 53 62 
-Caminho de 53 para 63: 53 54 55 63 
+Caminho de 53 para 63: 53 62 63 
 Caminho de 54 para 0: 54 45 36 27 18 9 0 
 Caminho de 54 para 1: 54 45 36 27 18 9 1 
 Caminho de 54 para 2: 54 45 36 27 18 10 2 
 Caminho de 54 para 3: 54 45 36 27 19 11 3 
-Caminho de 54 para 4: 54 45 36 27 19 11 3 4 
-Caminho de 54 para 5: 54 45 36 27 19 11 3 4 5 
-Caminho de 54 para 6: 54 45 36 27 19 11 3 4 5 6 
-Caminho de 54 para 7: 54 45 36 27 19 11 3 4 5 6 7 
+Caminho de 54 para 4: 54 45 36 27 19 11 4 
+Caminho de 54 para 5: 54 45 36 27 19 12 5 
+Caminho de 54 para 6: 54 45 36 27 19 12 5 6 
+Caminho de 54 para 7: 54 45 36 27 19 12 5 6 7 
 Caminho de 54 para 8: 54 45 36 27 18 9 8 
 Caminho de 54 para 9: 54 45 36 27 18 9 
 Caminho de 54 para 10: 54 45 36 27 18 10 
 Caminho de 54 para 11: 54 45 36 27 19 11 
-Caminho de 54 para 12: 54 45 36 27 19 11 12 
-Caminho de 54 para 13: 54 45 36 27 19 11 12 13 
-Caminho de 54 para 14: 54 45 36 27 19 11 12 13 14 
-Caminho de 54 para 15: 54 45 36 27 19 11 12 13 14 15 
-Caminho de 54 para 16: 54 45 36 27 18 17 16 
+Caminho de 54 para 12: 54 45 36 27 19 12 
+Caminho de 54 para 13: 54 45 36 27 19 12 13 
+Caminho de 54 para 14: 54 45 36 27 19 12 13 14 
+Caminho de 54 para 15: 54 45 36 27 19 12 13 14 15 
+Caminho de 54 para 16: 54 53 52 43 34 25 16 
 Caminho de 54 para 17: 54 45 36 27 18 17 
 Caminho de 54 para 18: 54 45 36 27 18 
 Caminho de 54 para 19: 54 45 36 27 19 
-Caminho de 54 para 24: 54 45 36 27 26 25 24 
-Caminho de 54 para 25: 54 45 36 27 26 25 
+Caminho de 54 para 24: 54 53 52 43 34 25 24 
+Caminho de 54 para 25: 54 53 52 43 34 25 
 Caminho de 54 para 26: 54 45 36 27 26 
 Caminho de 54 para 27: 54 45 36 27 
 Caminho de 54 para 28: 54 45 36 28 
-Caminho de 54 para 29: 54 46 38 30 29 
+Caminho de 54 para 29: 54 46 38 29 
 Caminho de 54 para 30: 54 46 38 30 
-Caminho de 54 para 31: 54 46 38 30 31 
-Caminho de 54 para 32: 54 45 36 35 34 33 32 
-Caminho de 54 para 33: 54 45 36 35 34 33 
-Caminho de 54 para 34: 54 45 36 35 34 
+Caminho de 54 para 31: 54 46 38 31 
+Caminho de 54 para 32: 54 53 52 43 34 33 32 
+Caminho de 54 para 33: 54 53 52 43 34 33 
+Caminho de 54 para 34: 54 53 52 43 34 
 Caminho de 54 para 35: 54 45 36 35 
 Caminho de 54 para 36: 54 45 36 
-Caminho de 54 para 37: 54 46 38 30 37 
+Caminho de 54 para 37: 54 45 37 
 Caminho de 54 para 38: 54 46 38 
-Caminho de 54 para 39: 54 46 38 39 
-Caminho de 54 para 43: 54 53 52 51 43 
-Caminho de 54 para 44: 54 53 52 51 44 
+Caminho de 54 para 39: 54 47 39 
+Caminho de 54 para 43: 54 53 52 43 
+Caminho de 54 para 44: 54 45 44 
 Caminho de 54 para 45: 54 45 
 Caminho de 54 para 46: 54 46 
 Caminho de 54 para 47: 54 47 
@@ -2585,50 +2585,50 @@ Caminho de 54 para 52: 54 53 52
 Caminho de 54 para 53: 54 53 
 Caminho de 54 para 54: 54 
 Caminho de 54 para 55: 54 55 
-Caminho de 54 para 56: 54 53 52 51 50 49 48 56 
-Caminho de 54 para 57: 54 53 52 51 50 49 57 
-Caminho de 54 para 58: 54 53 52 51 50 58 
+Caminho de 54 para 56: 54 53 52 51 50 49 56 
+Caminho de 54 para 57: 54 53 52 51 50 57 
+Caminho de 54 para 58: 54 53 52 51 58 
 Caminho de 54 para 62: 54 62 
 Caminho de 54 para 63: 54 63 
 Caminho de 55 para 0: 55 46 37 28 19 10 1 0 
 Caminho de 55 para 1: 55 46 37 28 19 10 1 
 Caminho de 55 para 2: 55 46 37 28 19 10 2 
 Caminho de 55 para 3: 55 46 37 28 19 11 3 
-Caminho de 55 para 4: 55 46 37 28 19 11 3 4 
-Caminho de 55 para 5: 55 46 37 28 19 11 3 4 5 
-Caminho de 55 para 6: 55 46 37 28 19 11 3 4 5 6 
-Caminho de 55 para 7: 55 46 37 28 19 11 3 4 5 6 7 
-Caminho de 55 para 8: 55 46 37 28 19 10 9 8 
+Caminho de 55 para 4: 55 46 37 28 19 11 4 
+Caminho de 55 para 5: 55 46 37 28 19 12 5 
+Caminho de 55 para 6: 55 46 37 28 19 12 5 6 
+Caminho de 55 para 7: 55 46 37 28 19 12 5 6 7 
+Caminho de 55 para 8: 55 54 53 44 35 26 17 8 
 Caminho de 55 para 9: 55 46 37 28 19 10 9 
 Caminho de 55 para 10: 55 46 37 28 19 10 
 Caminho de 55 para 11: 55 46 37 28 19 11 
-Caminho de 55 para 12: 55 46 37 28 19 11 12 
-Caminho de 55 para 13: 55 46 37 28 19 11 12 13 
-Caminho de 55 para 14: 55 46 37 28 19 11 12 13 14 
-Caminho de 55 para 15: 55 46 37 28 19 11 12 13 14 15 
-Caminho de 55 para 16: 55 46 37 28 19 18 17 16 
-Caminho de 55 para 17: 55 46 37 28 19 18 17 
+Caminho de 55 para 12: 55 46 37 28 19 12 
+Caminho de 55 para 13: 55 46 37 28 19 12 13 
+Caminho de 55 para 14: 55 46 37 28 19 12 13 14 
+Caminho de 55 para 15: 55 46 37 28 19 12 13 14 15 
+Caminho de 55 para 16: 55 54 53 52 43 34 25 16 
+Caminho de 55 para 17: 55 54 53 44 35 26 17 
 Caminho de 55 para 18: 55 46 37 28 19 18 
 Caminho de 55 para 19: 55 46 37 28 19 
-Caminho de 55 para 24: 55 46 37 28 27 26 25 24 
-Caminho de 55 para 25: 55 46 37 28 27 26 25 
-Caminho de 55 para 26: 55 46 37 28 27 26 
+Caminho de 55 para 24: 55 54 53 52 43 34 25 24 
+Caminho de 55 para 25: 55 54 53 52 43 34 25 
+Caminho de 55 para 26: 55 54 53 44 35 26 
 Caminho de 55 para 27: 55 46 37 28 27 
 Caminho de 55 para 28: 55 46 37 28 
 Caminho de 55 para 29: 55 46 37 29 
-Caminho de 55 para 30: 55 47 39 31 30 
+Caminho de 55 para 30: 55 47 39 30 
 Caminho de 55 para 31: 55 47 39 31 
-Caminho de 55 para 32: 55 46 37 36 35 34 33 32 
-Caminho de 55 para 33: 55 46 37 36 35 34 33 
-Caminho de 55 para 34: 55 46 37 36 35 34 
-Caminho de 55 para 35: 55 46 37 36 35 
+Caminho de 55 para 32: 55 54 53 52 43 34 33 32 
+Caminho de 55 para 33: 55 54 53 52 43 34 33 
+Caminho de 55 para 34: 55 54 53 52 43 34 
+Caminho de 55 para 35: 55 54 53 44 35 
 Caminho de 55 para 36: 55 46 37 36 
 Caminho de 55 para 37: 55 46 37 
-Caminho de 55 para 38: 55 47 39 31 38 
+Caminho de 55 para 38: 55 46 38 
 Caminho de 55 para 39: 55 47 39 
-Caminho de 55 para 43: 55 54 53 52 51 50 43 
-Caminho de 55 para 44: 55 54 53 52 44 
-Caminho de 55 para 45: 55 54 53 52 45 
+Caminho de 55 para 43: 55 54 53 52 43 
+Caminho de 55 para 44: 55 54 53 44 
+Caminho de 55 para 45: 55 46 45 
 Caminho de 55 para 46: 55 46 
 Caminho de 55 para 47: 55 47 
 Caminho de 55 para 48: 55 54 53 52 51 50 49 48 
@@ -2639,55 +2639,55 @@ Caminho de 55 para 52: 55 54 53 52
 Caminho de 55 para 53: 55 54 53 
 Caminho de 55 para 54: 55 54 
 Caminho de 55 para 55: 55 
-Caminho de 55 para 56: 55 54 53 52 51 50 49 48 56 
-Caminho de 55 para 57: 55 54 53 52 51 50 49 57 
-Caminho de 55 para 58: 55 54 53 52 51 50 58 
+Caminho de 55 para 56: 55 54 53 52 51 50 49 56 
+Caminho de 55 para 57: 55 54 53 52 51 50 57 
+Caminho de 55 para 58: 55 54 53 52 51 58 
 Caminho de 55 para 62: 55 62 
 Caminho de 55 para 63: 55 63 
-Caminho de 56 para 0: 56 57 58 51 43 35 27 19 11 3 2 1 0 
-Caminho de 56 para 1: 56 57 58 51 43 35 27 19 11 3 2 1 
-Caminho de 56 para 2: 56 57 58 51 43 35 27 19 11 3 2 
-Caminho de 56 para 3: 56 57 58 51 43 35 27 19 11 3 
-Caminho de 56 para 4: 56 57 58 51 43 35 27 19 11 3 4 
-Caminho de 56 para 5: 56 57 58 51 43 35 27 19 11 3 4 5 
-Caminho de 56 para 6: 56 57 58 51 43 35 27 19 11 3 4 5 6 
-Caminho de 56 para 7: 56 57 58 51 43 35 27 19 11 3 4 5 6 7 
-Caminho de 56 para 8: 56 57 58 51 43 35 27 19 11 10 9 8 
-Caminho de 56 para 9: 56 57 58 51 43 35 27 19 11 10 9 
-Caminho de 56 para 10: 56 57 58 51 43 35 27 19 11 10 
-Caminho de 56 para 11: 56 57 58 51 43 35 27 19 11 
-Caminho de 56 para 12: 56 57 58 51 43 35 27 19 11 12 
-Caminho de 56 para 13: 56 57 58 51 43 35 27 19 11 12 13 
-Caminho de 56 para 14: 56 57 58 51 43 35 27 19 11 12 13 14 
-Caminho de 56 para 15: 56 57 58 51 43 35 27 19 11 12 13 14 15 
-Caminho de 56 para 16: 56 57 58 51 43 35 27 19 18 17 16 
-Caminho de 56 para 17: 56 57 58 51 43 35 27 19 18 17 
-Caminho de 56 para 18: 56 57 58 51 43 35 27 19 18 
-Caminho de 56 para 19: 56 57 58 51 43 35 27 19 
-Caminho de 56 para 24: 56 57 58 51 43 35 27 26 25 24 
-Caminho de 56 para 25: 56 57 58 51 43 35 27 26 25 
-Caminho de 56 para 26: 56 57 58 51 43 35 27 26 
-Caminho de 56 para 27: 56 57 58 51 43 35 27 
-Caminho de 56 para 28: 56 57 58 51 44 36 28 
-Caminho de 56 para 29: 56 57 58 51 44 37 29 
+Caminho de 56 para 0: 56 49 50 43 35 27 18 9 0 
+Caminho de 56 para 1: 56 49 50 43 35 27 19 10 1 
+Caminho de 56 para 2: 56 49 50 43 35 27 19 11 2 
+Caminho de 56 para 3: 56 49 50 43 35 27 19 11 3 
+Caminho de 56 para 4: 56 49 50 43 35 27 19 11 4 
+Caminho de 56 para 5: 56 49 50 43 35 27 19 12 5 
+Caminho de 56 para 6: 56 49 50 43 35 27 19 12 5 6 
+Caminho de 56 para 7: 56 49 50 43 35 27 19 12 5 6 7 
+Caminho de 56 para 8: 56 49 50 43 35 26 17 8 
+Caminho de 56 para 9: 56 49 50 43 35 27 18 9 
+Caminho de 56 para 10: 56 49 50 43 35 27 19 10 
+Caminho de 56 para 11: 56 49 50 43 35 27 19 11 
+Caminho de 56 para 12: 56 49 50 43 35 27 19 12 
+Caminho de 56 para 13: 56 49 50 43 35 27 19 12 13 
+Caminho de 56 para 14: 56 49 50 43 35 27 19 12 13 14 
+Caminho de 56 para 15: 56 49 50 43 35 27 19 12 13 14 15 
+Caminho de 56 para 16: 56 49 50 43 34 25 16 
+Caminho de 56 para 17: 56 49 50 43 35 26 17 
+Caminho de 56 para 18: 56 49 50 43 35 27 18 
+Caminho de 56 para 19: 56 49 50 43 35 27 19 
+Caminho de 56 para 24: 56 49 50 43 34 25 24 
+Caminho de 56 para 25: 56 49 50 43 34 25 
+Caminho de 56 para 26: 56 49 50 43 35 26 
+Caminho de 56 para 27: 56 49 50 43 35 27 
+Caminho de 56 para 28: 56 49 50 43 36 28 
+Caminho de 56 para 29: 56 49 50 43 36 29 
 Caminho de 56 para 30: 56 57 58 51 44 37 30 
 Caminho de 56 para 31: 56 57 58 51 44 37 30 31 
-Caminho de 56 para 32: 56 57 58 51 43 35 34 33 32 
-Caminho de 56 para 33: 56 57 58 51 43 35 34 33 
-Caminho de 56 para 34: 56 57 58 51 43 35 34 
-Caminho de 56 para 35: 56 57 58 51 43 35 
-Caminho de 56 para 36: 56 57 58 51 44 36 
+Caminho de 56 para 32: 56 49 50 43 34 33 32 
+Caminho de 56 para 33: 56 49 50 43 34 33 
+Caminho de 56 para 34: 56 49 50 43 34 
+Caminho de 56 para 35: 56 49 50 43 35 
+Caminho de 56 para 36: 56 49 50 43 36 
 Caminho de 56 para 37: 56 57 58 51 44 37 
 Caminho de 56 para 38: 56 57 58 51 44 37 38 
 Caminho de 56 para 39: 56 57 58 51 44 37 38 39 
-Caminho de 56 para 43: 56 57 58 51 43 
+Caminho de 56 para 43: 56 49 50 43 
 Caminho de 56 para 44: 56 57 58 51 44 
 Caminho de 56 para 45: 56 57 58 51 44 45 
 Caminho de 56 para 46: 56 57 58 51 44 45 46 
 Caminho de 56 para 47: 56 57 58 51 44 45 46 47 
 Caminho de 56 para 48: 56 48 
 Caminho de 56 para 49: 56 49 
-Caminho de 56 para 50: 56 57 58 50 
+Caminho de 56 para 50: 56 49 50 
 Caminho de 56 para 51: 56 57 58 51 
 Caminho de 56 para 52: 56 57 58 51 52 
 Caminho de 56 para 53: 56 57 58 51 52 53 
@@ -2696,39 +2696,39 @@ Caminho de 56 para 55: 56 57 58 51 52 53 54 55
 Caminho de 56 para 56: 56 
 Caminho de 56 para 57: 56 57 
 Caminho de 56 para 58: 56 57 58 
-Caminho de 56 para 62: 56 57 58 51 52 53 54 62 
-Caminho de 56 para 63: 56 57 58 51 52 53 54 55 63 
-Caminho de 57 para 0: 57 50 43 35 27 19 11 3 2 1 0 
-Caminho de 57 para 1: 57 50 43 35 27 19 11 3 2 1 
-Caminho de 57 para 2: 57 50 43 35 27 19 11 3 2 
+Caminho de 56 para 62: 56 57 58 51 52 53 62 
+Caminho de 56 para 63: 56 57 58 51 52 53 54 63 
+Caminho de 57 para 0: 57 50 43 35 27 18 9 0 
+Caminho de 57 para 1: 57 50 43 35 27 19 10 1 
+Caminho de 57 para 2: 57 50 43 35 27 19 11 2 
 Caminho de 57 para 3: 57 50 43 35 27 19 11 3 
-Caminho de 57 para 4: 57 50 43 35 27 19 11 3 4 
-Caminho de 57 para 5: 57 50 43 35 27 19 11 3 4 5 
-Caminho de 57 para 6: 57 50 43 35 27 19 11 3 4 5 6 
-Caminho de 57 para 7: 57 50 43 35 27 19 11 3 4 5 6 7 
-Caminho de 57 para 8: 57 50 43 35 27 19 11 10 9 8 
-Caminho de 57 para 9: 57 50 43 35 27 19 11 10 9 
-Caminho de 57 para 10: 57 50 43 35 27 19 11 10 
+Caminho de 57 para 4: 57 50 43 35 27 19 11 4 
+Caminho de 57 para 5: 57 50 43 35 27 19 12 5 
+Caminho de 57 para 6: 57 50 43 35 27 19 12 5 6 
+Caminho de 57 para 7: 57 50 43 35 27 19 12 5 6 7 
+Caminho de 57 para 8: 57 50 43 35 26 17 8 
+Caminho de 57 para 9: 57 50 43 35 27 18 9 
+Caminho de 57 para 10: 57 50 43 35 27 19 10 
 Caminho de 57 para 11: 57 50 43 35 27 19 11 
-Caminho de 57 para 12: 57 50 43 35 27 19 11 12 
-Caminho de 57 para 13: 57 50 43 35 27 19 11 12 13 
-Caminho de 57 para 14: 57 50 43 35 27 19 11 12 13 14 
-Caminho de 57 para 15: 57 50 43 35 27 19 11 12 13 14 15 
-Caminho de 57 para 16: 57 50 43 35 27 19 18 17 16 
-Caminho de 57 para 17: 57 50 43 35 27 19 18 17 
-Caminho de 57 para 18: 57 50 43 35 27 19 18 
+Caminho de 57 para 12: 57 50 43 35 27 19 12 
+Caminho de 57 para 13: 57 50 43 35 27 19 12 13 
+Caminho de 57 para 14: 57 50 43 35 27 19 12 13 14 
+Caminho de 57 para 15: 57 50 43 35 27 19 12 13 14 15 
+Caminho de 57 para 16: 57 50 43 34 25 16 
+Caminho de 57 para 17: 57 50 43 35 26 17 
+Caminho de 57 para 18: 57 50 43 35 27 18 
 Caminho de 57 para 19: 57 50 43 35 27 19 
-Caminho de 57 para 24: 57 50 43 35 27 26 25 24 
-Caminho de 57 para 25: 57 50 43 35 27 26 25 
-Caminho de 57 para 26: 57 50 43 35 27 26 
+Caminho de 57 para 24: 57 50 43 34 25 24 
+Caminho de 57 para 25: 57 50 43 34 25 
+Caminho de 57 para 26: 57 50 43 35 26 
 Caminho de 57 para 27: 57 50 43 35 27 
 Caminho de 57 para 28: 57 50 43 36 28 
 Caminho de 57 para 29: 57 50 43 36 29 
 Caminho de 57 para 30: 57 50 43 36 29 30 
 Caminho de 57 para 31: 57 50 43 36 29 30 31 
-Caminho de 57 para 32: 57 50 43 35 34 33 32 
-Caminho de 57 para 33: 57 50 43 35 34 33 
-Caminho de 57 para 34: 57 50 43 35 34 
+Caminho de 57 para 32: 57 50 43 34 33 32 
+Caminho de 57 para 33: 57 50 43 34 33 
+Caminho de 57 para 34: 57 50 43 34 
 Caminho de 57 para 35: 57 50 43 35 
 Caminho de 57 para 36: 57 50 43 36 
 Caminho de 57 para 37: 57 50 43 36 37 
@@ -2750,39 +2750,39 @@ Caminho de 57 para 55: 57 50 51 52 53 54 55
 Caminho de 57 para 56: 57 56 
 Caminho de 57 para 57: 57 
 Caminho de 57 para 58: 57 58 
-Caminho de 57 para 62: 57 50 51 52 53 54 62 
-Caminho de 57 para 63: 57 50 51 52 53 54 55 63 
-Caminho de 58 para 0: 58 51 43 35 27 19 11 3 2 1 0 
-Caminho de 58 para 1: 58 51 43 35 27 19 11 3 2 1 
-Caminho de 58 para 2: 58 51 43 35 27 19 11 3 2 
+Caminho de 57 para 62: 57 50 51 52 53 62 
+Caminho de 57 para 63: 57 50 51 52 53 54 63 
+Caminho de 58 para 0: 58 51 43 35 27 18 9 0 
+Caminho de 58 para 1: 58 51 43 35 27 19 10 1 
+Caminho de 58 para 2: 58 51 43 35 27 19 11 2 
 Caminho de 58 para 3: 58 51 43 35 27 19 11 3 
-Caminho de 58 para 4: 58 51 43 35 27 19 11 3 4 
-Caminho de 58 para 5: 58 51 43 35 27 19 11 3 4 5 
-Caminho de 58 para 6: 58 51 43 35 27 19 11 3 4 5 6 
-Caminho de 58 para 7: 58 51 43 35 27 19 11 3 4 5 6 7 
-Caminho de 58 para 8: 58 51 43 35 27 19 11 10 9 8 
-Caminho de 58 para 9: 58 51 43 35 27 19 11 10 9 
-Caminho de 58 para 10: 58 51 43 35 27 19 11 10 
+Caminho de 58 para 4: 58 51 43 35 27 19 11 4 
+Caminho de 58 para 5: 58 51 43 35 27 19 12 5 
+Caminho de 58 para 6: 58 51 43 35 27 19 12 5 6 
+Caminho de 58 para 7: 58 51 43 35 27 19 12 5 6 7 
+Caminho de 58 para 8: 58 51 43 35 26 17 8 
+Caminho de 58 para 9: 58 51 43 35 27 18 9 
+Caminho de 58 para 10: 58 51 43 35 27 19 10 
 Caminho de 58 para 11: 58 51 43 35 27 19 11 
-Caminho de 58 para 12: 58 51 43 35 27 19 11 12 
-Caminho de 58 para 13: 58 51 43 35 27 19 11 12 13 
-Caminho de 58 para 14: 58 51 43 35 27 19 11 12 13 14 
-Caminho de 58 para 15: 58 51 43 35 27 19 11 12 13 14 15 
-Caminho de 58 para 16: 58 51 43 35 27 19 18 17 16 
-Caminho de 58 para 17: 58 51 43 35 27 19 18 17 
-Caminho de 58 para 18: 58 51 43 35 27 19 18 
+Caminho de 58 para 12: 58 51 43 35 27 19 12 
+Caminho de 58 para 13: 58 51 43 35 27 19 12 13 
+Caminho de 58 para 14: 58 51 43 35 27 19 12 13 14 
+Caminho de 58 para 15: 58 51 43 35 27 19 12 13 14 15 
+Caminho de 58 para 16: 58 51 43 34 25 16 
+Caminho de 58 para 17: 58 51 43 35 26 17 
+Caminho de 58 para 18: 58 51 43 35 27 18 
 Caminho de 58 para 19: 58 51 43 35 27 19 
-Caminho de 58 para 24: 58 51 43 35 27 26 25 24 
-Caminho de 58 para 25: 58 51 43 35 27 26 25 
-Caminho de 58 para 26: 58 51 43 35 27 26 
+Caminho de 58 para 24: 58 51 43 34 25 24 
+Caminho de 58 para 25: 58 51 43 34 25 
+Caminho de 58 para 26: 58 51 43 35 26 
 Caminho de 58 para 27: 58 51 43 35 27 
 Caminho de 58 para 28: 58 51 44 36 28 
 Caminho de 58 para 29: 58 51 44 37 29 
 Caminho de 58 para 30: 58 51 44 37 30 
 Caminho de 58 para 31: 58 51 44 37 30 31 
-Caminho de 58 para 32: 58 51 43 35 34 33 32 
-Caminho de 58 para 33: 58 51 43 35 34 33 
-Caminho de 58 para 34: 58 51 43 35 34 
+Caminho de 58 para 32: 58 51 43 34 33 32 
+Caminho de 58 para 33: 58 51 43 34 33 
+Caminho de 58 para 34: 58 51 43 34 
 Caminho de 58 para 35: 58 51 43 35 
 Caminho de 58 para 36: 58 51 44 36 
 Caminho de 58 para 37: 58 51 44 37 
@@ -2793,7 +2793,7 @@ Caminho de 58 para 44: 58 51 44
 Caminho de 58 para 45: 58 51 44 45 
 Caminho de 58 para 46: 58 51 44 45 46 
 Caminho de 58 para 47: 58 51 44 45 46 47 
-Caminho de 58 para 48: 58 57 56 48 
+Caminho de 58 para 48: 58 49 48 
 Caminho de 58 para 49: 58 49 
 Caminho de 58 para 50: 58 50 
 Caminho de 58 para 51: 58 51 
@@ -2804,49 +2804,49 @@ Caminho de 58 para 55: 58 51 52 53 54 55
 Caminho de 58 para 56: 58 57 56 
 Caminho de 58 para 57: 58 57 
 Caminho de 58 para 58: 58 
-Caminho de 58 para 62: 58 51 52 53 54 62 
-Caminho de 58 para 63: 58 51 52 53 54 55 63 
+Caminho de 58 para 62: 58 51 52 53 62 
+Caminho de 58 para 63: 58 51 52 53 54 63 
 Caminho de 62 para 0: 62 53 44 35 26 17 8 0 
-Caminho de 62 para 1: 62 53 44 35 26 17 9 1 
-Caminho de 62 para 2: 62 53 44 35 26 18 10 2 
-Caminho de 62 para 3: 62 53 44 35 27 19 11 3 
-Caminho de 62 para 4: 62 53 44 35 27 19 11 3 4 
-Caminho de 62 para 5: 62 53 44 35 27 19 11 3 4 5 
-Caminho de 62 para 6: 62 53 44 35 27 19 11 3 4 5 6 
-Caminho de 62 para 7: 62 53 44 35 27 19 11 3 4 5 6 7 
+Caminho de 62 para 1: 62 54 46 37 28 19 10 1 
+Caminho de 62 para 2: 62 54 46 37 28 19 10 2 
+Caminho de 62 para 3: 62 54 46 37 28 19 11 3 
+Caminho de 62 para 4: 62 54 46 37 28 19 11 4 
+Caminho de 62 para 5: 62 54 46 37 28 19 12 5 
+Caminho de 62 para 6: 62 54 46 37 28 19 12 5 6 
+Caminho de 62 para 7: 62 54 46 37 28 19 12 5 6 7 
 Caminho de 62 para 8: 62 53 44 35 26 17 8 
 Caminho de 62 para 9: 62 53 44 35 26 17 9 
-Caminho de 62 para 10: 62 53 44 35 26 18 10 
-Caminho de 62 para 11: 62 53 44 35 27 19 11 
-Caminho de 62 para 12: 62 53 44 35 27 19 11 12 
-Caminho de 62 para 13: 62 53 44 35 27 19 11 12 13 
-Caminho de 62 para 14: 62 53 44 35 27 19 11 12 13 14 
-Caminho de 62 para 15: 62 53 44 35 27 19 11 12 13 14 15 
+Caminho de 62 para 10: 62 54 46 37 28 19 10 
+Caminho de 62 para 11: 62 54 46 37 28 19 11 
+Caminho de 62 para 12: 62 54 46 37 28 19 12 
+Caminho de 62 para 13: 62 54 46 37 28 19 12 13 
+Caminho de 62 para 14: 62 54 46 37 28 19 12 13 14 
+Caminho de 62 para 15: 62 54 46 37 28 19 12 13 14 15 
 Caminho de 62 para 16: 62 53 44 35 26 17 16 
 Caminho de 62 para 17: 62 53 44 35 26 17 
 Caminho de 62 para 18: 62 53 44 35 26 18 
-Caminho de 62 para 19: 62 53 44 35 27 19 
+Caminho de 62 para 19: 62 54 46 37 28 19 
 Caminho de 62 para 24: 62 53 44 35 26 25 24 
 Caminho de 62 para 25: 62 53 44 35 26 25 
 Caminho de 62 para 26: 62 53 44 35 26 
 Caminho de 62 para 27: 62 53 44 35 27 
-Caminho de 62 para 28: 62 53 44 36 28 
-Caminho de 62 para 29: 62 53 44 36 29 
+Caminho de 62 para 28: 62 54 46 37 28 
+Caminho de 62 para 29: 62 54 46 38 29 
 Caminho de 62 para 30: 62 54 46 38 30 
-Caminho de 62 para 31: 62 54 46 38 30 31 
+Caminho de 62 para 31: 62 54 46 38 31 
 Caminho de 62 para 32: 62 53 44 35 34 33 32 
 Caminho de 62 para 33: 62 53 44 35 34 33 
 Caminho de 62 para 34: 62 53 44 35 34 
 Caminho de 62 para 35: 62 53 44 35 
 Caminho de 62 para 36: 62 53 44 36 
-Caminho de 62 para 37: 62 54 46 38 37 
+Caminho de 62 para 37: 62 54 46 37 
 Caminho de 62 para 38: 62 54 46 38 
-Caminho de 62 para 39: 62 54 46 38 39 
+Caminho de 62 para 39: 62 54 46 39 
 Caminho de 62 para 43: 62 53 44 43 
 Caminho de 62 para 44: 62 53 44 
-Caminho de 62 para 45: 62 54 46 38 45 
+Caminho de 62 para 45: 62 53 45 
 Caminho de 62 para 46: 62 54 46 
-Caminho de 62 para 47: 62 54 46 47 
+Caminho de 62 para 47: 62 55 47 
 Caminho de 62 para 48: 62 53 52 51 50 49 48 
 Caminho de 62 para 49: 62 53 52 51 50 49 
 Caminho de 62 para 50: 62 53 52 51 50 
@@ -2855,27 +2855,27 @@ Caminho de 62 para 52: 62 53 52
 Caminho de 62 para 53: 62 53 
 Caminho de 62 para 54: 62 54 
 Caminho de 62 para 55: 62 55 
-Caminho de 62 para 56: 62 53 52 51 50 49 48 56 
-Caminho de 62 para 57: 62 53 52 51 50 49 57 
-Caminho de 62 para 58: 62 53 52 51 50 58 
+Caminho de 62 para 56: 62 53 52 51 50 49 56 
+Caminho de 62 para 57: 62 53 52 51 50 57 
+Caminho de 62 para 58: 62 53 52 51 58 
 Caminho de 62 para 62: 62 
 Caminho de 62 para 63: 62 63 
 Caminho de 63 para 0: 63 54 45 36 27 18 9 0 
 Caminho de 63 para 1: 63 54 45 36 27 18 9 1 
 Caminho de 63 para 2: 63 54 45 36 27 18 10 2 
 Caminho de 63 para 3: 63 54 45 36 27 19 11 3 
-Caminho de 63 para 4: 63 54 45 36 27 19 11 3 4 
-Caminho de 63 para 5: 63 54 45 36 27 19 11 3 4 5 
-Caminho de 63 para 6: 63 54 45 36 27 19 11 3 4 5 6 
-Caminho de 63 para 7: 63 54 45 36 27 19 11 3 4 5 6 7 
+Caminho de 63 para 4: 63 54 45 36 27 19 11 4 
+Caminho de 63 para 5: 63 54 45 36 27 19 12 5 
+Caminho de 63 para 6: 63 54 45 36 27 19 12 5 6 
+Caminho de 63 para 7: 63 54 45 36 27 19 12 5 6 7 
 Caminho de 63 para 8: 63 54 45 36 27 18 9 8 
 Caminho de 63 para 9: 63 54 45 36 27 18 9 
 Caminho de 63 para 10: 63 54 45 36 27 18 10 
 Caminho de 63 para 11: 63 54 45 36 27 19 11 
-Caminho de 63 para 12: 63 54 45 36 27 19 11 12 
-Caminho de 63 para 13: 63 54 45 36 27 19 11 12 13 
-Caminho de 63 para 14: 63 54 45 36 27 19 11 12 13 14 
-Caminho de 63 para 15: 63 54 45 36 27 19 11 12 13 14 15 
+Caminho de 63 para 12: 63 54 45 36 27 19 12 
+Caminho de 63 para 13: 63 54 45 36 27 19 12 13 
+Caminho de 63 para 14: 63 54 45 36 27 19 12 13 14 
+Caminho de 63 para 15: 63 54 45 36 27 19 12 13 14 15 
 Caminho de 63 para 16: 63 54 45 36 27 18 17 16 
 Caminho de 63 para 17: 63 54 45 36 27 18 17 
 Caminho de 63 para 18: 63 54 45 36 27 18 
@@ -2885,8 +2885,8 @@ Caminho de 63 para 25: 63 54 45 36 27 26 25
 Caminho de 63 para 26: 63 54 45 36 27 26 
 Caminho de 63 para 27: 63 54 45 36 27 
 Caminho de 63 para 28: 63 54 45 36 28 
-Caminho de 63 para 29: 63 54 45 37 29 
-Caminho de 63 para 30: 63 54 45 37 30 
+Caminho de 63 para 29: 63 55 47 38 29 
+Caminho de 63 para 30: 63 55 47 39 30 
 Caminho de 63 para 31: 63 55 47 39 31 
 Caminho de 63 para 32: 63 54 45 36 35 34 33 32 
 Caminho de 63 para 33: 63 54 45 36 35 34 33 
@@ -2894,23 +2894,8 @@ Caminho de 63 para 34: 63 54 45 36 35 34
 Caminho de 63 para 35: 63 54 45 36 35 
 Caminho de 63 para 36: 63 54 45 36 
 Caminho de 63 para 37: 63 54 45 37 
-Caminho de 63 para 38: 63 55 47 39 38 
+Caminho de 63 para 38: 63 55 47 38 
 Caminho de 63 para 39: 63 55 47 39 
 Caminho de 63 para 43: 63 54 45 44 43 
 Caminho de 63 para 44: 63 54 45 44 
-Caminho de 63 para 45: 63 54 45 
-Caminho de 63 para 46: 63 55 47 39 46 
-Caminho de 63 para 47: 63 55 47 
-Caminho de 63 para 48: 63 54 53 52 51 50 49 48 
-Caminho de 63 para 49: 63 54 53 52 51 50 49 
-Caminho de 63 para 50: 63 54 53 52 51 50 
-Caminho de 63 para 51: 63 54 53 52 51 
-Caminho de 63 para 52: 63 54 53 52 
-Caminho de 63 para 53: 63 54 53 
-Caminho de 63 para 54: 63 54 
-Caminho de 63 para 55: 63 55 
-Caminho de 63 para 56: 63 54 53 52 51 50 49 48 56 
-Caminho de 63 para 57: 63 54 53 52 51 50 49 57 
-Caminho de 63 para 58: 63 54 53 52 51 50 58 
-Caminho de 63 para 62: 63 62 
-Caminho de 63 para 63: 63 
+Caminho
