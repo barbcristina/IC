@@ -160,12 +160,12 @@ modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for 
 #+ gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i)
 #ponto inical: ini; ponto final: fin
 for i in validos:
-  if i != fin:
+  if i != ini:
     modelo.addConstr(gp.quicksum(x[i, j] for j in validos if j != i ) == 1)
 
 # Restrição 2
 for j in validos:
-  if j != ini:
+  if j != fin:
     modelo.addConstr(gp.quicksum(x[i, j] for i in validos if i != j) == 1)
 
 # Restrição 3
@@ -177,7 +177,7 @@ for i in validos:
 
 # Restrição 4
 for i in validos:
-  if i != ini:
+  #if i != ini:
     modelo.addConstr(u[i] >= 1)
     modelo.addConstr(u[i] <= n - 1)
 
@@ -262,4 +262,4 @@ plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
 plt.title(f"Cost = {modelo.objVal:.2f}")
 
-plt.savefig('gurobi100.png')
+plt.savefig('gurobi64.png')

@@ -2898,4 +2898,19 @@ Caminho de 63 para 38: 63 55 47 38
 Caminho de 63 para 39: 63 55 47 39 
 Caminho de 63 para 43: 63 54 45 44 43 
 Caminho de 63 para 44: 63 54 45 44 
-Caminho
+Caminho de 63 para 45: 63 54 45 
+Caminho de 63 para 46: 63 54 46 
+Caminho de 63 para 47: 63 55 47 
+Caminho de 63 para 48: 63 54 53 52 51 50 49 48 
+Caminho de 63 para 49: 63 54 53 52 51 50 49 
+Caminho de 63 para 50: 63 54 53 52 51 50 
+Caminho de 63 para 51: 63 54 53 52 51 
+Caminho de 63 para 52: 63 54 53 52 
+Caminho de 63 para 53: 63 54 53 
+Caminho de 63 para 54: 63 54 
+Caminho de 63 para 55: 63 55 
+Caminho de 63 para 56: 63 54 53 52 51 50 49 56 
+Caminho de 63 para 57: 63 54 53 52 51 50 57 
+Caminho de 63 para 58: 63 54 53 52 51 58 
+Caminho de 63 para 62: 63 62 
+Caminho de 63 para 63: 63 
