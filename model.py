@@ -155,9 +155,8 @@ x = modelo.addVars(n, n, vtype=gp.GRB.BINARY, name="x")
 u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
 y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y")
 
-modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
+modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
-#+ gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i)
 #ponto inical: ini; ponto final: fin
 for i in validos:
   if i != ini:
@@ -177,7 +176,7 @@ for i in validos:
 
 # Restrição 4
 for i in validos:
-  #if i != ini:
+  if i != ini:
     modelo.addConstr(u[i] >= 1)
     modelo.addConstr(u[i] <= n - 1)
 

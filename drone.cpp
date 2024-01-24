@@ -313,7 +313,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
         visitado[fronteira[i]] = true;
     }
 
-    while (caminho.size() < n-7) {
+    while (caminho.size() < n-6) {
         std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
         std::cout << "selecionados: " << std::endl;
@@ -394,7 +394,7 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
 
 
 int main() {
-    std::string mapas = "mapas9.txt";
+    std::string mapas = "mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -436,13 +436,13 @@ int main() {
     //10x10
     //std::vector<int> obstaculos_indices = {13, 14, 15, 31, 32, 33, 47, 48, 49, 61, 62, 97, 98, 99};
     //9x9
-    std::vector<int> obstaculos_indices = {12, 13, 14, 41, 42, 43, 64, 65, 66};
+    //std::vector<int> obstaculos_indices = {12, 13, 14, 41, 42, 43, 64, 65, 66};
     //8x8
     //std::vector<int> obstaculos_indices = {20, 21, 22, 23, 40, 41, 42, 61, 60, 59};
     //7x7
     //std::vector<int> obstaculos_indices = {12, 13, 22, 23, 38, 39, 40};
     //6x6
-    //std::vector<int> obstaculos_indices = {7, 8, 22, 23, 30, 31};
+    std::vector<int> obstaculos_indices = {7, 8, 22, 23, 30, 31};
     for (int i : obstaculos_indices) {
         obstaculos.push_back(coord[i]);
     }
@@ -477,7 +477,7 @@ int main() {
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
-    std::ofstream pathFile("path9.txt");
+    std::ofstream pathFile("path6.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -540,14 +540,14 @@ int main() {
     int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
     std::cout << maiorx << " " << maiory << std::endl;
     //6x6
-    //std::vector<int> fronteira = {0, 6, 12, 18, 24, 25, 32, 33, 34, 35, 29, 28, 21, 16, 17, 11, 5, 4, 3, 2, 1};
+    std::vector<int> fronteira = {0, 6, 12, 18, 24, 25, 32, 33, 34, 35, 29, 28, 21, 16, 17, 11, 5, 4, 3, 2, 1};
     //7x7
-    std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
+    //std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
     //8x8
     //std::vector<int> fronteira = {0, 8, 16, 24, 32, 33, 34, 43, 50, 49, 48, 56, 57, 58, 51, 52, 53, 62, 63, 55, 47, 39, 31, 30, 29, 28, 19, 12, 13, 14, 15, 7, 6, 5, 4, 3, 2, 1};
     //10x10
     //std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-    std::vector<int> cicloHamiltoniano = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
+    //std::vector<int> cicloHamiltoniano = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
 
     double total = 0;
 
@@ -556,8 +556,8 @@ int main() {
     //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
     //}
 
-    std::vector<int> melhorRota = grasp(4, distancias, fronteira, q, altitudes, 200);
-    cicloHamiltoniano = melhorRota;
+    std::vector<int> melhorRota = grasp(4, distancias, fronteira, q, altitudes, 1000);
+    std::vector<int> cicloHamiltoniano = melhorRota;
     cicloHamiltoniano.push_back(0);
 
     total = 0;
