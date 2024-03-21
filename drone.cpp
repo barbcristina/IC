@@ -106,11 +106,14 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
     std::pair<std::vector<int>, double> melhorRota;
     rota.pop_back();
     double total = 0;
-        for(int i = 0; i < rota.size() - 1; i++){
-            total += (distancias[rota[i]][rota[i+1]] + q[rota[(i > 0) ? i-1 : i]][rota[i]][rota[i+1]]);
-        }
+    int iter = 0;
+    int maxIter = 1000;
 
-    while(melhora){
+    for(int i = 0; i < rota.size() - 1; i++){
+        total += (distancias[rota[i]][rota[i+1]] + q[rota[(i > 0) ? i-1 : i]][rota[i]][rota[i+1]]);
+    }
+
+    while(melhora && iter < maxIter){
         melhora = false;
         melhorRota = OPT2(rota, distancias, total, q, altitudes);
         double twopt = 0;
@@ -123,6 +126,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
             total = melhorRota.second;
             melhora = true;
         }
+        iter++;
     }
     return melhorRota;
 }
@@ -319,7 +323,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
         visitado[fronteira[i]] = true;
     }
     std::cout << "criou a fronteira " << std::endl;
-    while (caminho.size() < n-11) {
+    while (caminho.size() < n-14) {
         //std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
         //std::cout << "selecionados: " << std::endl;
@@ -390,11 +394,14 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
     std::vector<int> best;
     std::pair<std::vector<int>, double> par;
     std::vector<int> s;
+    bool melhora = true;
+    int qtdit = 0;
+    int melhorou = 0;
 
-    std::cout << "comecando o grasp " << std::endl;
-    for(int i = 0; i < maxit ; i++){
+    //std::cout << "comecando o grasp " << std::endl;
+    while(melhora){
         S = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
-        std::cout << "passou pela insercao mais barata " << std::endl;
+        //std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
             valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
@@ -405,18 +412,25 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
         for(int k = 0; k < s.size() - 1; k++){
             valor += (distancias[s[k]][s[k+1]] + q[s[(k > 0) ? k-1 : k]][s[k]][s[k+1]]);
         }
+        qtdit++;
         if(valor < lim){
             best = s;
             lim = valor;
+            melhorou = qtdit;
+        }
+
+        if(qtdit - melhorou >= 50){
+            melhora = false;
         }
         std::cout << "2opt: " << lim << std::endl;
     }
+    std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 
 int main() {
-    std::string mapas = "mapas8.txt";
+    std::string mapas = "mapas10.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -461,11 +475,11 @@ int main() {
     //11x11
     //std::vector<int> obstaculos_indices = {13, 15, 14, 41, 42, 43, 57, 58, 59, 84, 85, 86, 100, 101, 102, 103};
     //10x10
-    //std::vector<int> obstaculos_indices = {13, 14, 15, 31, 32, 33, 47, 48, 49, 61, 62, 97, 98, 99};
+    std::vector<int> obstaculos_indices = {13, 14, 15, 31, 32, 33, 47, 48, 49, 61, 62, 97, 98, 99};
     //9x9
     //std::vector<int> obstaculos_indices = {12, 13, 14, 41, 42, 43, 64, 65, 66};
     //8x8
-    std::vector<int> obstaculos_indices = {32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54};
+    //std::vector<int> obstaculos_indices = {32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54};
     //7x7
     //std::vector<int> obstaculos_indices = {12, 13, 22, 23, 38, 39, 40};
     //6x6
@@ -504,7 +518,7 @@ int main() {
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
-    std::ofstream pathFile("path8.txt");
+    std::ofstream pathFile("path10.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -568,11 +582,11 @@ int main() {
     //6x6
     //std::vector<int> fronteira = {0, 6, 12, 18, 24, 25, 32, 33, 34, 35, 29, 28, 21, 16, 17, 11, 5, 4, 3, 2, 1};
     //7x7 e 9x9 e 11x11 e 8x8
-    std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
+    //std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
     //8x8
     //std::vector<int> fronteira = {0, 8, 16, 24, 32, 40, 48, 56, 57, 58, 51, 52, 53, 62, 63, 55, 47, 39, 31, 30, 29, 28, 19, 12, 13, 14, 15, 7, 6, 5, 4, 3, 2, 1};
     //10x10
-    //std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     //15x15
     //std::vector<int> fronteira = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 209, 194, 179, 164, 149, 134, 119, 118, 117, 101, 87, 88, 89, 74, 59, 44, 29, 28, 27, 26, 10, 9 , 8, 7, 6, 5, 4, 3, 2, 1};
     //std::vector<int> cicloHamiltoniano = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
