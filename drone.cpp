@@ -390,6 +390,7 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
     std::vector<int> best;
     std::pair<std::vector<int>, double> par;
     std::vector<int> s;
+
     std::cout << "comecando o grasp " << std::endl;
     for(int i = 0; i < maxit ; i++){
         S = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
