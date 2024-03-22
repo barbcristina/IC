@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 
-mapas = 'mapas15.txt'
+mapas = 'mapas8.txt'
 
 # Abrir o arquivo para leitura
 with open(mapas, 'r') as arquivo:
@@ -30,11 +30,11 @@ coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 #13x13
 #obstaculos_indices = [33, 34, 153, 154, 67, 80, 82, 83, 84, 85, 132, 133, 134, 25, 97, 27, 28, 63, 64, 113, 114, 115, 116, 81, 54, 55, 56, 57, 23, 24]
 #15x15
-obstaculos_indices = [11, 12, 13, 14, 19, 20, 21, 22, 36, 33, 34, 35, 50, 51, 52, 53, 54, 78, 79, 80, 81, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 192, 193, 191, 167, 168, 169, 170, 198, 199, 200, 201]
+#obstaculos_indices = [11, 12, 13, 14, 19, 20, 21, 22, 36, 33, 34, 35, 50, 51, 52, 53, 54, 78, 79, 80, 81, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 192, 193, 191, 167, 168, 169, 170, 198, 199, 200, 201]
 #10x10
 #obstaculos_indices = [13, 15, 14, 41, 42, 43, 57, 58, 59, 71, 72, 73, 97, 98, 99]
 #8x8
-#obstaculos_indices = [32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54]
+obstaculos_indices = [32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54]
 #9x9
 #obstaculos_indices = [12, 13, 14, 41, 42, 43, 64, 65, 66]
 # 7x7
@@ -223,6 +223,7 @@ else:
             if u[j].x == i:
                 route.append(j+1)
     route.append(1)
+    route = [city for city in route if city-1 not in obstaculos_indices]
     print(route)
 
 fim = time.time()
@@ -269,4 +270,4 @@ plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
 plt.title(f"Cost = {modelo.objVal:.2f}")
 
-plt.savefig('gurobi225.png')
+plt.savefig('gurobi64.png')

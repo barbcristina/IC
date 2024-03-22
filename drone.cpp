@@ -314,7 +314,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
 
 
 // Função para construir um caminho hamiltoniano usando a heurística de inserção mais barata
-std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes) {
+std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize) {
     int n = distancias.size();
     std::vector<bool> visitado(n, false);
     std::vector<int> caminho; // Caminho inicial com a fronteira
@@ -323,7 +323,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
         visitado[fronteira[i]] = true;
     }
     std::cout << "criou a fronteira " << std::endl;
-    while (caminho.size() < n-14) {
+    while (caminho.size() < n-obsSize) {
         //std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
         //std::cout << "selecionados: " << std::endl;
@@ -340,12 +340,9 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
 
         int proximoPonto = proxPonto[randomIndex];
 
-        //std::cout << "proximo: " << proximoPonto << std::endl;
-
-        if (proximoPonto != -1) {
+        if (proximoPonto != -1 && !visitado[proximoPonto]) {
             // Encontre a posição de inserção que minimiza o custo
             int melhorPosicaoInsercao = -1;
-            //std::cout << "achando melhor pos" << std::endl;
             double menorCustoInsercao = std::numeric_limits<double>::max();
             for (size_t i = 0; i < caminho.size() - 1; i++) {
                 int pontoA = caminho[i];
@@ -367,19 +364,9 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
                     melhorPosicaoInsercao = i + 1;
                 }
             }
-
-            for(int i = 0; i < caminho.size() - 1; i++){
-                if(caminho[i] == proximoPonto){
-                    visitado[proximoPonto] = true;
-                }
-            }
             
-            if(!visitado[proximoPonto]){
-                caminho.insert(caminho.begin() + melhorPosicaoInsercao, proximoPonto);
-                visitado[proximoPonto] = true;
-            }
-            
-            //std::cout << "inserido" << std::endl;
+            caminho.insert(caminho.begin() + melhorPosicaoInsercao, proximoPonto);
+            visitado[proximoPonto] = true;
         }
     }
 
@@ -388,7 +375,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
     return caminho;
 }
 
-std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int maxit){
+std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize){
     float lim = 2000000;
     std::vector<int> S;
     std::vector<int> best;
@@ -400,7 +387,7 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
 
     //std::cout << "comecando o grasp " << std::endl;
     while(melhora){
-        S = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
+        S = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes, obsSize);
         //std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
@@ -604,7 +591,7 @@ int main() {
     //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
     //}
 
-    std::vector<int> melhorRota = grasp(4, distancias, fronteira, q, altitudes, 50);
+    std::vector<int> melhorRota = grasp(4, distancias, fronteira, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     cicloHamiltoniano.push_back(0);
 
