@@ -33,11 +33,12 @@ for i in range(0, 7):
   for k in range(0, 2):
     obstaculos_indices = [int(celula) for celula in linhas[-(k+1)].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
-    obstaculos = [coord[i] for i in obstaculos_indices]
-    validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
 
-    ini = 0
-    fin = 1
+    obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
+    validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices] # Lista de vértices válidos
+
+    ini = 0 # Ponto inicial
+    fin = 1 # Ponto final
 
     # Cria a matriz de custos
     c = [[float('inf')] * n for _ in range(n)]
@@ -103,11 +104,11 @@ for i in range(0, 7):
 
     # Função para imprimir o caminho mínimo
     def print_path(parent, v):
-        if parent[v] == None:
-            print(v, end=' ')
+        if parent[v] == None: # Se o vértice pai for nulo
+            print(v, end=' ') # Então imprime o vértice
             return
-        print_path(parent, parent[v])
-        print(v, end=' ')
+        print_path(parent, parent[v]) # Senão, imprime o caminho mínimo
+        print(v, end=' ') # E imprime o vértice
 
     # Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     def dijkstra(c, i, j):
@@ -126,7 +127,7 @@ for i in range(0, 7):
             spt_set[u] = True
 
             for v in validos:
-                if u != v and not spt_set[v] and c[u][v] > 0 and dist[u] + c[u][v] < dist[v]:
+                if u != v and not spt_set[v] and c[u][v] > 0 and dist[u] + c[u][v] < dist[v]: #
                     altitude = calcular_h(u, v, (dist[u] + c[u][v]))
                     angulos = calcular_a(parent[u] if parent[u] is not None else u, u, v)
                     alt[v] = alt[u] + altitude
@@ -149,11 +150,11 @@ for i in range(0, 7):
           for k in validos:
             q[i][j][k] = calcular_a(i, j, k)
 
-    modelo = gp.Model('Caixeiro_Viajante')
+    modelo = gp.Model('Caixeiro_Viajante') # Cria o modelo
 
     x = modelo.addVars(n, n, vtype=gp.GRB.BINARY, name="x")
     u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
-    y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y")
+    y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y") # Variável para os angulos
 
     modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
@@ -218,15 +219,14 @@ for i in range(0, 7):
         route = [city for city in route if city-1 not in obstaculos_indices]
         print(route)
         
-    with open(f'rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota:
+    with open(f'rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
           for city in route:
             arquivo_rota.write(f'{city-1}, ')
     print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
 
     fim = time.time()
-    tempo = fim - inicio
+    tempo = fim - inicio # Tempo de execução
     print("Tempo de Execução: ", tempo)
-    # Caminho com o modelo já atualizado
 
     import matplotlib.pyplot as plt
 
@@ -266,6 +266,6 @@ for i in range(0, 7):
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    versao += 1
-    plt.savefig(f'gurobi{mapaqtd*mapaqtd}_{versao}.png')
+    versao += 1 # Incrementa a versão
+    plt.savefig(f'gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
     print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')

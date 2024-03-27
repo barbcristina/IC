@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 for i in range(0, 2):
-  mapas = 'mapas6.txt'
+  mapas = 'mapas8.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -173,11 +173,21 @@ for i in range(0, 2):
       modelo.addConstr(u[i] >= 1)
       modelo.addConstr(u[i] <= n - 1)
 
+# Restrição 5
+  for i in validos: #
+    if i!=ini:
+      for j in validos: #if 
+        if j!=ini:
+          for k in validos: #if 
+            if k!=ini:
+              modelo.addConstr(y[i, j, k] <= x[j, k])
+              modelo.addConstr(y[i, j, k] <= x[i, j])
+
   # Restrição 6
   for i in validos:
       for j in validos:
-          for k in validos:
-              modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
+        for k in validos:
+          modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
   modelo.Params.timeLimit = 7200
   modelo.optimize()
@@ -255,4 +265,6 @@ for i in range(0, 2):
 
   plt.title(f"Cost = {modelo.objVal:.2f}")
 
-  plt.savefig('gurobi36.png')
+  plt.savefig('gurobi64.png')
+
+  #829.24

@@ -136,111 +136,138 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos_indices, int lar
     int x = 0;
     int y = 0;
 
-    // Lado esquerdo
+    // Lado esquerdo fixed
     for (int i = 0; i < altura; i++) {
-        auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
-        if (it != obstaculos_indices.end()) {
-            x -= altura;
-            y = x + altura + altura;
-            while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x+altura) != obstaculos_indices.end()) {
-                x++;
+        if(x < (largura * altura)){
+            auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
+            if (it != obstaculos_indices.end()) {
+                x -= altura;
+                y = x + altura + altura;
+                while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x + altura) != obstaculos_indices.end()) {
+                    x++;
+                    fronteira.push_back(x);
+                }
+                fronteira.pop_back();
+                x += altura;
                 fronteira.push_back(x);
+                if((x+altura) < (altura * largura)){
+                    std::cout << x+altura << std::endl;
+                    x += altura - 1;
+                    while (x != y) {
+                        fronteira.push_back(x);
+                        x--;
+                    }
+                    continue;
+                }
             }
-            fronteira.pop_back();
-            x += altura;
             fronteira.push_back(x);
-            x += altura - 1;
-            while (x != y) {
-                fronteira.push_back(x);
-                x--;
-            }
-            continue;
+            x += altura;
         }
-        fronteira.push_back(x);
-        x += altura;
     }
 
-    // Lado superior
-    x = altura * (largura - 1);
-    for (int i = 0; i < largura - 1; i++) {
-        auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
-        if (it != obstaculos_indices.end()) {
-            y = x + 2;
-            while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x) != obstaculos_indices.end()) {
-                x++;
-                fronteira.push_back(x);
-            }
-            fronteira.pop_back();
-            x += 1;
-            fronteira.push_back(x);
-            x += 2;
-            while (x != y) {
-                fronteira.push_back(x);
-                x--;
-            }
-            continue;
-        }
-        x++;
-        fronteira.push_back(x);
+    if(fronteira[fronteira.size() - 2] == fronteira.back()){
+        fronteira.pop_back();
     }
+    // Lado superior
+    x = fronteira.back() + 1;
+    std::cout << "x: " << x + 1 << std::endl;
+    for (int i = 0; i < largura-1; i++) {
+        if(x < (largura * altura)){
+            auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
+            if (it != obstaculos_indices.end()) {
+                x -= altura;
+                fronteira.push_back(x);
+                while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x + altura) != obstaculos_indices.end()) {
+                    x++;
+                    fronteira.push_back(x);
+                }
+                fronteira.pop_back();
+                x += altura;
+                fronteira.push_back(x);
+                x++;
+                continue;
+            }
+            fronteira.push_back(x);
+            x++;
+        }
+    }
+
+    if(fronteira[fronteira.size() - 2] == fronteira.back()){
+        fronteira.pop_back();
+    }
+
+    std::cout << "ultimo: " << fronteira.back() + 1 << std::endl;
 
     // Lado direito
-    x = altura * largura - 1;
+    x = fronteira.back() - altura;
     for (int i = 0; i < altura; i++) {
-        auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
-        if (it != obstaculos_indices.end()) {
-            x += altura;
-            y = x - altura - altura;
-            while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x-altura) != obstaculos_indices.end()) {
-                x--;
+        if(x > 0){
+            auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
+            if (it != obstaculos_indices.end()) {
+                x += altura;
+                y = x - altura - altura;
+                while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x-altura) != obstaculos_indices.end()) {
+                    x--;
+                    fronteira.push_back(x);
+                }
+                fronteira.pop_back();
+                x -= altura;
                 fronteira.push_back(x);
+                //x++;
+                if(x - altura > 0){
+                    x -= altura - 1;
+                    while (x != y) {
+                        fronteira.push_back(x);
+                        x++;
+                    }
+                    continue;
+                }
             }
-            fronteira.pop_back();
-            x -= altura;
             fronteira.push_back(x);
-            if(x > 10)
-            x -= altura - 1;
-            while (x != y) {
-                fronteira.push_back(x);
-                x++;
-            }
-            continue;
+            x -= altura;
         }
-        fronteira.push_back(x);
-        x -= altura;
+    }
+
+    if(fronteira[fronteira.size() - 2] == fronteira.back()){
+        fronteira.pop_back();
     }
 
     // Lado inferior
-    x = altura - 1;
-    for (int i = 0; i < largura - 4; i++) {
-        auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
-        if (it != obstaculos_indices.end()) {
-            y = x - 2;
-            while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x) != obstaculos_indices.end()) {
-                x--;
+    x = fronteira.back() - 1;
+    std::cout << "x: " << x + 1 << std::endl;
+    for (int i = 0; i < largura; i++) {
+        if(x > 0){
+            auto it = std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x);
+            if (it != obstaculos_indices.end()) {
+                x+=altura;
                 fronteira.push_back(x);
+                while (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), x - altura) != obstaculos_indices.end()) {
+                    x--;
+                    fronteira.push_back(x);
+                }
+                fronteira.pop_back();
+                x -= altura;
+                fronteira.push_back(x);
+                x --;
+                continue;
             }
-            fronteira.pop_back();
-            x -= 1;
+            if(std::find(fronteira.begin(), fronteira.end(), x) != fronteira.end()){
+                i--;
+                x-=1;
+                continue;
+            }
             fronteira.push_back(x);
-            x -= 2;
-            while (x != y) {
-                fronteira.push_back(x);
-                x++;
-            }
-            continue;
+            x -= 1;
         }
-        if(std::find(fronteira.begin(), fronteira.end(), x) != fronteira.end()){
-            i--;
-            x-=1;
-            continue;
-        }
-        fronteira.push_back(x);
-        x -= 1;
+    }
+
+    if(fronteira[fronteira.size() - 2] == fronteira.back()){
+        fronteira.pop_back();
     }
 
     fronteira.push_back(0);
 
+    std::cout << "Fronteira: ";
     for (int vertice : fronteira) {
         std::cout << vertice + 1 << ", ";
     }
@@ -415,9 +442,8 @@ std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias
     return best;
 }
 
-
 int main() {
-    std::string mapas = "mapas10.txt";
+    std::string mapas = "mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -444,33 +470,28 @@ int main() {
 
     // Converte as linhas em uma lista de tuplas
     std::vector<std::tuple<double, double, double>> coord;
-    for (const std::string& linha : linhas) {
-        std::istringstream iss(linha);
+    std::vector<int> obstaculos_indices;
+
+    for (int i = 0; i < linhas.size() - 2; i++) {
+        std::istringstream iss(linhas[i]);
         std::string cidade;
         double x, y, z;
         iss >> cidade >> x >> y >> z;
         coord.push_back(std::make_tuple(x, y, z));
     }
 
+    // para iterar só fazer linhas.back() - i
+    std::istringstream iss(linhas.back());
+    int obstaculo;
+    while (iss >> obstaculo) {
+        obstaculos_indices.push_back(obstaculo);
+        std::cout << obstaculo << std::endl;
+    }
+
     int n = coord.size();  // número de células (pontos)
 
     std::vector<std::tuple<double, double, double>> obstaculos;
-    //15x15
-    //std::vector<int> obstaculos_indices = {19, 20, 21, 22, 50, 51, 52, 53, 54, 11, 12, 13, 14, 33, 34, 35, 36, 78, 79, 80, 81, 103, 102, 104, 124, 125, 126, 160, 161, 162, 163, 167, 168, 169, 170, 191, 192, 193, 198, 199, 200, 201};
-    //13x13
-    //std::vector<int> obstaculos_indices = {23, 24, 25, 27, 28, 33, 34, 54, 55, 56, 57, 63, 64, 67, 80, 81, 82, 83, 84, 85, 97, 113, 114, 115, 116, 132, 133, 135, 153, 154};
-    //11x11
-    //std::vector<int> obstaculos_indices = {13, 15, 14, 41, 42, 43, 57, 58, 59, 84, 85, 86, 100, 101, 102, 103};
-    //10x10
-    std::vector<int> obstaculos_indices = {13, 14, 15, 31, 32, 33, 47, 48, 49, 61, 62, 97, 98, 99};
-    //9x9
-    //std::vector<int> obstaculos_indices = {12, 13, 14, 41, 42, 43, 64, 65, 66};
-    //8x8
-    //std::vector<int> obstaculos_indices = {32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54};
-    //7x7
-    //std::vector<int> obstaculos_indices = {12, 13, 22, 23, 38, 39, 40};
-    //6x6
-    //std::vector<int> obstaculos_indices = {7, 8, 22, 23, 30, 31};
+
     for (int i : obstaculos_indices) {
         obstaculos.push_back(coord[i]);
     }
@@ -505,7 +526,7 @@ int main() {
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
-    std::ofstream pathFile("path10.txt");
+    std::ofstream pathFile("path6.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -563,21 +584,24 @@ int main() {
         }
     }
     
+    // calcula altura e largura do grafo
     int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
     int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
     std::cout << maiorx << " " << maiory << std::endl;
+
     //6x6
     //std::vector<int> fronteira = {0, 6, 12, 18, 24, 25, 32, 33, 34, 35, 29, 28, 21, 16, 17, 11, 5, 4, 3, 2, 1};
     //7x7 e 9x9 e 11x11 e 8x8
-    //std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
+    std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
     //8x8
     //std::vector<int> fronteira = {0, 8, 16, 24, 32, 40, 48, 56, 57, 58, 51, 52, 53, 62, 63, 55, 47, 39, 31, 30, 29, 28, 19, 12, 13, 14, 15, 7, 6, 5, 4, 3, 2, 1};
     //10x10
-    std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    //std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
     //15x15
-    //std::vector<int> fronteira = {0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 209, 194, 179, 164, 149, 134, 119, 118, 117, 101, 87, 88, 89, 74, 59, 44, 29, 28, 27, 26, 10, 9 , 8, 7, 6, 5, 4, 3, 2, 1};
-    //std::vector<int> cicloHamiltoniano = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes);
-
+    for(int i = 0; i < obstaculos_indices.size(); i++){
+        std::cout << obstaculos_indices[i] << std::endl;
+    }
+    return 0;
     double total = 0;
     //64
     //std::vector<int> cicloHamiltoniano = {1, 2, 3, 4, 5, 6, 7, 8, 16, 15, 14, 13, 12, 11, 10, 18, 19, 20, 36, 37, 38, 39, 47, 46, 45, 44, 43, 42, 41, 49, 57, 58, 59, 60, 61, 62, 63, 64, 56, 48, 40, 32, 31, 30, 29, 28, 27, 26, 25, 17, 9, 1};
