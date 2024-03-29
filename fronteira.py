@@ -40,128 +40,171 @@ int main() {
         }
     }
 
+    // Print fronteira
+    for (int i : fronteira) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    // Superior
     for (int i = 1; i <= 64; i++) {
-        if (i + x in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end()) {
             int it = i;
             while (true) {
                 it += x;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it < 65) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it > 64) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Print fronteira
+    for (int i : fronteira) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    // Esquerda subindo
     for (int i = 1; i <= 64; i++) {
-        if (i + x in obstaculos && i not in fronteira) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i + x;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it % 8 == 1) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Direita subindo
     for (int i = 1; i <= 64; i++) {
-        if (i + x in obstaculos && i not in fronteira) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i + x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it % 8 == 0) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Print fronteira
+    for (int i : fronteira) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    // Inferior
     for (int i = 1; i <= 64; i++) {
-        if (i - x in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i;
             while (true) {
                 it -= x;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it > 0) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it < 0) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Direita descendo
     for (int i = 1; i <= 64; i++) {
-        if (i - x in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i - x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it % 8 == 0) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Esquerda descendo
     for (int i = 1; i <= 64; i++) {
-        if (i - x in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i - x;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
                 } else if (it % 8 == 1) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Direita
     for (int i = 1; i <= 64; i++) {
-        if (i + 1 in obstaculos && i not in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
-                } else if (it % 8 == 0 && i not in fronteira) {
+                } else if (it % 8 == 0 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
+    // Esquerda
     for (int i = 1; i <= 64; i++) {
-        if (i - 1 in obstaculos && i not in obstaculos) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
+                    std::cout << it << std::endl;
                     break;
-                } else if (it % 8 == 1 && i not in fronteira) {
+                } else if (it % 8 == 1 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << it << std::endl;
                     break;
                 }
             }
         }
     }
 
-    for (int i = 0; i < fronteira.size(); i++) {
-        std::cout << fronteira[i] << " ";
+    // Print fronteira
+    for (int i : fronteira) {
+        std::cout << i << " ";
     }
     std::cout << std::endl;
 

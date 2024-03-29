@@ -7,7 +7,7 @@ from numpy import ubyte
 import time
 
 inicio = time.time()
-for i in range(0, 2):
+for i in range(0, 1):
   mapas = 'mapas8.txt'
 
   # Abrir o arquivo para leitura
