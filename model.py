@@ -181,7 +181,7 @@ for i in range(0, 12):
         modelo.addConstr(u[i] >= 1)
         modelo.addConstr(u[i] <= n - 1)
 
-    # Restrição 6
+    # Restrição 5
     for i in validos:
         for j in validos:
             for k in validos:
