@@ -437,7 +437,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
     return caminho;
 }
 
-std::vector<int> grasp(int t, const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize){
+std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize){
     float lim = 2000000;
     std::vector<int> S;
     std::vector<int> best;
@@ -507,7 +507,7 @@ int main() {
     std::vector<std::tuple<double, double, double>> coord;
     std::vector<int> obstaculos_indices;
 
-    for (int i = 0; i < linhas.size() - 2; i++) {
+    for (int i = 0; i < linhas.size() - 10; i++) {
         std::istringstream iss(linhas[i]);
         std::string cidade;
         double x, y, z;
@@ -515,8 +515,9 @@ int main() {
         coord.push_back(std::make_tuple(x, y, z));
     }
 
-    // para iterar só fazer linhas.back() - i
-    std::istringstream iss(linhas.back());
+    // para iterar só fazer linhas.size() - i
+    int nObs = 10;
+    std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
         obstaculos_indices.push_back(obstaculo);
@@ -611,7 +612,6 @@ int main() {
         }
     }
 
-
     for (int i : validos) {
         for (int j : validos) {
             for(int k : validos)
@@ -626,6 +626,7 @@ int main() {
 
    
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
+
     std::vector<int> fronteira2;
     fronteira2.push_back(0);
     int sz = fronteira.size();
@@ -633,7 +634,7 @@ int main() {
     fronteira2.push_back(8);
     fronteira.erase(find(fronteira.begin(), fronteira.end(), 8));
 
-    while(fronteira2.size() < sz-1){
+    while(fronteira2.size() < sz){
         int menor = 100000;
         int k = 0;
         for(int j = 0; j < fronteira.size(); j++){
@@ -660,11 +661,6 @@ int main() {
             fronteira2.push_back(k);
     }
 
-    //8x8
-    //std::vector<int> fronteira = {0, 8, 16, 24, 32, 40, 48, 56, 57, 58, 51, 52, 53, 62, 63, 55, 47, 39, 31, 30, 29, 28, 19, 12, 13, 14, 15, 7, 6, 5, 4, 3, 2, 1};
-    //10x10
-    //std::vector<int> fronteira = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 91, 92, 93, 94, 95, 96, 89, 79, 69, 59, 58, 57, 46, 37, 38, 39, 29, 19, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-    //15x15
     std::cout << "obstaculos: " << std::endl;
     for(int i = 0; i < obstaculos_indices.size(); i++){
         std::cout << obstaculos_indices[i] << std::endl;
@@ -674,21 +670,15 @@ int main() {
         std::cout << i + 1 << " ";
     }
 
-    return 0;
+    //return 0;
     double total = 0;
-    //64
-    //std::vector<int> cicloHamiltoniano = {1, 2, 3, 4, 5, 6, 7, 8, 16, 15, 14, 13, 12, 11, 10, 18, 19, 20, 36, 37, 38, 39, 47, 46, 45, 44, 43, 42, 41, 49, 57, 58, 59, 60, 61, 62, 63, 64, 56, 48, 40, 32, 31, 30, 29, 28, 27, 26, 25, 17, 9, 1};
-    //121
-    //std::vector<int> cicloHamiltoniano = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33, 32, 31, 30, 29, 28, 27, 26, 25, 13, 24, 35, 36, 37, 38, 39, 40, 41, 21, 20, 19, 18, 17, 61, 62, 63, 64, 65, 66, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 57, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 88, 99, 98, 97, 96, 95, 84, 83, 82, 81, 80, 79, 90, 91, 92, 93, 94, 105, 106, 107, 108, 109, 110, 121, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 100, 89, 78, 67, 56, 45, 34, 23, 12, 1};
-    //144
-    //std::vector<int> cicloHamiltoniano = {1, 10, 11, 12, 14, 15, 16, 42, 43, 44, 58, 59, 60, 75, 76, 77, 102, 103, 104, 105, 124, 125, 126, 2, 3, 4, 5, 6, 7, 8, 9, 24, 36, 48, 47, 46, 45, 57, 56, 55, 54, 41, 40, 39, 17, 18, 19, 20, 21, 22, 23, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 38, 50, 51, 52, 53, 66, 67, 68, 69, 70, 71, 72, 84, 96, 108, 120, 132, 144, 143, 142, 141, 140, 139, 138, 137, 136, 135, 123, 111, 112, 113, 114, 115, 116, 117, 118, 106, 94, 93, 92, 91, 90, 89, 88, 87, 86, 74, 62, 63, 64, 65, 78, 79, 80, 81, 82, 83, 95, 107, 119, 131, 130, 129, 128, 127, 101, 100, 99, 98, 110, 122, 134, 133, 121, 109, 97, 85, 73, 61, 49, 37, 25, 13, 1};
-    //169 caminho
+    
     //std::vector<int> cicloHamiltoniano = {1, 9, 17, 25, 26, 27, 28, 29, 30, 31, 32, 40, 48, 56, 64, 64, 63, 62, 61, 60, 59, 58, 57, 49, 41, 42, 43, 44, 45, 46, 47, 39, 38, 37, 36, 20, 19, 18, 10, 11, 12, 13, 14, 15, 16, 8, 7, 6, 5, 4, 3, 2, 1};
     //for(int i = 0; i < cicloHamiltoniano.size(); i++){
     //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
     //}
 
-    std::vector<int> melhorRota = grasp(4, distancias, fronteira2, q, altitudes, obstaculos_indices.size());
+    std::vector<int> melhorRota = grasp(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     cicloHamiltoniano.push_back(0);
 
@@ -699,13 +689,12 @@ int main() {
 
     valorTotalAcumulado = total;
 
-    std::cout << "Total Gurobi: " << valorTotalAcumulado << std::endl;
+    std::cout << "Total: " << valorTotalAcumulado << std::endl;
 
     auto end_time = std::chrono::steady_clock::now();
-    // Calcular la duración del tiempo transcurrido
+    // Calcular tempo transcorrido
     auto duration = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time);
 
-    // Imprimir el tiempo transcurrido en microsegundos
     std::cout << "Tempo Gasto: " << duration.count() << " segundos" << std::endl;
 
     pathFile.close();

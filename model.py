@@ -6,90 +6,23 @@ import heapq
 from numpy import ubyte
 import time
 
-#15x15
-#obstaculos_indices = [11, 12, 13, 14, 19, 20, 21, 22, 36, 33, 34, 35, 50, 51, 52, 53, 54, 78, 79, 80, 81, 102, 103, 104, 104, 124, 125, 126, 126, 160, 161, 162, 163, 192, 193, 191, 167, 168, 169, 170, 198, 199, 200, 201]
-
 inicio = time.time()
-
-possibilidades_36 = [
-  [7, 8, 22, 23, 30, 31],
-  [6, 7, 20, 21, 34, 35],
-  [10, 11, 22, 23, 30, 31],
-  [2, 3, 12, 13, 32, 33],
-  [4, 5, 14, 15, 25, 26],
-  [7, 8, 9, 10, 25, 26, 27, 28],
-  [12, 13, 18, 22, 23, 29],
-  [25, 26, 27, 28, 9, 10, 16],
-  [34, 35, 14, 15, 21, 30, 31],
-  [7, 13, 21, 22, 28, 30, 31]
-]
-
-possibilidades_49 = [
-  [12, 13, 22, 23, 38, 39, 40],
-  [12, 13, 21, 22, 38, 39, 40],
-  [6, 7, 22, 23, 38, 39, 40],
-  [12, 13, 14, 37, 38, 39, 40],
-  [12, 19, 21, 22, 23, 38, 39, 37],
-  [8, 9, 10, 25, 26, 27, 42, 43, 44],
-  [15, 8, 9, 18, 19, 26, 29, 30, 31, 47, 48],
-  [25, 26, 16, 9, 10, 36, 37, 38, 48],
-  [12, 13, 22, 23, 15, 39, 40, 33],
-  [8, 9, 10, 11, 12, 22, 23, 24, 25, 26, 36, 37, 38, 39, 40]
-]
-
-possibilidades_64 = [
-  [32, 33, 34, 20, 21, 22, 23, 49, 50, 51, 52, 53, 54],
-  [8, 9, 10, 28, 29, 30, 40, 41, 62, 63],
-  [3, 4, 5, 25, 26, 27, 44, 45, 46, 59, 60, 61],
-  [12, 13, 14, 32, 33, 34, 48, 49, 50, 51, 61, 62],
-  [6, 7, 8, 24, 25, 26, 45, 46, 47, 56, 57, 58],
-  [27, 19, 35, 18, 20, 34, 36, 6, 7, 62, 63, 48, 47],
-  [56, 57, 58, 52, 53, 54, 32, 33, 34, 9, 10, 22, 23],
-]
-
-possibilidades_81 = [
-  [12, 13, 14, 41, 42, 43, 64, 65, 66],
-  [10, 11, 12, 33, 34, 35, 46, 47, 68, 69, 70],
-  [6, 7, 8, 21, 22, 23, 36, 37, 38, 57, 58, 59, 78, 79, 80],
-  [12, 13, 14, 20, 30, 31, 50, 51, 52, 64, 65, 66],
-  [10, 11, 19, 33, 34, 36, 37, 38, 57, 58, 59, 78, 79, 80]
-]
-
-possibilidades_100 = [
-  [13, 15, 14, 41, 42, 43, 57, 58, 59, 71, 72, 73, 97, 98, 99],
-  [16, 17, 18, 31, 32, 33, 55, 56, 57, 71, 72, 73, 97, 98, 99],
-  [81, 82, 83, 67, 68, 69, 44, 45, 46, 21, 22, 23, 24, 25],
-  [17, 18, 19, 21, 22, 31, 46, 47, 48, 63, 64, 65, 81, 82, 83],
-  [5, 6, 7, 26, 27, 28, 43, 44, 45, 56, 63, 64, 65, 90, 91, 92]
-]
-
-possibilidades_121 = [
-  [13, 15, 14, 41, 42, 43, 57, 58, 59, 84, 85, 86, 100, 101, 102, 103]
-]
-
-possibilidades_144 = [
-  [9, 10, 11, 13, 15, 14, 41, 42, 43, 57, 58, 59, 74, 75, 76, 101, 102, 103, 104, 123, 124, 125]
-]
-
-possibilidades_169 = [
-  [33, 34, 153, 154, 67, 80, 82, 83, 84, 85, 132, 133, 134, 25, 97, 27, 28, 63, 64, 113, 114, 115, 116, 81, 54, 55, 56, 57, 23, 24]
-]
 mapaqtd = 5
-todos_obstaculos = [possibilidades_36, possibilidades_49, possibilidades_64, possibilidades_81, possibilidades_100, possibilidades_121, possibilidades_144, possibilidades_169]
 
-for possibilidades in todos_obstaculos:
+for i in range(0, 12):
   mapaqtd += 1
-  mapas = f'mapas{mapaqtd}.txt'
+  mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
-      dados = arquivo.read()
+    dados = arquivo.read()
 
   # Separa a string em linhas
   linhas = dados.strip().split('\n')
+  qtdobs = len(linhas) - (mapaqtd*mapaqtd) # Quantidade de obstáculos
 
   # Converte as linhas em uma lista de tuplas
-  coord = [tuple(linha.split()) for linha in linhas]
+  coord = [tuple(linha.split()) for linha in linhas[:-qtdobs]]  # Exclui as linhas de obstáculos
 
   n = len(coord)  # número de células (pontos)
 
@@ -97,12 +30,15 @@ for possibilidades in todos_obstaculos:
 
   versao = 0
 
-  for obstaculos_indices in possibilidades:
-    obstaculos = [coord[i] for i in obstaculos_indices]
-    validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
+  for k in range(0, qtdobs):
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
+    print("Obstáculos: ", obstaculos_indices)
 
-    ini = 0
-    fin = 1
+    obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
+    validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices] # Lista de vértices válidos
+
+    ini = 0 # Ponto inicial
+    fin = 1 # Ponto final
 
     # Cria a matriz de custos
     c = [[float('inf')] * n for _ in range(n)]
@@ -168,11 +104,11 @@ for possibilidades in todos_obstaculos:
 
     # Função para imprimir o caminho mínimo
     def print_path(parent, v):
-        if parent[v] == None:
-            print(v, end=' ')
+        if parent[v] == None: # Se o vértice pai for nulo
+            print(v, end=' ') # Então imprime o vértice
             return
-        print_path(parent, parent[v])
-        print(v, end=' ')
+        print_path(parent, parent[v]) # Senão, imprime o caminho mínimo
+        print(v, end=' ') # E imprime o vértice
 
     # Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     def dijkstra(c, i, j):
@@ -191,7 +127,7 @@ for possibilidades in todos_obstaculos:
             spt_set[u] = True
 
             for v in validos:
-                if u != v and not spt_set[v] and c[u][v] > 0 and dist[u] + c[u][v] < dist[v]:
+                if u != v and not spt_set[v] and c[u][v] > 0 and dist[u] + c[u][v] < dist[v]: #
                     altitude = calcular_h(u, v, (dist[u] + c[u][v]))
                     angulos = calcular_a(parent[u] if parent[u] is not None else u, u, v)
                     alt[v] = alt[u] + altitude
@@ -214,11 +150,11 @@ for possibilidades in todos_obstaculos:
           for k in validos:
             q[i][j][k] = calcular_a(i, j, k)
 
-    modelo = gp.Model('Caixeiro_Viajante')
+    modelo = gp.Model('Caixeiro_Viajante') # Cria o modelo
 
     x = modelo.addVars(n, n, vtype=gp.GRB.BINARY, name="x")
     u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
-    y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y")
+    y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y") # Variável para os angulos
 
     modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
@@ -284,9 +220,15 @@ for possibilidades in todos_obstaculos:
         print(route)
 
     fim = time.time()
-    tempo = fim - inicio
+    tempo = fim - inicio # Tempo de execução
+        
+    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+      for city in route:
+        arquivo_rota.write(f'{city-1}, ')
+      arquivo_rota.write(f'\nTempo de Execução: {tempo} segundos')
+    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
+
     print("Tempo de Execução: ", tempo)
-    # Caminho com o modelo já atualizado
 
     import matplotlib.pyplot as plt
 
@@ -326,7 +268,6 @@ for possibilidades in todos_obstaculos:
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    versao += 1
-    plt.savefig(f'gurobi{mapaqtd*mapaqtd}_{versao}.png')
+    versao += 1 # Incrementa a versão
+    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
     print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
-mapaqtd += 1
