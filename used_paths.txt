@@ -1,0 +1,53 @@
+Caminho de 0 para 1: 0 1 
+Caminho de 1 para 2: 1 2 
+Caminho de 2 para 3: 2 3 
+Caminho de 3 para 4: 3 4 
+Caminho de 4 para 5: 4 5 
+Caminho de 5 para 6: 5 6 
+Caminho de 6 para 7: 6 7 
+Caminho de 7 para 15: 7 15 
+Caminho de 15 para 23: 15 23 
+Caminho de 23 para 31: 23 31 
+Caminho de 31 para 39: 31 39 
+Caminho de 39 para 47: 39 47 
+Caminho de 47 para 55: 47 55 
+Caminho de 55 para 63: 55 63 
+Caminho de 63 para 54: 63 54 
+Caminho de 54 para 46: 54 46 
+Caminho de 46 para 38: 46 38 
+Caminho de 38 para 30: 38 30 
+Caminho de 30 para 22: 30 22 
+Caminho de 22 para 21: 22 21 
+Caminho de 21 para 20: 21 20 
+Caminho de 20 para 19: 20 19 
+Caminho de 19 para 18: 19 18 
+Caminho de 18 para 17: 18 17 
+Caminho de 17 para 16: 17 16 
+Caminho de 16 para 24: 16 24 
+Caminho de 24 para 25: 24 25 
+Caminho de 25 para 26: 25 26 
+Caminho de 26 para 27: 26 27 
+Caminho de 27 para 28: 27 28 
+Caminho de 28 para 36: 28 36 
+Caminho de 36 para 35: 36 35 
+Caminho de 35 para 40: 35 42 41 40 
+Caminho de 40 para 41: 40 41 
+Caminho de 41 para 42: 41 42 
+Caminho de 42 para 43: 42 43 
+Caminho de 43 para 44: 43 44 
+Caminho de 44 para 52: 44 52 
+Caminho de 52 para 59: 52 59 
+Caminho de 59 para 58: 59 58 
+Caminho de 58 para 57: 58 57 
+Caminho de 57 para 56: 57 56 
+Caminho de 56 para 60: 56 57 58 59 60 
+Caminho de 60 para 53: 60 53 
+Caminho de 53 para 45: 53 45 
+Caminho de 45 para 37: 45 37 
+Caminho de 37 para 29: 37 29 
+Caminho de 29 para 11: 29 20 11 
+Caminho de 11 para 10: 11 10 
+Caminho de 10 para 9: 10 9 
+Caminho de 9 para 8: 9 8 
+Caminho de 8 para 0: 8 0 
+Caminho de 0 para 0: 0 

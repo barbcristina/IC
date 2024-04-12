@@ -331,7 +331,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
 
-    std::cout << "Número aleatório entre " << min << " e " << max << ": " << numero_aleatorio << std::endl;
+    //std::cout << "Número aleatório entre " << min << " e " << max << ": " << numero_aleatorio << std::endl;
 
     for(int j = 0; j < numero_aleatorio; j++){
         menorCustoInsercao = std::numeric_limits<double>::max();
@@ -388,11 +388,11 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
         caminho.push_back(fronteira[i]);
         visitado[fronteira[i]] = true;
     }
-    std::cout << "criou a fronteira " << std::endl;
+    //std::cout << "criou a fronteira " << std::endl;
     while (caminho.size() <= n-obsSize) {
-        std::cout << caminho.size() << std::endl;
+        //std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
-        std::cout << "selecionados: " << std::endl;
+        //std::cout << "selecionados: " << std::endl;
         //for(int v: proxPonto){
         //    std::cout << v << ", ";
         //}
@@ -482,7 +482,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "100_pontos/mapas10.txt";
+    std::string mapas = "64_pontos/mapas8.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -520,7 +520,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 7;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -568,7 +568,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path10.txt");
+    std::ofstream pathFile("path8.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -669,7 +669,7 @@ int main() {
         int menor = 100000;
         int k = 0;
         for(int j = 0; j < fronteira.size(); j++){
-            std::cout << "distancia: " << fronteira2.back() << " " << fronteira[j] << ": " << c[fronteira2.back()][fronteira[j]] << std::endl;
+            //std::cout << "distancia: " << fronteira2.back() << " " << fronteira[j] << ": " << c[fronteira2.back()][fronteira[j]] << std::endl;
             if(distancias[fronteira2.back()][fronteira[j]] < menor){
                 menor = distancias[fronteira2.back()][fronteira[j]];
                 k = fronteira[j];
@@ -682,12 +682,12 @@ int main() {
             // Remova o elemento
             fronteira.erase(it);
         }
-        std::cout << "Fronteira: ";
-        for (int i : fronteira) {
-            std::cout << i + 1 << " ";
-        }
+        //std::cout << "Fronteira: ";
+        //for (int i : fronteira) {
+        //    std::cout << i + 1 << " ";
+        //}
         
-        std::cout << "menor: " << fronteira2.back() + 1 << " e " << k + 1 << ": " << distancias[fronteira2.back()][k] << std::endl;
+        //std::cout << "menor: " << fronteira2.back() + 1 << " e " << k + 1 << ": " << distancias[fronteira2.back()][k] << std::endl;
         if(fronteira2.back() != k)
             fronteira2.push_back(k);
     }
@@ -704,14 +704,14 @@ int main() {
     //return 0;
     double total = 0;
     
-    //std::vector<int> cicloHamiltoniano = {1, 9, 17, 25, 26, 27, 28, 29, 30, 31, 32, 40, 48, 56, 64, 64, 63, 62, 61, 60, 59, 58, 57, 49, 41, 42, 43, 44, 45, 46, 47, 39, 38, 37, 36, 20, 19, 18, 10, 11, 12, 13, 14, 15, 16, 8, 7, 6, 5, 4, 3, 2, 1};
+    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 15, 23, 31, 39, 47, 55, 63, 54, 46, 38, 30, 22, 21, 20, 19, 18, 17, 16, 24, 25, 26, 27, 28, 36, 35, 40, 41, 42, 43, 44, 52, 59, 58, 57, 56, 60, 53, 45, 37, 29, 11, 10, 9, 8, 0};
     //for(int i = 0; i < cicloHamiltoniano.size(); i++){
     //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
     //}
 
-    std::vector<int> melhorRota = grasp(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
+    //std::vector<int> melhorRota = grasp(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
-    std::vector<int> cicloHamiltoniano = melhorRota;
+    //std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
     cicloHamiltoniano.push_back(0);
 

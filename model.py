@@ -6,7 +6,6 @@ import heapq
 from numpy import ubyte
 import time
 
-inicio = time.time()
 mapaqtd = 5
 
 for i in range(0, 12):
@@ -31,6 +30,7 @@ for i in range(0, 12):
   versao = 0
 
   for k in range(0, qtdobs):
+    inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
@@ -203,8 +203,10 @@ for i in range(0, 12):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 10800
+    modelo.Params.timeLimit = 7200
     modelo.optimize()
+
+    OTIMO = True
 
     if modelo.status == gp.GRB.OPTIMAL:
         print(f"Objetivo ótimo: {modelo.objVal:.2f}")
@@ -222,6 +224,7 @@ for i in range(0, 12):
 
     else:
         print("Solução não necessária ótima.")
+        OTIMO = False
         # for i in range(n):
         #     for j in range(n):
         #         if x[i, j].x > 0.5:
@@ -241,7 +244,12 @@ for i in range(0, 12):
     with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
-      arquivo_rota.write(f'\nTempo de Execução: {tempo} segundos')
+      arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
+      arquivo_rota.write(f'\nTempo de Execução: {tempo:.2f} segundos')
+      arquivo_rota.write(f'\nGAP: {modelo.MIPGap:.2f}')
+      if OTIMO == False:
+         arquivo_rota.write(f'\nSolução não necessária ótima')
+
     print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
 
     print("Tempo de Execução: ", tempo)
