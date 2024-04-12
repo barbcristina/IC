@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 for i in range(0, 1):
-  mapas = '289_pontos/mapas17.txt'
+  mapas = '120_pontos/mapas15x8.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -18,7 +18,7 @@ for i in range(0, 1):
   linhas = dados.strip().split('\n')
 
   # Converte as linhas em uma lista de tuplas
-  coord = [tuple(linha.split()) for linha in linhas[:-5]]  # Exclui a última linha
+  coord = [tuple(linha.split()) for linha in linhas[:-1]]  # Exclui a última linha
 
   n = len(coord)  # número de células (pontos)
 
@@ -133,12 +133,13 @@ for i in range(0, 1):
       altitudes[i][j] = alt[j]
 
   #Caminho com o modelo já atualizado
+  route = [0]
 
   import matplotlib.pyplot as plt
 
   xx, yy, zz = zip(*coord)
 
-  plt.figure(figsize=(12,12))
+  plt.figure(figsize=(8,15))
 
   plt.scatter(xx, yy, color="black") #plota vertices
 
@@ -163,16 +164,16 @@ for i in range(0, 1):
   for i, coordxy in enumerate(zip(xx, yy)):
       plt.annotate(str(i+1), xy=coordxy, xytext=(2, 2), textcoords='offset points')
 
-  #x_ordered = [xx[i-1] for i in route]
-  #y_ordered = [yy[i-1] for i in route]
+  x_ordered = [xx[i] for i in route]
+  y_ordered = [yy[i] for i in route]
 
   # x_ordered.append(xx[route[0]-1])
   # y_ordered.append(yy[route[0]-1])
 
-  #plt.plot(x_ordered, y_ordered, color="green") #plota arestas
+  plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
   #plt.title(f"Cost = {modelo.objVal:.2f}")
 
-  plt.savefig('36_pontos/gurobi36.png')
+  plt.savefig('100_pontos/gurobi100.png')
 
   #829.24

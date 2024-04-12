@@ -83,6 +83,7 @@
         "random": "cpp",
         "ranges": "cpp",
         "algorithm": "cpp",
-        "charconv": "cpp"
+        "charconv": "cpp",
+        "execution": "cpp"
     }
 }

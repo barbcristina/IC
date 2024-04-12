@@ -98,17 +98,20 @@ for i in range(0, 12):
             return h
 
     # Matrizes que guardam a penalidade de altitude e ângulo
+    # Matrizes que guardam a penalidade de altitude e ângulo
     altitudes = [[0] * n for _ in range(n)]
-    q = [[[0] * n for _ in range(n)] for _ in range(n)]
     distancias = [[float('inf')] * n for _ in range(n)]
+    all_angles = [[0] * n for _ in range(n)]
+    matrix = [[0] * n for _ in range(n)]
 
     # Função para imprimir o caminho mínimo
-    def print_path(parent, v):
-        if parent[v] == None: # Se o vértice pai for nulo
-            print(v, end=' ') # Então imprime o vértice
-            return
-        print_path(parent, parent[v]) # Senão, imprime o caminho mínimo
-        print(v, end=' ') # E imprime o vértice
+    def print_and_return_path(parent, v):
+        path = []
+        if parent[v] is None:
+            return [v]
+        path.extend(print_and_return_path(parent, parent[v]))
+        path.append(v)
+        return path
 
     # Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     def dijkstra(c, i, j):
@@ -116,6 +119,7 @@ for i in range(0, 12):
         parent = [None] * n
         dist[i] = 0
         alt = [0] * n
+        angles = [0] * n
         spt_set = [False] * n
 
         heap = [(0, i)]
@@ -131,7 +135,8 @@ for i in range(0, 12):
                     altitude = calcular_h(u, v, (dist[u] + c[u][v]))
                     angulos = calcular_a(parent[u] if parent[u] is not None else u, u, v)
                     alt[v] = alt[u] + altitude
-                    dist[v] = dist[u] + (c[u][v] + angulos)
+                    angles[v] = angles[u] + angulos
+                    dist[v] = dist[u] + c[u][v]
                     parent[v] = u
                     heapq.heappush(heap, (dist[v], v))
         if c[i][j] != float('inf'):
@@ -139,16 +144,27 @@ for i in range(0, 12):
         else:
           distancias[i][j] = dist[j]
         altitudes[i][j] = alt[j]
+        all_angles[i][j] = angles[j]
+        matrix[i][j] = print_and_return_path(parent, j)
 
     # Chamar o algoritmo de Dijkstra para variar nos vértices válidos
     for i in validos:
         for j in validos:
             dijkstra(c, i, j)
 
+    q = [[[0] * n for _ in range(n)] for _ in range(n)]
+
     for i in validos:
         for j in validos:
           for k in validos:
-            q[i][j][k] = calcular_a(i, j, k)
+            if c[i][j] != float('inf') and c[j][k] != float('inf'):
+              q[i][j][k] = calcular_a(i, j, k)
+
+    for i in validos:
+      for j in validos:
+        for k in validos:
+          if (c[i][j] == float('inf') or c[j][k] == float('inf')) and i!=j and j!=k:
+            q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][len(matrix[i][j])-2]][j][matrix[j][k][1]])
 
     modelo = gp.Model('Caixeiro_Viajante') # Cria o modelo
 

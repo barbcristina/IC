@@ -7,7 +7,7 @@ int main(){
     int x = 10, y = 10, v = 0;
     int w, h;
     float z = 200;
-    std::ofstream arquivo("mapas18.txt");
+    std::ofstream arquivo("mapas15x8.txt");
 
     std::cin >> h >> w;
 
