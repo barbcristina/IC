@@ -7209,4 +7209,17 @@ Caminho de 96 para 79: 96 87 88 79
 Caminho de 96 para 80: 96 95 94 93 92 91 80 
 Caminho de 96 para 81: 96 95 94 93 92 81 
 Caminho de 96 para 82: 96 95 94 93 82 
-Caminho de 96 para 83: 96
+Caminho de 96 para 83: 96 95 94 83 
+Caminho de 96 para 84: 96 95 84 
+Caminho de 96 para 85: 96 85 
+Caminho de 96 para 86: 96 86 
+Caminho de 96 para 87: 96 87 
+Caminho de 96 para 88: 96 87 88 
+Caminho de 96 para 89: 96 87 88 89 
+Caminho de 96 para 90: 96 95 94 93 92 91 90 
+Caminho de 96 para 91: 96 95 94 93 92 91 
+Caminho de 96 para 92: 96 95 94 93 92 
+Caminho de 96 para 93: 96 95 94 93 
+Caminho de 96 para 94: 96 95 94 
+Caminho de 96 para 95: 96 95 
+Caminho de 96 para 96: 96 

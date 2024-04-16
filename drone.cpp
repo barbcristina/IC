@@ -11,10 +11,6 @@
 #include <random>
 #include <chrono>
 
-auto start_time = std::chrono::steady_clock::now();
-
-double valorTotalAcumulado = 0.0; // Inicialize com zero
-
 // Função para calcular h
 double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double, double, double>>& coord) {
     std::tuple<double, double, double> coord_1 = coord[i];
@@ -71,7 +67,7 @@ std::vector<int> print_path(std::vector<int>& parent, int v, std::ofstream& outp
     return path;
 }
 
-std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes){
+std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>> &q,  std::vector<std::vector<double>> &altitudes){
     double ganhoMax = 0;
     std::pair<std::vector<int>, double> melhor;
     melhor.first = rota;
@@ -86,9 +82,11 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vecto
         for(int c = a+2; c < limc; c++){
             int d;
             d=c+1;
-            //+ q[rota[b]][rota[d]][(d == n) ? rota[d] : rota[d+1]]
-            //if(distancias[rota[a]][rota[b]] < 30 && distancias[rota[c]][rota[d]] < 30 && distancias[rota[a]][rota[c]] < 30 && distancias[rota[b]][rota[d]] < 30);
-            double ganho = (distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c!=n) ? d+1 : d]] + q[rota[c-1]][rota[c]][rota[d]]) - (distancias[rota[a]][rota[c]] + distancias[rota[b]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] + q[rota[d]][rota[b]][rota[b+1]] + q[rota[b]][rota[d]][rota[(c!=n) ? d+1 : d]] + q[rota[c-1]][rota[c]][rota[a]]);
+            double ganho = (distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] 
+            + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c!=n) ? d+1 : d]] 
+            + q[rota[c-1]][rota[c]][rota[d]]) - (distancias[rota[a]][rota[c]] 
+            + distancias[rota[b]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] 
+            + q[rota[d]][rota[b]][rota[b+1]] + q[rota[b]][rota[d]][rota[(c!=n) ? d+1 : d]] + q[rota[c-1]][rota[c]][rota[a]]);
             if(ganho > ganhoMax){
                 ganhoMax = ganho;
                 bestV = {a, b, c, d};
@@ -111,7 +109,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
     rota.pop_back();
     double total = 0;
     int iter = 0;
-    int maxIter = 1500;
+    int maxIter = 500;
 
     for(int i = 0; i < rota.size() - 1; i++){
         total += (distancias[rota[i]][rota[i+1]] + q[rota[(i > 0) ? i-1 : i]][rota[i]][rota[i+1]]);
@@ -129,6 +127,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
             rota = melhorRota.first;
             total = melhorRota.second;
             melhora = true;
+            std::cout << "melhorou na iteracao: " << iter << std::endl;
         }
         iter++;
     }
@@ -139,47 +138,50 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     std::vector<int> fronteira;
     int x = altura;
     int y = largura;
+    int xy = x*y;
 
-    // Esquerda
-    for (int i = 0; i < x * (y - 1) + 1; i += x) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
-            fronteira.push_back(i);
-        }
-    }
-
-    // Superior
-    for (int i = x * (y - 1) + 1; i < x * x; i++) {
+    // Inferior
+    for (int i = 0; i < y; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             fronteira.push_back(i);
         }
     }
 
     // Direita
-    for (int i = (x * x - x) - 1; i >= x - 1; i -= x) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
-            fronteira.push_back(i);
-        }
-    }
-
-    // Inferior
-    for (int i = x - 2; i > 0; i--) {
+    for (int i = (x-1) + x; i < xy; i += x) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             fronteira.push_back(i);
         }
     }
 
     // Superior
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = xy - 2; i > x * (y-1) - 1; i--) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
+            fronteira.push_back(i);
+        }
+    }
+
+    // Esquerda
+    for (int i = x * (y-2); i > 0; i -= x) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
+            fronteira.push_back(i);
+        }
+    }
+
+    if(fronteira.size() == (altura*2 + largura*2)-4)
+        return fronteira;
+
+    // Superior
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end()) {
             int it = i;
             while (true) {
                 it += x;
-                if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it < (x*y)) {
-                    std::cout << it << std::endl;
+                if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it < (xy)) {
                     break;
-                } else if (it > (x*y)-1) {
+                } else if (it > xy-1) {
                     fronteira.push_back(i);
-                    std::cout << it << std::endl;
+                    std::cout << "inserindo superior: "<<i << std::endl;
                     break;
                 }
             }
@@ -187,17 +189,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Esquerda subindo
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i + x;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
-                    std::cout << it << std::endl;
                     break;
-                } else if (it % 8 == 0) {
+                } else if (it % x == 0) {
                     fronteira.push_back(i);
-                    std::cout << it << std::endl;
+                    std::cout << "inserindo esquerda subindo: "<< i << std::endl;
                     break;
                 }
             }
@@ -205,17 +206,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Direita subindo
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i + x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
-                    std::cout << it << std::endl;
                     break;
-                } else if ((it % 8 == 7)) {
+                } else if ((it % x == x-1)) {
                     fronteira.push_back(i);
-                    std::cout << it << std::endl;
+                    std::cout << "inserindo direita subindo: "<<i << std::endl;
                     break;
                 }
             }
@@ -223,17 +223,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Inferior
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i;
             while (true) {
                 it -= x;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it > 0) {
-                    std::cout << it << std::endl;
                     break;
                 } else if ((it < 0) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
-                    std::cout << it << std::endl;
+                    std::cout << "inserindo inferior: "<<i << std::endl;
                     break;
                 }
             }
@@ -241,15 +240,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Direita descendo
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i - x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % 8 == 7) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if ((it % x == x-1) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << "inserindo direita descendo: "<<i << std::endl;
                     break;
                 }
             }
@@ -257,15 +257,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Esquerda descendo
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
             int it = i - x;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % 8 == 0) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if ((it % x == 0) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << "inserindo esquerda descendo: "<< i << std::endl;
                     break;
                 }
             }
@@ -273,15 +274,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Direita
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i + 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if (it % 8 == 7 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if (it % x == x-1 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << "inserindo direita: "<<i << std::endl;
                     break;
                 }
             }
@@ -289,15 +291,16 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     }
 
     // Esquerda
-    for (int i = 0; i < (x*y); i++) {
+    for (int i = 0; i < xy; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i - 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % 8) == 0 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if ((it % x) == 0 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
                     fronteira.push_back(i);
+                    std::cout << "inserindo esquerda: "<<i << std::endl;
                     break;
                 }
             }
@@ -389,7 +392,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
         visitado[fronteira[i]] = true;
     }
     //std::cout << "criou a fronteira " << std::endl;
-    while (caminho.size() <= n-obsSize) {
+    while (caminho.size() < n-obsSize) {
         //std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
         //std::cout << "selecionados: " << std::endl;
@@ -458,7 +461,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
             valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
-        std::cout << "construtiva: " << valor << std::endl;
+        //std::cout << "construtiva: " << valor << std::endl;
         par = Local_Search(S, distancias, 0, q, altitudes);
         s = par.first;
         valor = 0;
@@ -482,7 +485,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "64_pontos/mapas8.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -520,7 +523,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 7;
+    int nObs = 9;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -543,8 +546,7 @@ int main() {
         }
     }
 
-    int ini = 0;
-    int fin = 1;
+    auto start_time = std::chrono::steady_clock::now();
 
     // Cria a matriz de custos
     std::vector<std::vector<double>> c(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
@@ -553,11 +555,10 @@ int main() {
             if (i != j) {
                 int dist = std::sqrt(std::pow(std::get<0>(coord[i]) - std::get<0>(coord[j]), 2) + std::pow(std::get<1>(coord[i]) - std::get<1>(coord[j]), 2) + std::pow(std::get<2>(coord[i]) - std::get<2>(coord[j]), 2));
                 if (dist > 28) { // Distancia máxima entre vértices adjacentes
-                    //printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
                     continue;  // Então se i e j não forem adjacentes, c[i][j] = inf
                 } else {
                     c[i][j] = dist + 0.5;
-                }    //printf("Distancia entre %d e %d: %f\n", i, j, c[i][j]);
+                }
             }
         }
     }
@@ -568,7 +569,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path8.txt");
+    std::ofstream pathFile("path6.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -655,80 +656,81 @@ int main() {
 
    
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
-
-
-    std::vector<int> fronteira2;
-    fronteira2.push_back(0);
-    int sz = fronteira.size();
-    fronteira.erase(find(fronteira.begin(), fronteira.end(), 0));
-    fronteira2.push_back(maiorx);
-    fronteira.erase(find(fronteira.begin(), fronteira.end(), 8));
-
-    // Método guloso para organizar os pontos da fronteira
-    while(fronteira2.size() < sz-1){
-        int menor = 100000;
-        int k = 0;
-        for(int j = 0; j < fronteira.size(); j++){
-            //std::cout << "distancia: " << fronteira2.back() << " " << fronteira[j] << ": " << c[fronteira2.back()][fronteira[j]] << std::endl;
-            if(distancias[fronteira2.back()][fronteira[j]] < menor){
-                menor = distancias[fronteira2.back()][fronteira[j]];
-                k = fronteira[j];
-            }
-        }
-        auto it = std::find(fronteira.begin(), fronteira.end(), k);
-
-        // Verifique se o elemento foi encontrado
-        if (it != fronteira.end()) {
-            // Remova o elemento
-            fronteira.erase(it);
-        }
-        //std::cout << "Fronteira: ";
-        //for (int i : fronteira) {
-        //    std::cout << i + 1 << " ";
-        //}
-        
-        //std::cout << "menor: " << fronteira2.back() + 1 << " e " << k + 1 << ": " << distancias[fronteira2.back()][k] << std::endl;
-        if(fronteira2.back() != k)
-            fronteira2.push_back(k);
-    }
-
-    std::cout << "obstaculos: " << std::endl;
-    for(int i = 0; i < obstaculos_indices.size(); i++){
-        std::cout << obstaculos_indices[i] << std::endl;
-    }
     std::cout << "Fronteira: ";
-    for (int i : fronteira2) {
-        std::cout << i + 1 << " ";
+        for (int i : fronteira) {
+            std::cout << i + 1 << " ";
+        }
+
+    // Método guloso para organizar os pontos da fronteira se necessario
+    if(fronteira.size() != (maiorx*2 + maiory*2)-4){
+        std::vector<int> fronteira2;
+        fronteira2.push_back(0);
+        int sz = fronteira.size();
+        fronteira.erase(find(fronteira.begin(), fronteira.end(), 0));
+
+        // Método guloso para organizar os pontos da fronteira
+        while(fronteira2.size() < sz){
+            int menor = 100000;
+            int k = 0;
+            // Encontra o ponto mais próximo do último ponto da fronteira
+            for(int j = 0; j < fronteira.size(); j++){
+                if(distancias[fronteira2.back()][fronteira[j]] < menor){
+                    menor = distancias[fronteira2.back()][fronteira[j]];
+                    k = fronteira[j];
+                }
+            }
+            auto it = std::find(fronteira.begin(), fronteira.end(), k);
+
+            // Verifique se o elemento foi encontrado
+            if (it != fronteira.end()) {
+                // Remova o elemento
+                fronteira.erase(it);
+            }
+            // Adiciona o elemento à fronteira
+            if(fronteira2.back() != k)
+                fronteira2.push_back(k);
+        }
+
+        std::cout << "obstaculos: " << std::endl;
+        for(int i = 0; i < obstaculos_indices.size(); i++){
+            std::cout << obstaculos_indices[i] << std::endl;
+        }
+        std::cout << "Fronteira: ";
+        for (int i : fronteira2) {
+            std::cout << i + 1 << " ";
+        }
+
+        fronteira = fronteira2;
     }
-
     //return 0;
-    double total = 0;
-    
-    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 15, 23, 31, 39, 47, 55, 63, 54, 46, 38, 30, 22, 21, 20, 19, 18, 17, 16, 24, 25, 26, 27, 28, 36, 35, 40, 41, 42, 43, 44, 52, 59, 58, 57, 56, 60, 53, 45, 37, 29, 11, 10, 9, 8, 0};
-    //for(int i = 0; i < cicloHamiltoniano.size(); i++){
-    //    cicloHamiltoniano[i] = cicloHamiltoniano[i] - 1;
-    //}
 
-    //std::vector<int> melhorRota = grasp(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
+    // se o último elemento da fronteira for 0, remova, pois pode atrapalhar na inserção mais barata
+    if(fronteira.back() == 0){
+        fronteira.pop_back();
+    }
+    
+    // Recalcula a rota do gurobi
+    //std::vector<int> cicloHamiltoniano = {0, 1, 10, 19, 28, 37, 46, 55, 56, 47, 38, 29, 20, 11, 2, 3, 4, 5, 6, 15, 24, 23, 22, 21, 30, 39, 48, 57, 67, 68, 69, 70, 61, 52, 51, 50, 60, 59, 58, 49, 40, 31, 32, 33, 34, 25, 16, 7, 8, 17, 26, 35, 44, 53, 62, 71, 80, 79, 78, 77, 76, 75, 74, 73, 72, 63, 54, 45, 36, 27, 18, 9, 0};
+
+    std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
-    //std::vector<int> cicloHamiltoniano = melhorRota;
+    std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
     cicloHamiltoniano.push_back(0);
 
-    total = 0;
+    // Calcular o valor total do ciclo
+    double total = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
     }
 
-    valorTotalAcumulado = total;
-
-    std::cout << "Total: " << valorTotalAcumulado << std::endl;
+    std::cout << "Total: " << total << std::endl;
 
     auto end_time = std::chrono::steady_clock::now();
     // Calcular tempo transcorrido
-    auto duration = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time);
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-    std::cout << "Tempo Gasto: " << duration.count() << " segundos" << std::endl;
+    std::cout << "Tempo Gasto: " << duration.count() << " millisegundos" << std::endl;
 
     pathFile.close();
 
@@ -765,7 +767,7 @@ int main() {
             resultadosFile << std::get<0>(obstacle) << " " << std::get<1>(obstacle) << std::endl;
         }
 
-        resultadosFile << "Valor Total do Ciclo: " << valorTotalAcumulado << std::endl;
+        resultadosFile << "Valor Total do Ciclo: " << total << std::endl;
 
         resultadosFile.close();
     } else {

@@ -1,0 +1,2 @@
+36_1 = 138 millisegundos grasp 100
+36_2 = 3272 millisegundos grasp 100
