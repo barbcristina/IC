@@ -122,19 +122,20 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
         for(int i = 0; i < rota.size() - 1; i++){
             twopt += (distancias[melhorRota.first[i]][melhorRota.first[i+1]] + q[melhorRota.first[(i > 0) ? i-1 : i]][melhorRota.first[i]][melhorRota.first[i+1]]);
         }
-        //std::cout << "2opt vs dist anterior: " << twopt << "  " << total << std::endl;
+        //twopt += (distancias[melhorRota.first[rota.size()-1]][0] + q[melhorRota.first[rota.size()-2]][melhorRota.first[rota.size()-1]][0]);
+        //std::cout << "2opt vs dist anterior: " << twopt << "  " << melhorRota.second << std::endl;
         if(melhorRota.second < total){
             rota = melhorRota.first;
             total = melhorRota.second;
             melhora = true;
-            std::cout << "melhorou na iteracao: " << iter << std::endl;
+            //std::cout << "melhorou na iteracao: " << iter << std::endl;
         }
         iter++;
     }
     return melhorRota;
 }
 
-std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, int altura) {
+std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, int altura, bool &guloso) {
     std::vector<int> fronteira;
     int x = altura;
     int y = largura;
@@ -144,6 +145,7 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     for (int i = 0; i < y; i++) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             fronteira.push_back(i);
+            //std::cout << "inserindo inferior normal: " <<i << std::endl;
         }
     }
 
@@ -151,13 +153,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     for (int i = (x-1) + x; i < xy; i += x) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             fronteira.push_back(i);
+            //std::cout << "inserindo direita normal: " <<i << std::endl;
         }
     }
 
     // Superior
     for (int i = xy - 2; i > x * (y-1) - 1; i--) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
-            fronteira.push_back(i);
+            fronteira.push_back(i);;
+            //std::cout << "inserindo superior normal: " <<i << std::endl;
         }
     }
 
@@ -165,15 +169,18 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
     for (int i = x * (y-2); i > 0; i -= x) {
         if (std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             fronteira.push_back(i);
+            //std::cout << "inserindo esquerda normal: " <<i << std::endl;
         }
     }
 
     if(fronteira.size() == (altura*2 + largura*2)-4)
         return fronteira;
 
+    guloso = true;
+
     // Superior
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i;
             while (true) {
                 it += x;
@@ -181,7 +188,7 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
                     break;
                 } else if (it > xy-1) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo superior: "<<i << std::endl;
+                    //std::cout << "inserindo superior: "<<i << std::endl;
                     break;
                 }
             }
@@ -190,7 +197,7 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Esquerda subindo
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i + x;
             while (true) {
                 it--;
@@ -198,7 +205,7 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
                     break;
                 } else if (it % x == 0) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo esquerda subindo: "<< i << std::endl;
+                    //std::cout << "inserindo esquerda subindo: "<< i << std::endl;
                     break;
                 }
             }
@@ -207,15 +214,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Direita subindo
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + x) != obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
             int it = i + x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % x == x-1)) {
+                } else if (it % x == x-1) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo direita subindo: "<<i << std::endl;
+                    //std::cout << "inserindo direita subindo: "<<i << std::endl;
                     break;
                 }
             }
@@ -224,15 +231,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Inferior
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i;
             while (true) {
                 it -= x;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end() && it > 0) {
                     break;
-                } else if ((it < 0) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if (it < 0) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo inferior: "<<i << std::endl;
+                    //std::cout << "inserindo inferior: "<< i << std::endl;
                     break;
                 }
             }
@@ -241,15 +248,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Direita descendo
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i - x;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % x == x-1) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if (it % x == x-1) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo direita descendo: "<<i << std::endl;
+                    //std::cout << "inserindo direita descendo: "<< i << std::endl;
                     break;
                 }
             }
@@ -258,15 +265,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Esquerda descendo
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - x) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i - x;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % x == 0) && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if (it % x == 0) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo esquerda descendo: "<< i << std::endl;
+                    //std::cout << "inserindo esquerda descendo: "<< i << std::endl;
                     break;
                 }
             }
@@ -275,15 +282,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Direita
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i + 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i + 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i;
             while (true) {
                 it++;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if (it % x == x-1 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if (it % x == x-1) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo direita: "<<i << std::endl;
+                    //std::cout << "inserindo direita: "<<i << std::endl;
                     break;
                 }
             }
@@ -292,15 +299,15 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 
     // Esquerda
     for (int i = 0; i < xy; i++) {
-        if (std::find(obstaculos.begin(), obstaculos.end(), i - 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end()) {
+        if (std::find(obstaculos.begin(), obstaculos.end(), i - 1) != obstaculos.end() && std::find(obstaculos.begin(), obstaculos.end(), i) == obstaculos.end() && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
             int it = i;
             while (true) {
                 it--;
                 if (std::find(obstaculos.begin(), obstaculos.end(), it) == obstaculos.end()) {
                     break;
-                } else if ((it % x) == 0 && std::find(fronteira.begin(), fronteira.end(), i) == fronteira.end()) {
+                } else if ((it % x) == 0) {
                     fronteira.push_back(i);
-                    std::cout << "inserindo esquerda: "<<i << std::endl;
+                    //std::cout << "inserindo esquerda: "<<i << std::endl;
                     break;
                 }
             }
@@ -478,14 +485,14 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
         if(qtdit - melhorou >= 100){
             melhora = false;
         }
-        std::cout << "2opt: " << lim << std::endl;
+        //std::cout << "2opt: " << lim << std::endl;
     }
     std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 int main() {
-    std::string mapas = "36_pontos/mapas6.txt";
+    std::string mapas = "81_pontos/mapas9.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -523,7 +530,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 9;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -569,7 +576,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path6.txt");
+    std::ofstream pathFile("path9.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -654,15 +661,17 @@ int main() {
     int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
     std::cout << maiorx << " " << maiory << std::endl;
 
-   
-    std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory);
+    bool guloso = false;
+    std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory, guloso);
     std::cout << "Fronteira: ";
         for (int i : fronteira) {
             std::cout << i + 1 << " ";
         }
 
+    
+
     // Método guloso para organizar os pontos da fronteira se necessario
-    if(fronteira.size() != (maiorx*2 + maiory*2)-4){
+    if(guloso){
         std::vector<int> fronteira2;
         fronteira2.push_back(0);
         int sz = fronteira.size();
@@ -691,17 +700,18 @@ int main() {
                 fronteira2.push_back(k);
         }
 
-        std::cout << "obstaculos: " << std::endl;
-        for(int i = 0; i < obstaculos_indices.size(); i++){
-            std::cout << obstaculos_indices[i] << std::endl;
-        }
-        std::cout << "Fronteira: ";
+        //std::cout << "obstaculos: " << std::endl;
+        //for(int i = 0; i < obstaculos_indices.size(); i++){
+        //    std::cout << obstaculos_indices[i] << std::endl;
+        //}
+        std::cout << "Fronteira2: ";
         for (int i : fronteira2) {
             std::cout << i + 1 << " ";
         }
 
         fronteira = fronteira2;
     }
+
     //return 0;
 
     // se o último elemento da fronteira for 0, remova, pois pode atrapalhar na inserção mais barata
@@ -710,7 +720,7 @@ int main() {
     }
     
     // Recalcula a rota do gurobi
-    //std::vector<int> cicloHamiltoniano = {0, 1, 10, 19, 28, 37, 46, 55, 56, 47, 38, 29, 20, 11, 2, 3, 4, 5, 6, 15, 24, 23, 22, 21, 30, 39, 48, 57, 67, 68, 69, 70, 61, 52, 51, 50, 60, 59, 58, 49, 40, 31, 32, 33, 34, 25, 16, 7, 8, 17, 26, 35, 44, 53, 62, 71, 80, 79, 78, 77, 76, 75, 74, 73, 72, 63, 54, 45, 36, 27, 18, 9, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 14, 15, 6, 7, 8, 17, 26, 35, 44, 53, 62, 71, 80, 79, 78, 77, 76, 75, 74, 64, 55, 56, 57, 58, 50, 42, 41, 40, 49, 48, 47, 46, 45, 54, 63, 65, 66, 67, 68, 59, 51, 52, 43, 34, 33, 32, 31, 30, 29, 28, 36, 27, 18, 19, 20, 21, 12, 11, 10, 9, 0};
 
     std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());

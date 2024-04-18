@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 5
+mapaqtd = 8
 
-for i in range(0, 12):
+for i in range(0, 1):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,11 +27,11 @@ for i in range(0, 12):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0
+  versao = 9
 
-  for k in range(0, qtdobs):
+  for k in range(0, 1):
     inicio = time.time()
-    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+9].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
