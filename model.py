@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 5
+mapaqtd = 5 #5
 
-for i in range(0, 12):
+for i in range(0, 1):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -29,7 +29,7 @@ for i in range(0, 12):
 
   versao = 0
 
-  for k in range(0, qtdobs):
+  for k in range(0, 1):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -37,8 +37,7 @@ for i in range(0, 12):
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
     validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices] # Lista de vértices válidos
 
-    ini = 0 # Ponto inicial
-    fin = 1 # Ponto final
+    ini = validos[0] # Ponto inicial
 
     # Cria a matriz de custos
     c = [[float('inf')] * n for _ in range(n)]
@@ -176,24 +175,23 @@ for i in range(0, 12):
 
     #ponto inical: ini; ponto final: fin
     for i in validos:
-      if i != ini:
+      if  i!=ini:
         modelo.addConstr(gp.quicksum(x[i, j] for j in validos if j != i ) == 1)
 
     # Restrição 2
     for j in validos:
-      if j != fin:
         modelo.addConstr(gp.quicksum(x[i, j] for i in validos if i != j) == 1)
 
     # Restrição 3
     for i in validos:
-      if i != ini:
+      if i!= ini: 
         for j in validos:
-          if j != ini and j != i:
+          if j!=ini and i != j:
             modelo.addConstr(u[i] - u[j] + (n - 1) * x[i, j] <= n - 2)
 
     # Restrição 4
     for i in validos:
-      if i != ini:
+      if  i != ini:
         modelo.addConstr(u[i] >= 1)
         modelo.addConstr(u[i] <= n - 1)
 
@@ -203,23 +201,23 @@ for i in range(0, 12):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 7200
+    modelo.Params.timeLimit = 3600# 7200
     modelo.optimize()
 
     OTIMO = True
 
     if modelo.status == gp.GRB.OPTIMAL:
         print(f"Objetivo ótimo: {modelo.objVal:.2f}")
-        # for i in range(n):
-        #     for j in range(n):
-        #         if x[i, j].x > 0.5:
-        #             print(f"Cidade {i+1} -> Cidade {j+1}")
+        #for i in range(n):
+        #    for j in range(n):
+        #        if x[i, j].x > 0.5:
+        #            print(f"Cidade {i+1} -> Cidade {j+1}")
         route = []
         for i in range(n):
             for j in validos:
                 if u[j].x == i:
-                    route.append(j+1)
-        route.append(1)
+                    route.append(j)
+        route.append(0)
         print(route)
 
     else:
@@ -238,6 +236,11 @@ for i in range(0, 12):
         route = [city for city in route if city-1 not in obstaculos_indices]
         print(route)
 
+    total = 0
+    for i in range(0, len(route)-1):
+          total += (distancias[route[i]][route[i+1]] + altitudes[route[i]][route[i+1]] + q[route[ i-1 if i > 0 else i]][route[i]][route[i+1]])
+    print("recalculado", total)
+
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
@@ -250,7 +253,7 @@ for i in range(0, 12):
       if OTIMO == False:
          arquivo_rota.write(f'\nSolução não necessária ótima')
 
-    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
+    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}_fechado.txt')
 
     print("Tempo de Execução: ", tempo)
 
@@ -293,5 +296,5 @@ for i in range(0, 12):
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
     versao += 1 # Incrementa a versão
-    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
+    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}_fechado.png') # Salva a imagem do grafo
     print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
