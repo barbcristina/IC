@@ -1,61 +1,61 @@
-36_1 = 138 millisegundos grasp 100
-36_2 = 149 millisegundos grasp 101
-36_3 = 154 millisegundos grasp 100
-36_4 = 135 millisegundos grasp 103
-36_5 = 1835 millisegundos grasp 100
-36_6 = 116 millisegundos grasp 100
-36_7 = 139 millisegundos grasp 101
-36_8 = 133 millisegundos grasp 100
-36_9 = 139 millisegundos grasp 100
-36_10 = 145 millisegundos grasp 100
+36_1 = 26 millisegundos grasp 100
+36_2 = 31 millisegundos grasp 101
+36_3 = 35 millisegundos grasp 169
+36_4 = 27 millisegundos grasp 106
+36_5 = 37 millisegundos grasp 138
+36_6 = 22 millisegundos grasp 100
+36_7 = 31 millisegundos grasp 105
+36_8 = 25 millisegundos grasp 101
+36_9 = 26 millisegundos grasp 108
+36_10 = 29 millisegundos grasp 101
 
 
-49_1 = 388 millisegundos grasp 105
-49_2 = 355 millisegundos grasp 103
-49_3 = 448 millisegundos grasp 112
-49_4 = 417 millisegundos grasp 119
-49_5 = 338 millisegundos grasp 111
-49_6 = 515 millisegundos grasp 199
-49_7 = 745 millisegundos grasp 234
-49_8 = 417 millisegundos grasp 116
-49_9 = 325 millisegundos grasp 105
-49_10 = 235 millisegundos grasp 100
+49_1 = 71 millisegundos grasp 100
+49_2 = 69 millisegundos grasp 145
+49_3 = 78 millisegundos grasp 104
+49_4 = 53 millisegundos grasp 126
+49_5 = 50 millisegundos grasp 101
+49_6 = 59 millisegundos grasp 152
+49_7 = 73 millisegundos grasp 283
+49_8 = 59 millisegundos grasp 118
+49_9 = 63 millisegundos grasp 104
+49_10 = 32 millisegundos grasp 100
 
 
-64_1 = 633 millisegundos grasp 100
-64_2 = 769 millisegundos grasp 105
-64_3 = 1162 millisegundos grasp 117
-64_4 = 967 millisegundos grasp 122
-65_5 = 1370 millisegundos grasp 188
-64_6 = 716 millisegundos grasp 100
-64_7 = 1035 millisegundos grasp 146
-64_8 = 1841 millisegundos grasp 204
-64_9 = 1146 millisegundos grasp 117
-64_10 = 1287 millisegundos grasp 139
+64_1 = 82 millisegundos grasp 102
+64_2 = 98 millisegundos grasp 131
+64_3 = 107 millisegundos grasp 100
+64_4 = 144 millisegundos grasp 182
+65_5 = 93 millisegundos grasp 106
+64_6 = 89 millisegundos grasp 105
+64_7 = 85 millisegundos grasp 109
+64_8 = 111 millisegundos grasp 104
+64_9 = 259 millisegundos grasp 348
+64_10 = 119 millisegundos grasp 128
 
 
-81_1 = 5703 millisegundos grasp 176
-81_2 = 5389 millisegundos grasp 182
-81_3 = 2064 millisegundos grasp 102
-81_4 = 3165 millisegundos grasp 105
-81_5 = 3990 milliseconds grasp 137
-81_6 = 6854 millisegundos grasp 274
-81_7 = 3284 millisegundos grasp 125
-81_8 = 5635 millisegundos grasp 205  gap: 1793.13 - 1784.02
-81_9 = 3969 millisegundos grasp 149
-81_10 = 1306 millisegundos grasp 100
+81_1 = 343 millisegundos grasp 129
+81_2 = 422 millisegundos grasp 182
+81_3 = 265 millisegundos grasp 102
+81_4 = 292 millisegundos grasp 141
+81_5 = 367 milliseconds grasp 177
+81_6 = 213 millisegundos grasp 106
+81_7 = 275 millisegundos grasp 107
+81_8 = 466 millisegundos grasp 205  gap: 1793.13 - 1784.02
+81_9 = 338 millisegundos grasp 158
+81_10 = 109 millisegundos grasp 101
 
 
-100_1 = 7623 millisegundos grasp 133  gap: 2326.74 - 2314.53
-100_2 = 2203.67 *
-100_3 = 2255.58 *
-100_4 = 47 segundos grasp 784  gap: 2362.66 - 2356.09
-100_5 = 25.65 segundos grasp 399
-100_6 = 7.32 segundos grasp 115
-100_7 = 6.485 segundos grasp 117
-100_8 = 8.9 segundos grasp 167
-100_9 = 4.81 segundos grasp 100
-100_10 = 13.67 segundos grasp 224  gap: 2237.27 - 2217.6
+100_1 = 1297 millisegundos millisegundos grasp 241  gap: 2326.74 - 2314.53
+100_2 = 2203.67 * consegui 2214.12 1127 millisegundos grasp 180
+100_3 = 2320 millisegundos grasp 432
+100_4 = 1507 millisegundos grasp 264  gap: 2362.66 - 2335.55
+100_5 = 1651 millisegundos grasp 285
+100_6 = 1776 millisegundos grasp 281
+100_7 = 729 millisegundos grasp 116
+100_8 = 798 millisegundos grasp 165
+100_9 = 417 millisegundos grasp 107
+100_10 = 1574 millisegundos grasp 273  gap: 2237.27 - 2216.51
 
 
-121_1 = 39.9 segundos grasp 504
+121_1 = 3129 millisegundos segundos grasp 601

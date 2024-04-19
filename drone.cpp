@@ -67,7 +67,7 @@ std::vector<int> print_path(std::vector<int>& parent, int v, std::ofstream& outp
     return path;
 }
 
-std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>> &q,  std::vector<std::vector<double>> &altitudes){
+std::pair<std::vector<int>, double> OPT2(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes){
     double ganhoMax = 0;
     std::pair<std::vector<int>, double> melhor;
     melhor.first = rota;
@@ -102,10 +102,9 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vecto
     return melhor;
 }
 
-std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes){
+std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes){
     bool melhora = true;
     std::pair<std::vector<int>, double> melhorRota;
-    //rota.pop_back();
     double total = 0;
     int iter = 0;
     int maxIter = 500;
@@ -134,7 +133,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const st
     return melhorRota;
 }
 
-std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, int altura, bool &guloso) {
+std::vector<int> construirFronteira(std::vector<int>& obstaculos, int largura, int altura, bool &guloso) {
     std::vector<int> fronteira;
     int x = altura;
     int y = largura;
@@ -324,7 +323,7 @@ std::vector<int> construirFronteira(std::vector<int> obstaculos, int largura, in
 }
 
 
-std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminho, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes) {
+std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminho, const std::vector<std::vector<double>>& distancias, std::vector<bool>& visitado, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes) {
     int n = distancias.size();
     std::vector<bool> selecionados(n, false);
     std::vector<int> maisprox;
@@ -335,7 +334,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
     std::mt19937 gen(rd());
 
     int min = 2;
-    int max = 40;
+    int max = 20;
 
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
@@ -389,7 +388,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
 
 
 // Função para construir um caminho hamiltoniano usando a heurística de inserção mais barata
-std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize) {
+std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes, int obsSize) {
     int n = distancias.size();
     std::vector<bool> visitado(n, false);
     std::vector<int> caminho; // Caminho inicial com a fronteira
@@ -450,7 +449,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
     return caminho;
 }
 
-std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes, int obsSize){
+std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const std::vector<int>& fronteira, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes, int obsSize){
     float lim = 2000000;
     std::vector<int> S;
     std::vector<int> best;
@@ -481,17 +480,17 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 600){
+        if(qtdit - melhorou >= 100){
             melhora = false;
         }
-        std::cout << "2opt: " << lim << std::endl;
+        //std::cout << "2opt: " << lim << std::endl;
     }
     std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 int main() {
-    std::string mapas = "121_pontos/mapas11.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -529,7 +528,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 9;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -575,7 +574,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path11.txt");
+    std::ofstream pathFile("path7.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
