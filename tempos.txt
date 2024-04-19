@@ -46,3 +46,16 @@
 81_10 = 1306 millisegundos grasp 100
 
 
+100_1 = 7623 millisegundos grasp 133  gap: 2326.74 - 2314.53
+100_2 = 2203.67 *
+100_3 = 2255.58 *
+100_4 = 47 segundos grasp 784  gap: 2362.66 - 2356.09
+100_5 = 25.65 segundos grasp 399
+100_6 = 7.32 segundos grasp 115
+100_7 = 6.485 segundos grasp 117
+100_8 = 8.9 segundos grasp 167
+100_9 = 4.81 segundos grasp 100
+100_10 = 13.67 segundos grasp 224  gap: 2237.27 - 2217.6
+
+
+121_1 = 39.9 segundos grasp 504

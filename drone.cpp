@@ -82,11 +82,7 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vecto
         for(int c = a+2; c < limc; c++){
             int d;
             d=c+1;
-            double ganho = (distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] 
-            + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c!=n) ? d+1 : d]] 
-            + q[rota[c-1]][rota[c]][rota[d]]) - (distancias[rota[a]][rota[c]] 
-            + distancias[rota[b]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] 
-            + q[rota[d]][rota[b]][rota[b+1]] + q[rota[b]][rota[d]][rota[(c!=n) ? d+1 : d]] + q[rota[c-1]][rota[c]][rota[a]]);
+            double ganho = distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c==limc) ? d : d+1]] + q[rota[c-1]][rota[c]][rota[d]] - distancias[rota[a]][rota[c]] - distancias[rota[b]][rota[d]] - q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] - q[rota[d]][rota[b]][rota[b+1]] - q[rota[b]][rota[d]][rota[(c==d) ? d : d+1]] - q[rota[c-1]][rota[c]][rota[a]];
             if(ganho > ganhoMax){
                 ganhoMax = ganho;
                 bestV = {a, b, c, d};
@@ -96,8 +92,11 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vecto
     }
     if(ganhoMax > 0){
         melhor.second = dist - ganhoMax;
-        melhor.first[bestV[1]] = rota[bestV[2]];
-        melhor.first[bestV[2]] = rota[bestV[1]];
+   
+        std::reverse(melhor.first.begin() + bestV[1], melhor.first.begin() + bestV[2] + 1);
+        rota = melhor.first;
+        //melhor.first[bestV[1]] = rota[bestV[2]];
+        //melhor.first[bestV[2]] = rota[bestV[1]];
     }
     
     return melhor;
@@ -106,7 +105,7 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int> rota, const std::vecto
 std::pair<std::vector<int>, double> Local_Search(std::vector<int> rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>> q,  std::vector<std::vector<double>> altitudes){
     bool melhora = true;
     std::pair<std::vector<int>, double> melhorRota;
-    rota.pop_back();
+    //rota.pop_back();
     double total = 0;
     int iter = 0;
     int maxIter = 500;
@@ -336,7 +335,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
     std::mt19937 gen(rd());
 
     int min = 2;
-    int max = 20;
+    int max = 40;
 
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
@@ -482,17 +481,17 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 100){
+        if(qtdit - melhorou >= 600){
             melhora = false;
         }
-        //std::cout << "2opt: " << lim << std::endl;
+        std::cout << "2opt: " << lim << std::endl;
     }
     std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 int main() {
-    std::string mapas = "81_pontos/mapas9.txt";
+    std::string mapas = "121_pontos/mapas11.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -530,7 +529,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 1;
+    int nObs = 9;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -576,7 +575,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path9.txt");
+    std::ofstream pathFile("path11.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -720,13 +719,12 @@ int main() {
     }
     
     // Recalcula a rota do gurobi
-    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 14, 15, 6, 7, 8, 17, 26, 35, 44, 53, 62, 71, 80, 79, 78, 77, 76, 75, 74, 64, 55, 56, 57, 58, 50, 42, 41, 40, 49, 48, 47, 46, 45, 54, 63, 65, 66, 67, 68, 59, 51, 52, 43, 34, 33, 32, 31, 30, 29, 28, 36, 27, 18, 19, 20, 21, 12, 11, 10, 9, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
     std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
-    cicloHamiltoniano.push_back(0);
 
     // Calcular o valor total do ciclo
     double total = 0;
