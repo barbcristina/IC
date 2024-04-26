@@ -334,7 +334,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
     std::mt19937 gen(rd());
 
     int min = 2;
-    int max = 20;
+    int max = 30;
 
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
@@ -400,11 +400,7 @@ std::vector<int> construirCaminhoInsercaoMaisBarata(const std::vector<std::vecto
     while (caminho.size() < n-obsSize) {
         //std::cout << caminho.size() << std::endl;
         std::vector<int> proxPonto = encontrarProximoPontoNaoVisitado(caminho, distancias, visitado, q, altitudes);
-        //std::cout << "selecionados: " << std::endl;
-        //for(int v: proxPonto){
-        //    std::cout << v << ", ";
-        //}
-        //std::cout << std::endl;
+        
         std::mt19937 rng(static_cast<unsigned>(std::time(0)));
 
         std::uniform_int_distribution<size_t> dist(0, proxPonto.size() - 1);
@@ -480,7 +476,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 100){
+        if(qtdit - melhorou >= 500){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -490,7 +486,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "36_pontos/mapas6.txt";
+    std::string mapas = "144_pontos/mapas12.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -519,7 +515,7 @@ int main() {
     std::vector<std::tuple<double, double, double>> coord;
     std::vector<int> obstaculos_indices;
 
-    for (int i = 0; i < linhas.size() - 10; i++) {
+    for (int i = 0; i < linhas.size() - 5; i++) {
         std::istringstream iss(linhas[i]);
         std::string cidade;
         double x, y, z;
@@ -528,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 1;
+    int nObs = 3;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -574,7 +570,7 @@ int main() {
     std::vector<std::vector<std::vector<int>>> matrix(n, std::vector<std::vector<int>>(n, std::vector<int>(n, 0)));
     std::vector<std::vector<double>> distancias(n, std::vector<double>(n, std::numeric_limits<double>::infinity()));
 
-    std::ofstream pathFile("path7.txt");
+    std::ofstream pathFile("path.txt");
 
     // Função para calcular o caminho mínimo usando o algoritmo de Dijkstra com heap
     auto dijkstra = [&](const std::vector<std::vector<double>>& c, int i, int j) {
@@ -718,10 +714,10 @@ int main() {
     }
     
     // Recalcula a rota do gurobi
-    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 33, 45, 44, 43, 42, 41, 28, 26, 27, 29, 30, 31, 32, 34, 46, 58, 57, 56, 55, 54, 53, 52, 63, 64, 65, 66, 67, 68, 69, 70, 71, 59, 47, 35, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 25, 37, 49, 61, 73, 74, 75, 76, 77, 78, 79, 91, 90, 89, 88, 87, 98, 111, 112, 113, 114, 115, 116, 117, 118, 130, 129, 128, 127, 126, 125, 124, 137, 138, 139, 140, 141, 142, 143, 131, 119, 107, 106, 105, 104, 103, 102, 101, 100, 99, 86, 85, 72, 60, 48, 36, 24, 12, 0};
 
     std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
-    //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
+    //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
 

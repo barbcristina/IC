@@ -34,7 +34,7 @@ for linha in linhas:
         obstaculos.append((x, y))
 
 # Leitura do arquivo contendo todos os caminhos
-with open('path9.txt', 'r') as allPathsFile:
+with open('path.txt', 'r') as allPathsFile:
     all_paths = allPathsFile.readlines()
 
 # Encontrar caminhos usados no ciclo Hamiltoniano
@@ -106,6 +106,4 @@ for i in range(len(x_ordered) - 1):
 
 plt.title(f"Custo Total do Ciclo: {custo_total:.2f}")
 
-plt.savefig("grasp100_10.png")
-
-plt.show()
+plt.savefig("grasp_IMB_121_10.png")

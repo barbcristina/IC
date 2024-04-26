@@ -59,3 +59,19 @@
 
 
 121_1 = 3129 millisegundos segundos grasp 601
+121_2 = 2610.81 * consegui 2619.55 1310 millisegundos grasp 206
+121_3 = 1881 millisegundos grasp 291 gap: 2376.51 - 2376.51 = 0
+121_4 = gap: 2710.21 - 2637.2 18312 millisegundos grasp 2234
+121_5 = gap: 2759.26 - 2735.67 890 milliseconds grasp 100
+121_6 = gap: 2648.64 - 2616.03 1403 milliseconds grasp 183
+121_7 = gap: 2675.43 - 2616.04 725 milliseconds grasp 122
+121_8 = gap: 2780.07 - 2695.01 1101 milliseconds grasp 123
+121_9 = gap: 2649.91 mudar obs
+121_10 = gap: 2573.51 - 2557.51 1195 milliseconds grasp 164
+
+
+144_1 = 3086.62 3494 milliseconds grasp 167
+144_2 = iterações: 608
+Total: 2851.01
+Tempo Gasto: 10407 millisegundos
+144_3 = rodar de novo
