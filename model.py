@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 11
+mapaqtd = 11 #5
 
-for i in range(0, 1):
+for i in range(0, 6):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -29,7 +29,7 @@ for i in range(0, 1):
 
   versao = 1
 
-  for k in range(1, 4):
+  for k in range(0, 10):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -50,6 +50,19 @@ for i in range(0, 1):
               continue  # Então se i e j nào forem adjacentes, c[i][j] = inf
             else:
               c[i][j] = dist + 0.5
+    
+    maiorx = (coord[-1][0] + 10) // 20
+    maiory = (coord[-1][1] + 10) // 20
+    print(maiorx, maiory)
+
+    for i in validos:
+      for j in validos:
+        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
+          c[i][j] = float('inf')
+          c[j][i] = float('inf')
+        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
+          c[i][j] = float('inf')
+          c[j][i] = float('inf')
 
     # Ângulo do caminho entre pontos
     def calcular_a(i, j, k):
@@ -139,7 +152,7 @@ for i in range(0, 1):
                     dist[v] = dist[u] + c[u][v]
                     parent[v] = u
                     heapq.heappush(heap, (dist[v], v))
-        if c[i][j] != float('inf'):
+        if i in obstaculos_indices and j in obstaculos_indices:
           distancias[i][j] = c[i][j]
         else:
           distancias[i][j] = dist[j]

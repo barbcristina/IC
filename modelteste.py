@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 for i in range(0, 1):
-  mapas = '120_pontos/mapas15x8.txt'
+  mapas = '256_pontos/mapas16.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -18,13 +18,13 @@ for i in range(0, 1):
   linhas = dados.strip().split('\n')
 
   # Converte as linhas em uma lista de tuplas
-  coord = [tuple(linha.split()) for linha in linhas[:-1]]  # Exclui a última linha
+  coord = [tuple(linha.split()) for linha in linhas[:-10]]  # Exclui a última linha
 
   n = len(coord)  # número de células (pontos)
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  obstaculos_indices = [int(celula) for celula in linhas[-1].split()]  # Lista de células a serem evitadas
+  obstaculos_indices = [int(celula) for celula in linhas[-4].split()]  # Lista de células a serem evitadas
   print("Obstáculos: ", obstaculos_indices)
   obstaculos = [coord[i] for i in obstaculos_indices]
   validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]
@@ -139,7 +139,7 @@ for i in range(0, 1):
 
   xx, yy, zz = zip(*coord)
 
-  plt.figure(figsize=(8,15))
+  plt.figure(figsize=(12,12))
 
   plt.scatter(xx, yy, color="black") #plota vertices
 
@@ -174,6 +174,6 @@ for i in range(0, 1):
 
   #plt.title(f"Cost = {modelo.objVal:.2f}")
 
-  plt.savefig('100_pontos/gurobi100.png')
+  plt.savefig('testando_pontos.png')
 
   #829.24

@@ -564,6 +564,11 @@ int main() {
         }
     }
 
+    // calcula altura e largura do grafo
+    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
+    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
+    std::cout << maiorx << " " << maiory << std::endl;
+
     // Matrizes que guardam a penalidade de altitude e ângulo
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<double>> all_angles(n, std::vector<double>(n, 0.0));
@@ -649,11 +654,6 @@ int main() {
             }
         }
     }
-    
-    // calcula altura e largura do grafo
-    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
-    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
-    std::cout << maiorx << " " << maiory << std::endl;
 
     bool guloso = false;
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory, guloso);
