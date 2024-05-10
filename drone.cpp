@@ -121,7 +121,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const s
             twopt += (distancias[melhorRota.first[i]][melhorRota.first[i+1]] + q[melhorRota.first[(i > 0) ? i-1 : i]][melhorRota.first[i]][melhorRota.first[i+1]]);
         }
         //twopt += (distancias[melhorRota.first[rota.size()-1]][0] + q[melhorRota.first[rota.size()-2]][melhorRota.first[rota.size()-1]][0]);
-        std::cout << "2opt vs dist anterior: " << twopt << "  " << melhorRota.second << std::endl;
+        //std::cout << "2opt vs dist anterior: " << twopt << "  " << melhorRota.second << std::endl;
         if(melhorRota.second < total){
             rota = melhorRota.first;
             total = melhorRota.second;

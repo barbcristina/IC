@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 5 #5
+mapaqtd = 13 #5
 
-for i in range(0, 1):
+for i in range(0, 4):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,9 +27,9 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0
+  versao = 0 # Versão do arquivo
 
-  for k in range(0, 1):
+  for k in range(0, qtdobs):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -37,7 +37,8 @@ for i in range(0, 1):
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
     validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices] # Lista de vértices válidos
 
-    ini = validos[0] # Ponto inicial
+    ini = 0 # Ponto inicial
+    fin = 1 # Ponto final
 
     # Cria a matriz de custos
     c = [[float('inf')] * n for _ in range(n)]
@@ -49,6 +50,19 @@ for i in range(0, 1):
               continue  # Então se i e j nào forem adjacentes, c[i][j] = inf
             else:
               c[i][j] = dist + 0.5
+    
+    maiorx = (coord[-1][0] + 10) // 20
+    maiory = (coord[-1][1] + 10) // 20
+    print(maiorx, maiory)
+
+    for i in validos:
+      for j in validos:
+        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
+          c[i][j] = float('inf')
+          c[j][i] = float('inf')
+        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
+          c[i][j] = float('inf')
+          c[j][i] = float('inf')
 
     # Ângulo do caminho entre pontos
     def calcular_a(i, j, k):
@@ -138,7 +152,7 @@ for i in range(0, 1):
                     dist[v] = dist[u] + c[u][v]
                     parent[v] = u
                     heapq.heappush(heap, (dist[v], v))
-        if c[i][j] != float('inf'):
+        if i in obstaculos_indices and j in obstaculos_indices:
           distancias[i][j] = c[i][j]
         else:
           distancias[i][j] = dist[j]
@@ -175,23 +189,24 @@ for i in range(0, 1):
 
     #ponto inical: ini; ponto final: fin
     for i in validos:
-      if  i!=ini:
+      if i != ini:
         modelo.addConstr(gp.quicksum(x[i, j] for j in validos if j != i ) == 1)
 
     # Restrição 2
     for j in validos:
+      if j != fin:
         modelo.addConstr(gp.quicksum(x[i, j] for i in validos if i != j) == 1)
 
     # Restrição 3
     for i in validos:
-      if i!= ini: 
+      if i != ini:
         for j in validos:
-          if j!=ini and i != j:
+          if j != ini and j != i:
             modelo.addConstr(u[i] - u[j] + (n - 1) * x[i, j] <= n - 2)
 
     # Restrição 4
     for i in validos:
-      if  i != ini:
+      if i != ini:
         modelo.addConstr(u[i] >= 1)
         modelo.addConstr(u[i] <= n - 1)
 
@@ -201,23 +216,23 @@ for i in range(0, 1):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 3600# 7200
+    modelo.Params.timeLimit = 3600
     modelo.optimize()
 
     OTIMO = True
 
     if modelo.status == gp.GRB.OPTIMAL:
         print(f"Objetivo ótimo: {modelo.objVal:.2f}")
-        #for i in range(n):
-        #    for j in range(n):
-        #        if x[i, j].x > 0.5:
-        #            print(f"Cidade {i+1} -> Cidade {j+1}")
+        # for i in range(n):
+        #     for j in range(n):
+        #         if x[i, j].x > 0.5:
+        #             print(f"Cidade {i+1} -> Cidade {j+1}")
         route = []
         for i in range(n):
             for j in validos:
                 if u[j].x == i:
-                    route.append(j)
-        route.append(0)
+                    route.append(j+1)
+        route.append(1)
         print(route)
 
     else:
@@ -236,15 +251,10 @@ for i in range(0, 1):
         route = [city for city in route if city-1 not in obstaculos_indices]
         print(route)
 
-    total = 0
-    for i in range(0, len(route)-1):
-          total += (distancias[route[i]][route[i+1]] + altitudes[route[i]][route[i+1]] + q[route[ i-1 if i > 0 else i]][route[i]][route[i+1]])
-    print("recalculado", total)
-
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
-    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}_.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
       arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
@@ -253,7 +263,7 @@ for i in range(0, 1):
       if OTIMO == False:
          arquivo_rota.write(f'\nSolução não necessária ótima')
 
-    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}_fechado.txt')
+    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
 
     print("Tempo de Execução: ", tempo)
 
@@ -296,5 +306,5 @@ for i in range(0, 1):
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
     versao += 1 # Incrementa a versão
-    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}_fechado.png') # Salva a imagem do grafo
+    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
     print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
