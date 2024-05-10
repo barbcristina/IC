@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 for i in range(0, 1):
-  mapas = '256_pontos/mapas16.txt'
+  mapas = '196_pontos/mapas14.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -24,7 +24,7 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  obstaculos_indices = [int(celula) for celula in linhas[-4].split()]  # Lista de células a serem evitadas
+  obstaculos_indices = [int(celula) for celula in linhas[-9].split()]  # Lista de células a serem evitadas
   print("Obstáculos: ", obstaculos_indices)
   obstaculos = [coord[i] for i in obstaculos_indices]
   validos = [coord.index(i) for i in coord if coord.index(i) not in obstaculos_indices]

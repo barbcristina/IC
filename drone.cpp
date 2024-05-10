@@ -476,7 +476,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 500){
+        if(qtdit - melhorou >= 1){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -486,7 +486,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "144_pontos/mapas12.txt";
+    std::string mapas = "196_pontos/mapas14.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -515,7 +515,7 @@ int main() {
     std::vector<std::tuple<double, double, double>> coord;
     std::vector<int> obstaculos_indices;
 
-    for (int i = 0; i < linhas.size() - 5; i++) {
+    for (int i = 0; i < linhas.size() - 10; i++) {
         std::istringstream iss(linhas[i]);
         std::string cidade;
         double x, y, z;
@@ -524,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 3;
+    int nObs = 9;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -569,6 +569,17 @@ int main() {
     int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
     std::cout << maiorx << " " << maiory << std::endl;
 
+    for (int i = 0; i < validos.size(); i++) {
+        for (int j = 0; j < validos.size(); j++) {
+            if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i-1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j+1) != obstaculos_indices.end() && (i-1)/maiorx == i/maiorx && (j+1)/maiorx == j/maiorx) {
+                c[i][j] = std::numeric_limits<double>::infinity();
+                c[j][i] = std::numeric_limits<double>::infinity();
+            } else if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i+1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j-1) != obstaculos_indices.end() && (i+1)/maiorx == i/maiorx && (j-1)/maiorx == j/maiorx) {
+                c[i][j] = std::numeric_limits<double>::infinity();
+                c[j][i] = std::numeric_limits<double>::infinity();
+            }
+        }
+    }
     // Matrizes que guardam a penalidade de altitude e ângulo
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<double>> all_angles(n, std::vector<double>(n, 0.0));
@@ -662,7 +673,6 @@ int main() {
             std::cout << i + 1 << " ";
         }
 
-    
 
     // Método guloso para organizar os pontos da fronteira se necessario
     if(guloso){
