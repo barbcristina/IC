@@ -8,7 +8,7 @@ import time
 
 mapaqtd = 13 #5
 
-for i in range(0, 4):
+for i in range(0, 1):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,11 +27,11 @@ for i in range(0, 4):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0 # Versão do arquivo
+  versao = 2 # Versão do arquivo
 
-  for k in range(0, qtdobs):
+  for k in range(0, 1):
     inicio = time.time()
-    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+2].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
@@ -57,10 +57,10 @@ for i in range(0, 4):
 
     for i in validos:
       for j in validos:
-        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
+        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1)) and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
-        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
+        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1)) and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
 
@@ -152,13 +152,15 @@ for i in range(0, 4):
                     dist[v] = dist[u] + c[u][v]
                     parent[v] = u
                     heapq.heappush(heap, (dist[v], v))
-        if i in obstaculos_indices and j in obstaculos_indices:
+        if c[i][j] != float('inf'):
           distancias[i][j] = c[i][j]
         else:
           distancias[i][j] = dist[j]
         altitudes[i][j] = alt[j]
         all_angles[i][j] = angles[j]
         matrix[i][j] = print_and_return_path(parent, j)
+        if i == 2 and j == 137:
+          print("matrix[",i,"][",j,"] = ", distancias[i][j])
 
     # Chamar o algoritmo de Dijkstra para variar nos vértices válidos
     for i in validos:
@@ -176,8 +178,16 @@ for i in range(0, 4):
     for i in validos:
       for j in validos:
         for k in validos:
-          if (c[i][j] == float('inf') or c[j][k] == float('inf')) and i!=j and j!=k:
+          if (c[i][j] == float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
+            print("primeiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
+            print("tamanho matrix: ", matrix[j][k])
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][len(matrix[i][j])-2]][j][matrix[j][k][1]])
+          elif (c[i][j] == float('inf') and c[j][k] != float('inf')) and i!=j and j!=k:
+            q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k]
+          elif (c[i][j] != float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
+            print("terceiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
+            q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j][len(matrix[i][j])-2]]
+          
 
     modelo = gp.Model('Caixeiro_Viajante') # Cria o modelo
 
@@ -216,7 +226,7 @@ for i in range(0, 4):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 3600
+    modelo.Params.timeLimit = 7200
     modelo.optimize()
 
     OTIMO = True
@@ -254,7 +264,7 @@ for i in range(0, 4):
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
-    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}_.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
       arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
