@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 13 #5
+mapaqtd = 11 #5
 
-for i in range(0, 1):
+for i in range(0, 6):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,11 +27,11 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 2 # Versão do arquivo
+  versao = 0 # Versão do arquivo
 
-  for k in range(0, 1):
+  for k in range(0, qtdobs):
     inicio = time.time()
-    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+2].split()]  # Lista de células a serem evitadas
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
@@ -159,8 +159,6 @@ for i in range(0, 1):
         altitudes[i][j] = alt[j]
         all_angles[i][j] = angles[j]
         matrix[i][j] = print_and_return_path(parent, j)
-        if i == 2 and j == 137:
-          print("matrix[",i,"][",j,"] = ", distancias[i][j])
 
     # Chamar o algoritmo de Dijkstra para variar nos vértices válidos
     for i in validos:
@@ -179,13 +177,10 @@ for i in range(0, 1):
       for j in validos:
         for k in validos:
           if (c[i][j] == float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
-            print("primeiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
-            print("tamanho matrix: ", matrix[j][k])
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][len(matrix[i][j])-2]][j][matrix[j][k][1]])
           elif (c[i][j] == float('inf') and c[j][k] != float('inf')) and i!=j and j!=k:
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k]
           elif (c[i][j] != float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
-            print("terceiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j][len(matrix[i][j])-2]]
           
 
@@ -226,7 +221,7 @@ for i in range(0, 1):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 7200
+    modelo.Params.timeLimit = 3600
     modelo.optimize()
 
     OTIMO = True
