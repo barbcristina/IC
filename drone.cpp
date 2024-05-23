@@ -329,19 +329,10 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
     std::vector<int> maisprox;
     int proximoPonto = -1;
     double menorCustoInsercao;
-    
-    std::random_device rd;
-    std::mt19937 gen(rd());
-
-    int min = 2;
-    int max = 30;
-
-    std::uniform_int_distribution<> dist(min, max);
-    int numero_aleatorio = dist(gen);
 
     //std::cout << "Número aleatório entre " << min << " e " << max << ": " << numero_aleatorio << std::endl;
 
-    for(int j = 0; j < numero_aleatorio; j++){
+    for(int j = 0; j < 20; j++){
         menorCustoInsercao = std::numeric_limits<double>::max();
         for (int i = 0; i < n; i++) {
             if (!visitado[i] and !selecionados[i]) {
@@ -476,7 +467,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 1){
+        if(qtdit - melhorou >= 100){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -486,7 +477,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "196_pontos/mapas14.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -560,6 +551,23 @@ int main() {
                 } else {
                     c[i][j] = dist + 0.5;
                 }
+            }
+        }
+    }
+
+        // calcula altura e largura do grafo
+    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
+    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
+    std::cout << maiorx << " " << maiory << std::endl;
+
+    for (int i = 0; i < validos.size(); i++) {
+        for (int j = 0; j < validos.size(); j++) {
+            if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i-1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j+1) != obstaculos_indices.end() && (j == (i+maiorx+1) || i == (j-maiorx-1)) && (i-1)/maiorx == i/maiorx && (j+1)/maiorx == j/maiorx) {
+                c[i][j] = std::numeric_limits<double>::infinity();
+                c[j][i] = std::numeric_limits<double>::infinity();
+            } else if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i+1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j-1) != obstaculos_indices.end() && (j == (i+maiorx+1) || i == (j-maiorx-1)) && (i+1)/maiorx == i/maiorx && (j-1)/maiorx == j/maiorx) {
+                c[i][j] = std::numeric_limits<double>::infinity();
+                c[j][i] = std::numeric_limits<double>::infinity();
             }
         }
     }
@@ -719,12 +727,9 @@ int main() {
     //return 0;
 
     // se o último elemento da fronteira for 0, remova, pois pode atrapalhar na inserção mais barata
-    if(fronteira.back() == 0){
-        fronteira.pop_back();
-    }
-    
+    fronteira = {0, 12, 24, 36, 48, 60, 72, 84, 96, 109, 122, 135, 136, 137, 138, 139, 140, 141, 142, 143, 131, 119, 107, 95, 83, 71, 59, 46, 33, 20, 7, 6, 5, 4, 3, 2, 1};
     // Recalcula a rota do gurobi
-    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 33, 45, 44, 43, 42, 41, 28, 26, 27, 29, 30, 31, 32, 34, 46, 58, 57, 56, 55, 54, 53, 52, 63, 64, 65, 66, 67, 68, 69, 70, 71, 59, 47, 35, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 25, 37, 49, 61, 73, 74, 75, 76, 77, 78, 79, 91, 90, 89, 88, 87, 98, 111, 112, 113, 114, 115, 116, 117, 118, 130, 129, 128, 127, 126, 125, 124, 137, 138, 139, 140, 141, 142, 143, 131, 119, 107, 106, 105, 104, 103, 102, 101, 100, 99, 86, 85, 72, 60, 48, 36, 24, 12, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
     std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes, obstaculos_indices.size());

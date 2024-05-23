@@ -70,8 +70,13 @@
 121_10 = gap: 2573.51 - 2557.51 1195 milliseconds grasp 164
 
 
-144_1 = 3086.62 3494 milliseconds grasp 167
-144_2 = iterações: 608
-Total: 2851.01
-Tempo Gasto: 10407 millisegundos
-144_3 = rodar de novo
+144_1 = gap: 3127 - 3099.13 1207 iterações 28961 milliseconds
+144_2 = 2830 * consegui 2968.12 188 iterações 4069 milliseconds
+144_3 = gap: 2946.5 - 2924.18 127 iterações 2511 milliseconds
+144_4 = gap: 3031 - 3004.11 220 it 4615 milliseconds
+144_5 = 2817.5 - 2803.62 222 it 4154 milliseconds
+144_6 = 2983.5 * 3073
+144_7 = 2665.5 * 2696.78
+144_8 = gap: 3130 - 3109.13
+144_9 = 3315 - 3189.52 3289 millisegundos
+144_10 = 3112.5 - 3103.16 1966 milliseconds
