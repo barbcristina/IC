@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 11 #5
+mapaqtd = 15 #5
 
-for i in range(0, 6):
+for i in range(0, 5):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -272,6 +272,7 @@ for i in range(0, 6):
 
     print("Tempo de Execução: ", tempo)
 
+    """
     import matplotlib.pyplot as plt
 
     xx, yy, zz = zip(*coord)
@@ -310,6 +311,8 @@ for i in range(0, 6):
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    versao += 1 # Incrementa a versão
+    #versao += 1 # Incrementa a versão
     plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
-    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
+    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}') 
+    """
+    versao += 1 # Incrementa a versão
