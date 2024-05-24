@@ -8,7 +8,7 @@ import time
 
 inicio = time.time()
 for i in range(0, 1):
-  mapas = '120_pontos/mapas15x8.txt'
+  mapas = '289_pontos/mapas17.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -18,7 +18,7 @@ for i in range(0, 1):
   linhas = dados.strip().split('\n')
 
   # Converte as linhas em uma lista de tuplas
-  coord = [tuple(linha.split()) for linha in linhas[:-1]]  # Exclui a última linha
+  coord = [tuple(linha.split()) for linha in linhas[:-10]]  # Exclui a última linha
 
   n = len(coord)  # número de células (pontos)
 

@@ -27,11 +27,11 @@ for i in range(0,1): #(0, 2):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0 # Versão do arquivo
+  versao = 8 # Versão do arquivo
 
   for k in range(0, qtdobs):
     inicio = time.time()
-    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+8].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
