@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 9 #5
+mapaqtd = 16#9 #5
 
-for i in range(0, 2):
+for i in range(0,1): #(0, 2):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
