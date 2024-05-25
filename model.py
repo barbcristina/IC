@@ -5,12 +5,13 @@ import math
 import heapq
 from numpy import ubyte
 import time
+import matplotlib.pyplot as plt
 
-mapaqtd = 16 #5
+mapaqtd = 5 #5
 
 for i in range(0, 1):
   mapaqtd += 1
-  mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
+  mapas = '120_pontos/mapas15x8.txt'
 
   # Abrir o arquivo para leitura
   with open(mapas, 'r') as arquivo:
@@ -18,7 +19,7 @@ for i in range(0, 1):
 
   # Separa a string em linhas
   linhas = dados.strip().split('\n')
-  qtdobs = len(linhas) - (mapaqtd*mapaqtd) # Quantidade de obstáculos
+  qtdobs = len(linhas) - (120) # Quantidade de obstáculos
 
   # Converte as linhas em uma lista de tuplas
   coord = [tuple(linha.split()) for linha in linhas[:-qtdobs]]  # Exclui as linhas de obstáculos
@@ -27,9 +28,9 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0 # Versão do arquivo
-
-  for k in range(0, qtdobs):
+  versao = 1 # Versão do arquivo
+  print(qtdobs)
+  for k in range(0, 1):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -259,7 +260,7 @@ for i in range(0, 1):
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
-    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+    with open(f'120_pontos/rota120_{versao}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
       arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
@@ -268,12 +269,10 @@ for i in range(0, 1):
       if OTIMO == False:
          arquivo_rota.write(f'\nSolução não necessária ótima')
 
-    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
+    print(f'Arquivo de rota gerado: rota 120_{versao}.txt')
 
     print("Tempo de Execução: ", tempo)
 
-    """
-    import matplotlib.pyplot as plt
 
     xx, yy, zz = zip(*coord)
 
@@ -311,8 +310,7 @@ for i in range(0, 1):
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    #versao += 1 # Incrementa a versão
-    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
-    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}') 
-    """
     versao += 1 # Incrementa a versão
+    plt.savefig('120_pontos/gurobi120_1.png') # Salva a imagem do grafo
+    print('resolvida a versao 120_1') 
+    #versao += 1 # Incrementa a versão
