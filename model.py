@@ -6,7 +6,7 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 13 #5
+mapaqtd = 15 #5
 
 for i in range(0, 1):
   mapaqtd += 1
@@ -27,11 +27,11 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 2 # Versão do arquivo
+  versao = 0 # Versão do arquivo
 
   for k in range(0, 1):
     inicio = time.time()
-    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+2].split()]  # Lista de células a serem evitadas
+    obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
 
     obstaculos = [coord[i] for i in obstaculos_indices] # Coordenadas dos obstáculos
@@ -60,7 +60,7 @@ for i in range(0, 1):
         if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1)) and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
-        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1)) and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
+        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1) or i == (j-maiorx+1) or j == (i+maiorx-1)) and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
 
@@ -277,6 +277,7 @@ for i in range(0, 1):
 
     print("Tempo de Execução: ", tempo)
 
+    """
     import matplotlib.pyplot as plt
 
     xx, yy, zz = zip(*coord)
@@ -315,6 +316,8 @@ for i in range(0, 1):
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    versao += 1 # Incrementa a versão
+    #versao += 1 # Incrementa a versão
     plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
-    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
+    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}') 
+    """
+    versao += 1 # Incrementa a versão

@@ -467,7 +467,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 100){
+        if(qtdit - melhorou >= 1){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -477,7 +477,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "36_pontos/mapas6.txt";
+    std::string mapas = "225_pontos/mapas15.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -515,7 +515,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 9;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -523,6 +523,8 @@ int main() {
         std::cout << obstaculo << std::endl;
     }
 
+    std::vector<int> cicloHamiltoniano = {0, 114, 177, 115, 176, 101, 175, 86, 174, 85, 159, 84, 158, 98, 173, 113, 188, 127, 189, 141, 190, 155, 206, 154, 205, 153, 204, 137, 203, 136, 218, 121, 219, 106, 220, 92, 221, 93, 222, 94, 207, 95, 208, 96, 223, 97, 224, 82, 209, 83, 194, 99, 179, 100, 178, 116, 164, 131, 149, 130, 133, 129, 132, 128, 148, 112, 147, 111, 146, 110, 145, 109, 144, 108, 143, 122, 142, 138, 157, 152, 172, 151, 187, 166, 202, 181, 217, 216, 215, 214, 213, 212, 211, 210, 195, 180, 165, 150, 135, 120, 105, 90, 75, 60, 45, 46, 30, 15, 16, 32, 47, 62, 61, 31, 18, 17, 2, 3, 4, 5, 6, 7, 8, 9, 10, 26, 27, 28, 29, 43, 57, 56, 55, 40, 39, 38, 37, 23, 24, 25, 41, 42, 58, 73, 74, 89, 88, 87, 72, 71, 70, 69, 68, 67, 66, 65, 64, 49, 48, 63, 77, 76, 91, 107, 123, 196, 139, 197, 140, 182, 156, 183, 171, 184, 185, 186, 1, 59, 44, 134, 119, 118, 117, 0};
+    double total = 8376.18;
     int n = coord.size();  // número de células (pontos)
 
     std::vector<std::tuple<double, double, double>> obstaculos;
@@ -555,39 +557,6 @@ int main() {
         }
     }
 
-        // calcula altura e largura do grafo
-    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
-    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
-    std::cout << maiorx << " " << maiory << std::endl;
-
-    for (int i = 0; i < validos.size(); i++) {
-        for (int j = 0; j < validos.size(); j++) {
-            if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i-1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j+1) != obstaculos_indices.end() && (j == (i+maiorx+1) || i == (j-maiorx-1)) && (i-1)/maiorx == i/maiorx && (j+1)/maiorx == j/maiorx) {
-                c[i][j] = std::numeric_limits<double>::infinity();
-                c[j][i] = std::numeric_limits<double>::infinity();
-            } else if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i+1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j-1) != obstaculos_indices.end() && (j == (i+maiorx+1) || i == (j-maiorx-1)) && (i+1)/maiorx == i/maiorx && (j-1)/maiorx == j/maiorx) {
-                c[i][j] = std::numeric_limits<double>::infinity();
-                c[j][i] = std::numeric_limits<double>::infinity();
-            }
-        }
-    }
-
-    // calcula altura e largura do grafo
-    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
-    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
-    std::cout << maiorx << " " << maiory << std::endl;
-
-    for (int i = 0; i < validos.size(); i++) {
-        for (int j = 0; j < validos.size(); j++) {
-            if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i-1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j+1) != obstaculos_indices.end() && (i-1)/maiorx == i/maiorx && (j+1)/maiorx == j/maiorx) {
-                c[i][j] = std::numeric_limits<double>::infinity();
-                c[j][i] = std::numeric_limits<double>::infinity();
-            } else if (std::find(obstaculos_indices.begin(), obstaculos_indices.end(), i+1) != obstaculos_indices.end() && std::find(obstaculos_indices.begin(), obstaculos_indices.end(), j-1) != obstaculos_indices.end() && (i+1)/maiorx == i/maiorx && (j-1)/maiorx == j/maiorx) {
-                c[i][j] = std::numeric_limits<double>::infinity();
-                c[j][i] = std::numeric_limits<double>::infinity();
-            }
-        }
-    }
     // Matrizes que guardam a penalidade de altitude e ângulo
     std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
     std::vector<std::vector<double>> all_angles(n, std::vector<double>(n, 0.0));
@@ -673,6 +642,11 @@ int main() {
             }
         }
     }
+    
+    // calcula altura e largura do grafo
+    int maiorx = (std::get<0>(coord[coord.size()-1]) + 10)/20;
+    int maiory = (std::get<1>(coord[coord.size()-1]) + 10)/20;
+    std::cout << maiorx << " " << maiory << std::endl;
 
     bool guloso = false;
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory, guloso);
@@ -718,7 +692,7 @@ int main() {
         //}
         std::cout << "Fronteira2: ";
         for (int i : fronteira2) {
-            std::cout << i + 1 << " ";
+            std::cout << i << ", ";
         }
 
         fronteira = fronteira2;
@@ -732,15 +706,15 @@ int main() {
     //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
     std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
-    //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira, q, altitudes, obstaculos_indices.size());
+    //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
-
+    std::cout << "chegou no final" << std::endl;
     // Calcular o valor total do ciclo
-    double total = 0;
-    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
-        total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
-    }
+    //double total = 0;
+   //for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
+    //    total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
+    //}
 
     std::cout << "Total: " << total << std::endl;
 

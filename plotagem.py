@@ -106,6 +106,4 @@ for i in range(len(x_ordered) - 1):
 
 plt.title(f"Custo Total do Ciclo: {custo_total:.2f}")
 
-plt.savefig("grasp64 ")
-
-plt.show()
+plt.savefig("225_pontos/Gurobi_225_1.png")
