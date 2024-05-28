@@ -1,183 +1,187 @@
-Caminho de 0 para 114: 0 16 32 48 49 65 66 82 98 114 
-Caminho de 114 para 177: 114 129 144 159 175 176 177 
-Caminho de 177 para 115: 177 176 175 159 145 130 115 
-Caminho de 115 para 176: 115 129 144 159 175 176 
-Caminho de 176 para 101: 176 175 159 145 131 116 101 
-Caminho de 101 para 175: 101 115 129 144 159 175 
-Caminho de 175 para 86: 175 159 145 131 116 101 86 
-Caminho de 86 para 174: 86 100 114 129 144 159 174 
-Caminho de 174 para 85: 174 159 145 130 115 100 85 
-Caminho de 85 para 159: 85 99 114 129 144 159 
-Caminho de 159 para 84: 159 144 129 114 99 84 
-Caminho de 84 para 158: 84 98 113 128 143 158 
-Caminho de 158 para 98: 158 143 128 113 98 
-Caminho de 98 para 173: 98 113 128 143 158 173 
-Caminho de 173 para 113: 173 158 143 128 113 
-Caminho de 113 para 188: 113 128 143 158 173 188 
-Caminho de 188 para 127: 188 172 157 142 127 
-Caminho de 127 para 189: 127 143 159 174 189 
-Caminho de 189 para 141: 189 173 157 141 
-Caminho de 141 para 190: 141 142 158 174 190 
-Caminho de 190 para 155: 190 189 188 187 171 155 
-Caminho de 155 para 206: 155 156 157 158 174 190 206 
-Caminho de 206 para 154: 206 205 204 203 187 171 155 154 
-Caminho de 154 para 205: 154 155 156 157 173 189 205 
-Caminho de 205 para 153: 205 204 203 187 171 155 154 153 
-Caminho de 153 para 204: 153 154 155 156 172 188 204 
-Caminho de 204 para 137: 204 203 187 171 155 154 153 137 
-Caminho de 137 para 203: 137 138 139 155 171 187 203 
-Caminho de 203 para 136: 203 187 171 155 154 153 152 136 
-Caminho de 136 para 218: 136 137 138 139 155 171 187 203 218 
-Caminho de 218 para 121: 218 202 186 171 155 154 153 137 121 
-Caminho de 121 para 219: 121 122 123 139 155 171 187 203 219 
-Caminho de 219 para 106: 219 203 187 171 155 154 138 122 106 
-Caminho de 106 para 220: 106 107 123 139 140 156 172 188 204 220 
-Caminho de 220 para 92: 220 219 203 187 171 155 139 123 107 92 
-Caminho de 92 para 221: 92 108 123 139 140 141 157 173 189 205 221 
-Caminho de 221 para 93: 221 220 219 203 187 171 155 139 123 108 93 
-Caminho de 93 para 222: 93 94 95 111 127 143 159 175 190 206 222 
-Caminho de 222 para 94: 222 206 190 174 158 142 127 111 110 94 
-Caminho de 94 para 207: 94 95 111 127 143 159 175 190 206 207 
-Caminho de 207 para 95: 207 206 190 174 158 142 127 111 95 
-Caminho de 95 para 208: 95 111 127 143 159 175 190 206 207 208 
-Caminho de 208 para 96: 208 207 206 190 174 158 142 127 111 96 
-Caminho de 96 para 223: 96 112 128 144 159 175 190 206 207 223 
-Caminho de 223 para 97: 223 222 206 190 174 158 142 127 112 97 
-Caminho de 97 para 224: 97 113 129 144 159 175 190 206 207 208 224 
-Caminho de 224 para 82: 224 223 222 206 190 174 158 142 127 112 97 82 
-Caminho de 82 para 209: 82 83 84 100 116 132 148 164 179 194 209 
-Caminho de 209 para 83: 209 194 179 164 148 147 131 115 99 83 
-Caminho de 83 para 194: 83 84 100 116 132 148 164 179 194 
-Caminho de 194 para 99: 194 179 164 148 147 131 115 99 
-Caminho de 99 para 179: 99 100 116 132 148 164 179 
-Caminho de 179 para 100: 179 164 148 132 116 100 
-Caminho de 100 para 178: 100 116 132 148 164 178 
-Caminho de 178 para 116: 178 164 148 132 116 
-Caminho de 116 para 164: 116 132 148 164 
-Caminho de 164 para 131: 164 148 147 131 
-Caminho de 131 para 149: 131 132 133 149 
-Caminho de 149 para 130: 149 148 147 146 130 
-Caminho de 130 para 133: 130 131 132 133 
-Caminho de 133 para 129: 133 132 131 130 129 
-Caminho de 129 para 132: 129 130 131 132 
-Caminho de 132 para 128: 132 131 130 129 128 
-Caminho de 128 para 148: 128 129 130 131 132 148 
-Caminho de 148 para 112: 148 147 146 145 144 128 112 
-Caminho de 112 para 147: 112 113 114 115 131 147 
-Caminho de 147 para 111: 147 146 145 144 143 127 111 
-Caminho de 111 para 146: 111 112 113 114 130 146 
-Caminho de 146 para 110: 146 145 144 143 127 111 110 
-Caminho de 110 para 145: 110 111 112 113 129 145 
-Caminho de 145 para 109: 145 144 143 127 111 110 109 
-Caminho de 109 para 144: 109 110 111 112 128 144 
-Caminho de 144 para 108: 144 143 127 111 110 109 108 
-Caminho de 108 para 143: 108 109 110 111 127 143 
-Caminho de 143 para 122: 143 142 141 140 139 138 122 
-Caminho de 122 para 142: 122 123 139 140 141 142 
-Caminho de 142 para 138: 142 141 140 139 138 
-Caminho de 138 para 157: 138 139 140 141 157 
-Caminho de 157 para 152: 157 156 155 154 153 152 
-Caminho de 152 para 172: 152 153 154 155 156 172 
-Caminho de 172 para 151: 172 171 155 154 153 152 151 
-Caminho de 151 para 187: 151 152 153 154 155 171 187 
-Caminho de 187 para 166: 187 186 185 184 183 182 166 
-Caminho de 166 para 202: 166 182 183 184 185 186 202 
-Caminho de 202 para 181: 202 186 185 184 183 182 181 
-Caminho de 181 para 217: 181 197 213 214 215 216 217 
-Caminho de 217 para 216: 217 216 
-Caminho de 216 para 215: 216 215 
-Caminho de 215 para 214: 215 214 
-Caminho de 214 para 213: 214 213 
-Caminho de 213 para 212: 213 212 
-Caminho de 212 para 211: 212 211 
-Caminho de 211 para 210: 211 210 
-Caminho de 210 para 195: 210 195 
-Caminho de 195 para 180: 195 180 
-Caminho de 180 para 165: 180 165 
-Caminho de 165 para 150: 165 150 
-Caminho de 150 para 135: 150 135 
-Caminho de 135 para 120: 135 120 
-Caminho de 120 para 105: 120 105 
-Caminho de 105 para 90: 105 90 
-Caminho de 90 para 75: 90 75 
-Caminho de 75 para 60: 75 60 
-Caminho de 60 para 45: 60 45 
-Caminho de 45 para 46: 45 46 
-Caminho de 46 para 30: 46 30 
-Caminho de 30 para 15: 30 15 
-Caminho de 15 para 16: 15 16 
-Caminho de 16 para 32: 16 32 
-Caminho de 32 para 47: 32 47 
-Caminho de 47 para 62: 47 62 
-Caminho de 62 para 61: 62 61 
-Caminho de 61 para 31: 61 46 31 
-Caminho de 31 para 18: 31 32 18 
-Caminho de 18 para 17: 18 17 
-Caminho de 17 para 2: 17 2 
+Caminho de 0 para 1: 0 1 
+Caminho de 1 para 2: 1 2 
 Caminho de 2 para 3: 2 3 
-Caminho de 3 para 4: 3 4 
+Caminho de 3 para 18: 3 18 
+Caminho de 18 para 19: 18 19 
+Caminho de 19 para 20: 19 20 
+Caminho de 20 para 4: 20 4 
 Caminho de 4 para 5: 4 5 
 Caminho de 5 para 6: 5 6 
 Caminho de 6 para 7: 6 7 
 Caminho de 7 para 8: 7 8 
 Caminho de 8 para 9: 8 9 
-Caminho de 9 para 10: 9 10 
-Caminho de 10 para 26: 10 26 
+Caminho de 9 para 25: 9 25 
+Caminho de 25 para 41: 25 41 
+Caminho de 41 para 57: 41 57 
+Caminho de 57 para 73: 57 73 
+Caminho de 73 para 72: 73 72 
+Caminho de 72 para 56: 72 56 
+Caminho de 56 para 40: 56 40 
+Caminho de 40 para 39: 40 39 
+Caminho de 39 para 54: 39 54 
+Caminho de 54 para 38: 54 38 
+Caminho de 38 para 22: 38 22 
+Caminho de 22 para 23: 22 23 
+Caminho de 23 para 24: 23 24 
+Caminho de 24 para 26: 24 25 26 
 Caminho de 26 para 27: 26 27 
 Caminho de 27 para 28: 27 28 
 Caminho de 28 para 29: 28 29 
-Caminho de 29 para 43: 29 43 
-Caminho de 43 para 57: 43 57 
-Caminho de 57 para 56: 57 56 
-Caminho de 56 para 55: 56 55 
-Caminho de 55 para 40: 55 40 
-Caminho de 40 para 39: 40 39 
-Caminho de 39 para 38: 39 38 
-Caminho de 38 para 37: 38 37 
-Caminho de 37 para 23: 37 23 
-Caminho de 23 para 24: 23 24 
-Caminho de 24 para 25: 24 25 
-Caminho de 25 para 41: 25 41 
-Caminho de 41 para 42: 41 42 
-Caminho de 42 para 58: 42 58 
-Caminho de 58 para 73: 58 73 
-Caminho de 73 para 74: 73 74 
-Caminho de 74 para 89: 74 89 
-Caminho de 89 para 88: 89 88 
-Caminho de 88 para 87: 88 87 
-Caminho de 87 para 72: 87 72 
-Caminho de 72 para 71: 72 71 
-Caminho de 71 para 70: 71 70 
-Caminho de 70 para 69: 70 69 
-Caminho de 69 para 68: 69 68 
-Caminho de 68 para 67: 68 67 
-Caminho de 67 para 66: 67 66 
-Caminho de 66 para 65: 66 65 
-Caminho de 65 para 64: 65 64 
-Caminho de 64 para 49: 64 49 
-Caminho de 49 para 48: 49 48 
-Caminho de 48 para 63: 48 63 
-Caminho de 63 para 77: 63 77 
-Caminho de 77 para 76: 77 76 
-Caminho de 76 para 91: 76 91 
+Caminho de 29 para 30: 29 30 
+Caminho de 30 para 47: 30 47 
+Caminho de 47 para 63: 47 63 
+Caminho de 63 para 79: 63 79 
+Caminho de 79 para 95: 79 95 
+Caminho de 95 para 111: 95 111 
+Caminho de 111 para 127: 111 127 
+Caminho de 127 para 110: 127 110 
+Caminho de 110 para 76: 110 93 76 
+Caminho de 76 para 60: 76 60 
+Caminho de 60 para 59: 60 59 
+Caminho de 59 para 75: 59 75 
+Caminho de 75 para 91: 75 91 
 Caminho de 91 para 107: 91 107 
-Caminho de 107 para 123: 107 123 
-Caminho de 123 para 196: 123 137 151 166 181 196 
-Caminho de 196 para 139: 196 181 166 152 153 139 
-Caminho de 139 para 197: 139 138 152 166 182 197 
-Caminho de 197 para 140: 197 183 184 185 171 155 140 
-Caminho de 140 para 182: 140 139 138 152 166 182 
-Caminho de 182 para 156: 182 183 184 185 171 156 
-Caminho de 156 para 183: 156 171 185 184 183 
-Caminho de 183 para 171: 183 184 185 171 
-Caminho de 171 para 184: 171 185 184 
-Caminho de 184 para 185: 184 185 
-Caminho de 185 para 186: 185 186 
-Caminho de 186 para 1: 186 171 155 139 123 107 91 76 61 46 31 16 1 
-Caminho de 1 para 59: 1 2 3 4 5 6 7 8 9 10 26 27 43 59 
-Caminho de 59 para 44: 59 44 
-Caminho de 44 para 134: 44 58 72 86 101 117 118 134 
-Caminho de 134 para 119: 134 119 
-Caminho de 119 para 118: 119 118 
-Caminho de 118 para 117: 118 117 
-Caminho de 117 para 0: 117 116 115 114 98 82 66 65 64 48 32 16 0 
+Caminho de 107 para 109: 107 108 109 
+Caminho de 109 para 126: 109 126 
+Caminho de 126 para 142: 126 142 
+Caminho de 142 para 158: 142 158 
+Caminho de 158 para 159: 158 159 
+Caminho de 159 para 175: 159 175 
+Caminho de 175 para 191: 175 191 
+Caminho de 191 para 190: 191 190 
+Caminho de 190 para 189: 190 189 
+Caminho de 189 para 188: 189 188 
+Caminho de 188 para 218: 188 203 218 
+Caminho de 218 para 202: 218 202 
+Caminho de 202 para 186: 202 186 
+Caminho de 186 para 170: 186 170 
+Caminho de 170 para 154: 170 154 
+Caminho de 154 para 138: 154 138 
+Caminho de 138 para 121: 138 121 
+Caminho de 121 para 105: 121 105 
+Caminho de 105 para 104: 105 104 
+Caminho de 104 para 103: 104 103 
+Caminho de 103 para 120: 103 120 
+Caminho de 120 para 136: 120 136 
+Caminho de 136 para 135: 136 135 
+Caminho de 135 para 151: 135 151 
+Caminho de 151 para 167: 151 167 
+Caminho de 167 para 166: 167 166 
+Caminho de 166 para 165: 166 165 
+Caminho de 165 para 149: 165 149 
+Caminho de 149 para 133: 149 133 
+Caminho de 133 para 118: 133 118 
+Caminho de 118 para 102: 118 102 
+Caminho de 102 para 86: 102 86 
+Caminho de 86 para 84: 86 85 84 
+Caminho de 84 para 83: 84 83 
+Caminho de 83 para 100: 83 100 
+Caminho de 100 para 85: 100 85 
+Caminho de 85 para 69: 85 69 
+Caminho de 69 para 53: 69 53 
+Caminho de 53 para 101: 53 69 85 101 
+Caminho de 101 para 117: 101 117 
+Caminho de 117 para 132: 117 132 
+Caminho de 132 para 148: 132 148 
+Caminho de 148 para 164: 148 164 
+Caminho de 164 para 180: 164 180 
+Caminho de 180 para 181: 180 181 
+Caminho de 181 para 182: 181 182 
+Caminho de 182 para 183: 182 183 
+Caminho de 183 para 184: 183 184 
+Caminho de 184 para 168: 184 168 
+Caminho de 168 para 169: 168 169 
+Caminho de 169 para 171: 169 170 171 
+Caminho de 171 para 187: 171 187 
+Caminho de 187 para 203: 187 203 
+Caminho de 203 para 219: 203 219 
+Caminho de 219 para 235: 219 235 
+Caminho de 235 para 236: 235 236 
+Caminho de 236 para 220: 236 220 
+Caminho de 220 para 204: 220 204 
+Caminho de 204 para 172: 204 188 172 
+Caminho de 172 para 156: 172 156 
+Caminho de 156 para 139: 156 139 
+Caminho de 139 para 122: 139 122 
+Caminho de 122 para 106: 122 106 
+Caminho de 106 para 90: 106 90 
+Caminho de 90 para 74: 90 74 
+Caminho de 74 para 58: 74 58 
+Caminho de 58 para 42: 58 42 
+Caminho de 42 para 43: 42 43 
+Caminho de 43 para 44: 43 44 
+Caminho de 44 para 45: 44 45 
+Caminho de 45 para 46: 45 46 
+Caminho de 46 para 62: 46 62 
+Caminho de 62 para 61: 62 61 
+Caminho de 61 para 77: 61 77 
+Caminho de 77 para 93: 77 93 
+Caminho de 93 para 108: 93 108 
+Caminho de 108 para 124: 108 124 
+Caminho de 124 para 140: 124 140 
+Caminho de 140 para 157: 140 157 
+Caminho de 157 para 173: 157 173 
+Caminho de 173 para 205: 173 189 205 
+Caminho de 205 para 221: 205 221 
+Caminho de 221 para 237: 221 237 
+Caminho de 237 para 254: 237 254 
+Caminho de 254 para 255: 254 255 
+Caminho de 255 para 253: 255 254 253 
+Caminho de 253 para 252: 253 252 
+Caminho de 252 para 251: 252 251 
+Caminho de 251 para 250: 251 250 
+Caminho de 250 para 249: 250 249 
+Caminho de 249 para 248: 249 248 
+Caminho de 248 para 231: 248 231 
+Caminho de 231 para 230: 231 230 
+Caminho de 230 para 229: 230 229 
+Caminho de 229 para 228: 229 228 
+Caminho de 228 para 226: 228 227 226 
+Caminho de 226 para 225: 226 225 
+Caminho de 225 para 224: 225 224 
+Caminho de 224 para 240: 224 240 
+Caminho de 240 para 241: 240 241 
+Caminho de 241 para 242: 241 242 
+Caminho de 242 para 243: 242 243 
+Caminho de 243 para 244: 243 244 
+Caminho de 244 para 227: 244 227 
+Caminho de 227 para 210: 227 210 
+Caminho de 210 para 211: 210 211 
+Caminho de 211 para 212: 211 212 
+Caminho de 212 para 213: 212 213 
+Caminho de 213 para 214: 213 214 
+Caminho de 214 para 215: 214 215 
+Caminho de 215 para 232: 215 232 
+Caminho de 232 para 233: 232 233 
+Caminho de 233 para 216: 233 216 
+Caminho de 216 para 199: 216 199 
+Caminho de 199 para 198: 199 198 
+Caminho de 198 para 197: 198 197 
+Caminho de 197 para 196: 197 196 
+Caminho de 196 para 195: 196 195 
+Caminho de 195 para 179: 195 179 
+Caminho de 179 para 163: 179 163 
+Caminho de 163 para 147: 163 147 
+Caminho de 147 para 131: 147 131 
+Caminho de 131 para 115: 131 115 
+Caminho de 115 para 114: 115 114 
+Caminho de 114 para 113: 114 113 
+Caminho de 113 para 129: 113 129 
+Caminho de 129 para 130: 129 130 
+Caminho de 130 para 146: 130 146 
+Caminho de 146 para 162: 146 162 
+Caminho de 162 para 145: 162 145 
+Caminho de 145 para 144: 145 144 
+Caminho de 144 para 128: 144 128 
+Caminho de 128 para 112: 128 112 
+Caminho de 112 para 97: 112 97 
+Caminho de 97 para 98: 97 98 
+Caminho de 98 para 82: 98 82 
+Caminho de 82 para 66: 82 66 
+Caminho de 66 para 49: 66 49 
+Caminho de 49 para 65: 49 65 
+Caminho de 65 para 64: 65 64 
+Caminho de 64 para 48: 64 48 
+Caminho de 48 para 32: 48 32 
+Caminho de 32 para 16: 32 16 
+Caminho de 16 para 0: 16 0 
