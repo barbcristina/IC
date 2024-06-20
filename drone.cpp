@@ -486,7 +486,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "256_pontos/mapas16.txt";
+    std::string mapas = "121_pontos/mapas11.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -524,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 1;
+    int nObs = 4;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -668,6 +668,18 @@ int main() {
         }
     }
 
+    
+    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 14, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 16, 17, 18, 19, 20, 40, 39, 38, 37, 36, 35, 34, 45, 56, 57,58,59,60,61,62,63,64,65,76,87,86,85,84,83,94,93,82,71,72,73,74,75,51,50,49,48,47,46,70,81,92,91,90, 89, 113, 114, 115, 116, 117, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
+    double total = 0;
+    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
+        total += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
+        std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
+    }
+
+    std::cout << "Total: " << total << std::endl;
+
+    return 0;
+
     bool guloso = false;
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory, guloso);
     std::cout << "Fronteira: ";
@@ -724,13 +736,12 @@ int main() {
     // Recalcula a rota do gurobi
     //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
-    std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
+    //std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
-    std::vector<int> cicloHamiltoniano = melhorRota;
+    //std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
     std::cout << "chegou no final" << std::endl;
     // Calcular o valor total do ciclo
-    double total = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
     }
