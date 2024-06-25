@@ -6,7 +6,7 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 15 #5
+mapaqtd = 8 #5
 
 for i in range(0, 1):
   mapaqtd += 1
@@ -29,7 +29,7 @@ for i in range(0, 1):
 
   versao = 0 # Versão do arquivo
 
-  for k in range(0, 1):
+  for k in range(0, 2):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -57,10 +57,10 @@ for i in range(0, 1):
 
     for i in validos:
       for j in validos:
-        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1)) and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
+        if i-1 in obstaculos_indices and j+1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1) or j == (i+maiorx-1) or i == (j-maiorx+1)) and (i-1)//maiorx == i//maiorx and (j+1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
-        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1) or i == (j-maiorx+1) or j == (i+maiorx-1)) and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
+        elif i+1 in obstaculos_indices and j-1 in obstaculos_indices and (j == (i+maiorx+1) or i == (j-maiorx-1) or j == (i+maiorx-1) or i == (j-maiorx+1)) and (i+1)//maiorx == i//maiorx and (j-1)//maiorx == j//maiorx:
           c[i][j] = float('inf')
           c[j][i] = float('inf')
 
@@ -91,7 +91,7 @@ for i in range(0, 1):
         div = (r + s - t)/math.sqrt(4*r*s)
         ang = math.pi - math.acos(div)
 
-        angulo = (0.2 * (180/math.pi) * ang)
+        angulo = (0.4 * (180/math.pi) * ang)
         #print("angulo entre: ", i, " ", j, " ",k, " = ", angulo)
 
         return angulo
@@ -105,7 +105,7 @@ for i in range(0, 1):
             return 0
         else:
             # k = 1 enquanto não for decidido a penalidade
-            h = (2 * ((coord_2[2] - coord_1[2])) / dist)
+            h = (0 * ((coord_2[2] - coord_1[2])))
             h = math.sqrt(h ** 2)
 
             return h
@@ -179,13 +179,10 @@ for i in range(0, 1):
       for j in validos:
         for k in validos:
           if (c[i][j] == float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
-            print("primeiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
-            print("tamanho matrix: ", matrix[j][k])
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][len(matrix[i][j])-2]][j][matrix[j][k][1]])
           elif (c[i][j] == float('inf') and c[j][k] != float('inf')) and i!=j and j!=k:
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k]
           elif (c[i][j] != float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
-            print("terceiro if q[",i,"][",j,"][",k,"] = ", q[i][j][k])
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j][len(matrix[i][j])-2]]
           
 
@@ -226,7 +223,7 @@ for i in range(0, 1):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 7200
+    modelo.Params.timeLimit = 3600 # Limite de tempo de execução
     modelo.optimize()
 
     OTIMO = True
@@ -264,7 +261,7 @@ for i in range(0, 1):
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
-    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}_kh0_ka04.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
       arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
@@ -273,11 +270,11 @@ for i in range(0, 1):
       if OTIMO == False:
          arquivo_rota.write(f'\nSolução não necessária ótima')
 
-    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
+    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}_kh0_ka04.txt')
 
     print("Tempo de Execução: ", tempo)
 
-    """
+    
     import matplotlib.pyplot as plt
 
     xx, yy, zz = zip(*coord)
@@ -316,8 +313,7 @@ for i in range(0, 1):
     plt.plot(x_ordered, y_ordered, color="green") #plota arestas
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
-    #versao += 1 # Incrementa a versão
-    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
-    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}') 
-    """
     versao += 1 # Incrementa a versão
+    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}_kh0_ka04.png') # Salva a imagem do grafo
+    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}_kh0_ka04')
+    #versao += 1 # Incrementa a versão

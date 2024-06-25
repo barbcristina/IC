@@ -476,7 +476,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 100){
+        if(qtdit - melhorou >= 1){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -524,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 4;
+    int nObs = 10;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -669,13 +669,27 @@ int main() {
     }
 
     
-    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 14, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 16, 17, 18, 19, 20, 40, 39, 38, 37, 36, 35, 34, 45, 56, 57,58,59,60,61,62,63,64,65,76,87,86,85,84,83,94,93,82,71,72,73,74,75,51,50,49,48,47,46,70,81,92,91,90, 89, 113, 114, 115, 116, 117, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
+    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 34, 35, 47, 46, 45, 56, 67, 68, 69, 70, 71, 72, 73, 74, 75, 64, 63, 62, 61, 60, 48, 49, 50, 51, 52, 53, 54, 65, 76, 87, 98, 97, 96, 95, 94, 83, 82, 81, 80, 79, 78, 89, 90, 91, 92, 93, 104, 105, 106, 107, 108, 109, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
     double total = 0;
+    int qtd = 0;
+    int quarentacinco = 0, noventa = 0, centotrintacino = 0, centooitenta = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
+        if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 9)
+            quarentacinco++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 18)
+            noventa++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 27)
+            centotrintacino++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 36)
+            centooitenta++;
         total += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
         std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
     }
 
+    std::cout << "Qtd de penalizações de angulo 45: " << quarentacinco << std::endl;
+    std::cout << "Qtd de penalizações de angulo 90: " << noventa << std::endl;
+    std::cout << "Qtd de penalizações de angulo 135: " << centotrintacino << std::endl;
+    std::cout << "Qtd de penalizações de angulo 180: " << centooitenta << std::endl;
     std::cout << "Total: " << total << std::endl;
 
     return 0;
