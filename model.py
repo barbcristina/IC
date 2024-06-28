@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 7 #5
+mapaqtd = 5
 
-for i in range(0, 1):
+for i in range(0, 12):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -29,7 +29,7 @@ for i in range(0, 1):
 
   versao = 0 # Versão do arquivo
 
-  for k in range(0, 3):
+  for k in range(0, qtdobs):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -91,7 +91,7 @@ for i in range(0, 1):
         div = (r + s - t)/math.sqrt(4*r*s)
         ang = math.pi - math.acos(div)
 
-        angulo = (0.5 * (180/math.pi) * ang)
+        angulo = (0.2 * (180/math.pi) * ang)
         #print("angulo entre: ", i, " ", j, " ",k, " = ", angulo)
 
         return angulo
@@ -105,7 +105,7 @@ for i in range(0, 1):
             return 0
         else:
             # k = 1 enquanto não for decidido a penalidade
-            h = (0 * ((coord_2[2] - coord_1[2])))
+            h = (1.5 * ((coord_2[2] - coord_1[2])))
             h = math.sqrt(h ** 2)
 
             return h
@@ -261,7 +261,7 @@ for i in range(0, 1):
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
         
-    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}_kh0_ka005.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
+    with open(f'{mapaqtd*mapaqtd}_pontos/rota{mapaqtd*mapaqtd}_{versao+1}.txt', 'w') as arquivo_rota: # Salva a rota em um arquivo
       for city in route:
         arquivo_rota.write(f'{city-1}, ')
       arquivo_rota.write(f'\nFuncao Objetivo: {modelo.objVal:.2f}')
@@ -270,7 +270,7 @@ for i in range(0, 1):
       if OTIMO == False:
          arquivo_rota.write(f'\nSolução não necessária ótima')
 
-    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}_kh0_ka005.txt')
+    print(f'Arquivo de rota gerado: rota{mapaqtd*mapaqtd}_{versao+1}.txt')
 
     print("Tempo de Execução: ", tempo)
 
@@ -314,6 +314,6 @@ for i in range(0, 1):
 
     plt.title(f"Cost = {modelo.objVal:.2f}")
     versao += 1 # Incrementa a versão
-    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}_kh0_ka005.png') # Salva a imagem do grafo
-    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}_kh0_ka005')
+    plt.savefig(f'{mapaqtd*mapaqtd}_pontos/gurobi{mapaqtd*mapaqtd}_{versao}.png') # Salva a imagem do grafo
+    print(f'resolvida a versao {mapaqtd*mapaqtd}_{versao}')
     #versao += 1 # Incrementa a versão
