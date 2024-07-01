@@ -151,7 +151,7 @@ int encontrarProximoPonto(int anterior, int atual, const std::vector<std::vector
 
 
 // Função para encontrar o ciclo hamiltoniano usando KNN
-std::vector<int> encontrarCicloHamiltoniano(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
+std::vector<int> KNN2INI(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
     int n = distancias.size();
     std::vector<bool> visitado(n, false);
     std::vector<int> cicloHamiltoniano;
@@ -203,6 +203,38 @@ std::vector<int> encontrarCicloHamiltoniano(int tam, const std::vector<std::vect
     return cicloHamiltoniano;
 }
 
+// Função para encontrar o ciclo hamiltoniano usando KNN
+std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
+    int n = distancias.size();
+    std::vector<bool> visitado(n, false);
+    std::vector<int> cicloHamiltoniano;
+
+    int pontoAtual = 0;
+    int pontoant = 0;
+    int pontoInicial = pontoAtual;
+    int valorTotalAcumulado = 0;
+
+    cicloHamiltoniano.push_back(pontoAtual);
+    visitado[pontoAtual] = true;
+
+    for (int i = 1; i < n; i++) {
+        int proximoPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
+
+        if (proximoPonto == -1) {
+            break;
+        }
+
+        valorTotalAcumulado += distancias[pontoAtual][proximoPonto];
+        cicloHamiltoniano.push_back(proximoPonto);
+        visitado[proximoPonto] = true;
+        pontoant = pontoAtual;
+        pontoAtual = proximoPonto;
+    }
+    //cicloHamiltoniano.push_back(pontoInicial);
+
+    return cicloHamiltoniano;
+}
+
 std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q,  std::vector<std::vector<double>>& altitudes, int obsSize){
     float lim = 2000000;
     std::vector<int> S;
@@ -215,7 +247,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 
     //std::cout << "comecando o grasp " << std::endl;
     while(melhora){
-        S = encontrarCicloHamiltoniano(tam, distancias, q, obsSize);
+        S = KNN2INI(tam, distancias, q, obsSize);
         //std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
@@ -234,7 +266,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 100){
+        if(qtdit - melhorou >= 1){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
