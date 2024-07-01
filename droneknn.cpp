@@ -20,7 +20,7 @@ double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double
     if (i == j) {
         return 0;
     } else {
-        double h = 2 * ((std::get<2>(coord_2) - std::get<2>(coord_1)) / dist);
+        double h = 1.5 * ((std::get<2>(coord_2) - std::get<2>(coord_1)));
         h = std::pow(h,2);
         h = std::sqrt(h);
 
@@ -224,7 +224,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
             break;
         }
 
-        valorTotalAcumulado += distancias[pontoAtual][proximoPonto];
+        valorTotalAcumulado += (distancias[pontoAtual][proximoPonto] + q[pontoant][pontoAtual][proximoPonto]);
         cicloHamiltoniano.push_back(proximoPonto);
         visitado[proximoPonto] = true;
         pontoant = pontoAtual;
