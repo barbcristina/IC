@@ -157,7 +157,7 @@ std::vector<int> encontrarCicloHamiltoniano(int tam, const std::vector<std::vect
     std::vector<int> cicloHamiltoniano;
 
     int pontoAtual = 0;
-    int pontoat = 168;
+    int pontoat = tam;
     int pontoant = 0;
     int pontoantant = tam;
     int pontoini = pontoat;
@@ -234,7 +234,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 1){
+        if(qtdit - melhorou >= 100){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -244,7 +244,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "121_pontos/mapas11.txt";
+    std::string mapas = "81_pontos/mapas9.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -426,28 +426,7 @@ int main() {
         }
     }
     
-    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 34, 35, 47, 46, 45, 56, 67, 68, 69, 70, 71, 72, 73, 74, 75, 64, 63, 62, 61, 60, 48, 49, 50, 51, 52, 53, 54, 65, 76, 87, 98, 97, 96, 95, 94, 83, 82, 81, 80, 79, 78, 89, 90, 91, 92, 93, 104, 105, 106, 107, 108, 109, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
-    double total = 0;
-    int qtd = 0;
-    int quarentacinco = 0, noventa = 0, centotrintacino = 0, centooitenta = 0;
-    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
-        if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 9)
-            quarentacinco++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 18)
-            noventa++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 27)
-            centotrintacino++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 36)
-            centooitenta++;
-        total += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
-        std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
-    }
-
-    std::cout << "Qtd de penalizações de angulo 45: " << quarentacinco << std::endl;
-    std::cout << "Qtd de penalizações de angulo 90: " << noventa << std::endl;
-    std::cout << "Qtd de penalizações de angulo 135: " << centotrintacino << std::endl;
-    std::cout << "Qtd de penalizações de angulo 180: " << centooitenta << std::endl;
-    std::cout << "Total: " << total << std::endl;
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 34, 35, 47, 46, 45, 56, 67, 68, 69, 70, 71, 72, 73, 74, 75, 64, 63, 62, 61, 60, 48, 49, 50, 51, 52, 53, 54, 65, 76, 87, 98, 97, 96, 95, 94, 83, 82, 81, 80, 79, 78, 89, 90, 91, 92, 93, 104, 105, 106, 107, 108, 109, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
 
     //return 0;
 
@@ -461,11 +440,34 @@ int main() {
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
     //std::cout << "chegou no final" << std::endl;
     // Calcular o valor total do ciclo
+    double total = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
     }
 
     std::cout << "Total: " << total << std::endl;
+
+    double totalang = 0;
+    int qtd = 0;
+    int quarentacinco = 0, noventa = 0, centotrintacino = 0, centooitenta = 0;
+    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
+        if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 9)
+            quarentacinco++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 18)
+            noventa++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 27)
+            centotrintacino++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 36)
+            centooitenta++;
+        totalang += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
+        //std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
+    }
+
+    std::cout << "Qtd de penalizações de angulo 45: " << quarentacinco << std::endl;
+    std::cout << "Qtd de penalizações de angulo 90: " << noventa << std::endl;
+    std::cout << "Qtd de penalizações de angulo 135: " << centotrintacino << std::endl;
+    std::cout << "Qtd de penalizações de angulo 180: " << centooitenta << std::endl;
+    std::cout << "Total: " << totalang << std::endl;
 
     auto end_time = std::chrono::steady_clock::now();
     // Calcular tempo transcorrido
