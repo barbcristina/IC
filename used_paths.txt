@@ -45,27 +45,27 @@ Caminho de 36 para 37: 36 37
 Caminho de 37 para 38: 37 38 
 Caminho de 38 para 39: 38 39 
 Caminho de 39 para 40: 39 40 
-Caminho de 40 para 67: 40 49 58 67 
+Caminho de 40 para 58: 40 49 58 
+Caminho de 58 para 67: 58 67 
 Caminho de 67 para 68: 67 68 
 Caminho de 68 para 69: 68 69 
 Caminho de 69 para 70: 69 70 
-Caminho de 70 para 71: 70 71 
-Caminho de 71 para 79: 71 79 
-Caminho de 79 para 78: 79 78 
-Caminho de 78 para 77: 78 77 
-Caminho de 77 para 76: 77 76 
-Caminho de 76 para 75: 76 75 
-Caminho de 75 para 74: 75 74 
-Caminho de 74 para 73: 74 73 
-Caminho de 73 para 72: 73 72 
-Caminho de 72 para 63: 72 63 
-Caminho de 63 para 54: 63 54 
-Caminho de 54 para 55: 54 55 
-Caminho de 55 para 56: 55 56 
-Caminho de 56 para 57: 56 57 
-Caminho de 57 para 58: 57 58 
-Caminho de 58 para 59: 58 59 
-Caminho de 59 para 60: 59 60 
-Caminho de 60 para 61: 60 61 
-Caminho de 61 para 62: 61 62 
-Caminho de 62 para 80: 62 71 80 
+Caminho de 70 para 62: 70 62 
+Caminho de 62 para 61: 62 61 
+Caminho de 61 para 60: 61 60 
+Caminho de 60 para 59: 60 59 
+Caminho de 59 para 57: 59 58 57 
+Caminho de 57 para 56: 57 56 
+Caminho de 56 para 55: 56 55 
+Caminho de 55 para 54: 55 54 
+Caminho de 54 para 63: 54 63 
+Caminho de 63 para 72: 63 72 
+Caminho de 72 para 73: 72 73 
+Caminho de 73 para 74: 73 74 
+Caminho de 74 para 75: 74 75 
+Caminho de 75 para 76: 75 76 
+Caminho de 76 para 77: 76 77 
+Caminho de 77 para 78: 77 78 
+Caminho de 78 para 79: 78 79 
+Caminho de 79 para 80: 79 80 
+Caminho de 80 para 71: 80 71 

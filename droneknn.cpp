@@ -247,7 +247,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 
     //std::cout << "comecando o grasp " << std::endl;
     while(melhora){
-        S = KNN2INI(tam, distancias, q, obsSize);
+        S = KNN(tam, distancias, q, obsSize);
         //std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
