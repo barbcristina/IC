@@ -322,7 +322,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "100_pontos/mapas10.txt";
+    std::string mapas = "144_pontos/mapas12.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
