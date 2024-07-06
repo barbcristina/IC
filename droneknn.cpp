@@ -322,7 +322,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "49_pontos/mapas7.txt";
+    std::string mapas = "100_pontos/mapas10.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -360,7 +360,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 1;
+    int nObs = 10;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
