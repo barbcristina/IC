@@ -106,4 +106,4 @@ for i in range(len(x_ordered) - 1):
 
 plt.title(f"Custo Total do Ciclo: {custo_total:.2f}")
 
-plt.savefig("36_pontos/Grasp_36_1.png")
+plt.savefig("49_pontos/KNN_49_10.png")

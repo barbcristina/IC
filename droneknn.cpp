@@ -168,7 +168,7 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
 
 // Função para encontrar o ciclo hamiltoniano usando KNN
 std::vector<int> KNN2INI(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
-    int n = distancias.size();
+    int n = distancias.size() - obsSize;
     std::vector<bool> visitado(n, false);
     std::vector<int> cicloHamiltoniano;
 
@@ -210,7 +210,7 @@ std::vector<int> KNN2INI(int tam, const std::vector<std::vector<double>>& distan
 
     cicloHamiltoniano.push_back(pontoat);
     visitado[pontoat] = true;
-    for (int i = n/2; i < n; i++) {
+    for (int i = 1; i < n/2; i++) {
         
         std::vector<int> proxPonto = encontrarProximoPonto(pontoantant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
 
@@ -234,14 +234,14 @@ std::vector<int> KNN2INI(int tam, const std::vector<std::vector<double>>& distan
         pontoat = proximoPonto;
     }
     std::reverse(cicloHamiltoniano.begin() + n/2, cicloHamiltoniano.end());
-    //cicloHamiltoniano.push_back(pontoInicial);
+    cicloHamiltoniano.push_back(pontoInicial);
 
     return cicloHamiltoniano;
 }
 
 // Função para encontrar o ciclo hamiltoniano usando KNN
 std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
-    int n = distancias.size();
+    int n = distancias.size() - obsSize;
     std::vector<bool> visitado(n, false);
     std::vector<int> cicloHamiltoniano;
 
@@ -253,7 +253,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
     cicloHamiltoniano.push_back(pontoAtual);
     visitado[pontoAtual] = true;
 
-    for (int i = 1; i < n; i++) {
+    while (cicloHamiltoniano.size() < n) {
 
         std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
 
@@ -312,7 +312,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 1){
+        if(qtdit - melhorou >= 100){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -322,7 +322,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "36_pontos/mapas6.txt";
+    std::string mapas = "49_pontos/mapas7.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -360,7 +360,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
