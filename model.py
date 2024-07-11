@@ -8,7 +8,7 @@ import time
 
 mapaqtd = 5
 
-for i in range(0, 12):
+for i in range(0, 1):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,9 +27,9 @@ for i in range(0, 12):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0 # Versão do arquivo
+  versao = 2 # Versão do arquivo
 
-  for k in range(0, qtdobs):
+  for k in range(2, 3):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -131,7 +131,6 @@ for i in range(0, 12):
         dist = [float('inf')] * n
         parent = [None] * n
         dist[i] = 0
-        alt = [0] * n
         angles = [0] * n
         spt_set = [False] * n
 
@@ -147,17 +146,16 @@ for i in range(0, 12):
                 if u != v and not spt_set[v] and c[u][v] > 0 and dist[u] + c[u][v] < dist[v]: #
                     altitude = calcular_h(u, v, (dist[u] + c[u][v]))
                     angulos = calcular_a(parent[u] if parent[u] is not None else u, u, v)
-                    alt[v] = alt[u] + altitude
                     angles[v] = angles[u] + angulos
-                    dist[v] = dist[u] + c[u][v]
+                    dist[v] = dist[u] + (c[u][v] + altitude)
                     parent[v] = u
                     heapq.heappush(heap, (dist[v], v))
         if c[i][j] != float('inf'):
           distancias[i][j] = c[i][j]
         else:
           distancias[i][j] = dist[j]
-        altitudes[i][j] = alt[j]
         all_angles[i][j] = angles[j]
+
         matrix[i][j] = print_and_return_path(parent, j)
         if i == 2 and j == 137:
           print("matrix[",i,"][",j,"] = ", distancias[i][j])
@@ -192,7 +190,7 @@ for i in range(0, 12):
     u = modelo.addVars(n, vtype=gp.GRB.INTEGER, name="u")
     y = modelo.addVars(n, n, n, vtype=gp.GRB.BINARY, name="y") # Variável para os angulos
 
-    modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(altitudes[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
+    modelo.setObjective(gp.quicksum(distancias[i][j] * x[i, j] for i in validos for j in validos if j != i) + gp.quicksum(q[i][j][k] * y[i, j, k] for i in validos for j in validos if j != i or j != ini for k in validos if j != k), sense=gp.GRB.MINIMIZE)
 
     #ponto inical: ini; ponto final: fin
     for i in validos:
@@ -257,6 +255,13 @@ for i in range(0, 12):
         route.append(1)
         route = [city for city in route if city-1 not in obstaculos_indices]
         print(route)
+
+    totalcusto = 0
+    for i in range(len(route)-1):
+       print(f"Cidade {route[i]} -> Cidade {route[i+1]} com {distancias[route[i]-1][route[i+1]-1]} de distância, {y[i, j, k].x} de ângulo e {q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]} de penalidade de ângulo")  
+       totalcusto += distancias[route[i]-1][route[i+1]-1] + q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]
+
+    print(f"Custo total: {totalcusto}") 
 
     fim = time.time()
     tempo = fim - inicio # Tempo de execução

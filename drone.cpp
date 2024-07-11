@@ -476,7 +476,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 1){
+        if(qtdit - melhorou >= 100){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -486,7 +486,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "121_pontos/mapas11.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -524,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -657,42 +657,22 @@ int main() {
         }
     }
 
-    // Se i, j e k não forem adjacentes calcula a penalidade de angulo com base no caminho mínimo
     for (int i : validos) {
-        for (int j : validos) {
-            for(int k : validos){
-                if ((c[i][j] == std::numeric_limits<float>::infinity() || c[j][k] == std::numeric_limits<float>::infinity()) && i != j && j != k) {
-                    q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]]);
-                }
+    for (int j : validos) {
+        for (int k : validos) {
+            if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
+                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]];
+            } else if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] != std::numeric_limits<double>::infinity() && i != j && j != k) {
+                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k];
+            } else if (c[i][j] != std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
+                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j].size()-2];
             }
         }
     }
+}
 
-    
-    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 34, 35, 47, 46, 45, 56, 67, 68, 69, 70, 71, 72, 73, 74, 75, 64, 63, 62, 61, 60, 48, 49, 50, 51, 52, 53, 54, 65, 76, 87, 98, 97, 96, 95, 94, 83, 82, 81, 80, 79, 78, 89, 90, 91, 92, 93, 104, 105, 106, 107, 108, 109, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
-    double total = 0;
-    int qtd = 0;
-    int quarentacinco = 0, noventa = 0, centotrintacino = 0, centooitenta = 0;
-    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
-        if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 9)
-            quarentacinco++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 18)
-            noventa++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 27)
-            centotrintacino++;
-        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 36)
-            centooitenta++;
-        total += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
-        std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
-    }
 
-    std::cout << "Qtd de penalizações de angulo 45: " << quarentacinco << std::endl;
-    std::cout << "Qtd de penalizações de angulo 90: " << noventa << std::endl;
-    std::cout << "Qtd de penalizações de angulo 135: " << centotrintacino << std::endl;
-    std::cout << "Qtd de penalizações de angulo 180: " << centooitenta << std::endl;
-    std::cout << "Total: " << total << std::endl;
-
-    return 0;
+    //return 0;
 
     bool guloso = false;
     std::vector<int> fronteira = construirFronteira(obstaculos_indices, maiorx, maiory, guloso);
@@ -748,19 +728,47 @@ int main() {
 
     // se o último elemento da fronteira for 0, remova, pois pode atrapalhar na inserção mais barata
     // Recalcula a rota do gurobi
-    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 10, 11, 17, 23, 29, 28, 33, 32, 31, 30, 24, 18, 13, 14, 15, 21, 20, 19, 25, 26, 27, 22, 16, 9, 8, 7, 0};
 
-    //std::vector<int> melhorRota = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
+    std::vector<int> cicloHamiltoniano = grasp(distancias, fronteira, q, altitudes, obstaculos_indices.size());
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     //std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
     std::cout << "chegou no final" << std::endl;
+
+    double total = 0;
+    int qtd = 0;
+    int quarentacinco = 0, noventa = 0, centotrintacino = 0, centooitenta = 0;
+    for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
+        if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 9)
+            quarentacinco++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 18)
+            noventa++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 27)
+            centotrintacino++;
+        else if(int(q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]) == 36)
+            centooitenta++;
+        total += q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]];
+        //std::cout << "Penalizacao e angulo: " << cicloHamiltoniano[(i > 0) ? i-1 : i] + 1 << " -> " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " = " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << ", " << (q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]])/0.2 << std::endl;
+    }
+
+    //std::cout << "Qtd de penalizações de angulo 45: " << quarentacinco << std::endl;
+    //std::cout << "Qtd de penalizações de angulo 90: " << noventa << std::endl;
+    //std::cout << "Qtd de penalizações de angulo 135: " << centotrintacino << std::endl;
+    //std::cout << "Qtd de penalizações de angulo 180: " << centooitenta << std::endl;
+    //std::cout << "Total de penalização por angulo: " << total << std::endl;
+
+    total = 0;
+
     // Calcular o valor total do ciclo
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
+        std::cout << "Cidade " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " com " << distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << " de distancia, com penalizacao de: " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << std::endl;
     }
 
-    std::cout << "Total: " << total << std::endl;
+    //std::cout << "custo de : " << distancias[9][17] << " e angulo: " << q[5][9][17] << std::endl; 
+
+    std::cout << "Custo total: " << total << std::endl;
 
     auto end_time = std::chrono::steady_clock::now();
     // Calcular tempo transcorrido

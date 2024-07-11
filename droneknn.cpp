@@ -134,12 +134,15 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const s
 }
 
 
-std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, std::vector<bool>& visitado, int pontoInicial, std::vector<int> ciclo) {
+std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, std::vector<bool>& visitado, int pontoInicial, std::vector<int> ciclo, int obsSize, std::vector<int> obstaculos) {
     int n = distancias.size();
+    std::cout << "tamanho validos " << obstaculos.size() << std::endl;  
     int proximoPonto = -1;
     double menorDistancia = std::numeric_limits<double>::max();
     std::vector<bool> selecionados(n, false);
     std::vector<int> maisprox;
+
+    std::cout << "entrou no encontrar prox ponto" << std::endl;
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -150,97 +153,30 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
 
-    for(int j = 0; j < numero_aleatorio; j++){
-        double menorDistancia = std::numeric_limits<double>::max();
-        for (int i = 0; i < n; i++) {
+
+    for(int j = 0; j < 10; j++){
+        menorDistancia = std::numeric_limits<double>::max();
+        //std::cout << "entrando no for" << std::endl;
+        for (int i : obstaculos) {
+            //std::cout << "entrando no if" << std::endl;
             if (!selecionados[i] && i != atual && !visitado[i] && distancias[atual][i] + q[anterior][atual][i] < menorDistancia) {
+                //std::cout << "passou do if" << std::endl;
                 proximoPonto = i;
-                menorDistancia = distancias[atual][i];
-                selecionados[proximoPonto] = true;
-                maisprox.push_back(proximoPonto);
+                menorDistancia = distancias[atual][i] + q[anterior][atual][i];
+                //std::cout << "saindo do for" << std::endl;
             }
         }
+        selecionados[proximoPonto] = true;
+        maisprox.push_back(proximoPonto);
     }
+
+    std::cout << "tamanho do vetor " << maisprox.size() << std::endl;
 
     return maisprox;
 }
 
-
 // Função para encontrar o ciclo hamiltoniano usando KNN
-std::vector<int> KNN2INI(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
-    int n = distancias.size() - obsSize;
-    std::vector<bool> visitado(n, false);
-    std::vector<int> cicloHamiltoniano;
-
-    int pontoAtual = 0;
-    int pontoat = tam;
-    int pontoant = 0;
-    int pontoantant = tam;
-    int pontoini = pontoat;
-    int pontoInicial = pontoAtual;
-    int valorTotalAcumulado = 0;
-
-    cicloHamiltoniano.push_back(pontoAtual);
-    visitado[pontoAtual] = true;
-    // tentar incluir a penalizacao por angulo aqui
-    for (int i = 1; i < n/2; i++) { 
-        
-        std::vector<int> proxPonto = encontrarProximoPonto(pontoantant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
-
-        std::mt19937 rng(static_cast<unsigned>(std::time(0)));
-
-        std::uniform_int_distribution<size_t> dist(0, proxPonto.size() - 1);
-    
-        // Escolha um índice aleatório
-        size_t randomIndex = dist(rng);
-
-        int proximoPonto = proxPonto[randomIndex]; 
-
-        if (proximoPonto == -1) {
-            break;
-        }
-
-        valorTotalAcumulado += (distancias[pontoAtual][proximoPonto] + q[pontoantant][pontoAtual][proximoPonto]);
-        cicloHamiltoniano.push_back(proximoPonto);
-        visitado[proximoPonto] = true;
-        pontoantant = pontoAtual;
-        pontoAtual = proximoPonto;
-    }
-
-
-    cicloHamiltoniano.push_back(pontoat);
-    visitado[pontoat] = true;
-    for (int i = 1; i < n/2; i++) {
-        
-        std::vector<int> proxPonto = encontrarProximoPonto(pontoantant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
-
-        std::mt19937 rng(static_cast<unsigned>(std::time(0)));
-
-        std::uniform_int_distribution<size_t> dist(0, proxPonto.size() - 1);
-    
-        // Escolha um índice aleatório
-        size_t randomIndex = dist(rng);
-
-        int proximoPonto = proxPonto[randomIndex];
-
-        if (proximoPonto == -1) {
-            break;
-        }
-
-        valorTotalAcumulado += (distancias[pontoat][proximoPonto] + q[pontoant][pontoat][proximoPonto]);
-        cicloHamiltoniano.push_back(proximoPonto);
-        visitado[proximoPonto] = true;
-        pontoant = pontoat;
-        pontoat = proximoPonto;
-    }
-    std::reverse(cicloHamiltoniano.begin() + n/2, cicloHamiltoniano.end());
-    cicloHamiltoniano.push_back(pontoInicial);
-
-    return cicloHamiltoniano;
-}
-
-// Função para encontrar o ciclo hamiltoniano usando KNN
-std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize) {
+std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos) {
     int n = distancias.size() - obsSize;
     std::vector<bool> visitado(n, false);
     std::vector<int> cicloHamiltoniano;
@@ -253,9 +189,17 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
     cicloHamiltoniano.push_back(pontoAtual);
     visitado[pontoAtual] = true;
 
-    while (cicloHamiltoniano.size() < n) {
+    while (cicloHamiltoniano.size() <= n) {
 
-        std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano);
+        std::cout << "tam: " << cicloHamiltoniano.size() << std::endl;
+
+        std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano, obsSize, obstaculos);
+
+        std::cout << "prox ponto: ";
+        for(int i : proxPonto){
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
 
         std::mt19937 rng(static_cast<unsigned>(std::time(0)));
 
@@ -264,24 +208,31 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
         // Escolha um índice aleatório
         size_t randomIndex = dist(rng);
 
+        std::cout << "escolheu ponto " << randomIndex << " " << proxPonto[randomIndex] << std::endl;
+
         int proximoPonto = proxPonto[randomIndex];
 
-        if (proximoPonto == -1) {
+        if(proximoPonto == -1){
             break;
         }
 
         valorTotalAcumulado += (distancias[pontoAtual][proximoPonto] + q[pontoant][pontoAtual][proximoPonto]);
-        cicloHamiltoniano.push_back(proximoPonto);
-        visitado[proximoPonto] = true;
-        pontoant = pontoAtual;
-        pontoAtual = proximoPonto;
+        if(!visitado[proximoPonto]){
+            //std::cout << "entrou no if" << std::endl;
+            cicloHamiltoniano.push_back(proximoPonto);
+            visitado[proximoPonto] = true;
+            pontoant = pontoAtual;
+            pontoAtual = proximoPonto;
+        }
     }
     cicloHamiltoniano.push_back(pontoInicial);
+
+    std::cout << "saiu do knn" << std::endl;
 
     return cicloHamiltoniano;
 }
 
-std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize){
+std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos){
     float lim = 2000000;
     std::vector<int> S;
     std::vector<int> best;
@@ -291,23 +242,23 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
     int qtdit = 0;
     int melhorou = 0;
 
-    //std::cout << "comecando o grasp " << std::endl;
+    std::cout << "comecando o grasp " << std::endl;
     while(melhora){
-        S = KNN(tam, distancias, q, obsSize);
-        //std::cout << "passou pela insercao mais barata " << std::endl;
+        S = KNN(tam, distancias, q, obsSize, obstaculos);
+        std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
             valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
-        //std::cout << "construtiva: " << valor << std::endl;
+        std::cout << "construtiva: " << valor << std::endl;
         par = Local_Search(S, distancias, 0, q);
         s = par.first;
         valor = 0;
-        for(int k = 0; k < s.size() - 1; k++){
-            valor += (distancias[s[k]][s[k+1]] + q[s[(k > 0) ? k-1 : k]][s[k]][s[k+1]]);
+        for(int k = 0; k < S.size() - 1; k++){
+            valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
         }
         qtdit++;
         if(valor < lim){
-            best = s;
+            best = S;
             lim = valor;
             melhorou = qtdit;
         }
@@ -315,14 +266,14 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
         if(qtdit - melhorou >= 100){
             melhora = false;
         }
-        //std::cout << "2opt: " << lim << std::endl;
+       //std::cout << "2opt: " << lim << std::endl;
     }
     std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 int main() {
-    std::string mapas = "144_pontos/mapas12.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -360,7 +311,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 6;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -368,7 +319,7 @@ int main() {
         std::cout << obstaculo << std::endl;
     }
 
-    //std::vector<int> cicloHamiltoniano = {0, 117, 101, 100, 115, 114, 98, 97, 113, 130, 131, 132, 133, 149, 148, 147, 146, 129, 112, 128, 144, 145, 162, 163, 164, 165, 166, 167, 151, 135, 136, 120, 105, 90, 75, 76, 77, 93, 110, 127, 111, 95, 79, 63, 62, 61, 60, 59, 58, 57, 41, 42, 43, 44, 45, 46, 47, 30, 29, 28, 27, 26, 25, 9, 8, 7, 6, 22, 38, 53, 69, 54, 39, 23, 24, 40, 56, 72, 73, 74, 91, 108, 109, 126, 142, 158, 159, 175, 191, 190, 189, 173, 157, 140, 124, 107, 106, 122, 139, 156, 172, 188, 204, 205, 221, 236, 235, 218, 202, 186, 170, 169, 168, 184, 183, 182, 181, 180, 179, 195, 210, 227, 212, 213, 214, 215, 232, 233, 216, 199, 198, 197, 196, 211, 226, 225, 224, 240, 241, 242, 243, 244, 228, 229, 230, 231, 248, 249, 250, 251, 252, 253, 255, 254, 237, 220, 219, 203, 187, 171, 154, 138, 121, 104, 103, 118, 102, 86, 85, 84, 83, 82, 66, 65, 1, 5, 4, 20, 3, 18, 2, 19, 64, 49, 48, 32, 16, 0};
+    //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 10, 11, 17, 23, 29, 28, 33, 32, 31, 30, 24, 25, 26, 27, 22, 21, 20, 19, 18, 13, 14, 15, 16, 9, 8, 7, 0};
 
     int n = coord.size();  // número de células (pontos)
 
@@ -512,7 +463,7 @@ int main() {
     // Recalcula a rota do gurobi
     //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
-    std::vector<int> melhorRota = grasp(validos.back(), distancias, q, obstaculos_indices.size());
+    std::vector<int> melhorRota = grasp(validos.back(), distancias, q, obstaculos_indices.size(), validos);
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
@@ -521,6 +472,7 @@ int main() {
     double total = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
         total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
+        std::cout << "Cidade " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " com " << distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << " de distancia, com penalizacao de: " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << std::endl;
     }
 
     std::cout << "Total: " << total << std::endl;

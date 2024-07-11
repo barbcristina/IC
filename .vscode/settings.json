@@ -85,5 +85,8 @@
         "algorithm": "cpp",
         "charconv": "cpp",
         "execution": "cpp"
+    },
+    "terminal.integrated.env.osx": {
+        "MallocNanoZone": "1"
     }
 }
