@@ -1,4 +1,4 @@
 0, 1, 2, 3, 4, 5, 11, 17, 23, 29, 28, 22, 16, 10, 9, 8, 7, 13, 19, 20, 27, 33, 32, 26, 25, 24, 18, 12, 6, 0, 
-Funcao Objetivo: 780.00
-Tempo de Execução: 1.88 segundos
+Funcao Objetivo: 791.45
+Tempo de Execução: 2.05 segundos
 GAP: 0.00

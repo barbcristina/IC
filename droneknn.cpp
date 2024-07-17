@@ -67,7 +67,7 @@ std::vector<int> print_path(std::vector<int>& parent, int v, std::ofstream& outp
     return path;
 }
 
-std::pair<std::vector<int>, double> OPT2(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q){
+std::pair<std::vector<int>, double> OPT2(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q, std::vector<std::vector<double>>& altitudes){
     double ganhoMax = 0;
     std::pair<std::vector<int>, double> melhor;
     melhor.first = rota;
@@ -82,7 +82,7 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int>& rota, const std::vect
         for(int c = a+2; c < limc; c++){
             int d;
             d=c+1;
-            double ganho = distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c==limc) ? d : d+1]] + q[rota[c-1]][rota[c]][rota[d]] - distancias[rota[a]][rota[c]] - distancias[rota[b]][rota[d]] - q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] - q[rota[d]][rota[b]][rota[b+1]] - q[rota[b]][rota[d]][rota[(c==d) ? d : d+1]] - q[rota[c-1]][rota[c]][rota[a]];
+            double ganho = distancias[rota[a]][rota[b]] + distancias[rota[c]][rota[d]] + altitudes[rota[a]][rota[b]] + altitudes[rota[c]][rota[d]] + q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[b]] + q[rota[a]][rota[b]][rota[b+1]] + q[rota[c]][rota[d]][rota[(c==limc) ? d : d+1]] + q[rota[c-1]][rota[c]][rota[d]] - distancias[rota[a]][rota[c]] - distancias[rota[b]][rota[d]] - altitudes[rota[a]][rota[c]] - altitudes[rota[b]][rota[d]] - q[rota[(a != 0) ? a-1 : 0]][rota[a]][rota[c]] - q[rota[d]][rota[b]][rota[b+1]] - q[rota[b]][rota[d]][rota[(c==d) ? d : d+1]] - q[rota[c-1]][rota[c]][rota[a]];
             if(ganho > ganhoMax){
                 ganhoMax = ganho;
                 bestV = {a, b, c, d};
@@ -102,7 +102,7 @@ std::pair<std::vector<int>, double> OPT2(std::vector<int>& rota, const std::vect
     return melhor;
 }
 
-std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q){
+std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const std::vector<std::vector<double>>& distancias, double dist, std::vector<std::vector<std::vector<double>>>& q, std::vector<std::vector<double>>& altitudes){
     bool melhora = true;
     std::pair<std::vector<int>, double> melhorRota;
     double total = 0;
@@ -110,15 +110,15 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const s
     int maxIter = 500;
 
     for(int i = 0; i < rota.size() - 1; i++){
-        total += (distancias[rota[i]][rota[i+1]] + q[rota[(i > 0) ? i-1 : i]][rota[i]][rota[i+1]]);
+        total += (distancias[rota[i]][rota[i+1]] + altitudes[rota[i]][rota[i+1]] + q[rota[(i > 0) ? i-1 : i]][rota[i]][rota[i+1]]);
     }
 
     while(melhora && iter < maxIter){
         melhora = false;
-        melhorRota = OPT2(rota, distancias, total, q);
+        melhorRota = OPT2(rota, distancias, total, q, altitudes);
         double twopt = 0;
         for(int i = 0; i < rota.size() - 1; i++){
-            twopt += (distancias[melhorRota.first[i]][melhorRota.first[i+1]] + q[melhorRota.first[(i > 0) ? i-1 : i]][melhorRota.first[i]][melhorRota.first[i+1]]);
+            twopt += (distancias[melhorRota.first[i]][melhorRota.first[i+1]] + altitudes[melhorRota.first[i]][melhorRota.first[i+1]] + q[melhorRota.first[(i > 0) ? i-1 : i]][melhorRota.first[i]][melhorRota.first[i+1]]);
         }
         //twopt += (distancias[melhorRota.first[rota.size()-1]][0] + q[melhorRota.first[rota.size()-2]][melhorRota.first[rota.size()-1]][0]);
         //std::cout << "2opt vs dist anterior: " << twopt << "  " << melhorRota.second << std::endl;
@@ -134,7 +134,7 @@ std::pair<std::vector<int>, double> Local_Search(std::vector<int>& rota, const s
 }
 
 
-std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, std::vector<bool>& visitado, int pontoInicial, std::vector<int> ciclo, int obsSize, std::vector<int> obstaculos) {
+std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, std::vector<bool>& visitado, int pontoInicial, std::vector<int> ciclo, int obsSize, std::vector<int> obstaculos, std::vector<std::vector<double>>& altitudes) {
     int n = distancias.size();
     //std::cout << "tamanho validos " << obstaculos.size() << std::endl;  
     int proximoPonto = -1;
@@ -158,10 +158,10 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
         menorDistancia = std::numeric_limits<double>::max();
         //std::cout << "entrando no for" << std::endl;
         for (int i : obstaculos) {
-            if (!selecionados[i] && i != atual && !visitado[i] && distancias[atual][i] + q[anterior][atual][i] < menorDistancia) {
+            if (!selecionados[i] && i != atual && !visitado[i] && distancias[atual][i] + altitudes[atual][i] + q[anterior][atual][i] < menorDistancia) {
                 //std::cout << "passou do if" << std::endl;
                 proximoPonto = i;
-                menorDistancia = distancias[atual][i] + q[anterior][atual][i];
+                menorDistancia = distancias[atual][i] + altitudes[atual][i] + q[anterior][atual][i];
                 //std::cout << "saindo do for" << std::endl;
             }
         }
@@ -177,7 +177,7 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
 }
 
 // Função para encontrar o ciclo hamiltoniano usando KNN
-std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos) {
+std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos, std::vector<std::vector<double>>& altitudes) {
     int n = distancias.size() - obsSize;
     std::vector<bool> visitado(n + obsSize, false);
     std::vector<int> cicloHamiltoniano;
@@ -194,7 +194,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
 
         std::cout << "tam: " << cicloHamiltoniano.size() << std::endl;
 
-        std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano, obsSize, obstaculos);
+        std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano, obsSize, obstaculos, altitudes);
 
         if(proxPonto.size() == 0){
             break;
@@ -211,7 +211,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
 
         int proximoPonto = proxPonto[randomIndex];
 
-        valorTotalAcumulado += (distancias[pontoAtual][proximoPonto] + q[pontoant][pontoAtual][proximoPonto]);
+        valorTotalAcumulado += (distancias[pontoAtual][proximoPonto] + altitudes[pontoAtual][proximoPonto] + q[pontoant][pontoAtual][proximoPonto]);
         if(!visitado[proximoPonto]){
             //std::cout << "entrou no if" << std::endl;
             cicloHamiltoniano.push_back(proximoPonto);
@@ -227,7 +227,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
     return cicloHamiltoniano;
 }
 
-std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos){
+std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distancias, std::vector<std::vector<std::vector<double>>>& q, int obsSize, std::vector<int> obstaculos, std::vector<std::vector<double>>& altitudes){
     float lim = 2000000;
     std::vector<int> S;
     std::vector<int> best;
@@ -239,17 +239,17 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 
     //std::cout << "comecando o grasp " << std::endl;
     while(melhora){
-        S = KNN(tam, distancias, q, obsSize, obstaculos);
+        S = KNN(tam, distancias, q, obsSize, obstaculos, altitudes);
         //std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
-            valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
+            valor += (distancias[S[k]][S[k+1]] + altitudes[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
         //std::cout << "construtiva: " << valor << std::endl;
-        par = Local_Search(S, distancias, 0, q);
+        par = Local_Search(S, distancias, 0, q, altitudes);
         s = par.first;
         valor = 0;
-        for(int k = 0; k < S.size() - 1; k++){
-            valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
+        for(int k = 0; k < s.size() - 1; k++){
+            valor += (distancias[s[k]][s[k+1]] + altitudes[s[k]][s[k+1]] + q[s[(k > 0) ? k-1 : k]][s[k]][s[k+1]]);
         }
         qtdit++;
         if(valor < lim){
@@ -268,7 +268,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "81_pontos/mapas9.txt";
+    std::string mapas = "121_pontos/mapas11.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -306,7 +306,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 1;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -399,8 +399,9 @@ int main() {
                 if (u != v && !spt_set[v] && c[u][v] > 0 && dist[u] + c[u][v] < dist[v]) {
                     double altitude = calcular_h(u, v, (dist[u] + c[u][v]), coord);
                     double angulos = calcular_a((parent[u] == -1) ? u : parent[u], u, v, coord);
+                    alt[v] = alt[u] + altitude;
                     angles[v] = angles[u] + angulos;
-                    dist[v] = dist[u] + (c[u][v] + altitude);
+                    dist[v] = dist[u] + c[u][v];
                     parent[v] = u;
                     heap.push(std::make_pair(dist[v], v));
                 }
@@ -412,6 +413,7 @@ int main() {
         } else {
           distancias[i][j] = dist[j];
         }
+        altitudes[i][j] = alt[j];
         all_angles[i][j] = angles[j];
 
         pathFile << "Caminho de " << i << " para " << j << ": ";
@@ -458,7 +460,7 @@ int main() {
     // Recalcula a rota do gurobi
     //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
-    std::vector<int> melhorRota = grasp(validos.back(), distancias, q, obstaculos_indices.size(), validos);
+    std::vector<int> melhorRota = grasp(validos.back(), distancias, q, obstaculos_indices.size(), validos, altitudes);
     //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
     std::vector<int> cicloHamiltoniano = melhorRota;
     //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
@@ -466,7 +468,7 @@ int main() {
     // Calcular o valor total do ciclo
     double total = 0;
     for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
-        total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
+        total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + altitudes[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
         std::cout << "Cidade " << cicloHamiltoniano[i] + 1 << " -> " << cicloHamiltoniano[i+1] + 1 << " com " << distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << " de distancia, com penalizacao de: " << q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] << std::endl;
     }
 
