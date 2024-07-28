@@ -1,0 +1,841 @@
+Caminho de 0 para 0: 0 
+Caminho de 0 para 1: 0 1 
+Caminho de 0 para 2: 0 1 2 
+Caminho de 0 para 3: 0 1 2 3 
+Caminho de 0 para 4: 0 1 2 3 4 
+Caminho de 0 para 5: 0 1 2 3 4 5 
+Caminho de 0 para 6: 0 6 
+Caminho de 0 para 8: 0 1 8 
+Caminho de 0 para 9: 0 1 2 9 
+Caminho de 0 para 10: 0 1 2 3 10 
+Caminho de 0 para 11: 0 1 2 3 4 11 
+Caminho de 0 para 12: 0 6 12 
+Caminho de 0 para 14: 0 1 8 14 
+Caminho de 0 para 15: 0 1 8 15 
+Caminho de 0 para 16: 0 1 2 9 16 
+Caminho de 0 para 17: 0 1 2 3 10 17 
+Caminho de 0 para 18: 0 6 12 18 
+Caminho de 0 para 19: 0 6 12 19 
+Caminho de 0 para 20: 0 1 8 14 20 
+Caminho de 0 para 23: 0 1 2 9 16 23 
+Caminho de 0 para 24: 0 6 12 18 24 
+Caminho de 0 para 25: 0 6 12 18 25 
+Caminho de 0 para 26: 0 6 12 19 26 
+Caminho de 0 para 27: 0 1 8 14 20 27 
+Caminho de 0 para 29: 0 1 2 9 16 23 29 
+Caminho de 0 para 32: 0 6 12 18 25 32 
+Caminho de 0 para 33: 0 6 12 19 26 33 
+Caminho de 0 para 34: 0 1 8 14 20 27 34 
+Caminho de 0 para 35: 0 1 2 9 16 23 29 35 
+Caminho de 1 para 0: 1 0 
+Caminho de 1 para 1: 1 
+Caminho de 1 para 2: 1 2 
+Caminho de 1 para 3: 1 2 3 
+Caminho de 1 para 4: 1 2 3 4 
+Caminho de 1 para 5: 1 2 3 4 5 
+Caminho de 1 para 6: 1 6 
+Caminho de 1 para 8: 1 8 
+Caminho de 1 para 9: 1 2 9 
+Caminho de 1 para 10: 1 2 3 10 
+Caminho de 1 para 11: 1 2 3 4 11 
+Caminho de 1 para 12: 1 6 12 
+Caminho de 1 para 14: 1 8 14 
+Caminho de 1 para 15: 1 8 15 
+Caminho de 1 para 16: 1 2 9 16 
+Caminho de 1 para 17: 1 2 3 10 17 
+Caminho de 1 para 18: 1 6 12 18 
+Caminho de 1 para 19: 1 6 12 19 
+Caminho de 1 para 20: 1 8 14 20 
+Caminho de 1 para 23: 1 2 9 16 23 
+Caminho de 1 para 24: 1 6 12 18 24 
+Caminho de 1 para 25: 1 6 12 18 25 
+Caminho de 1 para 26: 1 8 14 20 26 
+Caminho de 1 para 27: 1 8 14 20 27 
+Caminho de 1 para 29: 1 2 9 16 23 29 
+Caminho de 1 para 32: 1 8 14 20 26 32 
+Caminho de 1 para 33: 1 8 14 20 26 33 
+Caminho de 1 para 34: 1 8 14 20 27 34 
+Caminho de 1 para 35: 1 2 9 16 23 29 35 
+Caminho de 2 para 0: 2 1 0 
+Caminho de 2 para 1: 2 1 
+Caminho de 2 para 2: 2 
+Caminho de 2 para 3: 2 3 
+Caminho de 2 para 4: 2 3 4 
+Caminho de 2 para 5: 2 3 4 5 
+Caminho de 2 para 6: 2 1 6 
+Caminho de 2 para 8: 2 8 
+Caminho de 2 para 9: 2 9 
+Caminho de 2 para 10: 2 3 10 
+Caminho de 2 para 11: 2 3 4 11 
+Caminho de 2 para 12: 2 1 6 12 
+Caminho de 2 para 14: 2 8 14 
+Caminho de 2 para 15: 2 8 15 
+Caminho de 2 para 16: 2 9 16 
+Caminho de 2 para 17: 2 3 10 17 
+Caminho de 2 para 18: 2 1 6 12 18 
+Caminho de 2 para 19: 2 8 14 19 
+Caminho de 2 para 20: 2 8 14 20 
+Caminho de 2 para 23: 2 9 16 23 
+Caminho de 2 para 24: 2 8 14 19 24 
+Caminho de 2 para 25: 2 8 14 20 25 
+Caminho de 2 para 26: 2 8 14 20 26 
+Caminho de 2 para 27: 2 8 14 20 27 
+Caminho de 2 para 29: 2 9 16 23 29 
+Caminho de 2 para 32: 2 8 14 20 26 32 
+Caminho de 2 para 33: 2 8 14 20 26 33 
+Caminho de 2 para 34: 2 8 14 20 27 34 
+Caminho de 2 para 35: 2 9 16 23 29 35 
+Caminho de 3 para 0: 3 2 1 0 
+Caminho de 3 para 1: 3 2 1 
+Caminho de 3 para 2: 3 2 
+Caminho de 3 para 3: 3 
+Caminho de 3 para 4: 3 4 
+Caminho de 3 para 5: 3 4 5 
+Caminho de 3 para 6: 3 2 1 6 
+Caminho de 3 para 8: 3 8 
+Caminho de 3 para 9: 3 9 
+Caminho de 3 para 10: 3 10 
+Caminho de 3 para 11: 3 4 11 
+Caminho de 3 para 12: 3 2 1 6 12 
+Caminho de 3 para 14: 3 9 14 
+Caminho de 3 para 15: 3 9 15 
+Caminho de 3 para 16: 3 9 16 
+Caminho de 3 para 17: 3 10 17 
+Caminho de 3 para 18: 3 9 14 19 18 
+Caminho de 3 para 19: 3 9 14 19 
+Caminho de 3 para 20: 3 9 15 20 
+Caminho de 3 para 23: 3 9 16 23 
+Caminho de 3 para 24: 3 9 14 19 24 
+Caminho de 3 para 25: 3 9 15 20 25 
+Caminho de 3 para 26: 3 9 15 20 26 
+Caminho de 3 para 27: 3 9 15 20 27 
+Caminho de 3 para 29: 3 9 16 23 29 
+Caminho de 3 para 32: 3 9 15 20 26 32 
+Caminho de 3 para 33: 3 9 15 20 26 33 
+Caminho de 3 para 34: 3 9 15 20 27 34 
+Caminho de 3 para 35: 3 9 16 23 29 35 
+Caminho de 4 para 0: 4 3 2 1 0 
+Caminho de 4 para 1: 4 3 2 1 
+Caminho de 4 para 2: 4 3 2 
+Caminho de 4 para 3: 4 3 
+Caminho de 4 para 4: 4 
+Caminho de 4 para 5: 4 5 
+Caminho de 4 para 6: 4 3 2 1 6 
+Caminho de 4 para 8: 4 3 8 
+Caminho de 4 para 9: 4 9 
+Caminho de 4 para 10: 4 10 
+Caminho de 4 para 11: 4 11 
+Caminho de 4 para 12: 4 3 2 1 6 12 
+Caminho de 4 para 14: 4 9 14 
+Caminho de 4 para 15: 4 10 15 
+Caminho de 4 para 16: 4 10 16 
+Caminho de 4 para 17: 4 10 17 
+Caminho de 4 para 18: 4 9 14 19 18 
+Caminho de 4 para 19: 4 9 14 19 
+Caminho de 4 para 20: 4 10 15 20 
+Caminho de 4 para 23: 4 10 16 23 
+Caminho de 4 para 24: 4 9 14 19 24 
+Caminho de 4 para 25: 4 10 15 20 25 
+Caminho de 4 para 26: 4 10 15 20 26 
+Caminho de 4 para 27: 4 10 15 20 27 
+Caminho de 4 para 29: 4 10 16 23 29 
+Caminho de 4 para 32: 4 10 15 20 26 32 
+Caminho de 4 para 33: 4 10 15 20 26 33 
+Caminho de 4 para 34: 4 10 16 23 29 34 
+Caminho de 4 para 35: 4 10 16 23 29 35 
+Caminho de 5 para 0: 5 4 3 2 1 0 
+Caminho de 5 para 1: 5 4 3 2 1 
+Caminho de 5 para 2: 5 4 3 2 
+Caminho de 5 para 3: 5 4 3 
+Caminho de 5 para 4: 5 4 
+Caminho de 5 para 5: 5 
+Caminho de 5 para 6: 5 4 3 2 1 6 
+Caminho de 5 para 8: 5 4 3 8 
+Caminho de 5 para 9: 5 4 9 
+Caminho de 5 para 10: 5 10 
+Caminho de 5 para 11: 5 11 
+Caminho de 5 para 12: 5 4 3 2 1 6 12 
+Caminho de 5 para 14: 5 4 9 14 
+Caminho de 5 para 15: 5 10 15 
+Caminho de 5 para 16: 5 11 16 
+Caminho de 5 para 17: 5 11 17 
+Caminho de 5 para 18: 5 4 9 14 19 18 
+Caminho de 5 para 19: 5 4 9 14 19 
+Caminho de 5 para 20: 5 10 15 20 
+Caminho de 5 para 23: 5 11 17 23 
+Caminho de 5 para 24: 5 4 9 14 19 24 
+Caminho de 5 para 25: 5 10 15 20 25 
+Caminho de 5 para 26: 5 10 15 20 26 
+Caminho de 5 para 27: 5 10 15 20 27 
+Caminho de 5 para 29: 5 11 17 23 29 
+Caminho de 5 para 32: 5 10 15 20 26 32 
+Caminho de 5 para 33: 5 11 17 23 29 34 33 
+Caminho de 5 para 34: 5 11 17 23 29 34 
+Caminho de 5 para 35: 5 11 17 23 29 35 
+Caminho de 6 para 0: 6 0 
+Caminho de 6 para 1: 6 1 
+Caminho de 6 para 2: 6 1 2 
+Caminho de 6 para 3: 6 1 2 3 
+Caminho de 6 para 4: 6 1 2 3 4 
+Caminho de 6 para 5: 6 1 2 3 4 5 
+Caminho de 6 para 6: 6 
+Caminho de 6 para 8: 6 1 8 
+Caminho de 6 para 9: 6 1 2 9 
+Caminho de 6 para 10: 6 1 2 3 10 
+Caminho de 6 para 11: 6 1 2 3 4 11 
+Caminho de 6 para 12: 6 12 
+Caminho de 6 para 14: 6 12 19 14 
+Caminho de 6 para 15: 6 1 8 15 
+Caminho de 6 para 16: 6 1 2 9 16 
+Caminho de 6 para 17: 6 1 2 3 10 17 
+Caminho de 6 para 18: 6 12 18 
+Caminho de 6 para 19: 6 12 19 
+Caminho de 6 para 20: 6 12 19 20 
+Caminho de 6 para 23: 6 1 2 9 16 23 
+Caminho de 6 para 24: 6 12 18 24 
+Caminho de 6 para 25: 6 12 18 25 
+Caminho de 6 para 26: 6 12 19 26 
+Caminho de 6 para 27: 6 12 19 20 27 
+Caminho de 6 para 29: 6 12 19 20 27 34 29 
+Caminho de 6 para 32: 6 12 18 25 32 
+Caminho de 6 para 33: 6 12 19 26 33 
+Caminho de 6 para 34: 6 12 19 20 27 34 
+Caminho de 6 para 35: 6 12 19 20 27 34 35 
+Caminho de 8 para 0: 8 1 0 
+Caminho de 8 para 1: 8 1 
+Caminho de 8 para 2: 8 2 
+Caminho de 8 para 3: 8 3 
+Caminho de 8 para 4: 8 9 4 
+Caminho de 8 para 5: 8 9 10 5 
+Caminho de 8 para 6: 8 1 6 
+Caminho de 8 para 8: 8 
+Caminho de 8 para 9: 8 9 
+Caminho de 8 para 10: 8 9 10 
+Caminho de 8 para 11: 8 9 10 11 
+Caminho de 8 para 12: 8 14 19 12 
+Caminho de 8 para 14: 8 14 
+Caminho de 8 para 15: 8 15 
+Caminho de 8 para 16: 8 9 16 
+Caminho de 8 para 17: 8 9 10 17 
+Caminho de 8 para 18: 8 14 19 18 
+Caminho de 8 para 19: 8 14 19 
+Caminho de 8 para 20: 8 14 20 
+Caminho de 8 para 23: 8 9 16 23 
+Caminho de 8 para 24: 8 14 19 24 
+Caminho de 8 para 25: 8 14 20 25 
+Caminho de 8 para 26: 8 14 20 26 
+Caminho de 8 para 27: 8 14 20 27 
+Caminho de 8 para 29: 8 9 16 23 29 
+Caminho de 8 para 32: 8 14 20 26 32 
+Caminho de 8 para 33: 8 14 20 26 33 
+Caminho de 8 para 34: 8 14 20 27 34 
+Caminho de 8 para 35: 8 9 16 23 29 35 
+Caminho de 9 para 0: 9 8 1 0 
+Caminho de 9 para 1: 9 8 1 
+Caminho de 9 para 2: 9 2 
+Caminho de 9 para 3: 9 3 
+Caminho de 9 para 4: 9 4 
+Caminho de 9 para 5: 9 10 5 
+Caminho de 9 para 6: 9 8 1 6 
+Caminho de 9 para 8: 9 8 
+Caminho de 9 para 9: 9 
+Caminho de 9 para 10: 9 10 
+Caminho de 9 para 11: 9 10 11 
+Caminho de 9 para 12: 9 14 19 12 
+Caminho de 9 para 14: 9 14 
+Caminho de 9 para 15: 9 15 
+Caminho de 9 para 16: 9 16 
+Caminho de 9 para 17: 9 10 17 
+Caminho de 9 para 18: 9 14 19 18 
+Caminho de 9 para 19: 9 14 19 
+Caminho de 9 para 20: 9 15 20 
+Caminho de 9 para 23: 9 16 23 
+Caminho de 9 para 24: 9 14 19 24 
+Caminho de 9 para 25: 9 15 20 25 
+Caminho de 9 para 26: 9 15 20 26 
+Caminho de 9 para 27: 9 15 20 27 
+Caminho de 9 para 29: 9 16 23 29 
+Caminho de 9 para 32: 9 15 20 26 32 
+Caminho de 9 para 33: 9 15 20 26 33 
+Caminho de 9 para 34: 9 15 20 27 34 
+Caminho de 9 para 35: 9 16 23 29 35 
+Caminho de 10 para 0: 10 9 8 1 0 
+Caminho de 10 para 1: 10 9 8 1 
+Caminho de 10 para 2: 10 9 2 
+Caminho de 10 para 3: 10 3 
+Caminho de 10 para 4: 10 4 
+Caminho de 10 para 5: 10 5 
+Caminho de 10 para 6: 10 9 8 1 6 
+Caminho de 10 para 8: 10 9 8 
+Caminho de 10 para 9: 10 9 
+Caminho de 10 para 10: 10 
+Caminho de 10 para 11: 10 11 
+Caminho de 10 para 12: 10 9 14 19 12 
+Caminho de 10 para 14: 10 9 14 
+Caminho de 10 para 15: 10 15 
+Caminho de 10 para 16: 10 16 
+Caminho de 10 para 17: 10 17 
+Caminho de 10 para 18: 10 9 14 19 18 
+Caminho de 10 para 19: 10 9 14 19 
+Caminho de 10 para 20: 10 15 20 
+Caminho de 10 para 23: 10 16 23 
+Caminho de 10 para 24: 10 9 14 19 24 
+Caminho de 10 para 25: 10 15 20 25 
+Caminho de 10 para 26: 10 15 20 26 
+Caminho de 10 para 27: 10 15 20 27 
+Caminho de 10 para 29: 10 16 23 29 
+Caminho de 10 para 32: 10 15 20 26 32 
+Caminho de 10 para 33: 10 15 20 26 33 
+Caminho de 10 para 34: 10 16 23 29 34 
+Caminho de 10 para 35: 10 16 23 29 35 
+Caminho de 11 para 0: 11 10 9 8 1 0 
+Caminho de 11 para 1: 11 10 9 8 1 
+Caminho de 11 para 2: 11 10 9 2 
+Caminho de 11 para 3: 11 10 3 
+Caminho de 11 para 4: 11 4 
+Caminho de 11 para 5: 11 5 
+Caminho de 11 para 6: 11 10 9 8 1 6 
+Caminho de 11 para 8: 11 10 9 8 
+Caminho de 11 para 9: 11 10 9 
+Caminho de 11 para 10: 11 10 
+Caminho de 11 para 11: 11 
+Caminho de 11 para 12: 11 10 9 14 19 12 
+Caminho de 11 para 14: 11 10 9 14 
+Caminho de 11 para 15: 11 10 15 
+Caminho de 11 para 16: 11 16 
+Caminho de 11 para 17: 11 17 
+Caminho de 11 para 18: 11 10 9 14 19 18 
+Caminho de 11 para 19: 11 10 9 14 19 
+Caminho de 11 para 20: 11 10 15 20 
+Caminho de 11 para 23: 11 17 23 
+Caminho de 11 para 24: 11 10 9 14 19 24 
+Caminho de 11 para 25: 11 10 15 20 25 
+Caminho de 11 para 26: 11 10 15 20 26 
+Caminho de 11 para 27: 11 10 15 20 27 
+Caminho de 11 para 29: 11 17 23 29 
+Caminho de 11 para 32: 11 10 15 20 26 32 
+Caminho de 11 para 33: 11 17 23 29 34 33 
+Caminho de 11 para 34: 11 17 23 29 34 
+Caminho de 11 para 35: 11 17 23 29 35 
+Caminho de 12 para 0: 12 6 0 
+Caminho de 12 para 1: 12 6 1 
+Caminho de 12 para 2: 12 6 1 2 
+Caminho de 12 para 3: 12 6 1 2 3 
+Caminho de 12 para 4: 12 6 1 2 3 4 
+Caminho de 12 para 5: 12 6 1 2 3 4 5 
+Caminho de 12 para 6: 12 6 
+Caminho de 12 para 8: 12 6 1 8 
+Caminho de 12 para 9: 12 19 14 9 
+Caminho de 12 para 10: 12 19 20 15 10 
+Caminho de 12 para 11: 12 19 20 15 16 11 
+Caminho de 12 para 12: 12 
+Caminho de 12 para 14: 12 19 14 
+Caminho de 12 para 15: 12 19 20 15 
+Caminho de 12 para 16: 12 19 20 15 16 
+Caminho de 12 para 17: 12 19 20 15 16 17 
+Caminho de 12 para 18: 12 18 
+Caminho de 12 para 19: 12 19 
+Caminho de 12 para 20: 12 19 20 
+Caminho de 12 para 23: 12 19 20 15 16 23 
+Caminho de 12 para 24: 12 18 24 
+Caminho de 12 para 25: 12 18 25 
+Caminho de 12 para 26: 12 19 26 
+Caminho de 12 para 27: 12 19 20 27 
+Caminho de 12 para 29: 12 19 20 27 34 29 
+Caminho de 12 para 32: 12 18 25 32 
+Caminho de 12 para 33: 12 19 26 33 
+Caminho de 12 para 34: 12 19 20 27 34 
+Caminho de 12 para 35: 12 19 20 27 34 35 
+Caminho de 14 para 0: 14 8 1 0 
+Caminho de 14 para 1: 14 8 1 
+Caminho de 14 para 2: 14 8 2 
+Caminho de 14 para 3: 14 8 3 
+Caminho de 14 para 4: 14 9 4 
+Caminho de 14 para 5: 14 15 10 5 
+Caminho de 14 para 6: 14 8 1 6 
+Caminho de 14 para 8: 14 8 
+Caminho de 14 para 9: 14 9 
+Caminho de 14 para 10: 14 15 10 
+Caminho de 14 para 11: 14 15 16 11 
+Caminho de 14 para 12: 14 19 12 
+Caminho de 14 para 14: 14 
+Caminho de 14 para 15: 14 15 
+Caminho de 14 para 16: 14 15 16 
+Caminho de 14 para 17: 14 15 16 17 
+Caminho de 14 para 18: 14 19 18 
+Caminho de 14 para 19: 14 19 
+Caminho de 14 para 20: 14 20 
+Caminho de 14 para 23: 14 15 16 23 
+Caminho de 14 para 24: 14 19 24 
+Caminho de 14 para 25: 14 20 25 
+Caminho de 14 para 26: 14 20 26 
+Caminho de 14 para 27: 14 20 27 
+Caminho de 14 para 29: 14 15 16 23 29 
+Caminho de 14 para 32: 14 20 26 32 
+Caminho de 14 para 33: 14 20 26 33 
+Caminho de 14 para 34: 14 20 27 34 
+Caminho de 14 para 35: 14 20 27 34 35 
+Caminho de 15 para 0: 15 8 1 0 
+Caminho de 15 para 1: 15 8 1 
+Caminho de 15 para 2: 15 9 2 
+Caminho de 15 para 3: 15 9 3 
+Caminho de 15 para 4: 15 9 4 
+Caminho de 15 para 5: 15 10 5 
+Caminho de 15 para 6: 15 8 1 6 
+Caminho de 15 para 8: 15 8 
+Caminho de 15 para 9: 15 9 
+Caminho de 15 para 10: 15 10 
+Caminho de 15 para 11: 15 16 11 
+Caminho de 15 para 12: 15 14 19 12 
+Caminho de 15 para 14: 15 14 
+Caminho de 15 para 15: 15 
+Caminho de 15 para 16: 15 16 
+Caminho de 15 para 17: 15 16 17 
+Caminho de 15 para 18: 15 14 19 18 
+Caminho de 15 para 19: 15 14 19 
+Caminho de 15 para 20: 15 20 
+Caminho de 15 para 23: 15 16 23 
+Caminho de 15 para 24: 15 14 19 24 
+Caminho de 15 para 25: 15 20 25 
+Caminho de 15 para 26: 15 20 26 
+Caminho de 15 para 27: 15 20 27 
+Caminho de 15 para 29: 15 16 23 29 
+Caminho de 15 para 32: 15 20 26 32 
+Caminho de 15 para 33: 15 20 26 33 
+Caminho de 15 para 34: 15 20 27 34 
+Caminho de 15 para 35: 15 16 23 29 35 
+Caminho de 16 para 0: 16 15 8 1 0 
+Caminho de 16 para 1: 16 15 8 1 
+Caminho de 16 para 2: 16 9 2 
+Caminho de 16 para 3: 16 10 3 
+Caminho de 16 para 4: 16 10 4 
+Caminho de 16 para 5: 16 10 5 
+Caminho de 16 para 6: 16 15 8 1 6 
+Caminho de 16 para 8: 16 15 8 
+Caminho de 16 para 9: 16 9 
+Caminho de 16 para 10: 16 10 
+Caminho de 16 para 11: 16 11 
+Caminho de 16 para 12: 16 15 14 19 12 
+Caminho de 16 para 14: 16 15 14 
+Caminho de 16 para 15: 16 15 
+Caminho de 16 para 16: 16 
+Caminho de 16 para 17: 16 17 
+Caminho de 16 para 18: 16 15 14 19 18 
+Caminho de 16 para 19: 16 15 14 19 
+Caminho de 16 para 20: 16 15 20 
+Caminho de 16 para 23: 16 23 
+Caminho de 16 para 24: 16 15 14 19 24 
+Caminho de 16 para 25: 16 15 20 25 
+Caminho de 16 para 26: 16 15 20 26 
+Caminho de 16 para 27: 16 15 20 27 
+Caminho de 16 para 29: 16 23 29 
+Caminho de 16 para 32: 16 15 20 26 32 
+Caminho de 16 para 33: 16 15 20 26 33 
+Caminho de 16 para 34: 16 23 29 34 
+Caminho de 16 para 35: 16 23 29 35 
+Caminho de 17 para 0: 17 16 15 8 1 0 
+Caminho de 17 para 1: 17 16 15 8 1 
+Caminho de 17 para 2: 17 16 9 2 
+Caminho de 17 para 3: 17 10 3 
+Caminho de 17 para 4: 17 11 4 
+Caminho de 17 para 5: 17 11 5 
+Caminho de 17 para 6: 17 16 15 8 1 6 
+Caminho de 17 para 8: 17 16 15 8 
+Caminho de 17 para 9: 17 16 9 
+Caminho de 17 para 10: 17 10 
+Caminho de 17 para 11: 17 11 
+Caminho de 17 para 12: 17 16 15 14 19 12 
+Caminho de 17 para 14: 17 16 15 14 
+Caminho de 17 para 15: 17 16 15 
+Caminho de 17 para 16: 17 16 
+Caminho de 17 para 17: 17 
+Caminho de 17 para 18: 17 16 15 14 19 18 
+Caminho de 17 para 19: 17 16 15 14 19 
+Caminho de 17 para 20: 17 16 15 20 
+Caminho de 17 para 23: 17 23 
+Caminho de 17 para 24: 17 16 15 14 19 24 
+Caminho de 17 para 25: 17 16 15 20 25 
+Caminho de 17 para 26: 17 16 15 20 26 
+Caminho de 17 para 27: 17 16 15 20 27 
+Caminho de 17 para 29: 17 23 29 
+Caminho de 17 para 32: 17 16 15 20 26 32 
+Caminho de 17 para 33: 17 23 29 34 33 
+Caminho de 17 para 34: 17 23 29 34 
+Caminho de 17 para 35: 17 23 29 35 
+Caminho de 18 para 0: 18 12 6 0 
+Caminho de 18 para 1: 18 12 6 1 
+Caminho de 18 para 2: 18 12 6 1 2 
+Caminho de 18 para 3: 18 19 14 8 3 
+Caminho de 18 para 4: 18 19 14 9 4 
+Caminho de 18 para 5: 18 19 20 15 10 5 
+Caminho de 18 para 6: 18 12 6 
+Caminho de 18 para 8: 18 19 14 8 
+Caminho de 18 para 9: 18 19 14 9 
+Caminho de 18 para 10: 18 19 20 15 10 
+Caminho de 18 para 11: 18 19 20 15 16 11 
+Caminho de 18 para 12: 18 12 
+Caminho de 18 para 14: 18 19 14 
+Caminho de 18 para 15: 18 19 20 15 
+Caminho de 18 para 16: 18 19 20 15 16 
+Caminho de 18 para 17: 18 19 20 15 16 17 
+Caminho de 18 para 18: 18 
+Caminho de 18 para 19: 18 19 
+Caminho de 18 para 20: 18 19 20 
+Caminho de 18 para 23: 18 19 20 15 16 23 
+Caminho de 18 para 24: 18 24 
+Caminho de 18 para 25: 18 25 
+Caminho de 18 para 26: 18 19 26 
+Caminho de 18 para 27: 18 19 20 27 
+Caminho de 18 para 29: 18 19 20 27 34 29 
+Caminho de 18 para 32: 18 25 32 
+Caminho de 18 para 33: 18 19 26 33 
+Caminho de 18 para 34: 18 19 20 27 34 
+Caminho de 18 para 35: 18 19 20 27 34 35 
+Caminho de 19 para 0: 19 12 6 0 
+Caminho de 19 para 1: 19 12 6 1 
+Caminho de 19 para 2: 19 14 8 2 
+Caminho de 19 para 3: 19 14 8 3 
+Caminho de 19 para 4: 19 14 9 4 
+Caminho de 19 para 5: 19 20 15 10 5 
+Caminho de 19 para 6: 19 12 6 
+Caminho de 19 para 8: 19 14 8 
+Caminho de 19 para 9: 19 14 9 
+Caminho de 19 para 10: 19 20 15 10 
+Caminho de 19 para 11: 19 20 15 16 11 
+Caminho de 19 para 12: 19 12 
+Caminho de 19 para 14: 19 14 
+Caminho de 19 para 15: 19 20 15 
+Caminho de 19 para 16: 19 20 15 16 
+Caminho de 19 para 17: 19 20 15 16 17 
+Caminho de 19 para 18: 19 18 
+Caminho de 19 para 19: 19 
+Caminho de 19 para 20: 19 20 
+Caminho de 19 para 23: 19 20 15 16 23 
+Caminho de 19 para 24: 19 24 
+Caminho de 19 para 25: 19 25 
+Caminho de 19 para 26: 19 26 
+Caminho de 19 para 27: 19 20 27 
+Caminho de 19 para 29: 19 20 27 34 29 
+Caminho de 19 para 32: 19 25 32 
+Caminho de 19 para 33: 19 26 33 
+Caminho de 19 para 34: 19 20 27 34 
+Caminho de 19 para 35: 19 20 27 34 35 
+Caminho de 20 para 0: 20 14 8 1 0 
+Caminho de 20 para 1: 20 14 8 1 
+Caminho de 20 para 2: 20 14 8 2 
+Caminho de 20 para 3: 20 14 8 3 
+Caminho de 20 para 4: 20 14 9 4 
+Caminho de 20 para 5: 20 15 10 5 
+Caminho de 20 para 6: 20 19 12 6 
+Caminho de 20 para 8: 20 14 8 
+Caminho de 20 para 9: 20 14 9 
+Caminho de 20 para 10: 20 15 10 
+Caminho de 20 para 11: 20 15 16 11 
+Caminho de 20 para 12: 20 19 12 
+Caminho de 20 para 14: 20 14 
+Caminho de 20 para 15: 20 15 
+Caminho de 20 para 16: 20 15 16 
+Caminho de 20 para 17: 20 15 16 17 
+Caminho de 20 para 18: 20 19 18 
+Caminho de 20 para 19: 20 19 
+Caminho de 20 para 20: 20 
+Caminho de 20 para 23: 20 15 16 23 
+Caminho de 20 para 24: 20 19 24 
+Caminho de 20 para 25: 20 25 
+Caminho de 20 para 26: 20 26 
+Caminho de 20 para 27: 20 27 
+Caminho de 20 para 29: 20 27 34 29 
+Caminho de 20 para 32: 20 26 32 
+Caminho de 20 para 33: 20 26 33 
+Caminho de 20 para 34: 20 27 34 
+Caminho de 20 para 35: 20 27 34 35 
+Caminho de 23 para 0: 23 16 15 8 1 0 
+Caminho de 23 para 1: 23 16 15 8 1 
+Caminho de 23 para 2: 23 16 9 2 
+Caminho de 23 para 3: 23 17 10 3 
+Caminho de 23 para 4: 23 17 11 4 
+Caminho de 23 para 5: 23 17 11 5 
+Caminho de 23 para 6: 23 16 15 8 1 6 
+Caminho de 23 para 8: 23 16 15 8 
+Caminho de 23 para 9: 23 16 9 
+Caminho de 23 para 10: 23 17 10 
+Caminho de 23 para 11: 23 17 11 
+Caminho de 23 para 12: 23 16 15 14 19 12 
+Caminho de 23 para 14: 23 16 15 14 
+Caminho de 23 para 15: 23 16 15 
+Caminho de 23 para 16: 23 16 
+Caminho de 23 para 17: 23 17 
+Caminho de 23 para 18: 23 16 15 14 19 18 
+Caminho de 23 para 19: 23 16 15 14 19 
+Caminho de 23 para 20: 23 16 15 20 
+Caminho de 23 para 23: 23 
+Caminho de 23 para 24: 23 16 15 14 19 24 
+Caminho de 23 para 25: 23 16 15 20 25 
+Caminho de 23 para 26: 23 29 34 33 26 
+Caminho de 23 para 27: 23 29 34 27 
+Caminho de 23 para 29: 23 29 
+Caminho de 23 para 32: 23 29 34 33 32 
+Caminho de 23 para 33: 23 29 34 33 
+Caminho de 23 para 34: 23 29 34 
+Caminho de 23 para 35: 23 29 35 
+Caminho de 24 para 0: 24 18 12 6 0 
+Caminho de 24 para 1: 24 18 12 6 1 
+Caminho de 24 para 2: 24 19 14 8 2 
+Caminho de 24 para 3: 24 19 14 8 3 
+Caminho de 24 para 4: 24 19 14 9 4 
+Caminho de 24 para 5: 24 25 20 15 10 5 
+Caminho de 24 para 6: 24 18 12 6 
+Caminho de 24 para 8: 24 19 14 8 
+Caminho de 24 para 9: 24 19 14 9 
+Caminho de 24 para 10: 24 25 20 15 10 
+Caminho de 24 para 11: 24 25 20 15 16 11 
+Caminho de 24 para 12: 24 18 12 
+Caminho de 24 para 14: 24 19 14 
+Caminho de 24 para 15: 24 25 20 15 
+Caminho de 24 para 16: 24 25 20 15 16 
+Caminho de 24 para 17: 24 25 20 15 16 17 
+Caminho de 24 para 18: 24 18 
+Caminho de 24 para 19: 24 19 
+Caminho de 24 para 20: 24 25 20 
+Caminho de 24 para 23: 24 25 20 15 16 23 
+Caminho de 24 para 24: 24 
+Caminho de 24 para 25: 24 25 
+Caminho de 24 para 26: 24 25 26 
+Caminho de 24 para 27: 24 25 26 27 
+Caminho de 24 para 29: 24 25 26 27 34 29 
+Caminho de 24 para 32: 24 25 32 
+Caminho de 24 para 33: 24 25 26 33 
+Caminho de 24 para 34: 24 25 26 27 34 
+Caminho de 24 para 35: 24 25 26 27 34 35 
+Caminho de 25 para 0: 25 19 12 6 0 
+Caminho de 25 para 1: 25 19 12 6 1 
+Caminho de 25 para 2: 25 19 14 8 2 
+Caminho de 25 para 3: 25 19 14 8 3 
+Caminho de 25 para 4: 25 19 14 9 4 
+Caminho de 25 para 5: 25 20 15 10 5 
+Caminho de 25 para 6: 25 19 12 6 
+Caminho de 25 para 8: 25 19 14 8 
+Caminho de 25 para 9: 25 19 14 9 
+Caminho de 25 para 10: 25 20 15 10 
+Caminho de 25 para 11: 25 20 15 16 11 
+Caminho de 25 para 12: 25 19 12 
+Caminho de 25 para 14: 25 19 14 
+Caminho de 25 para 15: 25 20 15 
+Caminho de 25 para 16: 25 20 15 16 
+Caminho de 25 para 17: 25 20 15 16 17 
+Caminho de 25 para 18: 25 18 
+Caminho de 25 para 19: 25 19 
+Caminho de 25 para 20: 25 20 
+Caminho de 25 para 23: 25 20 15 16 23 
+Caminho de 25 para 24: 25 24 
+Caminho de 25 para 25: 25 
+Caminho de 25 para 26: 25 26 
+Caminho de 25 para 27: 25 26 27 
+Caminho de 25 para 29: 25 26 27 34 29 
+Caminho de 25 para 32: 25 32 
+Caminho de 25 para 33: 25 26 33 
+Caminho de 25 para 34: 25 26 27 34 
+Caminho de 25 para 35: 25 26 27 34 35 
+Caminho de 26 para 0: 26 19 12 6 0 
+Caminho de 26 para 1: 26 20 14 8 1 
+Caminho de 26 para 2: 26 20 14 8 2 
+Caminho de 26 para 3: 26 20 14 8 3 
+Caminho de 26 para 4: 26 20 14 9 4 
+Caminho de 26 para 5: 26 20 15 10 5 
+Caminho de 26 para 6: 26 19 12 6 
+Caminho de 26 para 8: 26 20 14 8 
+Caminho de 26 para 9: 26 20 14 9 
+Caminho de 26 para 10: 26 20 15 10 
+Caminho de 26 para 11: 26 20 15 16 11 
+Caminho de 26 para 12: 26 19 12 
+Caminho de 26 para 14: 26 20 14 
+Caminho de 26 para 15: 26 20 15 
+Caminho de 26 para 16: 26 20 15 16 
+Caminho de 26 para 17: 26 20 15 16 17 
+Caminho de 26 para 18: 26 25 18 
+Caminho de 26 para 19: 26 19 
+Caminho de 26 para 20: 26 20 
+Caminho de 26 para 23: 26 20 15 16 23 
+Caminho de 26 para 24: 26 25 24 
+Caminho de 26 para 25: 26 25 
+Caminho de 26 para 26: 26 
+Caminho de 26 para 27: 26 27 
+Caminho de 26 para 29: 26 27 34 29 
+Caminho de 26 para 32: 26 32 
+Caminho de 26 para 33: 26 33 
+Caminho de 26 para 34: 26 27 34 
+Caminho de 26 para 35: 26 27 34 35 
+Caminho de 27 para 0: 27 20 14 8 1 0 
+Caminho de 27 para 1: 27 20 14 8 1 
+Caminho de 27 para 2: 27 20 14 8 2 
+Caminho de 27 para 3: 27 20 14 8 3 
+Caminho de 27 para 4: 27 20 14 9 4 
+Caminho de 27 para 5: 27 20 15 10 5 
+Caminho de 27 para 6: 27 26 19 12 6 
+Caminho de 27 para 8: 27 20 14 8 
+Caminho de 27 para 9: 27 20 14 9 
+Caminho de 27 para 10: 27 20 15 10 
+Caminho de 27 para 11: 27 20 15 16 11 
+Caminho de 27 para 12: 27 26 19 12 
+Caminho de 27 para 14: 27 20 14 
+Caminho de 27 para 15: 27 20 15 
+Caminho de 27 para 16: 27 20 15 16 
+Caminho de 27 para 17: 27 20 15 16 17 
+Caminho de 27 para 18: 27 26 25 18 
+Caminho de 27 para 19: 27 26 19 
+Caminho de 27 para 20: 27 20 
+Caminho de 27 para 23: 27 34 29 23 
+Caminho de 27 para 24: 27 26 25 24 
+Caminho de 27 para 25: 27 26 25 
+Caminho de 27 para 26: 27 26 
+Caminho de 27 para 27: 27 
+Caminho de 27 para 29: 27 34 29 
+Caminho de 27 para 32: 27 32 
+Caminho de 27 para 33: 27 33 
+Caminho de 27 para 34: 27 34 
+Caminho de 27 para 35: 27 34 35 
+Caminho de 29 para 0: 29 23 16 15 8 1 0 
+Caminho de 29 para 1: 29 23 16 15 8 1 
+Caminho de 29 para 2: 29 23 16 9 2 
+Caminho de 29 para 3: 29 23 17 10 3 
+Caminho de 29 para 4: 29 23 17 11 4 
+Caminho de 29 para 5: 29 23 17 11 5 
+Caminho de 29 para 6: 29 23 16 15 8 1 6 
+Caminho de 29 para 8: 29 23 16 15 8 
+Caminho de 29 para 9: 29 23 16 9 
+Caminho de 29 para 10: 29 23 17 10 
+Caminho de 29 para 11: 29 23 17 11 
+Caminho de 29 para 12: 29 34 33 26 19 12 
+Caminho de 29 para 14: 29 23 16 15 14 
+Caminho de 29 para 15: 29 23 16 15 
+Caminho de 29 para 16: 29 23 16 
+Caminho de 29 para 17: 29 23 17 
+Caminho de 29 para 18: 29 34 33 32 25 18 
+Caminho de 29 para 19: 29 34 33 26 19 
+Caminho de 29 para 20: 29 34 27 20 
+Caminho de 29 para 23: 29 23 
+Caminho de 29 para 24: 29 34 33 32 25 24 
+Caminho de 29 para 25: 29 34 33 32 25 
+Caminho de 29 para 26: 29 34 33 26 
+Caminho de 29 para 27: 29 34 27 
+Caminho de 29 para 29: 29 
+Caminho de 29 para 32: 29 34 33 32 
+Caminho de 29 para 33: 29 34 33 
+Caminho de 29 para 34: 29 34 
+Caminho de 29 para 35: 29 35 
+Caminho de 32 para 0: 32 26 19 12 6 0 
+Caminho de 32 para 1: 32 26 20 14 8 1 
+Caminho de 32 para 2: 32 26 20 14 8 2 
+Caminho de 32 para 3: 32 26 20 14 8 3 
+Caminho de 32 para 4: 32 26 20 14 9 4 
+Caminho de 32 para 5: 32 26 20 15 10 5 
+Caminho de 32 para 6: 32 26 19 12 6 
+Caminho de 32 para 8: 32 26 20 14 8 
+Caminho de 32 para 9: 32 26 20 14 9 
+Caminho de 32 para 10: 32 26 20 15 10 
+Caminho de 32 para 11: 32 26 20 15 16 11 
+Caminho de 32 para 12: 32 26 19 12 
+Caminho de 32 para 14: 32 26 20 14 
+Caminho de 32 para 15: 32 26 20 15 
+Caminho de 32 para 16: 32 26 20 15 16 
+Caminho de 32 para 17: 32 26 20 15 16 17 
+Caminho de 32 para 18: 32 25 18 
+Caminho de 32 para 19: 32 26 19 
+Caminho de 32 para 20: 32 26 20 
+Caminho de 32 para 23: 32 33 34 29 23 
+Caminho de 32 para 24: 32 25 24 
+Caminho de 32 para 25: 32 25 
+Caminho de 32 para 26: 32 26 
+Caminho de 32 para 27: 32 27 
+Caminho de 32 para 29: 32 33 34 29 
+Caminho de 32 para 32: 32 
+Caminho de 32 para 33: 32 33 
+Caminho de 32 para 34: 32 33 34 
+Caminho de 32 para 35: 32 33 34 35 
+Caminho de 33 para 0: 33 26 19 12 6 0 
+Caminho de 33 para 1: 33 27 20 14 8 1 
+Caminho de 33 para 2: 33 27 20 14 8 2 
+Caminho de 33 para 3: 33 27 20 14 8 3 
+Caminho de 33 para 4: 33 27 20 14 9 4 
+Caminho de 33 para 5: 33 34 29 23 17 11 5 
+Caminho de 33 para 6: 33 26 19 12 6 
+Caminho de 33 para 8: 33 27 20 14 8 
+Caminho de 33 para 9: 33 27 20 14 9 
+Caminho de 33 para 10: 33 27 20 15 10 
+Caminho de 33 para 11: 33 34 29 23 17 11 
+Caminho de 33 para 12: 33 26 19 12 
+Caminho de 33 para 14: 33 27 20 14 
+Caminho de 33 para 15: 33 27 20 15 
+Caminho de 33 para 16: 33 34 29 23 16 
+Caminho de 33 para 17: 33 34 29 23 17 
+Caminho de 33 para 18: 33 32 25 18 
+Caminho de 33 para 19: 33 26 19 
+Caminho de 33 para 20: 33 27 20 
+Caminho de 33 para 23: 33 34 29 23 
+Caminho de 33 para 24: 33 32 25 24 
+Caminho de 33 para 25: 33 32 25 
+Caminho de 33 para 26: 33 26 
+Caminho de 33 para 27: 33 27 
+Caminho de 33 para 29: 33 34 29 
+Caminho de 33 para 32: 33 32 
+Caminho de 33 para 33: 33 
+Caminho de 33 para 34: 33 34 
+Caminho de 33 para 35: 33 34 35 
+Caminho de 34 para 0: 34 27 20 14 8 1 0 
+Caminho de 34 para 1: 34 27 20 14 8 1 
+Caminho de 34 para 2: 34 27 20 14 8 2 
+Caminho de 34 para 3: 34 27 20 14 8 3 
+Caminho de 34 para 4: 34 29 23 17 11 4 
+Caminho de 34 para 5: 34 29 23 17 11 5 
+Caminho de 34 para 6: 34 33 26 19 12 6 
+Caminho de 34 para 8: 34 27 20 14 8 
+Caminho de 34 para 9: 34 27 20 14 9 
+Caminho de 34 para 10: 34 29 23 17 10 
+Caminho de 34 para 11: 34 29 23 17 11 
+Caminho de 34 para 12: 34 33 26 19 12 
+Caminho de 34 para 14: 34 27 20 14 
+Caminho de 34 para 15: 34 27 20 15 
+Caminho de 34 para 16: 34 29 23 16 
+Caminho de 34 para 17: 34 29 23 17 
+Caminho de 34 para 18: 34 33 32 25 18 
+Caminho de 34 para 19: 34 33 26 19 
+Caminho de 34 para 20: 34 27 20 
+Caminho de 34 para 23: 34 29 23 
+Caminho de 34 para 24: 34 33 32 25 24 
+Caminho de 34 para 25: 34 33 32 25 
+Caminho de 34 para 26: 34 33 26 
+Caminho de 34 para 27: 34 27 
+Caminho de 34 para 29: 34 29 
+Caminho de 34 para 32: 34 33 32 
+Caminho de 34 para 33: 34 33 
+Caminho de 34 para 34: 34 
+Caminho de 34 para 35: 34 35 
+Caminho de 35 para 0: 35 29 23 16 15 8 1 0 
+Caminho de 35 para 1: 35 29 23 16 15 8 1 
+Caminho de 35 para 2: 35 29 23 16 9 2 
+Caminho de 35 para 3: 35 29 23 17 10 3 
+Caminho de 35 para 4: 35 29 23 17 11 4 
+Caminho de 35 para 5: 35 29 23 17 11 5 
+Caminho de 35 para 6: 35 34 33 26 19 12 6 
+Caminho de 35 para 8: 35 29 23 16 15 8 
+Caminho de 35 para 9: 35 29 23 16 9 
+Caminho de 35 para 10: 35 29 23 17 10 
+Caminho de 35 para 11: 35 29 23 17 11 
+Caminho de 35 para 12: 35 34 33 26 19 12 
+Caminho de 35 para 14: 35 34 27 20 14 
+Caminho de 35 para 15: 35 29 23 16 15 
+Caminho de 35 para 16: 35 29 23 16 
+Caminho de 35 para 17: 35 29 23 17 
+Caminho de 35 para 18: 35 34 33 32 25 18 
+Caminho de 35 para 19: 35 34 33 26 19 
+Caminho de 35 para 20: 35 34 27 20 
+Caminho de 35 para 23: 35 29 23 
+Caminho de 35 para 24: 35 34 33 32 25 24 
+Caminho de 35 para 25: 35 34 33 32 25 
+Caminho de 35 para 26: 35 34 33 26 
+Caminho de 35 para 27: 35 34 27 
+Caminho de 35 para 29: 35 29 
+Caminho de 35 para 32: 35 34 33 32 
+Caminho de 35 para 33: 35 34 33 
+Caminho de 35 para 34: 35 34 
+Caminho de 35 para 35: 35 

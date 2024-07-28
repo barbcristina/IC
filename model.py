@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 9
+mapaqtd = 5
 
-for i in range(0, 1):
+for i in range(0, 2):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,9 +27,9 @@ for i in range(0, 1):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 1 # Versão do arquivo
+  versao = 0 # Versão do arquivo
 
-  for k in range(1, 2):
+  for k in range(0, qtdobs):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -179,12 +179,8 @@ for i in range(0, 1):
     for i in validos:
       for j in validos:
         for k in validos:
-          if (c[i][j] == float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
+          if (c[i][j] == float('inf') or c[j][k] == float('inf')) and i!=j and j!=k:
             q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + (q[matrix[i][j][len(matrix[i][j])-2]][j][matrix[j][k][1]])
-          elif (c[i][j] == float('inf') and c[j][k] != float('inf')) and i!=j and j!=k:
-            q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k]
-          elif (c[i][j] != float('inf') and c[j][k] == float('inf')) and i!=j and j!=k:
-            q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j][len(matrix[i][j])-2]]
           
 
     modelo = gp.Model('Caixeiro_Viajante') # Cria o modelo

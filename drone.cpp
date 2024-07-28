@@ -341,7 +341,7 @@ std::vector<int> encontrarProximoPontoNaoVisitado(const std::vector<int>& caminh
 
     //std::cout << "Número aleatório entre " << min << " e " << max << ": " << numero_aleatorio << std::endl;
 
-    for(int j = 0; j < numero_aleatorio; j++){
+    for(int j = 0; j < 1; j++){
         menorCustoInsercao = std::numeric_limits<double>::max();
         for (int i = 0; i < n; i++) {
             if (!visitado[i] and !selecionados[i]) {
@@ -476,7 +476,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
             melhorou = qtdit;
         }
 
-        if(qtdit - melhorou >= 500){
+        if(qtdit - melhorou >= 1){
             melhora = false;
         }
         //std::cout << "2opt: " << lim << std::endl;
@@ -486,7 +486,7 @@ std::vector<int> grasp(const std::vector<std::vector<double>>& distancias, const
 }
 
 int main() {
-    std::string mapas = "144_pontos/mapas12.txt";
+    std::string mapas = "36_pontos/mapas6.txt";
 
     // Abrir o arquivo para leitura
     std::ifstream arquivo(mapas);
@@ -524,7 +524,7 @@ int main() {
     }
 
     // para iterar só fazer linhas.size() - i
-    int nObs = 10;
+    int nObs = 9;
     std::istringstream iss(linhas[linhas.size() - nObs]);
     int obstaculo;
     while (iss >> obstaculo) {
@@ -532,7 +532,7 @@ int main() {
         std::cout << obstaculo << std::endl;
     }
 
-    std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 34, 33, 32, 31, 30, 29, 28, 39, 38, 50, 62, 63, 64, 77, 78, 79, 80, 81, 82, 94, 106, 118, 130, 129, 128, 127, 126, 114, 115, 116, 117, 105, 93, 92, 91, 90, 89, 88, 87, 86, 98, 99, 100, 113, 112, 111, 110, 122, 121, 109, 97, 85, 73, 61, 49, 37, 25, 26, 27, 16, 17, 18, 19, 20, 21, 22, 23, 35, 47, 46, 45, 44, 56, 55, 54, 53, 40, 51, 52, 65, 66, 67, 68, 69, 70, 71, 83, 95, 107, 119, 131, 143, 142, 141, 140, 139, 138, 137, 136, 135, 134, 133, 132, 120, 108, 96, 84, 72, 60, 48, 36, 24, 12, 0};
+    std::vector<int> cicloHamiltoniano = {0, 7, 8, 9, 11, 17, 23, 29, 27, 26, 25, 24, 30, 31, 32, 33, 28, 22, 21, 20, 19, 18, 13, 14, 15, 16, 10, 3, 2, 1, 0};
 
     int n = coord.size();  // número de células (pontos)
 
@@ -660,18 +660,18 @@ int main() {
     }
 
     for (int i : validos) {
-    for (int j : validos) {
-        for (int k : validos) {
-            if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
-                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]];
-            } else if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] != std::numeric_limits<double>::infinity() && i != j && j != k) {
-                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[j][k][1]][j][k];
-            } else if (c[i][j] != std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
-                q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[i][j][matrix[i][j].size()-2];
+        for (int j : validos) {
+            for (int k : validos) {
+                if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
+                    q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]];
+                } else if (c[i][j] == std::numeric_limits<double>::infinity() && c[j][k] != std::numeric_limits<double>::infinity() && i != j && j != k) {
+                    q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]];
+                } else if (c[i][j] != std::numeric_limits<double>::infinity() && c[j][k] == std::numeric_limits<double>::infinity() && i != j && j != k) {
+                    q[i][j][k] = (all_angles[i][j] + all_angles[j][k]) + q[matrix[i][j][matrix[i][j].size()-2]][j][matrix[j][k][1]];
+                }
             }
         }
     }
-}
 
 
     //return 0;

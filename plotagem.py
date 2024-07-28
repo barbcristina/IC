@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 # Leitura dos resultados do arquivo de texto
-with open('resultados.txt', 'r') as arquivo:
+with open('resultados2.txt', 'r') as arquivo:
     linhas = arquivo.readlines()
 
 coord = []
@@ -34,7 +34,7 @@ for linha in linhas:
         obstaculos.append((x, y))
 
 # Leitura do arquivo contendo todos os caminhos
-with open('path.txt', 'r') as allPathsFile:
+with open('path2.txt', 'r') as allPathsFile:
     all_paths = allPathsFile.readlines()
 
 # Encontrar caminhos usados no ciclo Hamiltoniano
@@ -106,4 +106,4 @@ for i in range(len(x_ordered) - 1):
 
 plt.title(f"Custo Total do Ciclo: {custo_total:.2f}")
 
-plt.savefig("100_pontos/IMB_100_10.png")
+plt.savefig("teste.png")
