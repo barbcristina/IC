@@ -10,6 +10,21 @@
 #include <numeric>
 #include <random>
 #include <chrono>
+#include <string>
+
+std::string formatWithComma(double number) {
+    std::ostringstream ss;
+    ss << std::fixed << std::setprecision(2) << number;
+    std::string result = ss.str();
+
+    // Substitui o ponto por vírgula
+    size_t pos = result.find('.');
+    if (pos != std::string::npos) {
+        result[pos] = ',';
+    }
+
+    return result;
+}
 
 // Função para calcular h
 double calcular_h(int i, int j, double dist, const std::vector<std::tuple<double, double, double>>& coord) {
@@ -148,7 +163,7 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
     std::mt19937 gen(rd());
 
     int min = 2;
-    int max = 8;
+    int max = 15;
 
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
@@ -192,7 +207,7 @@ std::vector<int> KNN(int tam, const std::vector<std::vector<double>>& distancias
 
     while (cicloHamiltoniano.size() <= n) {
 
-        std::cout << "tam: " << cicloHamiltoniano.size() << std::endl;
+        //std::cout << "tam: " << cicloHamiltoniano.size() << std::endl;
 
         std::vector<int> proxPonto = encontrarProximoPonto(pontoant, pontoAtual, distancias, q, visitado, pontoInicial, cicloHamiltoniano, obsSize, obstaculos, altitudes);
 
@@ -237,14 +252,14 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
     int qtdit = 0;
     int melhorou = 0;
 
-    //std::cout << "comecando o grasp " << std::endl;
+    std::cout << "comecando o grasp " << std::endl;
     while(melhora){
         S = KNN(tam, distancias, q, obsSize, obstaculos, altitudes);
-        //std::cout << "passou pela insercao mais barata " << std::endl;
+        std::cout << "passou pela insercao mais barata " << std::endl;
         float valor = 0;
         for(int k = 0; k < S.size() - 1; k++)
             valor += (distancias[S[k]][S[k+1]] + q[S[(k > 0) ? k-1 : k]][S[k]][S[k+1]]);
-        //std::cout << "construtiva: " << valor << std::endl;
+        std::cout << "construtiva: " << valor << std::endl;
         par = Local_Search(S, distancias, 0, q, altitudes);
         s = par.first;
         valor = 0;
@@ -261,17 +276,17 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
         if(qtdit - melhorou >= 100){
             melhora = false;
         }
-       //std::cout << "2opt: " << lim << std::endl;
+       std::cout << "2opt: " << lim << std::endl;
     }
     std::cout << "Qtd de iterações: " << qtdit - 1 << std::endl;
     return best;
 }
 
 int main() {
-    std::string mapas = "36_pontos/mapas6.txt";
+    std::string mapas = "289_pontos/mapas17.txt";
     std::ofstream resultadosFile("resultados.txt");
 
-    for(int nObs = 9; nObs > 8; nObs--){
+    for(int nObs = 10; nObs > 0; nObs--){
 
         std::ofstream resultadosFiles("resultados" + std::to_string(11-nObs) + ".txt");
 
@@ -319,7 +334,7 @@ int main() {
             std::cout << obstaculo << std::endl;
         }
 
-        std::vector<int> cicloHamiltoniano = {0, 7, 8, 9, 11, 17, 23, 29, 27, 26, 25, 24, 30, 31, 32, 33, 28, 22, 21, 20, 19, 18, 13, 14, 15, 16, 10, 3, 2, 1, 0};
+        //std::vector<int> cicloHamiltoniano = {0, 7, 8, 9, 11, 17, 23, 29, 27, 26, 25, 24, 30, 31, 32, 33, 28, 22, 21, 20, 19, 18, 13, 14, 15, 16, 10, 3, 2, 1, 0};
 
         int n = coord.size();  // número de células (pontos)
 
@@ -335,6 +350,8 @@ int main() {
                 validos.push_back(i);
             }
         }
+
+        std::cout << std::endl;
 
         auto start_time = std::chrono::steady_clock::now();
 
@@ -368,6 +385,8 @@ int main() {
                 }
             }
         }
+
+        //std::cout << "passou da matriz de custos" << std::endl;
 
         // Matrizes que guardam a penalidade de altitude e ângulo
         std::vector<std::vector<double>> altitudes(n, std::vector<double>(n, 0.0));
@@ -433,6 +452,8 @@ int main() {
             }
         }
 
+        //std::cout << "passou do dijkstra" << std::endl;
+
         std::vector<std::vector<std::vector<double>>> q(n, std::vector<std::vector<double>>(n, std::vector<double>(n, 0.0)));
 
         // Se i, j e k forem adjacentes calcula a penalidade de angulo normalmente
@@ -446,6 +467,14 @@ int main() {
             }
         }
 
+        for(int i = 0; i < validos.size(); i++){
+            std::cout << validos[i] << " ";
+        }
+
+        std::cout << std::endl;
+
+        //std::cout << "passou dos ang1" << std::endl;
+
         // Se i, j e k não forem adjacentes calcula a penalidade de angulo com base no caminho mínimo
         for (int i : validos) {
             for (int j : validos) {
@@ -456,6 +485,8 @@ int main() {
                 }
             }
         }
+
+        //std::cout << "passou dos ang2" << std::endl;
         
         //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 21, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 34, 35, 47, 46, 45, 56, 67, 68, 69, 70, 71, 72, 73, 74, 75, 64, 63, 62, 61, 60, 48, 49, 50, 51, 52, 53, 54, 65, 76, 87, 98, 97, 96, 95, 94, 83, 82, 81, 80, 79, 78, 89, 90, 91, 92, 93, 104, 105, 106, 107, 108, 109, 120, 119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 99, 88, 77, 66, 55, 44, 33, 22, 11, 0};
 
@@ -465,12 +496,14 @@ int main() {
         // Recalcula a rota do gurobi
         //std::vector<int> cicloHamiltoniano = {0, 1, 2, 3, 4, 5, 6, 7, 19, 18, 17, 16, 15, 14, 13, 12, 23, 34, 45, 56, 57, 58, 59, 48, 37, 36, 26, 27, 40, 41, 42, 53, 52, 62, 61, 60, 49, 38, 28, 29, 30, 31, 43, 54, 65, 64, 63, 73, 72, 71, 70, 69, 68, 67, 77, 89, 90, 91, 92, 93, 94, 95, 96, 97, 117, 116, 115, 114, 113, 102, 82, 83, 84, 85, 86, 87, 98, 109, 108, 107, 106, 105, 104, 103, 101, 100, 99, 88, 66, 55, 44, 33, 22, 11, 0};
 
-        //std::vector<int> melhorRota = grasp(validos.back(), distancias, q, obstaculos_indices.size(), validos, altitudes);
+        std::vector<int> cicloHamiltoniano = grasp(validos.back(), distancias, q, obstaculos_indices.size(), validos, altitudes);
         //std::vector<int> melhorRota = construirCaminhoInsercaoMaisBarata(distancias, fronteira2, q, altitudes, obstaculos_indices.size());
         //std::vector<int> cicloHamiltoniano = melhorRota;
         //cicloHamiltoniano = Local_Search(cicloHamiltoniano, distancias, 0, q, altitudes).first;
         //std::cout << "chegou no final" << std::endl;
         // Calcular o valor total do ciclo
+        //std::cout << "passou do grasp" << std::endl;
+
         double total = 0;
         for(int i = 0; i < cicloHamiltoniano.size() - 1; i++){
             total += (distancias[cicloHamiltoniano[i]][cicloHamiltoniano[i+1]] + q[cicloHamiltoniano[(i > 0) ? i-1 : i]][cicloHamiltoniano[i]][cicloHamiltoniano[i+1]]);
@@ -525,7 +558,9 @@ int main() {
 
         if (resultadosFile.is_open()) {
 
-            resultadosFile << total << std::endl;
+            std::string formattedNumber = formatWithComma(total);
+
+            resultadosFile << formattedNumber << std::endl;
 
         } else {
             std::cerr << "Erro ao abrir o arquivo resultados.txt para escrita." << std::endl;
