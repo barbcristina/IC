@@ -6,9 +6,9 @@ import heapq
 from numpy import ubyte
 import time
 
-mapaqtd = 7
+mapaqtd = 15
 
-for i in range(0, 9):
+for i in range(0, 1):
   mapaqtd += 1
   mapas = f'{mapaqtd*mapaqtd}_pontos/mapas{mapaqtd}.txt'
 
@@ -27,9 +27,9 @@ for i in range(0, 9):
 
   coord = [(float(x), float(y), float(z)) for cidade, x, y, z in coord]
 
-  versao = 0 # Versão do arquivo
+  versao = 5 # Versão do arquivo
 
-  for k in range(0, qtdobs):
+  for k in range(5, qtdobs):
     inicio = time.time()
     obstaculos_indices = [int(celula) for celula in linhas[-qtdobs+k].split()]  # Lista de células a serem evitadas
     print("Obstáculos: ", obstaculos_indices)
@@ -220,7 +220,7 @@ for i in range(0, 9):
             for k in validos:
                 modelo.addConstr(y[i, j, k] >= (x[j, k] + x[i, j] - 1))
 
-    modelo.Params.timeLimit = 3600 # Limite de tempo de execução
+    modelo.Params.timeLimit = 3200 # Limite de tempo de execução
     modelo.optimize()
 
     OTIMO = True
@@ -255,12 +255,10 @@ for i in range(0, 9):
         route = [city for city in route if city-1 not in obstaculos_indices]
         print(route)
 
-    totalcusto = 0
-    for i in range(len(route)-1):
-       print(f"Cidade {route[i]} -> Cidade {route[i+1]} com {distancias[route[i]-1][route[i+1]-1]} de distância, {y[i, j, k].x} de ângulo e {q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]} de penalidade de ângulo")  
-       totalcusto += distancias[route[i]-1][route[i+1]-1] + altitudes[route[i]-1][route[i+1]-1] + q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]
-
-    print(f"Custo total: {totalcusto}") 
+    #totalcusto = 0
+    #for i in range(len(route)-1):
+       #print(f"Cidade {route[i]} -> Cidade {route[i+1]} com {distancias[route[i]-1][route[i+1]-1]} de distância, {y[i, j, k].x} de ângulo e {q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]} de penalidade de ângulo")  
+       #totalcusto += distancias[route[i]-1][route[i+1]-1] + altitudes[route[i]-1][route[i+1]-1] + q[route[i-1 if i != 0 else i]-1][route[i]-1][route[i+1]-1]
 
     fim = time.time()
     tempo = fim - inicio # Tempo de execução
