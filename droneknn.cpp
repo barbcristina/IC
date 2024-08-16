@@ -163,7 +163,7 @@ std::vector<int> encontrarProximoPonto(int anterior, int atual, const std::vecto
     std::mt19937 gen(rd());
 
     int min = 2;
-    int max = 15;
+    int max = 10;
 
     std::uniform_int_distribution<> dist(min, max);
     int numero_aleatorio = dist(gen);
@@ -283,7 +283,7 @@ std::vector<int> grasp(int tam, const std::vector<std::vector<double>>& distanci
 }
 
 int main() {
-    std::string mapas = "289_pontos/mapas17.txt";
+    std::string mapas = "256_pontos/mapas16.txt";
     std::ofstream resultadosFile("resultados.txt");
 
     for(int nObs = 10; nObs > 0; nObs--){
